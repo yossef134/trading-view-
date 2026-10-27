@@ -54,6 +54,22 @@ What blocks an entry (on top):
   pdt           only with "pdt_guard": true: 3 day trades already in the last
                 5 business days (a 4th would trip the old pattern-day-trader rule)
 
+BTC plans (24/7, fractional). Orders cannot describe Bitcoin: no whole shares,
+no NYSE session. `--btc` checks trader/btc-plan.json (from trader-btc) instead:
+
+    python3 check.py --btc                           # PASS / BLOCK, writes trader/state/risk-btc.json
+    python3 check.py --btc --record                  # you took it: log the entry (open) for the day limits
+    python3 check.py --btc --close                   # you are out: mark the open BTC entries closed
+
+It applies the same limits from trader/config.json (max_loss_per_trade_usd,
+max_daily_loss_usd, max_trades_per_day, min_reward_risk, max_order_usd,
+min_order_usd, max_position_pct, cash_buffer_pct, blocked, require_stop) and
+leaves out the NYSE entry window and the whole-share rules. Instead it needs a
+time stop (max_hold_hours, at most "btc_max_hold_hours", default 48), a stop at
+least "btc_min_stop_pct" (0.3) under the entry, no leverage, and no second BTC
+entry while one is open. The daily loss and the trades per day count stocks
+(trader/state/broker.json) and BTC (trader/state/btc.json) together.
+
 Exit code 0 when every order passes, 1 when any order is blocked.
 The verdicts go to trader/state/risk.json with a fingerprint of each order,
 so trader-broker only shows an order as ready if THIS exact order passed today.
@@ -705,6 +721,207 @@ def check(orders, cfg, portfolio=None, prices=None, state=None, today=None, now=
     }
 
 
+# ---------------------------------------------------------------- BTC plans
+
+BTC_NAMES = {"BTC", "BTC-USD", "BTCUSD", "BTC/USD", "XBT"}
+BTC_PLAN_FIELDS = ("symbol", "side", "entry", "stop", "target", "units", "max_hold_hours")
+
+
+def btc_fingerprint(plan):
+    core = {k: plan[k] for k in BTC_PLAN_FIELDS if k in plan and plan[k] is not None}
+    blob = json.dumps(core, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
+
+
+def check_btc(plan, cfg, portfolio=None, prices=None, state=None, btc_state=None, today=None, now=None,
+              price_times=None):
+    """Pure function. Checks one trader-btc plan; returns a result like check()'s, with one entry."""
+    c = dict(DEFAULTS)
+    c.update(cfg or {})
+    prices = {str(k).upper(): float(v) for k, v in (prices or {}).items() if _f(v)}
+    now_utc = now or parse_now(None)
+    today = today or to_eastern(now_utc).date().isoformat()
+    reasons, warns, info = [], [], []
+    top_warn = []
+    acct, aw = account(c, portfolio, prices)
+    top_warn.extend(aw)
+    if not c.get("paper", True):
+        top_warn.append("LIVE account (\"paper\": false): this trade uses real money")
+    top_warn.append("Bitcoin trades 24/7: the NYSE entry window does not apply; the time stop does")
+
+    sym = str(plan.get("symbol", "")).strip().upper()
+    side = str(plan.get("side", "")).strip().lower()
+    entry, stop, target = _f(plan.get("entry")), _f(plan.get("stop")), _f(plan.get("target"))
+    units = _f(plan.get("units"))
+    fee = (_f(plan.get("fee_pct_per_side")) or 0.0) / 100.0
+
+    # format
+    if sym not in BTC_NAMES:
+        reasons.append("format: symbol must be BTC-USD, got %r" % plan.get("symbol"))
+    if side != "buy":
+        reasons.append("short: trader-btc plans are long only (side buy), got %r" % plan.get("side"))
+    for name, v in (("entry", entry), ("units", units)):
+        if v is None or v <= 0:
+            reasons.append("format: %s must be a positive number, got %r" % (name, plan.get(name)))
+    if (_f(plan.get("leverage")) or 1.0) > 1.0:
+        reasons.append("leverage: %sx; leverage is off, spot only" % _num(plan.get("leverage")))
+    if BTC_NAMES & {str(b).upper() for b in c.get("blocked") or []}:
+        reasons.append("blocked: BTC is on your blocked list")
+    hold = _f(plan.get("max_hold_hours"))
+    cap_hold = _f(c.get("btc_max_hold_hours")) or 48.0
+    if not hold or hold <= 0:
+        reasons.append("time stop: no max_hold_hours. Bitcoin has no closing bell, so every plan needs a time to be out by")
+    elif hold > cap_hold + 1e-9:
+        reasons.append("time stop: %s hours is over your \"btc_max_hold_hours\" of %s" % (_num(hold), _num(cap_hold)))
+
+    risk_ps = rr = max_loss = None
+    ref, ref_from = entry, "plan"
+    if entry and entry > 0:
+        p = prices.get("BTC-USD") or prices.get("BTC")
+        t = (price_times or {}).get("BTC-USD") or (price_times or {}).get("BTC")
+        if p:
+            age = (now_utc - t).total_seconds() if t else None
+            if price_times is None or (age is not None and -60 <= age <= FRESH_MINUTES * 60):
+                if p > entry:
+                    ref, ref_from = p, "the latest price"
+            else:
+                warns.append("the BTC price in prices.json is older than %d minutes: not used" % FRESH_MINUTES)
+    # stop and target
+    if not stop:
+        if c.get("require_stop", True):
+            reasons.append("stop: no stop. Every entry needs one (\"require_stop\": true)")
+        else:
+            warns.append("no stop: the max loss is not capped, so it is not counted in the daily loss")
+    elif ref:
+        if stop >= ref:
+            reasons.append("stop: the stop %s must be below the entry %s" % (_p(stop), _p(ref)))
+        else:
+            risk_ps = ref - stop
+            stop_pct = 100.0 * risk_ps / ref
+            min_stop = _f(c.get("btc_min_stop_pct"))
+            min_stop = 0.3 if min_stop is None else min_stop
+            if stop_pct < min_stop - 1e-9:
+                reasons.append("stop: only %.2f%% under the entry, under your %s%% minimum: fees and noise "
+                               "would hit it" % (stop_pct, _num(min_stop)))
+            if units:
+                max_loss = round(units * (risk_ps + fee * (ref + stop)), 2)
+                cap = _f(c.get("max_loss_per_trade_usd"))
+                if cap and max_loss > cap + CENT:
+                    reasons.append("loss: %s BTC x %s risk a coin%s = %s at the stop, over your %s max loss "
+                                   "per trade" % (_num(units), _p(risk_ps), (" + fees" if fee else ""),
+                                                  money(max_loss), money(cap)))
+            min_rr = _f(c.get("min_reward_risk"))
+            if target:
+                if target <= ref:
+                    reasons.append("target: the target %s must be above the entry %s" % (_p(target), _p(ref)))
+                else:
+                    rr = round((target - ref) / risk_ps, 2)
+                    if min_rr and rr < min_rr - 1e-9:
+                        reasons.append("reward:risk: %.2f (target %s, entry %s, stop %s) is under your minimum %s"
+                                       % (rr, _p(target), _p(ref), _p(stop), _num(min_rr)))
+            elif min_rr:
+                reasons.append("reward:risk: no target to measure it against (min_reward_risk %s)" % _num(min_rr))
+
+    # size
+    value = units * ref if (units and ref) else None
+    if value is not None:
+        hi, lo = _f(c.get("max_order_usd")), _f(c.get("min_order_usd"))
+        if hi and value > hi + CENT:
+            reasons.append("size: %s is over your %s max order" % (money(value), money(hi)))
+        if lo and value < lo - CENT:
+            reasons.append("size: %s is under your %s minimum order" % (money(value), money(lo)))
+        total = acct["cash"] + sum(acct["values"].values())
+        pos = _f(c.get("max_position_pct"))
+        if pos and total > 0 and value > total * pos / 100.0 + CENT:
+            reasons.append("position: %s is %.1f%% of the account %s, over your %s%% position cap"
+                           % (money(value), 100.0 * value / total, money(total), _pct(pos)))
+        buf = _f(c.get("cash_buffer_pct")) or 0.0
+        usable = acct["cash"] * (1 - buf / 100.0)
+        if value > usable + CENT:
+            reasons.append("cash: %s needs more than the %s usable (cash %s, %s%% buffer); margin is off"
+                           % (money(value), money(max(usable, 0)), money(acct["cash"]), _pct(buf)))
+
+    # day limits: stocks (broker.json) and BTC (btc.json) together
+    entries_today = [r for r in placed_today(state, today) if rec_is_entry(r)]
+    btc_rows = (btc_state or {}).get("entries", [])
+    btc_today = [r for r in btc_rows if r.get("date") == today]
+    loss_today = 0.0
+    for r in entries_today + btc_today:
+        ml = _f(r.get("max_loss"))
+        if ml is None:
+            top_warn.append("an entry today (%s) has no max loss in the log; not counted" % r.get("symbol", "BTC"))
+        else:
+            loss_today += ml
+    daily = _f(c.get("max_daily_loss_usd"))
+    if daily and max_loss is not None and loss_today + max_loss > daily + CENT:
+        reasons.append("daily loss: %s already at risk today plus %s for this one = %s, over your %s daily loss "
+                       "limit" % (money(loss_today), money(max_loss), money(loss_today + max_loss), money(daily)))
+    n_today = len(entries_today) + len(btc_today)
+    cap_t = int(c.get("max_trades_per_day") or 0)
+    if cap_t and n_today >= cap_t:
+        reasons.append("trades: %d entries placed today (stocks and BTC), your limit is %d a day" % (n_today, cap_t))
+    if any(r.get("status") == "open" for r in btc_rows):
+        reasons.append("duplicate: a BTC entry is still open (trader/state/btc.json). Close it first "
+                       "(check.py --btc --close)")
+
+    if risk_ps and ref and stop:
+        info.append("entry %s (%s), stop %s, target %s: risk %s a coin" % (
+            _p(ref), ref_from if ref_from != "plan" else "the plan's entry", _p(stop),
+            _p(target) if target else "none", _p(risk_ps)))
+        info.append("max loss %s%s, reward:risk %s%s" % (
+            money(max_loss) if max_loss is not None else "n/a",
+            (" (limit %s)" % money(c["max_loss_per_trade_usd"])) if _f(c.get("max_loss_per_trade_usd")) else "",
+            ("%.2f" % rr) if rr is not None else "n/a",
+            (" (min %s)" % _num(c["min_reward_risk"])) if _f(c.get("min_reward_risk")) else ""))
+    if daily or cap_t:
+        info.append("today before this: %d of %s trades, %s of %s daily loss" % (
+            n_today, cap_t or "unlimited", money(loss_today), money(daily) if daily else "no limit on"))
+    if hold:
+        info.append("time stop: out within %s hours" % _num(hold))
+
+    verdict = "BLOCK" if reasons else "PASS"
+    result = {
+        "index": 1, "symbol": "BTC-USD", "side": side, "kind": "entry",
+        "amount": "%s BTC" % _num(units) if units else "?", "value_usd": round(value, 2) if value else None,
+        "entry_ref": round(ref, 2) if ref else None, "entry_ref_from": ref_from, "stop": stop, "target": target,
+        "risk_per_share": risk_ps, "max_loss": max_loss, "reward_risk": rr, "max_hold_hours": hold,
+        "fingerprint": btc_fingerprint(plan), "verdict": verdict, "reasons": reasons, "warnings": warns, "info": info,
+    }
+    return {
+        "mode": "btc", "date": today, "now_new_york": to_eastern(now_utc).strftime("%Y-%m-%d %H:%M"),
+        "paper": bool(c.get("paper", True)), "results": [result],
+        "pass": int(verdict == "PASS"), "block": int(verdict == "BLOCK"), "warnings": top_warn,
+        "cash_after": round(acct["cash"] - (value or 0), 2) if verdict == "PASS" else round(acct["cash"], 2),
+        "today": {"entries_placed": n_today, "loss_at_risk": round(loss_today, 2)},
+    }
+
+
+def btc_record(btc_state, res, plan, today, now_utc):
+    """Add a passed plan to the BTC log as open. Returns the new state."""
+    r = res["results"][0]
+    st = dict(btc_state or {})
+    rows = list(st.get("entries", []))
+    rows.append({"date": today, "at": now_utc.replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                 "symbol": "BTC-USD", "side": "buy", "units": plan.get("units"), "entry": plan.get("entry"),
+                 "stop": plan.get("stop"), "target": plan.get("target"), "max_loss": r["max_loss"],
+                 "fingerprint": r["fingerprint"], "status": "open"})
+    st["entries"] = rows
+    return st
+
+
+def btc_close(btc_state):
+    st = dict(btc_state or {})
+    n = 0
+    rows = []
+    for r in st.get("entries", []):
+        if r.get("status") == "open":
+            r = dict(r, status="closed")
+            n += 1
+        rows.append(r)
+    st["entries"] = rows
+    return st, n
+
+
 def _pct(x):
     x = float(x)
     return str(int(x)) if x == int(x) else ("%.2f" % x)
@@ -736,6 +953,9 @@ def report(res):
                     "paper" if res["paper"] else "LIVE"))
     if res["block"]:
         lines.append("Blocked orders do not go to the broker. Fix the order or your rules, then check again.")
+    elif res.get("mode") == "btc":
+        lines.append("The plan passed. trader-btc places nothing: you place it yourself (paper first), "
+                     "then log it with check.py --btc --record.")
     else:
         lines.append("Every order passed. trader-broker still asks you yes or no for each one.")
     lines.append("Education and tooling, not financial advice.")
@@ -778,7 +998,15 @@ def main(argv=None):
     ap.add_argument("--out", default="trader/state/risk.json", help="where the verdicts are recorded")
     ap.add_argument("--no-write", action="store_true", help="do not record the verdicts")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--btc", action="store_true", help="check a trader-btc plan instead of orders.json")
+    ap.add_argument("--plan", default="trader/btc-plan.json", help="with --btc: the plan to check")
+    ap.add_argument("--btc-state", default="trader/state/btc.json", help="with --btc: BTC entries you took")
+    ap.add_argument("--btc-out", default="trader/state/risk-btc.json", help="with --btc: where the verdict goes")
+    ap.add_argument("--record", action="store_true", help="with --btc: log a PASSED plan as taken (open)")
+    ap.add_argument("--close", action="store_true", help="with --btc: mark the open BTC entries closed")
     a = ap.parse_args(argv)
+    if a.btc:
+        return main_btc(a)
     try:
         now = parse_now(a.now)
         if a.today and not re.match(r"^\d{4}-\d{2}-\d{2}$", a.today):
@@ -812,6 +1040,56 @@ def main(argv=None):
         print("check.py: %s" % e, file=sys.stderr)
         return 1
     print(json.dumps(res, indent=2) if a.json else report(res))
+    return 1 if res["block"] else 0
+
+
+def _write(path, doc):
+    d = os.path.dirname(path)
+    if d:
+        os.makedirs(d, exist_ok=True)
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2)
+        fh.write("\n")
+    os.replace(tmp, path)
+
+
+def main_btc(a):
+    try:
+        now = parse_now(a.now)
+        if a.today and not re.match(r"^\d{4}-\d{2}-\d{2}$", a.today):
+            raise RiskError("--today wants a date like 2026-10-19")
+        btc_state = read_json(a.btc_state, "BTC state", required=False)
+        if a.close:
+            st, n = btc_close(btc_state)
+            _write(a.btc_state, st)
+            print("%d open BTC entr%s marked closed." % (n, "y" if n == 1 else "ies"))
+            return 0
+        plan = read_json(a.plan, "BTC plan (run trader-btc: btc.py plan --write first)")
+        if not isinstance(plan, dict):
+            raise RiskError("%s is not a plan" % a.plan)
+        cfg = read_json(a.config, "config", required=False) or {}
+        portfolio = read_json(a.portfolio, "portfolio", required=False)
+        pdoc = read_json(a.prices, "prices", required=False) or {}
+        prices, times = load_prices(pdoc)
+        state = read_json(a.state, "broker state", required=False)
+        res = check_btc(plan, cfg, portfolio, prices, state, btc_state, a.today, now, times)
+        if not a.no_write:
+            rec = dict(res)
+            rec["checked_at"] = datetime.datetime.now(datetime.timezone.utc).replace(
+                microsecond=0, tzinfo=None).strftime("%Y-%m-%dT%H:%M:%SZ")
+            rec["plan_file"] = a.plan
+            _write(a.btc_out, rec)
+        if a.record:
+            if res["block"]:
+                raise RiskError("the plan was blocked: nothing recorded")
+            _write(a.btc_state, btc_record(btc_state, res, plan, res["date"], now))
+    except RiskError as e:
+        print("check.py: %s" % e, file=sys.stderr)
+        return 1
+    print(json.dumps(res, indent=2) if a.json else report(res))
+    if a.record:
+        print("Recorded as an open BTC entry. After you are out: check.py --btc --close")
     return 1 if res["block"] else 0
 
 

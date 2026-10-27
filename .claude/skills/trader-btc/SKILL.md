@@ -35,6 +35,7 @@ python3 "${CLAUDE_SKILL_DIR}/btc.py" check --write               # waiting / tri
 python3 "${CLAUDE_SKILL_DIR}/btc.py" plan --risk 50 --capital 2000 --write   # -> trader/btc-plan.json
 python3 "${CLAUDE_SKILL_DIR}/btc.py" sim                         # 10,000 paths + past breakouts
 python3 "${CLAUDE_SKILL_DIR}/btc.py" show
+python3 "${CLAUDE_SKILL_DIR}/../trader-risk/check.py" --btc      # the risk gate: PASS / BLOCK
 ```
 
 Other flags: `--source coinbase` when Yahoo is blocked, `--interval 15m`
@@ -57,11 +58,13 @@ HH:MM"` (UTC), `--offline FILE` (a saved Yahoo chart JSON).
    stop, fees included, fits `--risk`; `--capital` caps the position.
 4. `sim`: read the verdict aloud, including "negative expectancy" or "coin
    flip". If it is negative, do not talk the user into the trade.
-5. Orders: this skill never places one. `trader-risk` and `trader-broker` are
-   built for whole-share stocks and block crypto by default. Give the user the
-   plan as a ticket (buy, units, stop, target, time stop) and let them place
-   it themselves, on a paper account first. Nothing is sent without their
-   explicit yes.
+5. Risk check: run `python3 "${CLAUDE_SKILL_DIR}/../trader-risk/check.py" --btc`.
+   BLOCK is final: say why and change the plan, never argue past it. On PASS,
+   give the user the plan as a ticket (buy, units, stop, target, time stop)
+   and let them place it themselves, on a paper account first. Once they say
+   they took it, log it with `check.py --btc --record`, and when they are out
+   `check.py --btc --close`. This skill and `trader-risk` place nothing, and
+   `trader-broker` is built for whole-share stocks, so it is not used for BTC.
 
 ## What it reads and writes
 

@@ -35,6 +35,30 @@ python3 "${CLAUDE_SKILL_DIR}/check.py" --no-write                # look without 
 python3 "${CLAUDE_SKILL_DIR}/check.py" --now "2026-10-19 10:15"  # pin the clock (New York time)
 ```
 
+## BTC plans
+
+`trader-btc` writes a plan (fractional BTC, a time stop, no closing bell), not
+an Alpaca order, so it has its own mode. Run it before the user places a BTC
+trade, and always show the PASS or BLOCK:
+
+```bash
+python3 "${CLAUDE_SKILL_DIR}/check.py" --btc                  # trader/btc-plan.json -> trader/state/risk-btc.json
+python3 "${CLAUDE_SKILL_DIR}/check.py" --btc --record         # the user took a PASSED plan: log it (open)
+python3 "${CLAUDE_SKILL_DIR}/check.py" --btc --close          # the user is out: mark the open entries closed
+```
+
+Same limits from `trader/config.json`: max loss per trade (fees included,
+measured from the higher of the plan's entry and a fresh `BTC-USD` price in
+`prices.json`), reward:risk, max order, min order, position cap, cash buffer,
+daily loss and trades per day (stocks from `broker.json` and BTC from
+`trader/state/btc.json` count together), the blocked list. Left out: the NYSE
+entry window and whole shares. Added: a time stop is required
+(`max_hold_hours`, at most `btc_max_hold_hours`, default 48), the stop must be
+at least `btc_min_stop_pct` (0.3) under the entry, long only, no leverage, and
+no second BTC entry while one is open. A BLOCK is final: do not offer the user
+a way around it, change the plan or the limits and check again. The check
+places nothing; the user places the trade themselves, paper account first.
+
 ## What it reads and writes
 
 | file | what |
