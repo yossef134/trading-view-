@@ -29,10 +29,16 @@ spacing:
   safe-band-y: [168, 1330]
   caption-band-y: [1180, 1320]
   margin-x: 80
+ground:
+  paper: white with a navy graph-paper grid, 60 px cells at 7% navy, a 20% navy dot every 240 px (x 60+240k, y 120+240k)
+  paper-on-orange: the orange field carries the same 60 px grid in 16% white
 components:
   highlight: orange block behind a navy word, 0 34 px padding, 24 px radius
   bubble-hot: orange bubble, navy text
   phone: device bezel #0B1328, white screen
+  sticker: white cut-out edge (7 px) + soft navy shadow (0 12 px 14 px, 20%); people, icons and props
+  people: flat busts from src/people.js (men and women, hijab or not, four skin tones), tops and scarves in navy, greys and peach only
+  connector: dashed navy arrow (8 px, 4/22 dash) that draws itself and leads the camera to the next idea
 ---
 
 # Identity A: white, clean
@@ -45,6 +51,13 @@ components:
 - Rubik Medium for every Arabic word. Hierarchy comes from size and colour, not from weight.
 - English words in Indie Flower bold, slightly larger than the Arabic around them (×1.3), as a hand-written aside.
 - Arabic reveals run per word or as a right-to-left wipe. Never per letter (it breaks Arabic joining).
+
+## Motion (from Yossef's Pinterest references, adapted, not copied)
+- The ground is graph paper so camera moves read: the camera pushes in slowly on holds, pans along a dashed connector to the consequence, and whips (0.35–0.4 s, motion blur) between ideas.
+- Things are thrown in as stickers from their own side with an overshoot; landings squash and nudge the frame.
+- Kicker + slam: a small line sets up, the key word lands big with a 4-frame stamp and a short frame shake.
+- Numbers that matter roll like an odometer and get a hand-drawn scribble around them.
+- Every scene hands over through an object the next scene keeps.
 
 ## Don't
 - Orange text on white (2.9:1, unreadable on a phone).
