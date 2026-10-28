@@ -46,76 +46,103 @@
     #root .bub { position: relative; background: var(--color-ad-bubble); color: var(--color-ad-ink); font-size: 46px; line-height: 1.35; padding: 14px 28px; border-radius: 36px; border-top-right-radius: 10px; white-space: nowrap; }
     #root .bub-hot { background: var(--color-accent); color: var(--color-ink); font-size: 58px; }
 
+    /* written on the cut clock (voice-cut.wav) */
+    #stairs-cam { position: absolute; inset: 0; }
     #root .step { position: absolute; width: 260px; border-radius: 22px; background: var(--color-ink); }
     #root .step span { position: absolute; left: 0; right: 0; top: 28px; text-align: center; direction: rtl; font-size: 58px; color: #ffffff; }
     #stairs-s3 { background: var(--color-accent); }
     #stairs-s3 span { color: var(--color-ink); }
+    /* «الإعلان الممول مهم»: the ad as a megaphone */
+    #stairs-mega { position: absolute; left: 260px; top: 620px; width: 560px; height: 400px; }
+    #stairs-mega svg { position: absolute; left: 0; top: 0; width: 560px; height: 400px; overflow: visible; }
+    #stairs-mega .ppl { filter: drop-shadow(0 18px 24px rgba(19, 33, 63, 0.22)); }
+    #stairs-tag { position: absolute; left: 165px; top: 170px; width: 200px; height: 60px; border-radius: 16px; background: var(--color-surface); color: var(--color-ad-ink); font-size: 36px; line-height: 60px; text-align: center; direction: rtl; white-space: nowrap; }
+    #stairs-stamp { position: absolute; left: 520px; top: 420px; display: flex; align-items: center; gap: 16px; padding: 0 36px; height: 170px; border-radius: 28px; background: var(--color-accent); color: var(--color-ink); font-size: 130px; direction: rtl; white-space: nowrap; }
+    #stairs-stamp svg { width: 96px; height: 96px; }
   </style>
   <div id="root" data-composition-id="stairs" data-width="1080" data-height="1920">
-    <div class="t" id="stairs-t1" style="top: 260px; font-size: 120px">خطوة أخيرة</div>
-    <div class="t" id="stairs-t2" style="top: 430px; font-size: 66px">في الـ <span class="en">scaling</span></div>
+    <div id="stairs-cam" data-layout-allow-overlap>
+      <div class="t" id="stairs-t1" style="top: 260px; font-size: 120px"><span class="w">خطوة</span> <span class="w">أخيرة</span></div>
+      <div class="t" id="stairs-t2" style="top: 440px; left: 190px; font-size: 66px">في الـ <span class="en">scaling</span></div>
 
-    <div class="step" id="stairs-s1" style="left: 660px; top: 930px; height: 200px"><span>محتوى</span></div>
-    <div class="step" id="stairs-s2" style="left: 390px; top: 750px; height: 380px"><span>ثقة</span></div>
-    <div class="step" id="stairs-s3" style="left: 120px; top: 570px; height: 560px"><span id="stairs-s3-lab">إعلان</span></div>
+      <div class="step" id="stairs-s1" style="left: 660px; top: 930px; height: 200px"><span>محتوى</span></div>
+      <div class="step" id="stairs-s2" style="left: 390px; top: 750px; height: 380px"><span>ثقة</span></div>
+      <div class="step" id="stairs-s3" style="left: 120px; top: 570px; height: 560px"><span id="stairs-s3-lab">إعلان</span></div>
 
-    <!-- the content phone, as the split left it -->
-    <div class="phone" id="stairs-phone">
-      <div class="ph-shell"></div>
-      <div class="ph-screenbg"></div>
-      <div class="ph-screen">
-        <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
-        <div class="ph-title">رسايل</div>
-        <div class="bub-row" style="top: 190px"><div class="bub-av" data-layout-ignore>م</div><div class="bub bub-hot">عايز أحجز</div></div>
+      <!-- the content phone, as the split left it -->
+      <div class="phone" id="stairs-phone">
+        <div class="ph-shell"></div>
+        <div class="ph-screenbg"></div>
+        <div class="ph-screen">
+          <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+          <div class="ph-title">رسايل</div>
+          <div class="bub-row" style="top: 190px"><div class="bub-av" data-layout-ignore>م</div><div class="bub bub-hot">عايز أحجز</div></div>
+        </div>
       </div>
+
+      <div id="stairs-mega" data-layout-allow-overlap>
+        <svg class="ppl" viewBox="0 0 560 400">
+          <defs><filter id="stairs-edge" x="-12%" y="-12%" width="124%" height="124%"><feMorphology in="SourceAlpha" operator="dilate" radius="8" result="d" /><feFlood flood-color="#ffffff" /><feComposite in2="d" operator="in" result="e" /><feMerge><feMergeNode in="e" /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>
+          <g filter="url(#stairs-edge)">
+            <rect x="340" y="138" width="130" height="124" rx="24" fill="#13213F" />
+            <rect x="452" y="160" width="46" height="80" rx="16" fill="#2D4A7A" />
+            <path d="M 396 250 L 416 344 Q 420 362 438 358 L 452 354 Q 468 350 464 332 L 446 250 Z" fill="#13213F" />
+            <path d="M 120 64 L 366 148 L 366 252 L 120 336 Q 92 200 120 64 Z" fill="#13213F" />
+            <ellipse cx="120" cy="200" rx="36" ry="136" fill="#F4F6FA" stroke="#13213F" stroke-width="10" />
+          </g>
+          <g fill="none" stroke="#13213F" stroke-width="14" stroke-linecap="round">
+            <path class="wave" d="M 62 146 Q 34 200 62 254" />
+            <path class="wave" d="M 26 104 Q -20 200 26 296" />
+            <path class="wave" d="M -10 62 Q -74 200 -10 338" />
+          </g>
+        </svg>
+        <div id="stairs-tag">إعلان ممول</div>
+      </div>
+      <div id="stairs-stamp" data-layout-ignore>مهم<svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6" /></svg></div>
     </div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
+      const kick = (t, k) => tl.fromTo("#stairs-cam", { x: 12 * k, y: 8 * k }, { x: 0, y: 0, duration: 0.24, ease: "elastic.out(1.2, 0.35)" }, t);
       gsap.set("#stairs-phone", { scale: 0.86, y: -60 });
-      gsap.set(["#stairs-t1", "#stairs-t2"], { opacity: 0 });
-      gsap.set(["#stairs-s1", "#stairs-s2"], { scaleY: 0, transformOrigin: "50% 100%" });
-      gsap.set("#stairs-s3", { y: -900, opacity: 0 });
+      gsap.set(["#stairs-t1 .w", "#stairs-t2", "#stairs-mega", "#stairs-stamp", ".wave"], { opacity: 0 });
+      gsap.set(["#stairs-s1", "#stairs-s2", "#stairs-s3"], { scaleY: 0, transformOrigin: "50% 100%" });
 
-      // the phone (the content) becomes the first step
-      tl.to("#stairs-phone", { x: 280, y: 280, scale: 0.18, duration: 0.6, ease: "power3.inOut" }, 0.1);
-      tl.to("#stairs-phone", { opacity: 0, duration: 0.2, ease: "none" }, 0.5);
-      tl.to("#stairs-s1", { scaleY: 1, duration: 0.45, ease: "expo.out" }, 0.5);
-      tl.to("#stairs-s2", { scaleY: 1, duration: 0.5, ease: "expo.out" }, 1.2);
-      // «بس بيكون خطوة أخيرة»: the ad lands last, on the top step
-      tl.set("#stairs-s3", { opacity: 1 }, 2.55);
-      tl.to("#stairs-s3", { y: 0, duration: 0.5, ease: "back.out(1.2)" }, 2.55);
-      tl.fromTo("#stairs-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 2.75);
-      tl.fromTo("#stairs-t2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 3.6);
+      // the content phone whips out; the ad comes in as a megaphone
+      tl.to("#stairs-phone", { x: -900, rotation: -18, scale: 0.6, duration: 0.28, ease: "power3.in" }, 0.02);
+      tl.set("#stairs-phone", { opacity: 0 }, 0.3);
+      tl.set("#stairs-mega", { opacity: 1 }, 0.18);
+      tl.fromTo("#stairs-mega", { x: 800, rotation: 30, scale: 0.6 }, { x: 0, rotation: -6, scale: 1, duration: 0.42, ease: "back.out(1.6)" }, 0.18);
+      // «الإعلان الممول»: it shouts
+      document.querySelectorAll(".wave").forEach((el, i) => {
+        tl.fromTo(el, { opacity: 0, x: 0 }, { opacity: 1, x: -26, duration: 0.18, ease: "power1.out", yoyo: true, repeat: 5 }, 0.45 + i * 0.1);
+      });
+      tl.fromTo("#stairs-mega", { scale: 1 }, { scale: 1.08, duration: 0.1, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 0.73);
+      // «مهم»: stamped
+      tl.fromTo("#stairs-stamp", { opacity: 0, scale: 1.8, rotation: -10 }, { opacity: 1, scale: 1, rotation: -10, duration: 4 / 30, ease: "none" }, 1.27);
+      kick(1.4, 1);
 
-      // hand-off: the ad block lifts off and rounds into the lens (360 px disc at 510,760)
-      tl.to("#stairs-s3-lab", { opacity: 0, duration: 0.15, ease: "none" }, 4.5);
-      tl.to(["#stairs-s1", "#stairs-s2", "#stairs-t1", "#stairs-t2"], { opacity: 0, y: "+=40", duration: 0.3, ease: "power3.in" }, 4.6);
-      tl.to("#stairs-s3", { x: 260, y: -90, scaleX: 1.385, scaleY: 0.6429, borderRadius: "50%", duration: 0.6, ease: "power2.inOut" }, 4.6);
+      // «بس بيكون خطوة أخيرة»: the stamp goes, the megaphone drops to the ground and rides the last step up
+      tl.to("#stairs-stamp", { opacity: 0, scale: 0.6, duration: 0.15, ease: "power3.in" }, 1.78);
+      tl.to("#stairs-tag", { opacity: 0, duration: 0.15, ease: "none" }, 1.8);
+      tl.to("#stairs-mega", { x: -290, y: 246, scale: 0.32, rotation: 0, duration: 0.4, ease: "power3.inOut" }, 1.8);
+      tl.to("#stairs-s1", { scaleY: 1, duration: 0.3, ease: "expo.out" }, 1.85);
+      tl.to("#stairs-s2", { scaleY: 1, duration: 0.3, ease: "expo.out" }, 2.02);
+      tl.to("#stairs-s3", { scaleY: 1, duration: 0.36, ease: "expo.out" }, 2.3);
+      tl.to("#stairs-mega", { y: -314, duration: 0.36, ease: "expo.out" }, 2.3);
+      [2.55, 3.11].forEach((t, i) => {
+        tl.fromTo(`#stairs-t1 .w:nth-of-type(${i + 1})`, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, t);
+        kick(t + 0.13, i ? -0.7 : 0.7);
+      });
+      tl.fromTo("#stairs-t2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.28, ease: "back.out(2)" }, 3.45);
 
-      // timed on the raw recording; tools/cut.py shortened its pauses, so each tween moves onto the cut (assets/voice/cut-map.json)
-      const CUT = [[0,0],[0,0],[0.2255,0.05],[1.29556,1.1201],[1.56285,1.2401],[3.39146,3.0687],[3.62363,3.1887],[5.39494,4.96],[5.93273,5.12],[7.02081,6.2081],[8.24869,6.6081],[11.804,10.1634],[13.4734,10.3834],[14.5153,11.4253],[14.8545,11.5453],[16.3794,13.0702],[16.9229,13.2302],[18.2428,14.5501],[18.453,14.6701],[21.242,17.4591],[22.9578,17.6791],[24.8515,19.5728],[25.0868,19.6928],[27.1607,21.7667],[28.3368,21.9867],[30.4698,24.1197],[30.8643,24.2397],[32.7954,26.1708],[33.923,26.5708],[35.7522,28.4],[36.4682,28.56],[38.2572,30.349],[38.7384,30.509],[40.5258,32.2964],[40.9904,32.4564],[41.678,33.144],[41.9994,33.264],[43.3146,34.5792],[43.9455,34.7392],[46.5355,37.3292],[46.7506,37.4492],[48.3375,39.0361],[48.8516,39.4361],[48.853,39.4375],[49.0997,39.6842],[50.8561,41.4406],[51.2233,41.5606],[54.0706,44.4079],[54.644,44.8079],[55.6336,45.7975],[55.8604,45.9175],[56.6052,46.6623],[56.8552,46.7823],[57.4996,47.4267],[57.7276,47.5467],[58.335,48.1541],[58.6985,48.2741],[60.627,50.2026],[61.1581,50.3626],[63.1661,52.3706],[63.4033,52.4906],[64.9725,54.0598],[65.6285,54.4598],[67.4596,56.2909],[67.775,56.4109],[68.4966,57.1325],[68.9401,57.5325],[70.8214,59.4138],[71.0378,59.5338],[73.6102,62.1062],[74.4124,62.3262],[76.5251,64.4389],[77.3038,64.8389],[79.0656,66.6007],[79.4624,66.7207],[83.532,70.7903],[83.95,71.0403],[83.95,71.0403],[85.95,73.0403]];
-      const cut = (t) => {
-        let i = 1;
-        while (i < CUT.length - 1 && CUT[i][0] < t) i++;
-        const [a0, b0] = CUT[i - 1], [a1, b1] = CUT[i];
-        return a1 === a0 ? b1 : b0 + ((b1 - b0) * (t - a0)) / (a1 - a0);
-      };
-      const retime = (tl, from, to) => {
-        const s0 = cut(from), len = cut(to) - s0;
-        tl.getChildren(false, true, true).forEach((c) => {
-          const a = c.startTime(), d = c.totalDuration();
-          let na = cut(from + a) - s0, nd = cut(from + a + d) - s0 - na;
-          if (d > 0) {
-            nd = Math.min(Math.max(nd, d * 0.5), len); // a pause can speed a move up, never past 2x
-            na = Math.min(Math.max(na, 0), len - nd); // and nothing spills past the scene's ends
-            c.timeScale(d / nd);
-          }
-          c.startTime(na);
-        });
-      };
-      retime(tl, 49, 54.2);
+      // hand-off: the megaphone sinks into the ad block, which lifts off and rounds into the lens (360 px disc at 510,760)
+      tl.to("#stairs-mega", { scale: 0, duration: 0.2, ease: "power3.in" }, 4.28);
+      tl.to("#stairs-s3-lab", { opacity: 0, duration: 0.15, ease: "none" }, 4.3);
+      tl.to(["#stairs-s1", "#stairs-s2", "#stairs-t1", "#stairs-t2"], { opacity: 0, y: "+=40", duration: 0.28, ease: "power3.in" }, 4.34);
+      tl.to("#stairs-s3", { x: 260, y: -90, scaleX: 1.385, scaleY: 0.6429, borderRadius: "50%", duration: 0.54, ease: "power2.inOut" }, 4.36);
+
       window.__timelines["stairs"] = tl;
     })();
   </script>

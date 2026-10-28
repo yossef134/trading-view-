@@ -26,6 +26,9 @@ retime = f'''// timed on the raw recording; tools/cut.py shortened its pauses, s
           }}
           c.startTime(na);
         }});
+        // timeScale() renders a tween once, which records its start values too early (before the tweens
+        // ahead of it have run); forget them so each tween reads its start when the playhead reaches it
+        tl.invalidate();
       }};'''
 for f in sorted(x for x in os.listdir("src") if x.endswith(".html")):
     s = open(f"src/{f}").read()

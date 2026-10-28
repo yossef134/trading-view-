@@ -1,4 +1,13 @@
-# REVIEW: v4 (pauses cut, sticker people, the second half rebuilt)
+# REVIEW: v5 (hook, doctor, money, X, megaphone)
+
+## v5 changes (Yossef's notes on v4)
+- Hook to «إعلان ممول»: the worried doctor in the middle of four people shouting six bubbles at him, the frame pushing in; each word of «مش هتعرف تسوّق لعيادتك صح» slams with a frame kick and he sweats; the voices are blown out; «إعلان ممول» hits with a ring, speed lines, an impact and his gasp.
+- «يا ترى الكلام ده صح؟»: he thinks (hand on chin, eyes up) and the question forms in a thought cloud, «صح؟» stamped on orange inside it.
+- «ممكن يضيّع فلوسك»: six bills fan out from behind the phone, grow wings and flap off; straight after, the phone steps back and the crowd arrives (three at once, then one after another).
+- «هتلاقي النتيجة برضه مش عاجباك»: the doctor steps in smiling; on «مش عاجباك» the smile turns over, the brows fall and a big orange X crosses out the ads.
+- «الإعلان الممول مهم»: faster; the ad whips in as a shouting megaphone, «مهم ✓» is stamped, then the steps snap up and the megaphone rides the last one.
+- Fix: retime() read some tweens' start values when it rescaled them, before the tweens ahead had run (the money took off from the middle of the phone); the timeline is now invalidated after retiming.
+- Hook and stairs moved to the cut clock (no retime); the duplicate caption «الإعلان الممول مهم» is off (it is on screen).
 
 ## v4 changes
 - Pace: tools/cut.py shortens every pause in the voice (0.12–0.22 s kept, 0.4 s at scene seams). Voice 83.95 s → 71.04 s, film 86 s → 73.04 s. The four scenes timed before the cut are moved onto it at runtime by `retime()` (see SPEC.md TIME).
@@ -13,12 +22,12 @@
 
 ## State
 - 73.04 s, 1080 x 1920, 30 fps, motion blur on. Eight scenes plus one captions track.
-- Sound: the cut voice plus 94 effects from the bundled HyperFrames library. No music (HeyGen is blocked from this session).
+- Sound: the cut voice plus 114 effects from the bundled HyperFrames library. No music (HeyGen is blocked from this session).
 
 ## Measured
 - Draft render (renders/draft-v4.mp4, not committed): 73.07 s, h264 + aac, −15.5 LUFS integrated, −1.4 dBTP peak.
 - `check`: 0 errors, 0 lint warnings.
-- Kept warnings: `line_unread` on a few short lines the faster pace now shows for under the reading floor («صح؟» before it is carried, «شكراً يا دكتور» 0.8 s, the haggling bubbles 0.6 s, the spinning odometer digits); `text_below_floor` on the post's «إعلان ممول» label while the phone is stepped back to 0.58 (19 px); `escaped_container` on the lens scene's off-frame station (it sits on the camera's paper by design).
+- Kept warnings: `line_unread` on a few short lines the faster pace now shows for under the reading floor («شكراً يا دكتور» 0.8 s, the haggling bubbles 0.6 s, the content phone as it whips out, the spinning odometer digits); `text_below_floor` on the post's «إعلان ممول» label while the phone is stepped back to 0.58 (19 px); `escaped_container` on the lens scene's off-frame station (it sits on the camera's paper by design).
 - Seams checked at −0.2 s to +0.2 s on every cut (snapshot --review).
 - The sound was measured, not heard.
 

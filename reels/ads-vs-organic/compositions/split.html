@@ -181,6 +181,9 @@
           }
           c.startTime(na);
         });
+        // timeScale() renders a tween once, which records its start values too early (before the tweens
+        // ahead of it have run); forget them so each tween reads its start when the playhead reaches it
+        tl.invalidate();
       };
       retime(tl, 33.4, 49);
       window.__timelines["split"] = tl;

@@ -15,8 +15,16 @@
     #root .ad-badge { position: absolute; left: -75px; top: 131px; width: 760px; height: 170px; border-radius: 40px; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 130px; color: var(--color-ad-ink); direction: rtl; }
     #root .ib-title { position: absolute; right: 28px; top: 72px; font-size: 46px; }
     /* inside the phone's frame, so they scale with it */
-    #root .bill { position: absolute; left: -50px; top: 430px; width: 220px; height: 110px; background: #b9c8b0; border: 4px solid var(--color-ink); border-radius: 10px; }
-    #root .bill::after { content: ""; position: absolute; left: 76px; top: 19px; width: 60px; height: 64px; border: 4px solid var(--color-ink); border-radius: 50%; }
+    /* «يضيّع فلوسك»: bills grow wings and fly off */
+    #root .fly { position: absolute; width: 200px; height: 100px; margin: -50px 0 0 -100px; }
+    #root .fly .cash { position: absolute; inset: 0; background: #b9c8b0; border: 4px solid var(--color-ink); border-radius: 10px; box-shadow: 0 12px 20px rgba(19, 33, 63, 0.16); }
+    #root .fly .cash::after { content: ""; position: absolute; left: 70px; top: 16px; width: 52px; height: 58px; border: 4px solid var(--color-ink); border-radius: 50%; }
+    #root .wing { position: absolute; top: -52px; width: 110px; height: 70px; overflow: visible; }
+    #root .wing.l { left: -40px; transform-origin: 100% 100%; }
+    #root .wing.r { right: -40px; transform-origin: 0% 100%; }
+    /* «مش عاجباك»: the doctor's face falls and the ads get crossed out */
+    #ad-x { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    #ad-doc { position: absolute; left: 540px; top: 1170px; width: 200px; height: 247px; margin: -247px 0 0 -100px; transform-origin: 50% 100%; }
     /* «هيوصّلك لناس أكتر»: the people the ad reaches, as stickers around the phone */
     #root .ad-p { position: absolute; width: 200px; height: 247px; margin: -247px 0 0 -100px; transform-origin: 50% 100%; }
     #root .ad-ring { position: absolute; left: 510px; top: 520px; width: 1400px; height: 1400px; margin: -700px 0 0 -700px; border-radius: 50%; border: 6px solid var(--color-ink); }
@@ -27,8 +35,6 @@
   </style>
   <div id="root" data-composition-id="ad" data-width="1080" data-height="1920">
     <div class="phone" id="ad-phone">
-      <div class="bill" id="ad-bill1" data-layout-ignore></div>
-      <div class="bill" id="ad-bill2" data-layout-ignore></div>
       <div class="ph-shell" id="ad-shell"></div>
       <div class="ph-screenbg" id="ad-screenbg"></div>
       <div class="ph-screen">
@@ -74,6 +80,12 @@
     <div class="ad-ring" data-layout-ignore></div>
     <div class="ad-ring" data-layout-ignore></div>
     <div id="ad-crowd" data-layout-allow-overlap></div>
+    <div id="ad-money" data-layout-allow-overlap></div>
+    <svg id="ad-x" viewBox="0 0 1080 1920" data-layout-ignore>
+      <path d="M 150 230 L 930 1080" pathLength="100" fill="none" stroke="#FF6A13" stroke-width="46" stroke-linecap="round" stroke-dasharray="100 120" stroke-dashoffset="100" />
+      <path d="M 930 230 L 150 1080" pathLength="100" fill="none" stroke="#FF6A13" stroke-width="46" stroke-linecap="round" stroke-dasharray="100 120" stroke-dashoffset="100" />
+    </svg>
+    <div id="ad-doc" data-layout-allow-overlap></div>
   </div>
   <script>
     (function () {
@@ -93,11 +105,24 @@
         crowd.appendChild(d);
       });
       const ppl = [...document.querySelectorAll(".ad-p")];
+      const WING = (d) => `<path d="${d}" fill="#FFFFFF" stroke="#13213F" stroke-width="5" stroke-linejoin="round" />`;
+      const WING_R = WING("M4 66 C8 30 40 6 106 4 C94 14 100 20 86 26 C96 32 84 38 72 40 C80 48 64 52 52 52 C56 60 30 66 4 66 Z");
+      const WING_L = WING("M106 66 C102 30 70 6 4 4 C16 14 10 20 24 26 C14 32 26 38 38 40 C30 48 46 52 58 52 C54 60 80 66 106 66 Z");
+      // [x, y, rotation] the bills fan out to, either side of the phone
+      const FAN = [[190, 600, -10], [830, 620, 8], [160, 830, 6], [860, 850, -6], [210, 1050, -4], [810, 1060, 10]];
+      const money = document.getElementById("ad-money");
+      FAN.forEach(([x, y, r]) => {
+        money.insertAdjacentHTML("beforeend", `<div class="fly" data-layout-ignore style="left: ${x}px; top: ${y}px"><svg class="wing l" viewBox="0 0 110 70">${WING_L}</svg><svg class="wing r" viewBox="0 0 110 70">${WING_R}</svg><div class="cash"></div></div>`);
+      });
+      const bills = [...document.querySelectorAll(".fly")];
+      document.getElementById("ad-doc").innerHTML = person(DOCTOR, "addoc");
 
       // the phone sits at 0.86, lifted 60 px, so captions have the band under it
       gsap.set("#ad-phone", { scale: 0.86, y: -60 });
       gsap.set("#ad-badge", { scale: 0.25 });
-      gsap.set(["#ad-shell", "#ad-screenbg", "#ad-ui", ".ad-mini", ".bill"], { opacity: 0 });
+      gsap.set(["#ad-shell", "#ad-screenbg", "#ad-ui", ".ad-mini", ".fly", ".wing", "#ad-doc"], { opacity: 0 });
+      bills.forEach((el, i) => gsap.set(el, { x: 510 - FAN[i][0], y: 700 - FAN[i][1], scale: 0.4 }));
+      gsap.set("#ad-doc", { scale: 1.75, filter: "saturate(1)" });
       ppl.forEach((el) => gsap.set(el, { opacity: 0, scale: +el.dataset.k, filter: "grayscale(0)" }));
       gsap.set(".ad-ring", { opacity: 0, scale: 0 });
       gsap.set(["#ad-b0", "#ad-b1", "#ad-b2", "#ad-b3"], { opacity: 0 });
@@ -108,24 +133,29 @@
       tl.fromTo("#ad-screenbg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.05);
       tl.fromTo("#ad-shell", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" }, 0.2);
 
-      // «ممكن يضيّع فلوسك»: two bills slip out of the phone and fall away
-      [["#ad-bill1", 3.25, -30], ["#ad-bill2", 3.55, -18]].forEach(([sel, t, rot]) => {
-        tl.set(sel, { opacity: 1 }, t);
-        tl.fromTo(sel, { x: 0, y: 0, rotation: 0 }, { x: -190, y: 20, rotation: rot / 3, duration: 0.35, ease: "expo.out" }, t);
-        tl.to(sel, { y: 1700, rotation: rot, duration: 0.9, ease: "power3.in" }, t + 0.35);
-        tl.set(sel, { opacity: 0 }, t + 1.3);
+      // «ممكن يضيّع فلوسك»: a fan of bills bursts out from behind the phone, grows wings and flies off
+      bills.forEach((el, i) => {
+        tl.to(el, { opacity: 1, x: 0, y: 0, scale: 1, rotation: FAN[i][2], duration: 0.35, ease: "back.out(1.8)" }, 2.82 + i * 0.04);
+      });
+      bills.forEach((el, i) => {
+        const wings = el.querySelectorAll(".wing");
+        tl.fromTo(wings, { opacity: 1, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.18, ease: "back.out(2)" }, 3.22 + i * 0.03);
+        tl.to(wings, { scaleY: 0.35, duration: 0.07, ease: "sine.inOut", yoyo: true, repeat: 15 }, 3.4 + i * 0.03);
+        tl.to(el, { x: (FAN[i][0] < 510 ? -1 : 1) * (120 + i * 30), y: -(FAN[i][1] + 260), rotation: FAN[i][2] * 3, duration: 1.0, ease: "power2.in" }, 3.32 + i * 0.07);
       });
 
       // «الإعلان الممول»: the phone steps back and up to make room
-      tl.to("#ad-phone", { scale: 0.58, y: -230, duration: 0.6, ease: "power3.inOut" }, 5.95);
+      tl.to("#ad-phone", { scale: 0.58, y: -230, duration: 0.6, ease: "power3.inOut" }, 4.2);
       // «هيوصّلك لناس أكتر، أيوه»: the ad goes out in waves; people pop up one after another, nearest first
       document.querySelectorAll(".ad-ring").forEach((el, i) => {
-        tl.fromTo(el, { scale: 0.05, opacity: 0.55 }, { scale: 1, opacity: 0, duration: 1.1, ease: "power1.out" }, 7.3 + i * 0.45);
+        tl.fromTo(el, { scale: 0.05, opacity: 0.55 }, { scale: 1, opacity: 0, duration: 1.1, ease: "power1.out" }, [4.3, 6.0, 7.1][i]);
       });
       const byNear = ppl.map((el, i) => [Math.hypot(SPOTS[i][0] - 510, SPOTS[i][1] - 120 - 520), el]).sort((a, b) => a[0] - b[0]).map((e) => e[1]);
       byNear.forEach((el, k) => {
         const s = +el.dataset.k;
-        tl.fromTo(el, { opacity: 0, y: 110, scale: s * 0.45, rotation: k % 2 ? 12 : -12 }, { opacity: 1, y: 0, scale: s, rotation: 0, duration: 0.45, ease: "back.out(1.8)" }, 7.35 + k * 0.1);
+        // the first three burst in with the phone's step back, the rest arrive one after another on «الإعلان الممول هيوصّلك لناس أكتر»
+        const t = k < 3 ? 4.35 + k * 0.25 : 6.0 + (k - 3) * 0.22;
+        tl.fromTo(el, { opacity: 0, y: 110, scale: s * 0.45, rotation: k % 2 ? 12 : -12 }, { opacity: 1, y: 0, scale: s, rotation: 0, duration: 0.45, ease: "back.out(1.8)" }, t);
       });
       // «أيوه»: the whole crowd nods once
       byNear.forEach((el, k) => {
@@ -148,13 +178,22 @@
         tl.fromTo(el, { opacity: 0, scale: 0.75, rotation: 0 }, { opacity: 1, scale: 1, rotation: rot, duration: 0.14, ease: "back.out(1.4)" }, 16.45 + k * 0.08);
       });
 
-      // «هتلاقي النتيجة مش عاجباك»: everything greys out and sinks
+      // «هتلاقي النتيجة»: the doctor steps in, smiling, expecting the result
+      tl.fromTo("#ad-doc", { opacity: 0, y: 300 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)" }, 17.35);
+      // «مش عاجباك»: the smile turns over, the brows fall, a big X lands on the ads
+      tl.to("#ad-doc .mouth", { scaleY: -1, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.inOut" }, 19.08);
+      tl.to("#ad-doc .brow-l", { rotation: -16, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.inOut" }, 19.08);
+      tl.to("#ad-doc .brow-r", { rotation: 16, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.inOut" }, 19.08);
+      tl.to("#ad-doc", { y: 14, scale: 1.7, filter: "saturate(0.55)", duration: 0.4, ease: "power2.out" }, 19.1);
+      tl.to("#ad-x path:nth-of-type(1)", { strokeDashoffset: 0, duration: 0.16, ease: "power2.in" }, 19.14);
+      tl.to("#ad-x path:nth-of-type(2)", { strokeDashoffset: 0, duration: 0.16, ease: "power2.in" }, 19.32);
+      tl.fromTo("#ad-x", { x: 16, y: -8 }, { x: 0, y: 0, duration: 0.3, ease: "elastic.out(1.2, 0.3)", immediateRender: false }, 19.48);
+      // and everything behind it greys out (the phone holds still: a moving layer is lifted above the X by motion blur)
       tl.to([".mini-gray", "#ad-gray"], { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 19.1);
-      tl.to("#ad-phone", { y: -20, duration: 0.4, ease: "power3.in" }, 19.1);
 
       // into the inbox: the copies leave, the phone rises back, an iris opens from the DM icon
-      tl.to(".ad-mini", { opacity: 0, filter: "blur(8px)", duration: 0.25, ease: "power3.in" }, 20.25);
-      tl.to("#ad-phone", { y: -60, duration: 0.4, ease: "power2.inOut" }, 20.3);
+      tl.to([".ad-mini", "#ad-x"], { opacity: 0, filter: "blur(8px)", duration: 0.25, ease: "power3.in" }, 20.25);
+      tl.to("#ad-doc", { opacity: 0, y: 320, duration: 0.3, ease: "power3.in" }, 20.2);
       tl.to(["#ad-gray", "#ad-badge"], { opacity: 0, duration: 0.15, ease: "none" }, 20.55);
       tl.to("#ad-inbox", { clipPath: "circle(1200px at 46px 100px)", duration: 0.35, ease: "power3.out" }, 20.6);
       tl.set("#ad-ui", { opacity: 0 }, 21.0);

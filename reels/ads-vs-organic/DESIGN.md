@@ -58,6 +58,8 @@ components:
 - Kicker + slam: a small line sets up, the key word lands big with a 4-frame stamp and a short frame shake.
 - Numbers that matter roll like an odometer and get a hand-drawn scribble around them.
 - Every scene hands over through an object the next scene keeps.
+- Characters act the line: a pose swap (worried → gasp → hand on chin) or a face that changes (smile turns over) on the spoken word.
+- A moving layer is lifted above the others by motion blur: keep an element still while something must be drawn over it.
 
 ## Don't
 - Orange text on white (2.9:1, unreadable on a phone).

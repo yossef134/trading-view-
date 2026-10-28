@@ -8,17 +8,18 @@ TIME:    the voice is the clock. Two clocks exist:
          - cut clock: assets/voice/voice-cut.wav, 71.04 s. tools/cut.py shortens every pause (0.12–0.22 s kept, 0.4 s at scene seams,
            10 ms crossfades) and writes assets/voice/cut-map.json, the knots between the two clocks.
          The film runs 73.04 s on the cut clock (the end card holds 2 s after the last word).
-         hook, ad, split and stairs were choreographed on the recording clock; build.py injects `retime()`, which moves each tween
-         onto the cut (a pause may speed a move up, never past 2x, and nothing spills past its scene). lens, base, claim and
-         endcard are written directly on the cut clock. Word stamps on both clocks: assets/voice/words-cut.json.
+         ad and split were choreographed on the recording clock; build.py injects `retime()`, which moves each tween
+         onto the cut (a pause may speed a move up, never past 2x, and nothing spills past its scene) and then invalidates the
+         timeline so no tween keeps start values read before its turn. hook, stairs, lens, base, claim and endcard are written
+         directly on the cut clock. Word stamps on both clocks: assets/voice/words-cut.json.
 
 ## Scenes (cut clock)
 | Scene | Starts | Length | Anchor words (cut clock) |
 |---|---|---|---|
 | hook | 0.000 | 6.364 | «إعلان ممول» 4.04 · «صح؟» 5.90 |
-| ad | 6.364 | 20.021 | «يضيّع فلوسك» 9.11 · «لناس أكتر، أيوه» 12.10–13.07 · «مليون إعلان» 18.72 |
+| ad | 6.364 | 20.021 | «يضيّع فلوسك» 9.11 · «لناس أكتر، أيوه» 12.10–13.07 · «مليون إعلان» 18.72 · «مش عاجباك» 21.2 |
 | split | 26.385 | 13.199 | «باستمرار» 29.80 · «عايز يكشف» 36.32 |
-| stairs | 39.584 | 4.914 | «خطوة أخيرة» 42.14 |
+| stairs | 39.584 | 4.914 | «الإعلان الممول» 39.85 · «مهم» 40.85 · «خطوة أخيرة» 42.14 |
 | lens | 44.498 | 9.802 | «محتوى قيّم» 45.82 · «هيكبّر» 48.84 · «عروض وخصومات» 51.20 · «هيكبّر» 53.06 |
 | base | 54.300 | 2.740 | «فالأساس» 54.44 · «الثقة» 56.74 |
 | claim | 57.040 | 7.540 | «أهم» 59.50 · «مليون» 59.82 · «مرة» 60.32 · «هتصرف» 62.90 |
@@ -39,6 +40,9 @@ The caption band (y 1180–1320) stays clear of every object while captions run 
 - DM bubbles: ad side «بكام الكشف؟» «فيه خصم؟» «آخر سعر كام؟» «طب ممكن أقل؟» in grey; content side one bubble «عايز أحجز» in orange.
 - Content posts: feed cards with the same round avatar (a navy initial «د»), titled «نصيحة»، «معلومة»، «سؤال وجواب».
 - People (src/people.js): thirteen flat sticker busts, men and women, five in hijab, four skin tones, white cut-out edge and soft shadow. For «لناس أكتر» the phone steps back to 0.58 and they pop up around it nearest first, 0.1 s apart, as three rings go out from the phone; they nod on «أيوه», go grey on «بس لو مش بتقدّم قيمة», and drop out of frame one by one.
+- Doctor (DOCTOR in src/people.js): the viewer, in a white coat with a stethoscope. Poses are swapped stickers (worried, wow, thinking with a hand on the chin); the smile → sad change is one sticker whose mouth flips and brows tilt.
+- Winged bills: six bills that fan out from behind the phone, sprout wings and flap off the top of the frame.
+- Megaphone: the paid ad as a navy megaphone sticker labelled «إعلان ممول», with sound waves; it rides up on the last step.
 - Magnifier: the stairs' orange block opens into a glass (360 px, 16 px orange rim, navy handle). It rides on the lens scene's paper and blows up whatever it covers (scale 1.3).
 - Staircase: three navy blocks rising right to left, «محتوى» «ثقة» «إعلان»; the ad sits on the last step.
 - Balance (claim): a navy beam on a stand; the right pan holds five ticked content tiles, the left pan the «إعلان ممول» badge and the bills. The pans counter-rotate so they always hang level.
@@ -52,10 +56,10 @@ The caption band (y 1180–1320) stays clear of every object while captions run 
 ## SHOTS
 | Scene | Spoken | Hero move | Hands off by |
 |---|---|---|---|
-| hook | كلهم بيقولولك: مش هتعرف تسوّق لعيادتك صح... غير لما تعمل إعلان ممول. يا ترى الكلام ده صح؟ | Speech bubbles crowd the frame, the line slams in word by word, «إعلان ممول» lands on orange, «صح؟» stamps. | «إعلان ممول» is carried into the post's label |
-| ad | وهقولك كمان ليه الإعلان لوحده ممكن يضيّع فلوسك. الإعلان الممول هيوصّلك لناس أكتر، أيوه. بس لو مش بتقدّم قيمة... هتلاقي النتيجة مش عاجباك. اللي هيكلمك... السعر والفصال وخلاص. | Bills fall out of the phone; the crowd of people pops up, nods, greys and walks off; eight copies of the ad; everything greys; the inbox opens on four haggling bubbles. | the phone slides into the left half |
+| hook | كلهم بيقولولك: مش هتعرف تسوّق لعيادتك صح... غير لما تعمل إعلان ممول. يا ترى الكلام ده صح؟ | Frame 0: the worried doctor in the middle, four people at the edges shouting six bubbles at him, the room pushing in. The line slams in word by word (frame kick on each), he sweats; the voices are blown out; «غير لما تعمل» then the hit: a ring and speed lines, «إعلان ممول» slams on orange, he gasps «!». On «يا ترى» he puts a hand to his chin and a thought cloud forms with «يا ترى الكلام ده / صح؟». | «إعلان ممول» is carried into the post's label |
+| ad | وهقولك كمان ليه الإعلان لوحده ممكن يضيّع فلوسك. الإعلان الممول هيوصّلك لناس أكتر، أيوه. بس لو مش بتقدّم قيمة... هتلاقي النتيجة مش عاجباك. اللي هيكلمك... السعر والفصال وخلاص. | A fan of bills bursts from behind the phone, grows wings and flaps away; straight away the phone steps back and the crowd pops up (three at once, then one after another), nods, greys and walks off; eight copies of the ad; on «هتلاقي النتيجة» the doctor steps in smiling, on «مش عاجباك» his smile turns over and a big orange X crosses out the ads; the inbox opens on four haggling bubbles. | the phone slides into the left half |
 | split | طب إيه فايدة المحتوى الأورجانيك هنا بقى؟ إن المريض بيشوفك باستمرار... عايز يكشف عندك أو يعمل معاك العملية. | Two phones; posts every day on the right; the post grows, «إنت» highlighted, a heart; «عايز أحجز». | the right phone takes the centre |
-| stairs | الإعلان الممول مهم، بس بيكون خطوة أخيرة في الـ scaling. | The phone shrinks into the first step; the stairs build; the ad block lands on top. | the ad block rounds into a disc |
+| stairs | الإعلان الممول مهم، بس بيكون خطوة أخيرة في الـ scaling. | The content phone whips out and the ad whips in as a megaphone that shouts; «مهم ✓» is stamped on orange; on «بس» the megaphone drops to the ground, the steps snap up (محتوى, ثقة) and the ad step rises carrying it; «خطوة أخيرة» slams in. | the ad block rounds into a disc |
 | lens | لو الأساس بتاعك محتوى قيّم ومعلومات ونصايح، الإعلان هيكبّر ده للمريض. إنما لو الأساس عروض وخصومات، برضه هيكبّر ده للمريض. | The disc opens into a glass. Three content stickers are thrown in on their words; the glass swoops over them and blows them up; the camera follows a dashed arrow to a patient («شكراً يا دكتور», hearts). Whip down the paper to the offers («عروض» tag, «٪ خصومات» burst): same glass, same blow-up, the arrow leads to a patient asking «بكام؟ فيه خصم؟ آخر سعر كام؟». Whip back home. | the three content stickers stay put |
 | base | فالأساس عندك هو المحتوى وبناء الثقة. | The stickers drop and burst into the bottom three bricks, two more bricks fall on top, «الأساس» slams, the top brick turns orange on «الثقة». | orange flood out of the top brick |
 | claim | واستمراريتك بقى في المحتوى ده أهم مليون مرة من أي إعلان ممول، حتى لو هتصرف فيه فلوس كتير. | A week of tiles ticks off day by day; «أهم» slams with the impact; a 1,000,000 odometer spins and lands on «مرة» inside a white scribble; the claim steps up and a balance rises: content lands heavy, the ad badge and five bills land on the other pan and it barely moves. | the type clears; the orange field stays |
@@ -67,7 +71,7 @@ The speech is captioned (most viewers watch muted): 3–5 words a group, RTL, Ru
 ## SOUND
 - Voice: Yossef's recording, pauses cut, normalised to −16 LUFS, peak ≤ −1.5 dBTP.
 - No bed yet (HeyGen's catalogue is blocked from this session).
-- Effects (tools/sfx.py, bundled library, pitch-shifted b/c takes): pops on every sticker and person, whooshes on camera whips and hand-offs, pings on messages, one impact on «أهم».
+- Effects (tools/sfx.py, bundled library, pitch-shifted b/c takes): pops on every sticker and person, whooshes on camera whips and hand-offs, pings on messages, impacts on «إعلان ممول» in the hook and on «أهم».
 
 ## BANNED
 Everything in spec.md's default list, plus: Instagram/WhatsApp/Facebook UI branding; any metric, follower count, price or result on screen (the only numerals are the day labels and the spoken «مليون»); doctor or patient names; letter-by-letter effects (they break Arabic joining); LTR word reveals; English words on screen except «scaling» as spoken.

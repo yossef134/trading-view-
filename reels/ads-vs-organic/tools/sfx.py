@@ -4,7 +4,7 @@ python3 tools/sfx.py   (from the project folder, after tools/cut.py)
 
 Each cue is the moment the eye sees the hit; the clip starts early by the sample's own peak so the
 sound lands on that frame. REC cues are times on the raw recording (the scenes timed before the pauses
-were cut: hook, ad, split, stairs) and go through assets/voice/cut-map.json; CUT cues are already on the cut.
+were cut: ad, split) and go through assets/voice/cut-map.json; CUT cues are already on the cut.
 """
 import json, subprocess
 import numpy as np
@@ -12,29 +12,42 @@ import numpy as np
 peak = {"ping": .229, "whoosh": .162, "pop": .120, "impact": .073}
 rate = {"a": 1.0, "b": 1.12, "c": 0.9, "": 1.0}
 F = 1 / 30
-REC = [  # (time on the recording, sound, take, volume, what)
-    (0.15, "pop", "b", 0.35, "voice 4 pops in"), (0.30, "pop", "c", 0.35, "voice 5"), (0.45, "pop", "a", 0.35, "voice 6"),
-    (3.45, "whoosh", "a", 0.3, "the voices are blown out"),
-    (4.45, "pop", "b", 0.55, "«إعلان ممول» lands on orange"),
-    (6.65, "pop", "a", 0.7, "«صح؟» stamp"),
-    (7.26, "whoosh", "b", 0.3, "«إعلان ممول» carried into the badge"),
-    (13.5, "whoosh", "b", 0.2, "the phone steps back"),
-] + [(14.95 + k * 0.1, "pop", "abc"[k % 3], 0.22, "people pop up, nearest first" if k == 0 else "") for k in range(13)] + [
+REC = [  # (time on the recording, sound, take, volume, what): the ad and split scenes
+    (10.45, "pop", "b", 0.35, "bills fan out of the phone"),
+    (10.85, "whoosh", "a", 0.35, "the money flies off"), (11.2, "whoosh", "c", 0.25, ""),
+    (11.7, "whoosh", "b", 0.2, "the phone steps back"),
+] + [(t + 0.15, "pop", "abc"[k % 3], 0.22, "people pop up, nearest first" if k == 0 else "")
+     for k, t in enumerate([11.85, 12.1, 12.35] + [13.5 + i * 0.22 for i in range(10)])] + [
     (18.9, "whoosh", "c", 0.25, "the crowd walks off"),
     (21.5, "whoosh", "a", 0.2, "the phone comes forward"),
     (23.95, "pop", "c", 0.28, "copies of the ad"), (24.11, "pop", "a", 0.28, ""), (24.27, "pop", "b", 0.28, ""), (24.43, "pop", "c", 0.28, ""),
+    (25.0, "pop", "b", 0.4, "the doctor steps in, smiling"),
+    (26.7, "whoosh", "b", 0.35, "the X"), (26.98, "pop", "a", 0.55, ""),
     (28.5, "ping", "a", 0.4, "haggling messages"), (29.7, "ping", "c", 0.4, ""), (31.45, "ping", "b", 0.4, ""), (31.9, "ping", "a", 0.4, ""),
     (33.5, "whoosh", "c", 0.35, "content phone whips in"),
     (41.75, "pop", "a", 0.45, "heart"),
     (43.75, "ping", "b", 0.5, "banner drops"),
     (45.6, "ping", "a", 0.6, "«عايز أحجز»"),
     (47.0, "whoosh", "a", 0.3, "split collapses"),
-    (49.75, "pop", "b", 0.45, "step"), (50.45, "pop", "c", 0.45, "step"), (52.0, "pop", "a", 0.55, "the ad lands"),
-    (53.9, "whoosh", "b", 0.3, "ad block rounds into the lens"),
 ]
-LENS, BASE, CLAIM, END = 44.498, 54.30, 57.04, 64.58
+STAIRS, LENS, BASE, CLAIM, END = 39.584, 44.498, 54.30, 57.04, 64.58
 ROOT_END = 73.04
 CUT = [  # (time on the cut, sound, take, volume, what)
+    (0.2, "pop", "b", 0.35, "more voices pile in"), (0.32, "pop", "c", 0.35, ""), (0.44, "pop", "a", 0.35, ""),
+    (1.05, "whoosh", "b", 0.25, "the noise falls back"),
+] + [(t + 0.13, "pop", "cab"[i % 3], 0.3, "the line slams in" if i == 0 else "") for i, t in enumerate([1.11, 1.39, 1.75, 2.23, 2.73])] + [
+    (3.05, "whoosh", "a", 0.3, "the voices are blown out"),
+    (4.07, "impact", "", 0.28, "«إعلان ممول» hits"), (4.07, "pop", "b", 0.5, ""),
+    (4.22, "pop", "c", 0.35, "the doctor gasps"),
+    (5.25, "pop", "a", 0.35, "he starts to think"),
+    (5.95, "pop", "a", 0.65, "«صح؟» stamp"),
+    (6.12, "whoosh", "b", 0.3, "«إعلان ممول» carried into the badge"),
+    (STAIRS + 0.05, "whoosh", "b", 0.3, "the content phone whips out"),
+    (STAIRS + 0.25, "whoosh", "c", 0.3, "the megaphone whips in"), (STAIRS + 0.5, "pop", "a", 0.4, ""),
+    (STAIRS + 1.36, "pop", "a", 0.65, "«مهم» stamp"),
+    (STAIRS + 1.85, "whoosh", "a", 0.22, "the megaphone drops to the ground"),
+    (STAIRS + 2.0, "pop", "c", 0.4, "steps"), (STAIRS + 2.17, "pop", "b", 0.4, ""), (STAIRS + 2.5, "pop", "a", 0.45, "the ad step rises"),
+    (STAIRS + 4.45, "whoosh", "b", 0.3, "ad block rounds into the lens"),
     (LENS + 1.47, "pop", "a", 0.45, "content stickers land"), (LENS + 2.27, "pop", "b", 0.45, ""), (LENS + 3.05, "pop", "c", 0.45, ""),
     (LENS + 3.8, "whoosh", "c", 0.3, "the glass swoops in"),
     (LENS + 4.4, "pop", "b", 0.5, "«هيكبّر»"),
