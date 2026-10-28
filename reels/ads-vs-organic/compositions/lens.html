@@ -1,0 +1,106 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Alexandria", sans-serif;
+      color: var(--color-ink);
+    }
+    #lens-magwrap { --lx: 510px; --ly: 760px; }
+    #root .stage { position: absolute; inset: 0; }
+    #root .card { position: absolute; left: 190px; width: 700px; border-radius: 30px; direction: rtl; }
+    #root .c-content { top: 270px; height: 300px; background: #faf7f3; border: 4px solid var(--color-ink); }
+    #root .c-av { position: absolute; right: 28px; top: 28px; width: 76px; height: 76px; border-radius: 50%; background: var(--color-ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 800; }
+    #root .c-title { position: absolute; right: 124px; top: 30px; font-size: 64px; font-weight: 800; line-height: 72px; }
+    #root .c-body { position: absolute; right: 30px; left: 30px; top: 140px; font-size: 54px; font-weight: 600; line-height: 1.35; }
+    #root .c-deal { top: 820px; height: 260px; background: #e4dcd2; }
+    #root .c-badge { position: absolute; right: 28px; top: 26px; padding: 4px 18px; border-radius: 12px; background: #ece7e0; color: #5b616b; font-size: 34px; font-weight: 800; }
+    #root .c-deal-txt { position: absolute; left: 0; right: 0; top: 104px; text-align: center; font-size: 72px; font-weight: 800; }
+    #root .lab { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; font-size: 56px; font-weight: 800; }
+    #root .hag { position: absolute; display: flex; direction: rtl; }
+    #root .hag div { background: #ecedef; color: #4a4f57; font-size: 40px; font-weight: 600; padding: 14px 26px; border-radius: 34px; border-top-right-radius: 10px; white-space: nowrap; }
+    /* the magnified copy: same stage, scaled 1.8 about the lens centre, cut to the lens */
+    #lens-mag {
+      background: var(--color-ground);
+      transform-origin: var(--lx) var(--ly);
+      transform: scale(1.8);
+      clip-path: circle(92px at var(--lx) var(--ly));
+    }
+    #lens-ring { position: absolute; left: 330px; top: 580px; width: 360px; height: 360px; }
+    #lens-disc { position: absolute; inset: 0; border-radius: 50%; background: var(--color-accent); }
+    #lens-rim { position: absolute; inset: 0; border-radius: 50%; border: 14px solid var(--color-accent); box-shadow: 0 18px 36px rgba(20, 33, 61, 0.18); }
+    #lens-handle { position: absolute; left: 300px; top: 300px; width: 42px; height: 190px; border-radius: 21px; background: var(--color-ink); transform-origin: 50% 0%; }
+  </style>
+  <div id="root" data-composition-id="lens" data-width="1080" data-height="1920">
+    <div class="stage" id="lens-base">
+      <div class="card c-content lens-in"><div class="c-av" data-layout-ignore>د</div><div class="c-title">نصيحة</div><div class="c-body">لو إنت بتعاني من ده<br />ابدأ بالخطوة دي</div></div>
+      <div class="lab lens-in" style="top: 600px">محتوى قيّم</div>
+      <div class="card c-deal lens-in"><div class="c-badge">إعلان ممول</div><div class="c-deal-txt">خصم على الكشف</div></div>
+      <div class="lab lens-in" style="top: 1110px; color: #7d838c">عروض وخصومات</div>
+      <div class="hag lens-hag" style="left: 150px; top: 1200px"><div>بكام؟</div></div>
+      <div class="hag lens-hag" style="left: 640px; top: 1200px"><div>فيه خصم؟</div></div>
+    </div>
+    <div class="stage" id="lens-magwrap" data-layout-ignore><div class="stage" id="lens-mag">
+      <div class="card c-content lens-in"><div class="c-av" data-layout-ignore>د</div><div class="c-title">نصيحة</div><div class="c-body">لو إنت بتعاني من ده<br />ابدأ بالخطوة دي</div></div>
+      <div class="lab lens-in" style="top: 600px">محتوى قيّم</div>
+      <div class="card c-deal lens-in"><div class="c-badge">إعلان ممول</div><div class="c-deal-txt">خصم على الكشف</div></div>
+      <div class="lab lens-in" style="top: 1110px; color: #7d838c">عروض وخصومات</div>
+      <div class="hag lens-hag" style="left: 150px; top: 1200px"><div>بكام؟</div></div>
+      <div class="hag lens-hag" style="left: 640px; top: 1200px"><div>فيه خصم؟</div></div>
+    </div></div>
+    <div id="lens-ring">
+      <div id="lens-handle"></div>
+      <div id="lens-rim"></div>
+      <div id="lens-disc"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // the lens centre drives both the ring (x/y from 510,760) and the magnified copy (--lx/--ly on its wrapper)
+      const lensTo = (lx, ly, t, d, ease) => {
+        tl.to("#lens-ring", { x: lx - 510, y: ly - 760, duration: d, ease }, t);
+        tl.to("#lens-magwrap", { "--lx": lx + "px", "--ly": ly + "px", duration: d, ease }, t);
+      };
+
+      gsap.set(".lens-in", { opacity: 0 });
+      gsap.set(".lens-hag", { opacity: 0 });
+      gsap.set("#lens-magwrap", { opacity: 0 });
+      gsap.set("#lens-handle", { rotation: -45, scaleY: 0 });
+
+      // the coral disc opens into a lens: the fill drains, the handle grows, the stage arrives
+      tl.to("#lens-disc", { opacity: 0, duration: 0.35, ease: "power2.inOut" }, 0.1);
+      tl.to("#lens-handle", { scaleY: 1, duration: 0.35, ease: "expo.out" }, 0.25);
+      tl.fromTo(".lens-in", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out", stagger: 0.06 }, 0.2);
+      tl.set("#lens-magwrap", { opacity: 1 }, 0.45);
+
+      // «لو الأساس محتوى قيّم... الإعلان هيكبّر ده»: over the content card, then a slow read across it
+      lensTo(640, 420, 0.6, 0.8, "power2.inOut");
+      lensTo(400, 440, 1.6, 2.6, "power1.inOut");
+
+      // «إنما لو الأساس عروض وخصومات، برضه هيكبّر ده»: over the deal; the haggling arrives with it
+      lensTo(640, 950, 4.5, 0.8, "power2.inOut");
+      tl.fromTo(".lens-hag", { opacity: 0, scale: 0.75, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.12, ease: "back.out(1.4)", stagger: 0.5 }, 5.6);
+      lensTo(380, 960, 5.5, 2.6, "power1.inOut");
+
+      // the lens pulls back and the stage clears for the foundation
+      tl.to("#lens-ring", { scale: 0.6, opacity: 0, y: "-=120", duration: 0.35, ease: "power3.in" }, 8.4);
+      tl.to("#lens-magwrap", { opacity: 0, duration: 0.2, ease: "none" }, 8.4);
+      tl.to(["#lens-base .lens-in", "#lens-base .lens-hag"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 8.65);
+
+      window.__timelines["lens"] = tl;
+    })();
+  </script>
+</template>

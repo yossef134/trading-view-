@@ -1,0 +1,111 @@
+<!doctype html>
+<html
+  lang="ar"
+  data-resolution="portrait"
+  data-composition-variables='[
+  {"id":"color-ground","type":"color","label":"Background","default":"#F3EEE7"},
+  {"id":"color-ink","type":"color","label":"Text","default":"#14213D"},
+  {"id":"color-accent","type":"color","label":"Accent","default":"#FF5A4E"},
+  {"id":"color-mute","type":"color","label":"Ad side grey","default":"#9AA0A8"},
+  {"id":"font-display","type":"string","label":"Display font","default":"Alexandria"}
+]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Alexandria";
+        src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
+        font-weight: 100 900;
+        unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+      }
+      @font-face {
+        font-family: "Alexandria";
+        src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
+        font-weight: 100 900;
+        unicode-range: U+0000-00FF, U+2000-206F;
+      }
+      :root {
+        --color-ground: #f3eee7;
+        --color-ink: #14213d;
+        --color-accent: #ff5a4e;
+        --color-mute: #9aa0a8;
+        --font-display: "Alexandria";
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--color-ground);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: var(--font-display), sans-serif;
+      }
+      #ground {
+        position: absolute;
+        inset: 0;
+        background: var(--color-ground);
+      }
+      #grain {
+        position: absolute;
+        inset: 0;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="73"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="ground" data-layout-ignore></div>
+      <div id="grain" data-layout-ignore></div>
+
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+        data-start="0" data-duration="6.5" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="ad" data-composition-id="ad" data-composition-src="compositions/ad.html"
+        data-start="6.5" data-duration="20.5" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="split" data-composition-id="split" data-composition-src="compositions/split.html"
+        data-start="27" data-duration="17" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="stairs" data-composition-id="stairs" data-composition-src="compositions/stairs.html"
+        data-start="44" data-duration="5" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="lens" data-composition-id="lens" data-composition-src="compositions/lens.html"
+        data-start="49" data-duration="9" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="base" data-composition-id="base" data-composition-src="compositions/base.html"
+        data-start="58" data-duration="4" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="claim" data-composition-id="claim" data-composition-src="compositions/claim.html"
+        data-start="62" data-duration="5" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html"
+        data-start="67" data-duration="6" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

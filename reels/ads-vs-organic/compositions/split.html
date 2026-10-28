@@ -1,0 +1,158 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Alexandria", sans-serif;
+      color: var(--color-ink);
+    }
+    /* ---- phone (shared with ad / stairs) ---- */
+    #root .phone { position: absolute; left: 240px; top: 210px; width: 540px; height: 1080px; }
+    #root .ph-shell { position: absolute; inset: 0; border-radius: 88px; background: #101317; box-shadow: 0 40px 80px rgba(20, 33, 61, 0.18); }
+    #root .ph-screenbg { position: absolute; left: 20px; top: 20px; width: 500px; height: 1040px; border-radius: 70px; background: #ffffff; }
+    #root .ph-screen { position: absolute; left: 20px; top: 20px; width: 500px; height: 1040px; border-radius: 70px; overflow: hidden; direction: rtl; }
+    #root .ph-status { position: absolute; left: 0; top: 0; width: 500px; height: 60px; direction: ltr; display: flex; justify-content: space-between; align-items: center; padding: 0 46px; font-size: 24px; font-weight: 700; }
+    #root .ph-bat { width: 44px; height: 20px; border: 3px solid var(--color-ink); border-radius: 6px; }
+    #root .ph-title { position: absolute; right: 28px; top: 74px; font-size: 46px; font-weight: 800; }
+    #root .inbox { position: absolute; inset: 0; background: #ffffff; }
+    #root .bub-row { position: absolute; right: 20px; display: flex; align-items: flex-start; gap: 12px; direction: rtl; }
+    #root .bub-av { flex: none; width: 48px; height: 48px; border-radius: 50%; background: #d5d8dc; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: #4a4f57; }
+    #root .bub { position: relative; background: #ecedef; color: #4a4f57; font-size: 46px; font-weight: 600; line-height: 1.35; padding: 14px 28px; border-radius: 36px; border-top-right-radius: 10px; white-space: nowrap; }
+    /* content feed */
+    #root .feed { position: absolute; left: 0; top: 0; width: 500px; height: 1040px; }
+    #root .fpost { position: absolute; left: 24px; width: 452px; height: 300px; }
+    #root .fday { position: absolute; right: 4px; top: 0; font-size: 46px; font-weight: 700; color: #7d838c; }
+    #root .fcard { position: absolute; left: 0; top: 64px; width: 452px; height: 250px; background: #faf7f3; border: 3px solid #e3ddd4; border-radius: 28px; direction: rtl; }
+    #root .fav { position: absolute; right: 20px; top: 20px; width: 60px; height: 60px; border-radius: 50%; background: var(--color-ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; }
+    #root .ftitle { position: absolute; right: 96px; top: 20px; font-size: 52px; font-weight: 800; line-height: 60px; }
+    #root .fbody { position: absolute; right: 22px; left: 22px; top: 112px; font-size: 46px; font-weight: 600; line-height: 1.3; }
+    #root .hl { background-image: linear-gradient(rgba(255, 90, 78, 0.38), rgba(255, 90, 78, 0.38)); background-repeat: no-repeat; background-position: 100% 70%; background-size: 0% 60%; }
+    #root .banner { position: absolute; left: 16px; top: 70px; width: 468px; height: 110px; background: #ffffff; border-radius: 30px; box-shadow: 0 12px 30px rgba(20, 33, 61, 0.18); display: flex; align-items: center; gap: 16px; padding: 0 22px; direction: rtl; }
+    #root .banner .bub-av { width: 60px; height: 60px; font-size: 28px; }
+    #root .banner b { font-size: 46px; font-weight: 800; }
+    #root .bub-hot { background: var(--color-accent); color: var(--color-ink); font-size: 56px; font-weight: 800; }
+    /* frame */
+    #root .q { position: absolute; left: 80px; top: 210px; width: 860px; text-align: center; direction: rtl; font-size: 66px; font-weight: 800; line-height: 1.35; white-space: nowrap; }
+    #root .lab { position: absolute; top: 386px; width: 300px; margin-left: -150px; text-align: center; font-size: 52px; font-weight: 800; }
+    #split-big { position: absolute; left: 284px; top: 444px; width: 452px; height: 250px; background: #faf7f3; border: 3px solid #e3ddd4; border-radius: 28px; direction: rtl; box-shadow: 0 30px 60px rgba(20, 33, 61, 0.16); }
+  </style>
+  <div id="root" data-composition-id="split" data-width="1080" data-height="1920">
+    <div class="q" id="split-q">طب إيه فايدة المحتوى<br />الأورجانيك هنا بقى؟</div>
+    <div class="lab" id="split-lab-ad" style="left: 317px; color: #7d838c">إعلان</div>
+    <div class="lab" id="split-lab-co" style="left: 702px">محتوى</div>
+
+    <!-- left: the ad phone, as the ad scene left it -->
+    <div class="phone" id="split-left">
+      <div class="ph-shell"></div>
+      <div class="ph-screenbg"></div>
+      <div class="ph-screen">
+        <div class="inbox">
+          <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+          <div class="ph-title">رسايل</div>
+          <div class="bub-row" style="top: 180px"><div class="bub-av" data-layout-ignore>م</div><div class="bub">بكام الكشف؟</div></div>
+          <div class="bub-row" style="top: 305px"><div class="bub-av" data-layout-ignore>س</div><div class="bub">فيه خصم؟</div></div>
+          <div class="bub-row" style="top: 430px"><div class="bub-av" data-layout-ignore>ه</div><div class="bub">آخر سعر كام؟</div></div>
+          <div class="bub-row" style="top: 555px"><div class="bub-av" data-layout-ignore>ن</div><div class="bub">طب ممكن أقل؟</div></div>
+          <div class="bub-row" id="split-churn1" style="top: 680px"><div class="bub-av" data-layout-ignore>ر</div><div class="bub">بكام؟</div></div>
+          <div class="bub-row" id="split-churn2" style="top: 805px"><div class="bub-av" data-layout-ignore>ك</div><div class="bub">فيه عرض؟</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right: the content phone -->
+    <div class="phone" id="split-right">
+      <div class="ph-shell"></div>
+      <div class="ph-screenbg"></div>
+      <div class="ph-screen">
+        <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+        <div class="ph-title" data-layout-allow-overlap>الرئيسية</div>
+        <div class="feed" id="split-feed">
+          <div class="fpost" id="split-p0" style="top: 1140px"><div class="fday">السبت</div><div class="fcard"><div class="fav" data-layout-ignore>د</div><div class="ftitle">نصيحة</div><div class="fbody">خلي بالك من دي</div></div></div>
+          <div class="fpost" id="split-p1" style="top: 810px"><div class="fday">الحد</div><div class="fcard"><div class="fav" data-layout-ignore>د</div><div class="ftitle">معلومة</div><div class="fbody">إيه اللي بيحصل؟</div></div></div>
+          <div class="fpost" id="split-p2" style="top: 480px"><div class="fday">الاتنين</div><div class="fcard"><div class="fav" data-layout-ignore>د</div><div class="ftitle">سؤال وجواب</div><div class="fbody">سؤالك وإجابته</div></div></div>
+          <div class="fpost" id="split-p3" style="top: 150px"><div class="fday">التلات</div><div class="fcard"><div class="fav" data-layout-ignore>د</div><div class="ftitle">نصيحة</div><div class="fbody">لو إنت بتعاني...</div></div></div>
+        </div>
+        <div class="banner" id="split-banner" data-layout-allow-overlap><div class="bub-av" data-layout-ignore>م</div><b>رسالة جديدة</b></div>
+        <div class="inbox" id="split-chat">
+          <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+          <div class="ph-title">رسايل</div>
+          <div class="bub-row" id="split-hot" style="top: 190px"><div class="bub-av" data-layout-ignore>م</div><div class="bub bub-hot">عايز أحجز</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- the newest post, lifted toward the camera -->
+    <div id="split-big" data-layout-allow-overlap>
+      <div class="fav" data-layout-ignore>د</div>
+      <div class="ftitle">نصيحة</div>
+      <div class="fbody">لو <span class="hl" id="split-hl">إنت</span> بتعاني...</div>
+      <svg id="split-heart" viewBox="0 0 24 24" style="position: absolute; left: 22px; bottom: 18px; width: 52px; height: 52px"><path d="M12 20s-7-4.4-9.2-8.8A5 5 0 0 1 12 6.4a5 5 0 0 1 9.2 4.8C19 15.6 12 20 12 20z" fill="#14213D" /></svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // initial state
+      gsap.set("#split-left", { x: -193, y: 55, scale: 0.62, opacity: 1 });
+      gsap.set("#split-right", { x: 192, y: 55, scale: 0.62 });
+      gsap.set(["#split-q", ".lab", "#split-churn1", "#split-churn2", "#split-big"], { opacity: 0 });
+      gsap.set(".fpost", { opacity: 0 });
+      gsap.set("#split-feed", { y: -990 });
+      gsap.set("#split-banner", { y: -200, opacity: 0 });
+      gsap.set("#split-chat", { clipPath: "circle(0px at 250px 125px)" });
+      gsap.set("#split-hot", { opacity: 0 });
+      gsap.set("#split-heart", { opacity: 0 });
+      gsap.set("#split-big", { x: 192, y: 123.8, scale: 0.62 });
+
+      // the content phone whips in from the right and sharpens
+      tl.fromTo("#split-right", { x: 892, filter: "blur(12px)" }, { x: 192, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 0.05);
+      tl.fromTo("#split-q", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.3);
+      tl.to("#split-q", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 3.0);
+      tl.fromTo(".lab", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.1 }, 3.15);
+
+      // «بيشوفك باستمرار»: a post a day, same face each time; the feed pushes down
+      [3.2, 4.2, 5.2, 6.2].forEach((t, i) => {
+        tl.to("#split-feed", { y: -(3 - i) * 330, duration: 0.45, ease: "expo.out" }, t);
+        tl.fromTo(`#split-p${i}`, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, t + 0.05);
+      });
+      // the ad side keeps churning
+      tl.fromTo("#split-churn1", { opacity: 0, scale: 0.75, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.12, ease: "back.out(1.4)" }, 5.0);
+      tl.fromTo("#split-churn2", { opacity: 0, scale: 0.75, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.12, ease: "back.out(1.4)" }, 7.0);
+
+      // «بيحس إنك فعلاً بتحل مشكلته... بيكلمه هو بس»
+      tl.to(["#split-left", "#split-lab-ad"], { opacity: 0.4, duration: 0.4, ease: "power2.inOut" }, 8.0);
+      tl.set("#split-big", { opacity: 1 }, 8.1);
+      tl.to("#split-big", { x: 0, y: 211, scale: 1.75, duration: 0.6, ease: "expo.out" }, 8.1);
+      tl.to("#split-hl", { backgroundSize: "100% 60%", duration: 0.4, ease: "power2.out" }, 9.6);
+      tl.fromTo("#split-heart", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(1.6)" }, 10.9);
+      tl.to("#split-big", { x: 192, y: 123.8, scale: 0.62, duration: 0.4, ease: "power3.inOut" }, 12.3);
+      tl.set("#split-big", { opacity: 0 }, 12.7);
+
+      // «واحد عايز يكشف عندك»: a message lands on the content side
+      tl.to("#split-banner", { y: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 13.0);
+      tl.to("#split-chat", { clipPath: "circle(1200px at 250px 125px)", duration: 0.35, ease: "power3.out" }, 13.9);
+      tl.set(["#split-feed", "#split-banner"], { opacity: 0 }, 14.3);
+      tl.fromTo("#split-hot", { opacity: 0, scale: 0.75, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.12, ease: "back.out(1.4)" }, 14.9);
+
+      // the split collapses into the content phone
+      tl.to(["#split-left", "#split-lab-ad"], { x: "-=900", duration: 0.5, ease: "power3.in" }, 15.9);
+      tl.to("#split-lab-co", { opacity: 0, duration: 0.2, ease: "power3.in" }, 15.9);
+      tl.to("#split-right", { x: 0, y: 0, scale: 1, duration: 0.8, ease: "power2.inOut" }, 16.0);
+
+      window.__timelines["split"] = tl;
+    })();
+  </script>
+</template>

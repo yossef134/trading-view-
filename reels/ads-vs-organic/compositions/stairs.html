@@ -1,0 +1,84 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Alexandria", sans-serif;
+      color: var(--color-ink);
+    }
+    /* ---- phone (shared with ad / split) ---- */
+    #root .phone { position: absolute; left: 240px; top: 210px; width: 540px; height: 1080px; }
+    #root .ph-shell { position: absolute; inset: 0; border-radius: 88px; background: #101317; box-shadow: 0 40px 80px rgba(20, 33, 61, 0.18); }
+    #root .ph-screen { position: absolute; left: 20px; top: 20px; width: 500px; height: 1040px; border-radius: 70px; overflow: hidden; direction: rtl; background: #ffffff; }
+    #root .ph-status { position: absolute; left: 0; top: 0; width: 500px; height: 60px; direction: ltr; display: flex; justify-content: space-between; align-items: center; padding: 0 46px; font-size: 24px; font-weight: 700; }
+    #root .ph-bat { width: 44px; height: 20px; border: 3px solid var(--color-ink); border-radius: 6px; }
+    #root .ph-title { position: absolute; right: 28px; top: 74px; font-size: 46px; font-weight: 800; }
+    #root .bub-row { position: absolute; right: 20px; display: flex; align-items: flex-start; gap: 12px; direction: rtl; }
+    #root .bub-av { flex: none; width: 48px; height: 48px; border-radius: 50%; background: #d5d8dc; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: #4a4f57; }
+    #root .bub { background: var(--color-accent); color: var(--color-ink); font-size: 56px; font-weight: 800; line-height: 1.35; padding: 16px 28px; border-radius: 36px; border-top-right-radius: 10px; white-space: nowrap; }
+    /* the staircase */
+    #root .step { position: absolute; width: 260px; border-radius: 22px; background: var(--color-ink); }
+    #root .step span { position: absolute; left: 0; right: 0; top: 30px; text-align: center; direction: rtl; font-size: 56px; font-weight: 800; color: #ffffff; }
+    #stairs-s3 { background: var(--color-accent); }
+    #stairs-s3 span { color: var(--color-ink); }
+    #root .title { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; font-weight: 800; }
+  </style>
+  <div id="root" data-composition-id="stairs" data-width="1080" data-height="1920">
+    <div class="title" id="stairs-t1" style="top: 290px; font-size: 110px">خطوة أخيرة</div>
+    <div class="title" id="stairs-t2" style="top: 450px; font-size: 56px; font-weight: 700">في الـ scaling</div>
+
+    <div class="step" id="stairs-s1" style="left: 660px; top: 1030px; height: 220px"><span>محتوى</span></div>
+    <div class="step" id="stairs-s2" style="left: 390px; top: 830px; height: 420px"><span>ثقة</span></div>
+    <div class="step" id="stairs-s3" style="left: 120px; top: 630px; height: 620px"><span id="stairs-s3-lab">إعلان</span></div>
+
+    <!-- the content phone, as the split left it -->
+    <div class="phone" id="stairs-phone">
+      <div class="ph-shell"></div>
+      <div class="ph-screen">
+        <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+        <div class="ph-title">رسايل</div>
+        <div class="bub-row" style="top: 190px"><div class="bub-av" data-layout-ignore>م</div><div class="bub">عايز أحجز</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set(["#stairs-t1", "#stairs-t2"], { opacity: 0 });
+      gsap.set(["#stairs-s1", "#stairs-s2"], { scaleY: 0, transformOrigin: "50% 100%" });
+      gsap.set("#stairs-s3", { y: -900, opacity: 0 });
+
+      // the phone (the content) becomes the first step
+      tl.to("#stairs-phone", { x: 280, y: 390, scale: 0.2, duration: 0.6, ease: "power3.inOut" }, 0.1);
+      tl.to("#stairs-phone", { opacity: 0, duration: 0.2, ease: "none" }, 0.5);
+      tl.to("#stairs-s1", { scaleY: 1, duration: 0.45, ease: "expo.out" }, 0.5);
+      tl.to("#stairs-s2", { scaleY: 1, duration: 0.5, ease: "expo.out" }, 1.0);
+      // the ad lands last, on the top step
+      tl.set("#stairs-s3", { opacity: 1 }, 1.9);
+      tl.to("#stairs-s3", { y: 0, duration: 0.5, ease: "back.out(1.2)" }, 1.9);
+
+      // «بس بيكون خطوة أخيرة في الـ scaling»
+      tl.fromTo("#stairs-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 2.6);
+      tl.fromTo("#stairs-t2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 3.3);
+
+      // hand-off: the ad block lifts off and rounds into the lens (360 px disc at 510,760)
+      tl.to("#stairs-s3-lab", { opacity: 0, duration: 0.15, ease: "none" }, 4.2);
+      tl.to(["#stairs-s1", "#stairs-s2", "#stairs-t1", "#stairs-t2"], { opacity: 0, y: "+=40", duration: 0.3, ease: "power3.in" }, 4.3);
+      tl.to("#stairs-s3", { x: 260, y: -180, scaleX: 1.385, scaleY: 0.5809, borderRadius: "50%", duration: 0.6, ease: "power2.inOut" }, 4.3);
+
+      window.__timelines["stairs"] = tl;
+    })();
+  </script>
+</template>

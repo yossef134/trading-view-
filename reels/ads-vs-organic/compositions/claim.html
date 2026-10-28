@@ -1,0 +1,45 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+    @font-face {
+      font-family: "Alexandria";
+      src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Alexandria", sans-serif;
+      color: var(--color-ink);
+    }
+    #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; font-weight: 800; }
+    #claim-flood { position: absolute; inset: 0; background: var(--color-accent); }
+  </style>
+  <div id="root" data-composition-id="claim" data-width="1080" data-height="1920">
+    <div id="claim-flood" data-layout-ignore></div>
+    <div class="t" id="claim-a" style="top: 440px; font-size: 56px; font-weight: 700; white-space: nowrap">واستمراريتك في المحتوى ده</div>
+    <div class="t" id="claim-stamp" style="top: 560px; font-size: 150px; line-height: 1.2; white-space: nowrap">أهم<br />مليون مرة</div>
+    <div class="t" id="claim-b" style="top: 1000px; font-size: 60px; font-weight: 700; white-space: nowrap">من أي إعلان ممول</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set(["#claim-a", "#claim-stamp", "#claim-b"], { opacity: 0 });
+      // colour flood from the centre of the frame
+      tl.fromTo("#claim-flood", { clipPath: "circle(0px at 510px 760px)" }, { clipPath: "circle(2300px at 510px 760px)", duration: 0.45, ease: "power2.inOut" }, 0);
+      tl.fromTo("#claim-a", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.35);
+      // «أهم مليون مرة» stamps: 1.3 → 1 in 4 frames, no ease, then holds still
+      tl.fromTo("#claim-stamp", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, 2.1);
+      tl.fromTo("#claim-b", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 3.0);
+      // clear the type before the end card takes the coral field
+      tl.to(["#claim-a", "#claim-stamp", "#claim-b"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 4.75);
+      window.__timelines["claim"] = tl;
+    })();
+  </script>
+</template>
