@@ -16,6 +16,7 @@
 - Sound: the cut voice plus 94 effects from the bundled HyperFrames library. No music (HeyGen is blocked from this session).
 
 ## Measured
+- Draft render (renders/draft-v4.mp4, not committed): 73.07 s, h264 + aac, −15.5 LUFS integrated, −1.4 dBTP peak.
 - `check`: 0 errors, 0 lint warnings.
 - Kept warnings: `line_unread` on a few short lines the faster pace now shows for under the reading floor («صح؟» before it is carried, «شكراً يا دكتور» 0.8 s, the haggling bubbles 0.6 s, the spinning odometer digits); `text_below_floor` on the post's «إعلان ممول» label while the phone is stepped back to 0.58 (19 px); `escaped_container` on the lens scene's off-frame station (it sits on the camera's paper by design).
 - Seams checked at −0.2 s to +0.2 s on every cut (snapshot --review).
