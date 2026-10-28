@@ -28,15 +28,8 @@ TIME:    the voice is the clock: assets/voice/voice.wav, 83.95 s; the film runs 
 Every spoken and on-screen line is Yossef's approved script (2026-10-28), verbatim. On-screen DMs, post titles and the ad label are illustrative props drawn from his own words ("السعر والفصال", "خصم على الكشف", "عايز أحجز"); no metrics, names or results appear anywhere.
 
 ## LOOK
-- Ground: solid #F3EEE7 (warm plaster, the colour of a clinic wall), 2% monochrome noise. No gradients across the full frame.
-- Ink: #14213D (deep navy). Every word meant to be read, every outline.
-- Accent: #FF5A4E (coral). One focus per shot only: «صح؟», the «عايز أحجز» DM, the magnifier rim, «مليون مرة», the follow button.
-- The ad side: desaturated #9AA0A8 grey for bubbles, the duplicated ads and the haggling.
-- Display face: Alexandria 800 (Arabic), sized 66–112 px, line height 1.3, tracking 0, one line per row (`nowrap`). Stamps 150–230 px. Alexandria runs wide: a 112 px line holds about 8 Arabic letters per 860 px.
-- Body face: Alexandria 500, 44–56 px. Captions: Alexandria 700, 64 px base / 46 px min, ink on a #F3EEE7 card at 92% when over phones.
-- Medium: the product UI of a phone. A generic messaging app and feed (no Instagram/WhatsApp branding).
-- Light and depth: one soft contact shadow under each phone, 0 40px 80px rgba(20,33,61,0.18). No glow, no blur halos, no vignette.
-- Direction: RTL everywhere (`dir="rtl"`). Word-by-word reveals run right to left.
+Identity A from `DESIGN.md` (the brand file is normative): white ground, navy #13213F ink, orange #FF6A13 once per frame as a fill behind navy text, Rubik Medium upright for Arabic, Indie Flower bold for English words. No grain, no gradients, no glow. RTL everywhere.
+The phone sits at 0.86 and 60 px higher than in v1, and the stairs, lens and foundation are lifted, so the caption band (y 1180–1320) stays clear.
 
 ## OBJECTS
 - Phone: 540 x 1080 px at (240, 210), 20 px black bezel, 88 px outer radius, a status bar (time 9:41, battery), screen #FFFFFF 500 x 1040. In split screen each phone scales to 0.62 (left centre 317,805 / right centre 702,805), so text inside a phone is at least 46 px.

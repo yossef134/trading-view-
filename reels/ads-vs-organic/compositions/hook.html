@@ -1,117 +1,77 @@
 <template>
   <style>
     @font-face {
-      font-family: "Alexandria";
-      src: url("assets/fonts/alexandria-arabic.woff2") format("woff2");
-      font-weight: 100 900;
+      font-family: "Rubik";
+      src: url("assets/fonts/rubik-arabic.woff2") format("woff2");
+      font-weight: 300 900;
       unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
     }
     @font-face {
-      font-family: "Alexandria";
-      src: url("assets/fonts/alexandria-latin.woff2") format("woff2");
-      font-weight: 100 900;
+      font-family: "Rubik";
+      src: url("assets/fonts/rubik-latin.woff2") format("woff2");
+      font-weight: 300 900;
       unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    @font-face {
+      font-family: "Indie Flower";
+      src: url("assets/fonts/indieflower-latin.woff2") format("woff2");
+      font-weight: 400;
     }
     #root {
       position: absolute;
       inset: 0;
-      font-family: "Alexandria", sans-serif;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
       color: var(--color-ink);
     }
-    #root .line {
-      position: absolute;
-      left: 80px;
-      width: 860px;
-      text-align: center;
-      direction: rtl;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    #hook-quiet {
-      top: 320px;
-      font-size: 54px;
-      font-weight: 600;
-      opacity: 0.6;
-    }
-    #hook-l1 {
-      top: 420px;
-      font-size: 86px;
-      line-height: 1.3;
-    }
-    #hook-l2 {
-      top: 700px;
-      font-size: 86px;
-      line-height: 1.3;
-    }
-    #hook-l2 .w,
-    #hook-ad span {
-      color: #c9c3ba;
-    }
-    #hook-ad {
-      position: absolute;
-      left: 130px;
-      top: 860px;
-      width: 760px;
-      height: 160px;
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      direction: rtl;
-      font-size: 112px;
-      font-weight: 800;
-      background-color: rgba(236, 231, 224, 0);
-    }
-    #hook-ask {
-      top: 400px;
-      font-size: 64px;
-      font-weight: 700;
-    }
-    #hook-stamp {
-      top: 500px;
-      font-size: 230px;
-      line-height: 1.2;
-      color: var(--color-accent);
-    }
+    #root .en { font-family: "Indie Flower", cursive; font-weight: 700; -webkit-text-stroke: 1.2px currentColor; font-size: 1.3em; direction: ltr; unicode-bidi: isolate; }
+    #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; }
+    #hook-quiet { top: 300px; font-size: 60px; color: var(--color-muted); }
+    #hook-l1 { top: 390px; font-size: 104px; line-height: 1.3; }
+    #hook-l2 { top: 700px; font-size: 104px; }
+    #hook-l2 .w, #hook-ad span { color: #c5cbd6; }
+    #hook-ad { position: absolute; left: 130px; top: 860px; width: 760px; height: 170px; border-radius: 40px; display: flex; align-items: center; justify-content: center; direction: rtl; font-size: 130px; background-color: rgba(238, 241, 246, 0); }
+    #hook-bar { position: absolute; left: 290px; top: 648px; width: 440px; height: 14px; border-radius: 7px; background: var(--color-accent); transform-origin: 100% 50%; }
+    #hook-ask { top: 380px; font-size: 66px; }
+    #hook-stamp { top: 470px; }
+    #hook-stamp span { display: inline-block; font-size: 230px; line-height: 1.15; padding: 0 40px; border-radius: 28px; background: var(--color-accent); color: var(--color-ink); }
   </style>
   <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
-    <div id="hook-quiet" class="line">كلهم بيقولولك:</div>
-    <div id="hook-l1" class="line">مش هتعرف تسوّق<br />لعيادتك صح</div>
-    <div id="hook-l2" class="line">
-      <span class="w">غير</span> <span class="w">لما</span> <span class="w">تعمل</span>
-    </div>
+    <div id="hook-quiet" class="t">كلهم بيقولولك:</div>
+    <div id="hook-l1" class="t">مش هتعرف تسوّق<br />لعيادتك صح</div>
+    <div id="hook-bar"></div>
+    <div id="hook-l2" class="t"><span class="w">غير</span> <span class="w">لما</span> <span class="w">تعمل</span></div>
     <div id="hook-ad"><span>إعلان ممول</span></div>
-    <div id="hook-ask" class="line">يا ترى الكلام ده</div>
-    <div id="hook-stamp" class="line">صح؟</div>
+    <div id="hook-ask" class="t">يا ترى الكلام ده</div>
+    <div id="hook-stamp" class="t"><span>صح؟</span></div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      const INK = "#14213D";
-      gsap.set(["#hook-quiet", "#hook-l1"], { opacity: 1, filter: "blur(0px)" });
-      gsap.set("#hook-quiet", { opacity: 0.6 });
+      const INK = "#13213F";
       gsap.set(["#hook-l2", "#hook-ad", "#hook-ask", "#hook-stamp"], { opacity: 0 });
+      gsap.set("#hook-bar", { scaleX: 0 });
 
-      // «غير لما تعمل إعلان ممول»: the line appears light grey, then each word turns ink
-      tl.fromTo(["#hook-l2", "#hook-ad"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 2.85);
-      tl.fromTo("#hook-l2 .w", { color: "#C9C3BA" }, { color: INK, duration: 0.12, stagger: 0.3, ease: "none" }, 3.0);
-      tl.fromTo("#hook-ad span", { color: "#C9C3BA" }, { color: INK, duration: 0.16, ease: "none" }, 3.95);
+      // «لعيادتك صح»: an orange stroke runs under the line, right to left
+      tl.to("#hook-bar", { scaleX: 1, duration: 0.45, ease: "expo.out" }, 2.55);
 
-      // everything but «إعلان ممول» leaves, the question arrives
-      tl.to(["#hook-quiet", "#hook-l1", "#hook-l2"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 4.6);
-      tl.fromTo("#hook-ask", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 4.85);
-      // «صح؟» stamps: 1.3 → 1 in 4 frames, no ease
-      tl.fromTo("#hook-stamp", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, 5.55);
+      // «غير لما تعمل إعلان ممول»: the line arrives pale, each word turns ink as it is spoken
+      tl.fromTo(["#hook-l2", "#hook-ad"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 3.15);
+      [3.33, 3.83, 4.03].forEach((t, i) => {
+        tl.fromTo(`#hook-l2 .w:nth-child(${i + 1})`, { color: "#C5CBD6" }, { color: INK, duration: 0.12, ease: "none" }, t);
+      });
+      tl.fromTo("#hook-ad span", { color: "#C5CBD6" }, { color: INK, duration: 0.16, ease: "none" }, 4.47);
 
-      // hand-off: the question leaves, «إعلان ممول» shrinks into the ad's badge (centre 565,446 at 0.25)
-      tl.to(["#hook-ask", "#hook-stamp"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 6.0);
-      tl.to("#hook-ad", {
-        x: 55, y: -494, scale: 0.25,
-        backgroundColor: "rgba(236,231,224,1)",
-        duration: 0.42, ease: "power3.inOut",
-      }, 6.05);
-      tl.to("#hook-ad span", { color: "#5B616B", duration: 0.42, ease: "power3.inOut" }, 6.05);
-      tl.fromTo("#hook-ad", { filter: "blur(0px)" }, { filter: "blur(6px)", duration: 0.21, ease: "power2.in", yoyo: true, repeat: 1 }, 6.05);
+      // everything but «إعلان ممول» leaves; «يا ترى الكلام ده... صح؟»
+      tl.to(["#hook-quiet", "#hook-l1", "#hook-l2", "#hook-bar"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 5.3);
+      tl.fromTo("#hook-ask", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 5.55);
+      tl.fromTo("#hook-stamp", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, 6.65);
+
+      // hand-off: «إعلان ممول» shrinks into the ad's badge (centre 557.3,428.6 at 0.215)
+      tl.to(["#hook-ask", "#hook-stamp"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 7.0);
+      tl.to("#hook-ad", { x: 47.3, y: -516.4, scale: 0.215, backgroundColor: "rgba(238,241,246,1)", duration: 0.42, ease: "power3.inOut" }, 7.05);
+      tl.to("#hook-ad span", { color: "#5A6378", duration: 0.42, ease: "power3.inOut" }, 7.05);
+      tl.fromTo("#hook-ad", { filter: "blur(0px)" }, { filter: "blur(6px)", duration: 0.21, ease: "power2.in", yoyo: true, repeat: 1 }, 7.05);
 
       window.__timelines["hook"] = tl;
     })();

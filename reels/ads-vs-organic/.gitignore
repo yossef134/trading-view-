@@ -3,3 +3,4 @@ renders/
 node_modules/
 assets/voice/*.mp3
 assets/voice/*.wav
+.media/

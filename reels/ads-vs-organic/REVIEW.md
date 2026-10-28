@@ -1,29 +1,23 @@
-# REVIEW: draft v1 (estimated timing, no audio)
+# REVIEW: v2 (identity A, timed to the voice)
 
 ## State
-- Built from SPEC.md, storyline B. 8 scenes (`compositions/`), 73 s, 1080 x 1920, 30 fps.
-- Timing is an estimate (~2.3 words/s). It waits on Yossef's voiceover: once it arrives, transcribe it (`--model small --language ar`, or `medium` if it is noisy), then move every beat to its anchor word.
-- No audio yet: no voice, no music, no effects. HeyGen (music catalog) is blocked by this session's network policy (api.heygen.com, static.heygen.ai and api.openverse.org are not allowed), so only the 21 bundled offline effects are reachable today.
-- No captions yet: they are built from the transcript's word timings, not from guesses.
+- 86 s, 1080 x 1920, 30 fps. Eight scenes plus one captions track, retimed to `assets/voice/voice-norm.wav` (−16.4 LUFS, −1.5 dBTP).
+- Identity A from `DESIGN.md`: white, navy, orange as a fill; Rubik Medium upright; Indie Flower bold for «scaling».
+- Captions: 26 groups of 3–5 words, written from what Yossef actually said (corrected spelling), timed by Whisper word stamps. Off where the same words are already big on screen: the hook, the split question, «خطوة أخيرة / في الـ scaling», «الأساس», the claim and the end card.
+- Sound: the voice plus 29 effects from the bundled HyperFrames library (pop, whoosh, notification, one bass impact on «أهم مليون مرة»). The b and c takes are pitch-shifted copies, so repeats are not identical.
+- No music: HeyGen's catalog is blocked by this session's network policy.
 
-## Creative calls
-- Storyline B (two phones, split to one). A and C were not built (`STORYLINES.md`).
-- S2: the phone builds around the carried badge instead of rising from below, so the hook's «إعلان ممول» lands inside the ad without a cut.
-- S4: the people who arrived fade out one by one on «ولا المريض حس إنك تستاهل الثقة», which fills a 5 s stretch that had nothing moving.
-- S8: the lifted post reads «لو إنت بتعاني...» (shortened so it holds one line), with a highlighter on «إنت» and a heart.
-- S11: a real magnifier. A 1.8x copy of the stage is cut to the lens, driven by `--lx/--ly`.
-- Every Arabic reveal is per word or a right-to-left wipe. Per-letter effects break Arabic joining.
+## Not yet done
+- Motion and transitions inspired by Yossef's Pinterest references: the pins cannot be opened here (pin.it and pinimg.com are blocked), and the files have not arrived yet.
 
 ## Measured
-- `npx hyperframes check`: 0 errors, 0 lint warnings, contrast 88/88 passed.
-- Seams checked frame by frame (−0.2 s to +0.2 s) at all 7 cuts: hook→ad (badge carry), ad→split (phone move), split→stairs, stairs→lens (coral disc) all continue without a jump.
-- Phone-width sheet (360 px): every line meant to be read is legible. The phone status bars and avatar initials are texture (`data-layout-ignore`).
+- `check`: 0 errors, 0 lint warnings. Seams (−0.2 s to +0.2 s) checked at every cut.
+- Whisper "small" (multilingual, from an npm mirror, since Hugging Face is blocked) was used for the timing only; every caption was checked against the script by hand.
+- The sound was measured, not heard.
 
 ## Warnings kept on purpose
-- `film_silent`: no audio until the voice and music land.
-- `line_unread` at 26.5 s on the inbox bubbles: a false positive at the ad→split seam. The same bubbles continue in the split's left phone, so they are on screen from 22 s to 41 s.
+- `contrast_aa_failure` at 81.2 s: the end card's words not yet spoken are pale (#C5CBD6) on purpose; each turns navy as Yossef says it.
 
-## Weakest shots, and what I would change next
-- S12 «الأساس» (58–62 s) is the plainest frame: five navy bricks under a word. It could build as a real foundation under the staircase from S10.
-- S2's bills are flat; they read as money, but are the least crafted object.
-- The lens rim drops a soft shadow at 49.1 s that the coral disc before it does not have (a 1-frame change at the seam).
+## Notes for next time
+- The raw recording opens with a 6 s "Free Audio Post Production by Auphonic" tag: cut it in every future recording, or export from Auphonic without it.
+- Audio files are not committed (the repo is public).
