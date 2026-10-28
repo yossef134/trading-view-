@@ -26,6 +26,12 @@
     }
     #root .en { font-family: "Indie Flower", cursive; font-weight: 700; -webkit-text-stroke: 1.2px currentColor; font-size: 1.3em; direction: ltr; unicode-bidi: isolate; }
     #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; }
+    /* graph paper (from the references): 60 px cells, a dot every 240 px; the root ground puts dots at x 60+240k, y 120+240k */
+    #root .paper { background-color: #ffffff; background-image: radial-gradient(circle, rgba(19, 33, 63, 0.2) 3px, transparent 3.5px), linear-gradient(rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px); background-size: 240px 240px, 60px 60px, 60px 60px; }
+    #root .paper-on-orange { background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px); background-size: 60px 60px, 60px 60px; }
+    #root .w { display: inline-block; }
+    #root .ppl { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 12px 14px rgba(19, 33, 63, 0.2)); }
+
     /* ---- phone (shared by ad / split / stairs) ---- */
     #root .phone { position: absolute; left: 240px; top: 210px; width: 540px; height: 1080px; }
     #root .ph-shell { position: absolute; inset: 0; border-radius: 88px; background: var(--color-device); box-shadow: 0 40px 80px rgba(19, 33, 63, 0.16); }
@@ -39,6 +45,7 @@
     #root .bub-av { flex: none; width: 48px; height: 48px; border-radius: 50%; background: #dce1ea; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--color-ad-ink); }
     #root .bub { position: relative; background: var(--color-ad-bubble); color: var(--color-ad-ink); font-size: 46px; line-height: 1.35; padding: 14px 28px; border-radius: 36px; border-top-right-radius: 10px; white-space: nowrap; }
     #root .bub-hot { background: var(--color-accent); color: var(--color-ink); font-size: 58px; }
+
     #root .feed { position: absolute; left: 0; top: 0; width: 500px; height: 1040px; }
     #root .fpost { position: absolute; left: 24px; width: 452px; height: 300px; }
     #root .fday { position: absolute; right: 4px; top: 0; font-size: 46px; color: #5f6880; }
@@ -154,6 +161,28 @@
       tl.to("#split-lab-co", { opacity: 0, duration: 0.2, ease: "power3.in" }, 13.5);
       tl.to("#split-right", { x: 0, y: -60, scale: 0.86, duration: 0.8, ease: "power2.inOut" }, 13.6);
 
+      // timed on the raw recording; tools/cut.py shortened its pauses, so each tween moves onto the cut (assets/voice/cut-map.json)
+      const CUT = [[0,0],[0,0],[0.2255,0.05],[1.29556,1.1201],[1.56285,1.2401],[3.39146,3.0687],[3.62363,3.1887],[5.39494,4.96],[5.93273,5.12],[7.02081,6.2081],[8.24869,6.6081],[11.804,10.1634],[13.4734,10.3834],[14.5153,11.4253],[14.8545,11.5453],[16.3794,13.0702],[16.9229,13.2302],[18.2428,14.5501],[18.453,14.6701],[21.242,17.4591],[22.9578,17.6791],[24.8515,19.5728],[25.0868,19.6928],[27.1607,21.7667],[28.3368,21.9867],[30.4698,24.1197],[30.8643,24.2397],[32.7954,26.1708],[33.923,26.5708],[35.7522,28.4],[36.4682,28.56],[38.2572,30.349],[38.7384,30.509],[40.5258,32.2964],[40.9904,32.4564],[41.678,33.144],[41.9994,33.264],[43.3146,34.5792],[43.9455,34.7392],[46.5355,37.3292],[46.7506,37.4492],[48.3375,39.0361],[48.8516,39.4361],[48.853,39.4375],[49.0997,39.6842],[50.8561,41.4406],[51.2233,41.5606],[54.0706,44.4079],[54.644,44.8079],[55.6336,45.7975],[55.8604,45.9175],[56.6052,46.6623],[56.8552,46.7823],[57.4996,47.4267],[57.7276,47.5467],[58.335,48.1541],[58.6985,48.2741],[60.627,50.2026],[61.1581,50.3626],[63.1661,52.3706],[63.4033,52.4906],[64.9725,54.0598],[65.6285,54.4598],[67.4596,56.2909],[67.775,56.4109],[68.4966,57.1325],[68.9401,57.5325],[70.8214,59.4138],[71.0378,59.5338],[73.6102,62.1062],[74.4124,62.3262],[76.5251,64.4389],[77.3038,64.8389],[79.0656,66.6007],[79.4624,66.7207],[83.532,70.7903],[83.95,71.0403],[83.95,71.0403],[85.95,73.0403]];
+      const cut = (t) => {
+        let i = 1;
+        while (i < CUT.length - 1 && CUT[i][0] < t) i++;
+        const [a0, b0] = CUT[i - 1], [a1, b1] = CUT[i];
+        return a1 === a0 ? b1 : b0 + ((b1 - b0) * (t - a0)) / (a1 - a0);
+      };
+      const retime = (tl, from, to) => {
+        const s0 = cut(from), len = cut(to) - s0;
+        tl.getChildren(false, true, true).forEach((c) => {
+          const a = c.startTime(), d = c.totalDuration();
+          let na = cut(from + a) - s0, nd = cut(from + a + d) - s0 - na;
+          if (d > 0) {
+            nd = Math.min(Math.max(nd, d * 0.5), len); // a pause can speed a move up, never past 2x
+            na = Math.min(Math.max(na, 0), len - nd); // and nothing spills past the scene's ends
+            c.timeScale(d / nd);
+          }
+          c.startTime(na);
+        });
+      };
+      retime(tl, 33.4, 49);
       window.__timelines["split"] = tl;
     })();
   </script>

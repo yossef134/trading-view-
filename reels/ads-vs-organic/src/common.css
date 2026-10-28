@@ -1,0 +1,31 @@
+    @font-face {
+      font-family: "Rubik";
+      src: url("assets/fonts/rubik-arabic.woff2") format("woff2");
+      font-weight: 300 900;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+    @font-face {
+      font-family: "Rubik";
+      src: url("assets/fonts/rubik-latin.woff2") format("woff2");
+      font-weight: 300 900;
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    @font-face {
+      font-family: "Indie Flower";
+      src: url("assets/fonts/indieflower-latin.woff2") format("woff2");
+      font-weight: 400;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      color: var(--color-ink);
+    }
+    #root .en { font-family: "Indie Flower", cursive; font-weight: 700; -webkit-text-stroke: 1.2px currentColor; font-size: 1.3em; direction: ltr; unicode-bidi: isolate; }
+    #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; }
+    /* graph paper (from the references): 60 px cells, a dot every 240 px; the root ground puts dots at x 60+240k, y 120+240k */
+    #root .paper { background-color: #ffffff; background-image: radial-gradient(circle, rgba(19, 33, 63, 0.2) 3px, transparent 3.5px), linear-gradient(rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px); background-size: 240px 240px, 60px 60px, 60px 60px; }
+    #root .paper-on-orange { background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px); background-size: 60px 60px, 60px 60px; }
+    #root .w { display: inline-block; }
+    #root .ppl { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 12px 14px rgba(19, 33, 63, 0.2)); }

@@ -26,33 +26,64 @@
     }
     #root .en { font-family: "Indie Flower", cursive; font-weight: 700; -webkit-text-stroke: 1.2px currentColor; font-size: 1.3em; direction: ltr; unicode-bidi: isolate; }
     #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; }
-    #root .brick { position: absolute; left: 130px; width: 760px; height: 96px; border-radius: 18px; background: var(--color-ink); color: #ffffff; direction: rtl; text-align: center; font-size: 48px; line-height: 96px; }
-    #base-sub .w { color: #c5cbd6; }
+    /* graph paper (from the references): 60 px cells, a dot every 240 px; the root ground puts dots at x 60+240k, y 120+240k */
+    #root .paper { background-color: #ffffff; background-image: radial-gradient(circle, rgba(19, 33, 63, 0.2) 3px, transparent 3.5px), linear-gradient(rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(19, 33, 63, 0.07) 1.5px, transparent 1.5px); background-size: 240px 240px, 60px 60px, 60px 60px; }
+    #root .paper-on-orange { background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px); background-size: 60px 60px, 60px 60px; }
+    #root .w { display: inline-block; }
+    #root .ppl { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 12px 14px rgba(19, 33, 63, 0.2)); }
+
+    #base-cam { position: absolute; inset: 0; }
+    /* the lens scene's content stickers, exactly as it leaves them */
+    #root .lc { position: absolute; width: 360px; height: 250px; margin: -125px 0 0 -180px; background: #ffffff; border: 6px solid var(--color-ink); border-radius: 34px; box-shadow: 0 18px 30px rgba(19, 33, 63, 0.16); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; direction: rtl; font-size: 58px; white-space: nowrap; overflow: hidden; }
+    #root .lc svg { width: 84px; height: 84px; flex: none; }
+    #root .brick { position: absolute; left: 130px; width: 760px; height: 96px; border-radius: 18px; background: var(--color-ink); color: #ffffff; direction: rtl; text-align: center; font-size: 48px; line-height: 96px; transform-origin: 50% 100%; }
   </style>
   <div id="root" data-composition-id="base" data-width="1080" data-height="1920">
-    <div class="t" id="base-t" style="top: 260px; font-size: 150px; line-height: 1.2">الأساس</div>
-    <div class="t" id="base-sub" style="top: 470px; font-size: 64px"><span class="w">المحتوى</span> <span class="w">وبناء</span> <span class="w">الثقة</span></div>
-    <div class="brick" id="base-first" style="top: 1034px"><span>نصيحة</span></div>
-    <div class="brick base-b" style="top: 926px">معلومة</div>
-    <div class="brick base-b" style="top: 818px">سؤال وجواب</div>
-    <div class="brick base-b" style="top: 710px">تجربة</div>
-    <div class="brick base-b" id="base-top" style="top: 602px">نصيحة</div>
+    <div id="base-cam" data-layout-allow-overlap>
+      <div class="t" id="base-t" style="top: 250px; font-size: 150px; line-height: 1.2">الأساس</div>
+      <div class="t" id="base-sub" style="top: 470px; font-size: 68px"><span class="w">المحتوى</span> <span class="w">وبناء</span> <span class="w">الثقة</span></div>
+      <div class="brick" id="base-b1" style="top: 1034px">نصايح</div>
+      <div class="brick" id="base-b2" style="top: 926px">محتوى قيّم</div>
+      <div class="brick" id="base-b3" style="top: 818px">معلومات</div>
+      <div class="brick" id="base-b5" style="top: 602px">سؤال وجواب</div>
+      <div class="brick" id="base-b4" style="top: 710px">تجربة</div>
+      <div class="lc" id="base-c2" style="left: 750px; top: 610px"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="42" fill="#13213F" /><circle cx="42" cy="24" r="6" fill="#FFFFFF" /><rect x="36" y="36" width="12" height="30" rx="6" fill="#FFFFFF" /></svg>معلومات</div>
+      <div class="lc" id="base-c1" style="left: 300px; top: 640px"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="42" fill="#13213F" /><path d="M34 26 L60 42 L34 58 Z" fill="#FFFFFF" /></svg>محتوى قيّم</div>
+      <div class="lc" id="base-c3" style="left: 520px; top: 900px"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="42" fill="#13213F" /><path d="M42 18 a17 17 0 0 0 -10 30.5 c2 2 3 4.5 3 7.5 h14 c0 -3 1 -5.5 3 -7.5 A17 17 0 0 0 42 18 z" fill="#FFFFFF" /><rect x="35" y="59" width="14" height="5" rx="2.5" fill="#FFFFFF" /></svg>نصايح</div>
+    </div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      gsap.set(["#base-t", "#base-sub", ".base-b", "#base-first span"], { opacity: 0 });
-      tl.to("#base-first span", { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
-      // the content is laid down as a foundation, brick by brick from the bottom
-      tl.fromTo(".base-b", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out", stagger: 0.15 }, 0.15);
-      // «فالأساس عندك هو المحتوى وبناء الثقة»
-      tl.fromTo("#base-t", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.2);
-      tl.set("#base-sub", { opacity: 1 }, 1.45);
-      [1.6, 2.45, 2.95].forEach((t, i) => {
-        tl.fromTo(`#base-sub .w:nth-child(${i + 1})`, { color: "#C5CBD6" }, { color: "#13213F", duration: 0.1, ease: "none" }, t);
+      gsap.set("#base-c1", { rotation: -7 }); gsap.set("#base-c2", { rotation: 6 }); gsap.set("#base-c3", { rotation: -3 });
+      gsap.set(["#base-t", "#base-sub .w", ".brick"], { opacity: 0 });
+      const land = (t) => tl.fromTo("#base-cam", { y: 14 }, { y: 0, duration: 0.35, ease: "elastic.out(1, 0.35)" }, t);
+
+      // «فالأساس عندك هو المحتوى»: the three content stickers fall and set as the bottom three bricks
+      // each sticker drops flat into its slot and bursts out sideways into its brick
+      [["#base-c3", 520, 900, "#base-b1"], ["#base-c1", 300, 640, "#base-b2"], ["#base-c2", 750, 610, "#base-b3"]].forEach(([sel, x, y, brick], i) => {
+        const t = 0.05 + i * 0.13, top = +document.querySelector(brick).style.top.replace("px", "");
+        tl.to(sel, { x: 510 - x, y: top + 48 - y, rotation: 0, scale: 0.7, duration: 0.4, ease: "power2.in" }, t);
+        tl.set(sel, { opacity: 0 }, t + 0.4);
+        tl.set(brick, { opacity: 1 }, t + 0.4);
+        tl.fromTo(brick, { scaleX: 0.33, scaleY: 1.5 }, { scaleX: 1, scaleY: 1, duration: 0.32, ease: "back.out(2.2)" }, t + 0.4);
+        land(t + 0.4);
+      });
+      tl.fromTo("#base-t", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, 0.14);
+      // two more bricks drop on top
+      [["#base-b4", 0.72], ["#base-b5", 1.02]].forEach(([sel, t]) => {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { y: -720 }, { y: 0, duration: 0.34, ease: "power2.in" }, t);
+        tl.fromTo(sel, { scaleY: 1, scaleX: 1 }, { scaleY: 0.82, scaleX: 1.04, duration: 0.08, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, t + 0.34);
+        land(t + 0.34);
+      });
+      // «المحتوى / وبناء / الثقة»
+      [1.28, 2.06, 2.44].forEach((t, i) => {
+        tl.fromTo(`#base-sub .w:nth-of-type(${i + 1})`, { opacity: 0, y: 40, scale: 1.25 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(2)" }, t);
       });
       // «الثقة»: the top brick takes the accent; the next scene floods out of it
-      tl.to("#base-top", { backgroundColor: "#FF6A13", color: "#13213F", duration: 0.2, ease: "power2.out" }, 2.95);
+      tl.to("#base-b5", { backgroundColor: "#FF6A13", color: "#13213F", duration: 0.15, ease: "power2.out" }, 2.44);
+      tl.fromTo("#base-b5", { scale: 1 }, { scale: 1.06, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 2.44);
       window.__timelines["base"] = tl;
     })();
   </script>

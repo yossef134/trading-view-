@@ -1,0 +1,175 @@
+<template>
+  <style>
+/*COMMON*/
+/*PHONE*/
+    #root .ph-icon { position: absolute; top: 76px; width: 44px; height: 44px; }
+    #root .ph-icon svg, #root .post-actions svg { width: 46px; height: 46px; }
+    #root .post-av { position: absolute; right: 24px; top: 165px; width: 60px; height: 60px; border-radius: 50%; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+    #root .post-name { position: absolute; right: 98px; top: 154px; font-size: 34px; line-height: 40px; }
+    #root .post-img { position: absolute; left: 0; top: 250px; width: 500px; height: 340px; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 58px; }
+    #root .post-cta { position: absolute; left: 0; top: 590px; width: 500px; height: 64px; background: #dce1ea; font-size: 34px; padding-right: 24px; line-height: 64px; }
+    #root .post-actions { position: absolute; right: 24px; top: 676px; display: flex; gap: 22px; }
+    #root .post-sk { position: absolute; right: 24px; height: 18px; border-radius: 9px; background: var(--color-surface); }
+    #root .ph-gray { position: absolute; inset: 0; background: rgba(125, 133, 151, 0.5); opacity: 0; }
+    /* the badge is the hook's «إعلان ممول» box; 0.25 here x 0.86 phone = 0.215 */
+    #root .ad-badge { position: absolute; left: -75px; top: 131px; width: 760px; height: 170px; border-radius: 40px; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 130px; color: var(--color-ad-ink); direction: rtl; }
+    #root .ib-title { position: absolute; right: 28px; top: 72px; font-size: 46px; }
+    /* inside the phone's frame, so they scale with it */
+    #root .bill { position: absolute; left: -50px; top: 430px; width: 220px; height: 110px; background: #b9c8b0; border: 4px solid var(--color-ink); border-radius: 10px; }
+    #root .bill::after { content: ""; position: absolute; left: 76px; top: 19px; width: 60px; height: 64px; border: 4px solid var(--color-ink); border-radius: 50%; }
+    /* «هيوصّلك لناس أكتر»: the people the ad reaches, as stickers around the phone */
+    #root .ad-p { position: absolute; width: 200px; height: 247px; margin: -247px 0 0 -100px; transform-origin: 50% 100%; }
+    #root .ad-ring { position: absolute; left: 510px; top: 520px; width: 1400px; height: 1400px; margin: -700px 0 0 -700px; border-radius: 50%; border: 6px solid var(--color-ink); }
+    #root .mini { position: absolute; width: 380px; height: 300px; margin: -150px 0 0 -190px; background: #ffffff; border-radius: 28px; box-shadow: 0 24px 48px rgba(19, 33, 63, 0.16); overflow: hidden; direction: rtl; }
+    #root .mini-badge { position: absolute; right: 22px; top: 16px; padding: 2px 16px; border-radius: 10px; background: var(--color-surface); color: var(--color-ad-ink); font-size: 34px; }
+    #root .mini-img { position: absolute; left: 0; top: 78px; width: 380px; height: 222px; background: var(--color-surface); display: flex; align-items: center; justify-content: center; font-size: 44px; }
+    #root .mini-gray { position: absolute; inset: 0; background: rgba(125, 133, 151, 0.5); opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="ad" data-width="1080" data-height="1920">
+    <div class="phone" id="ad-phone">
+      <div class="bill" id="ad-bill1" data-layout-ignore></div>
+      <div class="bill" id="ad-bill2" data-layout-ignore></div>
+      <div class="ph-shell" id="ad-shell"></div>
+      <div class="ph-screenbg" id="ad-screenbg"></div>
+      <div class="ph-screen">
+        <div id="ad-ui">
+          <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+          <div class="ph-title">الرئيسية</div>
+          <div class="ph-icon" style="left: 24px"><svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="2" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg></div>
+          <div class="ph-icon" style="left: 84px"><svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.2-8.8A5 5 0 0 1 12 6.4a5 5 0 0 1 9.2 4.8C19 15.6 12 20 12 20z" /></svg></div>
+          <div class="post-av" data-layout-ignore>ع</div>
+          <div class="post-name">عيادتك</div>
+          <div class="post-img">خصم على الكشف</div>
+          <div class="post-cta">احجز الآن</div>
+          <div class="post-actions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.2-8.8A5 5 0 0 1 12 6.4a5 5 0 0 1 9.2 4.8C19 15.6 12 20 12 20z" /></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="2" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 3 6.2L3 20l1.3-3.6A8 8 0 0 1 4 12z" /></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="2" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
+          </div>
+          <div class="post-sk" style="top: 748px; width: 380px"></div>
+          <div class="post-sk" style="top: 782px; width: 250px"></div>
+        </div>
+        <div class="ph-gray" id="ad-gray"></div>
+        <div class="ad-badge" id="ad-badge">إعلان ممول</div>
+        <div class="inbox" id="ad-inbox">
+          <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+          <div class="ib-title">رسايل</div>
+          <div class="bub-row" id="ad-b0" style="top: 180px"><div class="bub-av" data-layout-ignore>م</div><div class="bub">بكام الكشف؟</div></div>
+          <div class="bub-row" id="ad-b1" style="top: 305px"><div class="bub-av" data-layout-ignore>س</div><div class="bub">فيه خصم؟</div></div>
+          <div class="bub-row" id="ad-b2" style="top: 430px"><div class="bub-av" data-layout-ignore>ه</div><div class="bub">آخر سعر كام؟</div></div>
+          <div class="bub-row" id="ad-b3" style="top: 555px"><div class="bub-av" data-layout-ignore>ن</div><div class="bub">طب ممكن أقل؟</div></div>
+        </div>
+      </div>
+      <!-- «مليون إعلان»: the same ad, again and again -->
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 30px; top: 220px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 530px; top: 180px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 0px; top: 670px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 530px; top: 630px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 280px; top: 90px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 70px; top: 930px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 500px; top: 940px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+      <div class="mini ad-mini" data-layout-allow-overlap style="left: 280px; top: 490px"><div class="mini-badge">إعلان ممول</div><div class="mini-img">خصم على الكشف</div><div class="mini-gray"></div></div>
+    </div>
+    <div class="ad-ring" data-layout-ignore></div>
+    <div class="ad-ring" data-layout-ignore></div>
+    <div class="ad-ring" data-layout-ignore></div>
+    <div id="ad-crowd" data-layout-allow-overlap></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+/*PEOPLE*/
+      // [x of the feet, y of the feet, scale]: two rows under the phone, two on each side of it
+      const SPOTS = [[130, 1140, 0.95], [320, 1140, 0.95], [510, 1140, 0.95], [700, 1140, 0.95], [890, 1140, 0.95],
+        [225, 990, 0.8], [415, 990, 0.8], [605, 990, 0.8], [795, 990, 0.8],
+        [190, 700, 0.75], [850, 700, 0.75], [175, 445, 0.72], [865, 445, 0.72]];
+      const crowd = document.getElementById("ad-crowd");
+      SPOTS.forEach(([x, y, k], i) => {
+        const d = document.createElement("div");
+        d.className = "ad-p";
+        d.style.left = x + "px"; d.style.top = y + "px"; d.style.zIndex = y > 1100 ? 3 : y > 900 ? 2 : 1;
+        d.innerHTML = person(PEOPLE[i], "ad" + i);
+        d.dataset.k = k;
+        crowd.appendChild(d);
+      });
+      const ppl = [...document.querySelectorAll(".ad-p")];
+
+      // the phone sits at 0.86, lifted 60 px, so captions have the band under it
+      gsap.set("#ad-phone", { scale: 0.86, y: -60 });
+      gsap.set("#ad-badge", { scale: 0.25 });
+      gsap.set(["#ad-shell", "#ad-screenbg", "#ad-ui", ".ad-mini", ".bill"], { opacity: 0 });
+      ppl.forEach((el) => gsap.set(el, { opacity: 0, scale: +el.dataset.k, filter: "grayscale(0)" }));
+      gsap.set(".ad-ring", { opacity: 0, scale: 0 });
+      gsap.set(["#ad-b0", "#ad-b1", "#ad-b2", "#ad-b3"], { opacity: 0 });
+      gsap.set("#ad-inbox", { clipPath: "circle(0px at 46px 100px)" });
+
+      // the post builds around the badge, then the phone around the post
+      tl.fromTo("#ad-ui", { opacity: 0, scale: 0.94, transformOrigin: "305px 216px" }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.05);
+      tl.fromTo("#ad-screenbg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.05);
+      tl.fromTo("#ad-shell", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" }, 0.2);
+
+      // «ممكن يضيّع فلوسك»: two bills slip out of the phone and fall away
+      [["#ad-bill1", 3.25, -30], ["#ad-bill2", 3.55, -18]].forEach(([sel, t, rot]) => {
+        tl.set(sel, { opacity: 1 }, t);
+        tl.fromTo(sel, { x: 0, y: 0, rotation: 0 }, { x: -190, y: 20, rotation: rot / 3, duration: 0.35, ease: "expo.out" }, t);
+        tl.to(sel, { y: 1700, rotation: rot, duration: 0.9, ease: "power3.in" }, t + 0.35);
+        tl.set(sel, { opacity: 0 }, t + 1.3);
+      });
+
+      // «الإعلان الممول»: the phone steps back and up to make room
+      tl.to("#ad-phone", { scale: 0.58, y: -230, duration: 0.6, ease: "power3.inOut" }, 5.95);
+      // «هيوصّلك لناس أكتر، أيوه»: the ad goes out in waves; people pop up one after another, nearest first
+      document.querySelectorAll(".ad-ring").forEach((el, i) => {
+        tl.fromTo(el, { scale: 0.05, opacity: 0.55 }, { scale: 1, opacity: 0, duration: 1.1, ease: "power1.out" }, 7.3 + i * 0.45);
+      });
+      const byNear = ppl.map((el, i) => [Math.hypot(SPOTS[i][0] - 510, SPOTS[i][1] - 120 - 520), el]).sort((a, b) => a[0] - b[0]).map((e) => e[1]);
+      byNear.forEach((el, k) => {
+        const s = +el.dataset.k;
+        tl.fromTo(el, { opacity: 0, y: 110, scale: s * 0.45, rotation: k % 2 ? 12 : -12 }, { opacity: 1, y: 0, scale: s, rotation: 0, duration: 0.45, ease: "back.out(1.8)" }, 7.35 + k * 0.1);
+      });
+      // «أيوه»: the whole crowd nods once
+      byNear.forEach((el, k) => {
+        tl.to(el, { y: -18, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, 8.62 + (k % 5) * 0.025);
+      });
+      // «بس لو مش بتقدّم قيمة»: they go grey in a wave
+      byNear.forEach((el, k) => {
+        tl.to(el, { filter: "grayscale(1)", opacity: 0.6, duration: 0.3, ease: "power2.out" }, 9.6 + k * 0.05);
+      });
+      // «ولا المريض حس إنك فعلاً تستاهل الثقة»: and walk off, one by one
+      [5, 0, 9, 3, 11, 7, 1, 10, 4, 8, 2, 6, 12].forEach((i, k) => {
+        tl.to(ppl[i], { y: 1800, rotation: k % 2 ? 14 : -14, duration: 0.6, ease: "power3.in" }, 11.1 + k * 0.17);
+      });
+      // the phone comes forward again for the copies
+      tl.to("#ad-phone", { scale: 0.86, y: -60, duration: 0.6, ease: "power3.inOut" }, 13.95);
+
+      // «حتى لو صرفت مليون إعلان»: the same ad multiplies around the phone
+      document.querySelectorAll(".ad-mini").forEach((el, k) => {
+        const rot = [-8, 7, 5, -6, -3, -4, 8, 3][k];
+        tl.fromTo(el, { opacity: 0, scale: 0.75, rotation: 0 }, { opacity: 1, scale: 1, rotation: rot, duration: 0.14, ease: "back.out(1.4)" }, 16.45 + k * 0.08);
+      });
+
+      // «هتلاقي النتيجة مش عاجباك»: everything greys out and sinks
+      tl.to([".mini-gray", "#ad-gray"], { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 19.1);
+      tl.to("#ad-phone", { y: -20, duration: 0.4, ease: "power3.in" }, 19.1);
+
+      // into the inbox: the copies leave, the phone rises back, an iris opens from the DM icon
+      tl.to(".ad-mini", { opacity: 0, filter: "blur(8px)", duration: 0.25, ease: "power3.in" }, 20.25);
+      tl.to("#ad-phone", { y: -60, duration: 0.4, ease: "power2.inOut" }, 20.3);
+      tl.to(["#ad-gray", "#ad-badge"], { opacity: 0, duration: 0.15, ease: "none" }, 20.55);
+      tl.to("#ad-inbox", { clipPath: "circle(1200px at 46px 100px)", duration: 0.35, ease: "power3.out" }, 20.6);
+      tl.set("#ad-ui", { opacity: 0 }, 21.0);
+
+      // «هيكلمك... مش جاد... السعر والفصال»: four haggling messages, each from its sender's corner
+      [21.0, 22.2, 23.95, 24.4].forEach((t, k) => {
+        tl.fromTo(`#ad-b${k}`, { opacity: 0, scale: 0.75, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.12, ease: "back.out(1.4)" }, t);
+      });
+
+      // hand-off: the phone takes the left half of the split (scale 0.62, centre 317,805)
+      tl.to("#ad-phone", { x: -193, y: 55, scale: 0.62, duration: 0.6, ease: "power2.inOut" }, 25.25);
+
+      /*RETIME*/
+      retime(tl, 7.5, 33.4);
+      window.__timelines["ad"] = tl;
+    })();
+  </script>
+</template>

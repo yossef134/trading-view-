@@ -1,0 +1,58 @@
+<template>
+  <style>
+/*COMMON*/
+/*PHONE*/
+    #root .step { position: absolute; width: 260px; border-radius: 22px; background: var(--color-ink); }
+    #root .step span { position: absolute; left: 0; right: 0; top: 28px; text-align: center; direction: rtl; font-size: 58px; color: #ffffff; }
+    #stairs-s3 { background: var(--color-accent); }
+    #stairs-s3 span { color: var(--color-ink); }
+  </style>
+  <div id="root" data-composition-id="stairs" data-width="1080" data-height="1920">
+    <div class="t" id="stairs-t1" style="top: 260px; font-size: 120px">خطوة أخيرة</div>
+    <div class="t" id="stairs-t2" style="top: 430px; font-size: 66px">في الـ <span class="en">scaling</span></div>
+
+    <div class="step" id="stairs-s1" style="left: 660px; top: 930px; height: 200px"><span>محتوى</span></div>
+    <div class="step" id="stairs-s2" style="left: 390px; top: 750px; height: 380px"><span>ثقة</span></div>
+    <div class="step" id="stairs-s3" style="left: 120px; top: 570px; height: 560px"><span id="stairs-s3-lab">إعلان</span></div>
+
+    <!-- the content phone, as the split left it -->
+    <div class="phone" id="stairs-phone">
+      <div class="ph-shell"></div>
+      <div class="ph-screenbg"></div>
+      <div class="ph-screen">
+        <div class="ph-status" data-layout-ignore><span>9:41</span><span class="ph-bat"></span></div>
+        <div class="ph-title">رسايل</div>
+        <div class="bub-row" style="top: 190px"><div class="bub-av" data-layout-ignore>م</div><div class="bub bub-hot">عايز أحجز</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#stairs-phone", { scale: 0.86, y: -60 });
+      gsap.set(["#stairs-t1", "#stairs-t2"], { opacity: 0 });
+      gsap.set(["#stairs-s1", "#stairs-s2"], { scaleY: 0, transformOrigin: "50% 100%" });
+      gsap.set("#stairs-s3", { y: -900, opacity: 0 });
+
+      // the phone (the content) becomes the first step
+      tl.to("#stairs-phone", { x: 280, y: 280, scale: 0.18, duration: 0.6, ease: "power3.inOut" }, 0.1);
+      tl.to("#stairs-phone", { opacity: 0, duration: 0.2, ease: "none" }, 0.5);
+      tl.to("#stairs-s1", { scaleY: 1, duration: 0.45, ease: "expo.out" }, 0.5);
+      tl.to("#stairs-s2", { scaleY: 1, duration: 0.5, ease: "expo.out" }, 1.2);
+      // «بس بيكون خطوة أخيرة»: the ad lands last, on the top step
+      tl.set("#stairs-s3", { opacity: 1 }, 2.55);
+      tl.to("#stairs-s3", { y: 0, duration: 0.5, ease: "back.out(1.2)" }, 2.55);
+      tl.fromTo("#stairs-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 2.75);
+      tl.fromTo("#stairs-t2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 3.6);
+
+      // hand-off: the ad block lifts off and rounds into the lens (360 px disc at 510,760)
+      tl.to("#stairs-s3-lab", { opacity: 0, duration: 0.15, ease: "none" }, 4.5);
+      tl.to(["#stairs-s1", "#stairs-s2", "#stairs-t1", "#stairs-t2"], { opacity: 0, y: "+=40", duration: 0.3, ease: "power3.in" }, 4.6);
+      tl.to("#stairs-s3", { x: 260, y: -90, scaleX: 1.385, scaleY: 0.6429, borderRadius: "50%", duration: 0.6, ease: "power2.inOut" }, 4.6);
+
+      /*RETIME*/
+      retime(tl, 49, 54.2);
+      window.__timelines["stairs"] = tl;
+    })();
+  </script>
+</template>

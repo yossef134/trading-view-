@@ -1,0 +1,45 @@
+<template>
+  <style>
+/*COMMON*/
+    #root .cap { position: absolute; left: 80px; top: 1196px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; font-size: 58px; line-height: 1.3; color: var(--color-ink); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div class="cap" id="cap-0" data-in="0.164" data-out="2.205">وهقولك كمان ليه الإعلان لوحده</div>
+    <div class="cap" id="cap-1" data-in="2.205" data-out="3.939">ممكن يضيّع فلوسك</div>
+    <div class="cap" id="cap-2" data-in="3.939" data-out="5.637">الإعلان الممول هيوصّلك</div>
+    <div class="cap" id="cap-3" data-in="5.637" data-out="6.786">لناس أكتر، أيوه</div>
+    <div class="cap" id="cap-4" data-in="6.786" data-out="8.226">بس لو مش بتقدّم قيمة</div>
+    <div class="cap" id="cap-5" data-in="8.226" data-out="9.663">ولا المريض حس إنك</div>
+    <div class="cap" id="cap-6" data-in="9.663" data-out="11.235">فعلاً تستاهل الثقة دي</div>
+    <div class="cap" id="cap-7" data-in="11.235" data-out="13.087">حتى لو صرفت مليون إعلان</div>
+    <div class="cap" id="cap-8" data-in="13.087" data-out="15.543">هتلاقي النتيجة برضه مش عاجباك</div>
+    <div class="cap" id="cap-9" data-in="15.543" data-out="16.676">اللي هيكلمك في الغالب</div>
+    <div class="cap" id="cap-10" data-in="16.676" data-out="17.556">هيكون مش جاد</div>
+    <div class="cap" id="cap-11" data-in="17.556" data-out="18.721">وهيركّز على السعر</div>
+    <div class="cap" id="cap-12" data-in="18.721" data-out="20.131">والفصال وخلاص</div>
+    <div class="cap" id="cap-13" data-in="22.116" data-out="23.878">إن المريض بيشوفك باستمرار</div>
+    <div class="cap" id="cap-14" data-in="23.878" data-out="26.012">بيحس إنك فعلاً بتحل مشكلته</div>
+    <div class="cap" id="cap-15" data-in="26.012" data-out="26.82">وإن الحل ده</div>
+    <div class="cap" id="cap-16" data-in="26.82" data-out="28.295">بيكلمه هو بس</div>
+    <div class="cap" id="cap-17" data-in="28.295" data-out="29.58">وده فعلاً اللي بيجيب لك</div>
+    <div class="cap" id="cap-18" data-in="29.58" data-out="31.125">واحد عايز يكشف عندك</div>
+    <div class="cap" id="cap-19" data-in="31.125" data-out="33.022">أو حتى يعمل معاك العملية</div>
+    <div class="cap" id="cap-20" data-in="33.411" data-out="35.361">الإعلان الممول مهم</div>
+    <div class="cap" id="cap-21" data-in="41.83" data-out="44.189">الإعلان هيكبّر ده للمريض</div>
+    <div class="cap" id="cap-22" data-in="45.911" data-out="48.046">برضه هيكبّر ده للمريض</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set(".cap", { opacity: 0 });
+      // one group at a time: in on its first word (blur 8 → 0), out with a hard kill at its end
+      document.querySelectorAll(".cap").forEach((el) => {
+        const a = parseFloat(el.dataset.in), b = parseFloat(el.dataset.out);
+        tl.fromTo(el, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.12, ease: "power4.out" }, a);
+        tl.to(el, { opacity: 0, duration: 0.1, ease: "power2.in" }, b - 0.1);
+        tl.set(el, { opacity: 0, visibility: "hidden" }, b);
+      });
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>
