@@ -2,8 +2,27 @@
 
 GOAL:    A doctor who planned to "just run an ad" ends the reel convinced that consistent content comes first and the ad only amplifies it, then follows Yossef.
 OUTPUT:  HyperFrames, 1080 x 1920 (9:16 Reel), 30 fps.
-TIME:    ~73 s x 30 = ~2190 frames, estimated from the script at ~2.3 words/s.
-         Yossef's recorded voiceover is the clock: once it arrives, every shot is retimed to its anchor word from the transcript.
+TIME:    the voice is the clock: assets/voice/voice.wav, 83.95 s; the film runs ~86 s (end card holds 2.5 s after the last word).
+         voice.wav = voice-raw.mp3 [7.25–84.10] + [94.85–101.95]: the raw file opens with a 6 s
+         "Free Audio Post Production by Auphonic" tag (cut), and the CTA was recorded twice (the second take is kept).
+
+## Beat anchors (seconds on voice.wav, from assets/voice/transcript-whisper.json)
+| Shot | Starts | Anchor words |
+|---|---|---|
+| S1 hook | 0.00 | «إعلان ممول» 4.47 · «صح؟» 6.71 |
+| S2 promise | 7.67 | «يضيّع فلوسك» 10.75 |
+| S3 reach | 12.83 | «لناس أكتر» 15.39 |
+| S4 million ads | 16.87 | «قيمة» 17.83 · «مليون إعلان» 23.99 · «مش عاجباك» 26.61 |
+| S5 haggling | 28.09 | «السعر» 31.49 · «الفصال» 31.79 |
+| S6 rehook | 33.63 | «الأورجانيك» 35.17 |
+| S7 every day | 36.17 | «باستمرار» 37.69 |
+| S8 talks to him | 38.23 | «إنك» 39.03 · «بيكلمه هو بس» 41.73 |
+| S9 booking | 43.61 | «عايز يكشف» 45.53 |
+| S10 last step | 49.27 | «خطوة أخيرة» 51.79 |
+| S11 lens | 54.29 | «محتوى قيّم» 55.67 · «عروض وخصومات» 61.99 |
+| S12 foundation | 65.25 | «المحتوى وبناء الثقة» 66.73 |
+| S13 claim | 68.47 | «أهم مليون مرة» 70.91 · «من أي إعلان ممول» 72.13 |
+| S14 end | 76.93 | «الفولو» 77.92 · «يوسف» 79.58 · last word 83.14 |
 
 ## Copy
 Every spoken and on-screen line is Yossef's approved script (2026-10-28), verbatim. On-screen DMs, post titles and the ad label are illustrative props drawn from his own words ("السعر والفصال", "خصم على الكشف", "عايز أحجز"); no metrics, names or results appear anywhere.
