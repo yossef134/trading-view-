@@ -26,21 +26,31 @@
     }
     #root .en { font-family: "Indie Flower", cursive; font-weight: 700; -webkit-text-stroke: 1.2px currentColor; font-size: 1.3em; direction: ltr; unicode-bidi: isolate; }
     #root .t { position: absolute; left: 80px; width: 860px; text-align: center; direction: rtl; white-space: nowrap; }
-    #hook-quiet { top: 300px; font-size: 60px; color: var(--color-muted); }
-    #hook-l1 { top: 390px; font-size: 104px; line-height: 1.3; }
-    #hook-l2 { top: 700px; font-size: 104px; }
-    #hook-l2 .w, #hook-ad span { color: #c5cbd6; }
-    #hook-ad { position: absolute; left: 130px; top: 860px; width: 760px; height: 170px; border-radius: 40px; display: flex; align-items: center; justify-content: center; direction: rtl; font-size: 130px; background-color: rgba(238, 241, 246, 0); }
-    #hook-bar { position: absolute; left: 290px; top: 648px; width: 440px; height: 14px; border-radius: 7px; background: var(--color-accent); transform-origin: 100% 50%; }
+    #root .say { position: absolute; padding: 18px 34px; border-radius: 40px; background: #ffffff; border: 4px solid var(--color-ink); font-size: 50px; line-height: 1.3; white-space: nowrap; direction: rtl; box-shadow: 0 14px 30px rgba(19, 33, 63, 0.12); }
+    #root .say::after { content: ""; position: absolute; bottom: -16px; width: 26px; height: 26px; background: #ffffff; border-right: 4px solid var(--color-ink); border-bottom: 4px solid var(--color-ink); transform: rotate(45deg); }
+    #root .say.tl::after { right: 46px; }
+    #root .say.tr::after { left: 46px; }
+    #hook-all { top: 640px; font-size: 110px; }
+    #hook-l1 { top: 470px; font-size: 104px; line-height: 1.3; }
+    #hook-l1 .w { display: inline-block; }
+    #hook-l2 { top: 765px; font-size: 64px; }
+    #hook-ad { position: absolute; left: 130px; top: 860px; width: 760px; height: 170px; border-radius: 40px; display: flex; align-items: center; justify-content: center; direction: rtl; font-size: 130px; color: var(--color-ink); background-color: rgba(255, 106, 19, 0); }
     #hook-ask { top: 380px; font-size: 66px; }
     #hook-stamp { top: 470px; }
     #hook-stamp span { display: inline-block; font-size: 230px; line-height: 1.15; padding: 0 40px; border-radius: 28px; background: var(--color-accent); color: var(--color-ink); }
   </style>
   <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
-    <div id="hook-quiet" class="t">كلهم بيقولولك:</div>
-    <div id="hook-l1" class="t">مش هتعرف تسوّق<br />لعيادتك صح</div>
-    <div id="hook-bar"></div>
-    <div id="hook-l2" class="t"><span class="w">غير</span> <span class="w">لما</span> <span class="w">تعمل</span></div>
+    <!-- «كلهم بيقولولك»: what everyone keeps telling the doctor -->
+    <div class="say tr hook-say" id="hook-s1" style="left: 100px; top: 200px">اعمل إعلان!</div>
+    <div class="say tl hook-say" id="hook-s2" style="left: 540px; top: 250px">إعلان ممول وخلاص</div>
+    <div class="say tr hook-say" id="hook-s3" style="left: 230px; top: 345px">الإعلان هو الحل</div>
+    <div class="say tr hook-say" id="hook-s4" style="left: 100px; top: 1090px">زوّد الميزانية</div>
+    <div class="say tl hook-say" id="hook-s5" style="left: 560px; top: 1140px">بوّست البوست</div>
+    <div class="say tr hook-say" id="hook-s6" style="left: 130px; top: 1235px">عروض وخصومات!</div>
+
+    <div id="hook-all" class="t">كلهم بيقولولك:</div>
+    <div id="hook-l1" class="t"><span class="w">مش</span> <span class="w">هتعرف</span> <span class="w">تسوّق</span><br /><span class="w">لعيادتك</span> <span class="w">صح</span></div>
+    <div id="hook-l2" class="t">غير لما تعمل</div>
     <div id="hook-ad"><span>إعلان ممول</span></div>
     <div id="hook-ask" class="t">يا ترى الكلام ده</div>
     <div id="hook-stamp" class="t"><span>صح؟</span></div>
@@ -48,30 +58,42 @@
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      const INK = "#13213F";
-      gsap.set(["#hook-l2", "#hook-ad", "#hook-ask", "#hook-stamp"], { opacity: 0 });
-      gsap.set("#hook-bar", { scaleX: 0 });
+      // frame 0 (the thumbnail): «كلهم بيقولولك:» and three voices already talking
+      gsap.set([".w", "#hook-l2", "#hook-ad", "#hook-ask", "#hook-stamp", "#hook-s3", "#hook-s5", "#hook-s6"], { opacity: 0 });
+      gsap.set(["#hook-s1", "#hook-s2", "#hook-s4"], { rotation: (i) => [-6, 5, 4][i] });
 
-      // «لعيادتك صح»: an orange stroke runs under the line, right to left
-      tl.to("#hook-bar", { scaleX: 1, duration: 0.45, ease: "expo.out" }, 2.55);
-
-      // «غير لما تعمل إعلان ممول»: the line arrives pale, each word turns ink as it is spoken
-      tl.fromTo(["#hook-l2", "#hook-ad"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 3.15);
-      [3.33, 3.83, 4.03].forEach((t, i) => {
-        tl.fromTo(`#hook-l2 .w:nth-child(${i + 1})`, { color: "#C5CBD6" }, { color: INK, duration: 0.12, ease: "none" }, t);
+      // more voices pile in, fast
+      [["#hook-s3", 0.15, 3], ["#hook-s5", 0.3, -4], ["#hook-s6", 0.45, -2]].forEach(([sel, t, rot]) => {
+        tl.fromTo(sel, { opacity: 0, scale: 0.6, rotation: 0 }, { opacity: 1, scale: 1, rotation: rot, duration: 0.18, ease: "back.out(1.7)" }, t);
       });
-      tl.fromTo("#hook-ad span", { color: "#C5CBD6" }, { color: INK, duration: 0.16, ease: "none" }, 4.47);
 
-      // everything but «إعلان ممول» leaves; «يا ترى الكلام ده... صح؟»
-      tl.to(["#hook-quiet", "#hook-l1", "#hook-l2", "#hook-bar"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 5.3);
+      // «مش هتعرف تسوّق لعيادتك صح»: the noise steps back and the line slams in word by word
+      tl.to("#hook-all", { opacity: 0, y: -40, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 1.12);
+      tl.to(".hook-say", { opacity: 0.28, scale: 0.92, duration: 0.3, ease: "power2.out" }, 1.15);
+      [1.29, 1.71, 2.07, 2.55, 3.05].forEach((t, i) => {
+        tl.fromTo(`#hook-l1 .w:nth-of-type(${i + 1})`, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.16, ease: "expo.out" }, t);
+      });
+      // the voices are blown out of frame
+      [[-760, -80], [760, -60], [-760, 40], [-760, 60], [760, 80], [-760, 120]].forEach(([dx, dy], i) => {
+        tl.to(`#hook-s${i + 1}`, { x: dx, y: dy, duration: 0.4, ease: "power3.in" }, 3.2 + i * 0.03);
+        tl.set(`#hook-s${i + 1}`, { opacity: 0 }, 3.65 + i * 0.03);
+      });
+
+      // «غير لما تعمل إعلان ممول»: the phrase lands on an orange block
+      tl.fromTo("#hook-l2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 3.33);
+      tl.set("#hook-ad", { opacity: 1 }, 4.45);
+      tl.fromTo("#hook-ad", { scale: 1.25, backgroundColor: "rgba(255,106,19,1)" }, { scale: 1, duration: 0.2, ease: "expo.out" }, 4.45);
+
+      // «يا ترى الكلام ده صح؟»: the line clears, «إعلان ممول» cools down, the question takes the accent
+      tl.to(["#hook-l1", "#hook-l2"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 5.3);
+      tl.to("#hook-ad", { backgroundColor: "rgba(238,241,246,1)", duration: 0.3, ease: "power2.inOut" }, 5.4);
       tl.fromTo("#hook-ask", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 5.55);
       tl.fromTo("#hook-stamp", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 4 / 30, ease: "none" }, 6.65);
 
       // hand-off: «إعلان ممول» shrinks into the ad's badge (centre 557.3,428.6 at 0.215)
       tl.to(["#hook-ask", "#hook-stamp"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 7.0);
-      tl.to("#hook-ad", { x: 47.3, y: -516.4, scale: 0.215, backgroundColor: "rgba(238,241,246,1)", duration: 0.42, ease: "power3.inOut" }, 7.05);
+      tl.to("#hook-ad", { x: 47.3, y: -516.4, scale: 0.215, duration: 0.42, ease: "power3.inOut" }, 7.05);
       tl.to("#hook-ad span", { color: "#5A6378", duration: 0.42, ease: "power3.inOut" }, 7.05);
-      tl.fromTo("#hook-ad", { filter: "blur(0px)" }, { filter: "blur(6px)", duration: 0.21, ease: "power2.in", yoyo: true, repeat: 1 }, 7.05);
 
       window.__timelines["hook"] = tl;
     })();

@@ -32,24 +32,27 @@
   <div id="root" data-composition-id="base" data-width="1080" data-height="1920">
     <div class="t" id="base-t" style="top: 260px; font-size: 150px; line-height: 1.2">الأساس</div>
     <div class="t" id="base-sub" style="top: 470px; font-size: 64px"><span class="w">المحتوى</span> <span class="w">وبناء</span> <span class="w">الثقة</span></div>
-    <div class="brick base-b" style="top: 1034px">نصيحة</div>
+    <div class="brick" id="base-first" style="top: 1034px"><span>نصيحة</span></div>
     <div class="brick base-b" style="top: 926px">معلومة</div>
     <div class="brick base-b" style="top: 818px">سؤال وجواب</div>
     <div class="brick base-b" style="top: 710px">تجربة</div>
-    <div class="brick base-b" style="top: 602px">نصيحة</div>
+    <div class="brick base-b" id="base-top" style="top: 602px">نصيحة</div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      gsap.set(["#base-t", "#base-sub", ".base-b"], { opacity: 0 });
+      gsap.set(["#base-t", "#base-sub", ".base-b", "#base-first span"], { opacity: 0 });
+      tl.to("#base-first span", { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
       // the content is laid down as a foundation, brick by brick from the bottom
-      tl.fromTo(".base-b", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out", stagger: 0.15 }, 0.05);
+      tl.fromTo(".base-b", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out", stagger: 0.15 }, 0.15);
       // «فالأساس عندك هو المحتوى وبناء الثقة»
       tl.fromTo("#base-t", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.2);
       tl.set("#base-sub", { opacity: 1 }, 1.45);
       [1.6, 2.45, 2.95].forEach((t, i) => {
         tl.fromTo(`#base-sub .w:nth-child(${i + 1})`, { color: "#C5CBD6" }, { color: "#13213F", duration: 0.1, ease: "none" }, t);
       });
+      // «الثقة»: the top brick takes the accent; the next scene floods out of it
+      tl.to("#base-top", { backgroundColor: "#FF6A13", color: "#13213F", duration: 0.2, ease: "power2.out" }, 2.95);
       window.__timelines["base"] = tl;
     })();
   </script>

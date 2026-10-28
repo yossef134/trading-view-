@@ -48,7 +48,7 @@
   </style>
   <div id="root" data-composition-id="lens" data-width="1080" data-height="1920">
     <div class="stage" id="lens-base">
-      <div class="card c-content lens-in"><div class="c-av" data-layout-ignore>د</div><div class="c-title">نصيحة</div><div class="c-body">لو إنت بتعاني من ده<br />ابدأ بالخطوة دي</div></div>
+      <div class="card c-content lens-in" id="lens-card"><div class="c-av" data-layout-ignore>د</div><div class="c-title">نصيحة</div><div class="c-body">لو إنت بتعاني من ده<br />ابدأ بالخطوة دي</div></div>
       <div class="lab lens-in" style="top: 530px">محتوى قيّم</div>
       <div class="card c-deal lens-in"><div class="c-badge">إعلان ممول</div><div class="c-deal-txt">خصم على الكشف</div></div>
       <div class="lab lens-in" style="top: 925px; color: var(--color-muted)">عروض وخصومات</div>
@@ -97,7 +97,10 @@
       // the lens pulls back and the stage clears for the foundation
       tl.to("#lens-ring", { scale: 0.6, opacity: 0, y: "-=120", duration: 0.35, ease: "power3.in" }, 10.25);
       tl.to("#lens-magwrap", { opacity: 0, duration: 0.2, ease: "none" }, 10.25);
-      tl.to(["#lens-base .lens-in", "#lens-base .lens-hag"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 10.5);
+      tl.to(["#lens-base .lens-in:not(#lens-card)", "#lens-base .lens-hag"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 10.3);
+      // hand-off: the content card drops and flattens into the first brick of the foundation (760 x 96, centre 510,1082)
+      tl.to("#lens-card > *", { opacity: 0, duration: 0.15, ease: "none" }, 10.2);
+      tl.to("#lens-card", { x: -30, y: 722, scaleX: 1.0857, scaleY: 0.32, backgroundColor: "#13213F", borderColor: "#13213F", duration: 0.55, ease: "power3.inOut" }, 10.3);
 
       window.__timelines["lens"] = tl;
     })();

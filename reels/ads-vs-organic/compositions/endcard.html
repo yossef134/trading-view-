@@ -30,6 +30,7 @@
     #root .btn-lab { position: absolute; left: 250px; top: 575px; width: 520px; height: 130px; display: flex; align-items: center; justify-content: center; gap: 18px; direction: rtl; font-size: 64px; }
     #end-done svg { width: 54px; height: 54px; }
     #end-sub .w, #end-cta .w { color: #c5cbd6; }
+    #end-arrow { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: visible; }
   </style>
   <div id="root" data-composition-id="endcard" data-width="1080" data-height="1920">
     <div id="end-field" data-layout-ignore></div>
@@ -38,12 +39,18 @@
     <div class="btn-lab" id="end-done">متابَع <svg viewBox="0 0 24 24" fill="none" stroke="#13213F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6" /></svg></div>
     <div class="t" id="end-name" style="top: 800px; font-size: 180px; line-height: 1.25">يوسف</div>
     <div class="t" id="end-sub" style="top: 1070px; font-size: 56px; line-height: 1.45"><span class="w">بساعد</span> <span class="w">الدكاترة</span> <span class="w">يعملوا</span> <span class="w">محتوى</span><br /><span class="w">يبيع</span> <span class="w">ويبني</span> <span class="w">ثقة</span> <span class="w">مع</span> <span class="w">المريض</span></div>
+    <!-- «متنساش الفولو الجميل بتاعك»: points at the username the platform shows bottom-left -->
+    <svg id="end-arrow" viewBox="0 0 1080 1920" data-layout-ignore>
+      <path id="end-arrow-line" d="M 600 1290 C 560 1430, 420 1500, 250 1545" pathLength="100" fill="none" stroke="#FF6A13" stroke-width="12" stroke-linecap="round" stroke-dasharray="100 120" stroke-dashoffset="110" />
+      <path id="end-arrow-head" d="M 285 1510 L 250 1545 L 298 1558" fill="none" stroke="#FF6A13" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
       gsap.set(["#end-cta", "#end-follow", "#end-done", "#end-name", "#end-sub"], { opacity: 0 });
       gsap.set("#end-field", { clipPath: "inset(0px 0px 0px 0px round 0px)" });
+      gsap.set("#end-arrow-head", { opacity: 0 });
       // the orange field contracts into the follow button (520 x 130 at 250,575)
       tl.to("#end-field", { clipPath: "inset(575px 310px 1215px 250px round 65px)", duration: 0.6, ease: "power3.inOut" }, 0);
       tl.fromTo("#end-follow", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(1.4)" }, 0.5);
@@ -56,6 +63,9 @@
       tl.to("#end-follow", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 1.6);
       tl.to("#end-field", { backgroundColor: "#EEF1F6", duration: 0.2, ease: "power2.inOut" }, 1.6);
       tl.fromTo("#end-done", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(1.4)" }, 1.72);
+      // «الجميل بتاعك»: the arrow draws itself down to the username, then the head lands
+      tl.fromTo("#end-arrow-line", { strokeDashoffset: 110 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 1.75);
+      tl.fromTo("#end-arrow-head", { opacity: 0, scale: 0.6, transformOrigin: "250px 1545px" }, { opacity: 1, scale: 1, duration: 0.18, ease: "back.out(1.8)" }, 2.2);
       // «أنا يوسف»: the name wipes in right to left
       tl.set("#end-name", { opacity: 1 }, 2.25);
       tl.fromTo("#end-name", { clipPath: "inset(0px 0px 0px 100%)" }, { clipPath: "inset(0px 0px 0px 0%)", duration: 0.5, ease: "power3.out" }, 2.25);

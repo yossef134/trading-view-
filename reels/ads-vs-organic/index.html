@@ -56,6 +56,7 @@
     <div
       id="root"
       data-composition-id="main"
+      data-motion-blur="on"
       data-start="0"
       data-duration="86"
       data-width="1080"
@@ -96,35 +97,42 @@
         data-start="0" data-duration="83.95" data-track-index="3" data-volume="1"></audio>
 
       <!-- sound on the visible actions (bundled HyperFrames library; b/c takes are pitch-shifted copies) -->
-      <audio id="sfx-00" class="clip" src="assets/sfx/pop-a.mp3" data-start="6.563" data-duration="0.71" data-track-index="4" data-volume="0.7"></audio>
-      <audio id="sfx-01" class="clip" src="assets/sfx/whoosh-a.mp3" data-start="7.131" data-duration="0.565" data-track-index="5" data-volume="0.35"></audio>
-      <audio id="sfx-02" class="clip" src="assets/sfx/pop-b.mp3" data-start="13.426" data-duration="0.662" data-track-index="4" data-volume="0.3"></audio>
-      <audio id="sfx-03" class="clip" src="assets/sfx/pop-c.mp3" data-start="13.8" data-duration="0.83" data-track-index="5" data-volume="0.3"></audio>
-      <audio id="sfx-04" class="clip" src="assets/sfx/pop-a.mp3" data-start="14.213" data-duration="0.71" data-track-index="4" data-volume="0.3"></audio>
-      <audio id="sfx-05" class="clip" src="assets/sfx/pop-b.mp3" data-start="14.626" data-duration="0.662" data-track-index="6" data-volume="0.3"></audio>
-      <audio id="sfx-06" class="clip" src="assets/sfx/pop-c.mp3" data-start="23.85" data-duration="0.83" data-track-index="4" data-volume="0.28"></audio>
-      <audio id="sfx-07" class="clip" src="assets/sfx/pop-a.mp3" data-start="24.023" data-duration="0.71" data-track-index="5" data-volume="0.28"></audio>
-      <audio id="sfx-08" class="clip" src="assets/sfx/pop-b.mp3" data-start="24.196" data-duration="0.662" data-track-index="6" data-volume="0.28"></audio>
-      <audio id="sfx-09" class="clip" src="assets/sfx/pop-c.mp3" data-start="24.33" data-duration="0.83" data-track-index="7" data-volume="0.28"></audio>
-      <audio id="sfx-10" class="clip" src="assets/sfx/ping-a.mp3" data-start="28.304" data-duration="2.446" data-track-index="4" data-volume="0.4"></audio>
-      <audio id="sfx-11" class="clip" src="assets/sfx/ping-c.mp3" data-start="29.479" data-duration="2.759" data-track-index="5" data-volume="0.4"></audio>
-      <audio id="sfx-12" class="clip" src="assets/sfx/ping-b.mp3" data-start="31.279" data-duration="2.21" data-track-index="4" data-volume="0.4"></audio>
-      <audio id="sfx-13" class="clip" src="assets/sfx/ping-a.mp3" data-start="31.704" data-duration="2.446" data-track-index="6" data-volume="0.4"></audio>
-      <audio id="sfx-14" class="clip" src="assets/sfx/whoosh-b.mp3" data-start="33.389" data-duration="0.539" data-track-index="5" data-volume="0.35"></audio>
-      <audio id="sfx-15" class="clip" src="assets/sfx/pop-a.mp3" data-start="41.663" data-duration="0.71" data-track-index="4" data-volume="0.45"></audio>
-      <audio id="sfx-16" class="clip" src="assets/sfx/ping-b.mp3" data-start="43.579" data-duration="2.21" data-track-index="4" data-volume="0.5"></audio>
-      <audio id="sfx-17" class="clip" src="assets/sfx/ping-a.mp3" data-start="45.404" data-duration="2.446" data-track-index="5" data-volume="0.6"></audio>
-      <audio id="sfx-18" class="clip" src="assets/sfx/whoosh-c.mp3" data-start="46.853" data-duration="0.669" data-track-index="4" data-volume="0.3"></audio>
-      <audio id="sfx-19" class="clip" src="assets/sfx/pop-b.mp3" data-start="49.676" data-duration="0.662" data-track-index="4" data-volume="0.45"></audio>
-      <audio id="sfx-20" class="clip" src="assets/sfx/pop-c.mp3" data-start="50.35" data-duration="0.83" data-track-index="4" data-volume="0.45"></audio>
-      <audio id="sfx-21" class="clip" src="assets/sfx/pop-a.mp3" data-start="51.913" data-duration="0.71" data-track-index="4" data-volume="0.55"></audio>
-      <audio id="sfx-22" class="clip" src="assets/sfx/whoosh-a.mp3" data-start="53.771" data-duration="0.565" data-track-index="4" data-volume="0.3"></audio>
-      <audio id="sfx-23" class="clip" src="assets/sfx/pop-b.mp3" data-start="61.426" data-duration="0.662" data-track-index="4" data-volume="0.35"></audio>
-      <audio id="sfx-24" class="clip" src="assets/sfx/pop-c.mp3" data-start="61.9" data-duration="0.83" data-track-index="5" data-volume="0.35"></audio>
-      <audio id="sfx-25" class="clip" src="assets/sfx/whoosh-b.mp3" data-start="68.509" data-duration="0.539" data-track-index="4" data-volume="0.35"></audio>
-      <audio id="sfx-26" class="clip" src="assets/sfx/impact.mp3" data-start="70.81" data-duration="2.106" data-track-index="4" data-volume="0.32"></audio>
-      <audio id="sfx-27" class="clip" src="assets/sfx/whoosh-c.mp3" data-start="76.953" data-duration="0.669" data-track-index="4" data-volume="0.3"></audio>
-      <audio id="sfx-28" class="clip" src="assets/sfx/pop-a.mp3" data-start="78.313" data-duration="0.71" data-track-index="4" data-volume="0.55"></audio>
+      <audio id="sfx-00" class="clip" src="assets/sfx/pop-b.mp3" data-start="0.076" data-duration="0.662" data-track-index="4" data-volume="0.35"></audio>  <!-- voice 4 pops in -->
+      <audio id="sfx-01" class="clip" src="assets/sfx/pop-c.mp3" data-start="0.2" data-duration="0.83" data-track-index="5" data-volume="0.35"></audio>  <!-- voice 5 -->
+      <audio id="sfx-02" class="clip" src="assets/sfx/pop-a.mp3" data-start="0.363" data-duration="0.71" data-track-index="6" data-volume="0.35"></audio>  <!-- voice 6 -->
+      <audio id="sfx-03" class="clip" src="assets/sfx/whoosh-a.mp3" data-start="3.321" data-duration="0.565" data-track-index="4" data-volume="0.3"></audio>  <!-- the voices are blown out -->
+      <audio id="sfx-04" class="clip" src="assets/sfx/pop-b.mp3" data-start="4.376" data-duration="0.662" data-track-index="4" data-volume="0.55"></audio>  <!-- «إعلان ممول» lands on orange -->
+      <audio id="sfx-05" class="clip" src="assets/sfx/pop-a.mp3" data-start="6.563" data-duration="0.71" data-track-index="4" data-volume="0.7"></audio>  <!-- «صح؟» stamp -->
+      <audio id="sfx-06" class="clip" src="assets/sfx/whoosh-b.mp3" data-start="7.149" data-duration="0.539" data-track-index="5" data-volume="0.3"></audio>  <!-- «إعلان ممول» carried into the badge -->
+      <audio id="sfx-07" class="clip" src="assets/sfx/pop-b.mp3" data-start="13.426" data-duration="0.662" data-track-index="4" data-volume="0.3"></audio>  <!-- people arrive -->
+      <audio id="sfx-08" class="clip" src="assets/sfx/pop-c.mp3" data-start="13.8" data-duration="0.83" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-09" class="clip" src="assets/sfx/pop-a.mp3" data-start="14.213" data-duration="0.71" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-10" class="clip" src="assets/sfx/pop-b.mp3" data-start="14.626" data-duration="0.662" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="sfx-11" class="clip" src="assets/sfx/pop-c.mp3" data-start="23.85" data-duration="0.83" data-track-index="4" data-volume="0.28"></audio>  <!-- copies of the ad -->
+      <audio id="sfx-12" class="clip" src="assets/sfx/pop-a.mp3" data-start="24.023" data-duration="0.71" data-track-index="5" data-volume="0.28"></audio>
+      <audio id="sfx-13" class="clip" src="assets/sfx/pop-b.mp3" data-start="24.196" data-duration="0.662" data-track-index="6" data-volume="0.28"></audio>
+      <audio id="sfx-14" class="clip" src="assets/sfx/pop-c.mp3" data-start="24.33" data-duration="0.83" data-track-index="7" data-volume="0.28"></audio>
+      <audio id="sfx-15" class="clip" src="assets/sfx/ping-a.mp3" data-start="28.304" data-duration="2.446" data-track-index="4" data-volume="0.4"></audio>  <!-- haggling messages -->
+      <audio id="sfx-16" class="clip" src="assets/sfx/ping-c.mp3" data-start="29.479" data-duration="2.759" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="sfx-17" class="clip" src="assets/sfx/ping-b.mp3" data-start="31.279" data-duration="2.21" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-18" class="clip" src="assets/sfx/ping-a.mp3" data-start="31.704" data-duration="2.446" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="sfx-19" class="clip" src="assets/sfx/whoosh-c.mp3" data-start="33.353" data-duration="0.669" data-track-index="5" data-volume="0.35"></audio>  <!-- content phone whips in -->
+      <audio id="sfx-20" class="clip" src="assets/sfx/pop-a.mp3" data-start="41.663" data-duration="0.71" data-track-index="4" data-volume="0.45"></audio>  <!-- heart -->
+      <audio id="sfx-21" class="clip" src="assets/sfx/ping-b.mp3" data-start="43.579" data-duration="2.21" data-track-index="4" data-volume="0.5"></audio>  <!-- banner drops -->
+      <audio id="sfx-22" class="clip" src="assets/sfx/ping-a.mp3" data-start="45.404" data-duration="2.446" data-track-index="5" data-volume="0.6"></audio>  <!-- «عايز أحجز» -->
+      <audio id="sfx-23" class="clip" src="assets/sfx/whoosh-a.mp3" data-start="46.871" data-duration="0.565" data-track-index="4" data-volume="0.3"></audio>  <!-- split collapses -->
+      <audio id="sfx-24" class="clip" src="assets/sfx/pop-b.mp3" data-start="49.676" data-duration="0.662" data-track-index="4" data-volume="0.45"></audio>  <!-- step -->
+      <audio id="sfx-25" class="clip" src="assets/sfx/pop-c.mp3" data-start="50.35" data-duration="0.83" data-track-index="4" data-volume="0.45"></audio>  <!-- step -->
+      <audio id="sfx-26" class="clip" src="assets/sfx/pop-a.mp3" data-start="51.913" data-duration="0.71" data-track-index="4" data-volume="0.55"></audio>  <!-- the ad lands -->
+      <audio id="sfx-27" class="clip" src="assets/sfx/whoosh-b.mp3" data-start="53.789" data-duration="0.539" data-track-index="4" data-volume="0.3"></audio>  <!-- ad block rounds into the lens -->
+      <audio id="sfx-28" class="clip" src="assets/sfx/pop-b.mp3" data-start="61.426" data-duration="0.662" data-track-index="4" data-volume="0.35"></audio>  <!-- haggling under the lens -->
+      <audio id="sfx-29" class="clip" src="assets/sfx/pop-c.mp3" data-start="61.9" data-duration="0.83" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-30" class="clip" src="assets/sfx/whoosh-c.mp3" data-start="64.653" data-duration="0.669" data-track-index="4" data-volume="0.25"></audio>  <!-- content card drops into the foundation -->
+      <audio id="sfx-31" class="clip" src="assets/sfx/whoosh-a.mp3" data-start="68.491" data-duration="0.565" data-track-index="4" data-volume="0.35"></audio>  <!-- orange flood out of the top brick -->
+      <audio id="sfx-32" class="clip" src="assets/sfx/impact.mp3" data-start="70.81" data-duration="2.106" data-track-index="4" data-volume="0.32"></audio>  <!-- «أهم مليون مرة» -->
+      <audio id="sfx-33" class="clip" src="assets/sfx/whoosh-b.mp3" data-start="76.989" data-duration="0.539" data-track-index="4" data-volume="0.3"></audio>  <!-- field contracts into the button -->
+      <audio id="sfx-34" class="clip" src="assets/sfx/pop-a.mp3" data-start="78.313" data-duration="0.71" data-track-index="4" data-volume="0.55"></audio>  <!-- followed -->
+      <audio id="sfx-35" class="clip" src="assets/sfx/pop-c.mp3" data-start="78.9" data-duration="0.83" data-track-index="5" data-volume="0.45"></audio>  <!-- arrow head lands -->
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
