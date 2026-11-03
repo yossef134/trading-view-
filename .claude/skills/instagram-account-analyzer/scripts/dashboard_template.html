@@ -37,6 +37,8 @@
   --accent: #3987e5; --good-text: #0ca30c; --wash: rgba(255,255,255,.05);
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.card + .grid, .card + .card { margin-top: 12px; }
 html { background: var(--plane); }
 body { margin: 0; background: var(--plane); color: var(--ink);
   font: 15px/1.6 system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; }
@@ -381,9 +383,9 @@ const erIcon = H.er_vs_benchmark === "within" ? ["good", "✓"] : H.er_vs_benchm
 const erText = { within: "ضمن النطاق المرجعي", above: "فوق النطاق المرجعي", below: "تحت النطاق المرجعي" }[H.er_vs_benchmark] || "";
 app.append(h("div", { class: "grid g-tiles", style: "margin-top:12px" },
   tile("المتابعين", n0(A.profile.followers), `بيتابع ${full(A.profile.following)}`),
-  tile("معدل التفاعل (وسيط)", pct(H.median_er), `${erText} (${pct(H.benchmark_low, 1)} إلى ${pct(H.benchmark_high, 1)} تقريبًا)`, erIcon),
+  tile("معدل التفاعل (وسيط)", pct(H.median_er), `${erText} (${pct(H.benchmark_low, 1)} إلى ${pct(H.benchmark_high, 1)} تقريبًا)` + (A.profile.followers < 1000 ? ` · الحساب صغير: لايك واحد = ${pct(1 / A.profile.followers, 1)}، فالنسبة غير ثابتة` : ""), erIcon),
   tile("النشر (بوست/أسبوع)", CAD.posts_per_week != null ? ltr(CAD.posts_per_week.toFixed(1)) : "—", CAD.consistency ? (CAD.consistency === "regular" ? "منتظم" : "غير منتظم") + ` · أطول فجوة ${CAD.longest_gap_days} يوم` : "", CAD.consistency === "regular" ? ["good", "✓"] : CAD.consistency ? ["warn", "!"] : null),
-  tile("الاتجاه", T.direction ? { up: "طالع", down: "نازل", flat: "ثابت" }[T.direction] : "—", T.change_pct != null ? `${ltr((T.change_pct > 0 ? "+" : "") + T.change_pct + "%")} (الأحدث مقابل الأقدم)` : T.note || "", T.direction === "up" ? ["good", "▲"] : T.direction === "down" ? ["crit", "▼"] : null),
+  tile("الاتجاه", T.direction ? { up: "طالع", down: "نازل", flat: "ثابت" }[T.direction] : "—", T.change_pct != null ? `${ltr((T.change_pct > 0 ? "+" : "") + T.change_pct + "%")} (الأحدث مقابل الأقدم)` : (T.note ? "محتاج 10 بوستات ناضجة على الأقل" : ""), T.direction === "up" ? ["good", "▲"] : T.direction === "down" ? ["crit", "▼"] : null),
   tile("ناجح / فاشل", `${A.winners.length} / ${A.losers.length}`, `من ${A.meta.mature_posts_scored} بوست اتقيّموا`)));
 
 /* timeline */
@@ -401,7 +403,7 @@ app.append(...section("timeline", "أداء كل بوست", "كل عمود = ب�
   const ticks = [{ v: 0, label: "0" }, { v: 0.5, label: "0.5×" }, { v: 1, label: "1×", base: true }, { v: 1.5, label: "1.5×" }, ...niceTicks(yMax).filter((v) => v >= 2).map((v) => ({ v, label: v + "×" }))];
   app.append(chartCard({
     title: "مؤشر الأداء لكل بوست", legend: legend(fmts), sub: "فوق 1.5× = ناجح · تحت 0.5× = فاشل",
-    foot: `استُبعد ${A.excluded.immature} بوست أحدث من 48 ساعة و${A.excluded.pinned} مثبت لأنهم مش بيتقارنوا بعدل. الألوان لازم تتقرا مع الليجند أو الجدول.`,
+    foot: `مستبعد من الرسم: ${A.excluded.immature} بوست أحدث من 48 ساعة، و${A.excluded.pinned} مثبت، و${A.excluded.no_baseline || 0} من فورمات عددها أقل من 3 بوستات (مفيش «معتاد» نقارن بيه). الألوان لازم تتقرا مع الليجند أو الجدول.`,
     draw: (w) => columnChart({ width: w, height: 240, items, yMax, ticks, aria: "مؤشر أداء كل بوست", xLabel: (i) => (i === 0 || i === items.length - 1 || i === Math.floor(items.length / 2) ? dayRaw(scored[i].timestamp).slice(5) : null) }),
     table: { cols: [{ t: "التاريخ" }, { t: "الفورمات" }, { t: "الهوك", cls: "hook" }, { t: "المؤشر", num: true }, { t: "الحكم" }], rows: scored.map((p) => [day(p.timestamp), FMT[p.format], p.hook, x2(p.index), { win: "ناجح", lose: "فاشل", normal: "عادي" }[p.verdict]]) },
   }));
@@ -445,7 +447,15 @@ app.append(...section("timing", "أحسن أوقات النشر", `مستنتج�
     draw: (w) => columnChart({ width: w, height: 200, items, yMax, ticks: [{ v: 0, label: "0" }, { v: 1, label: "1×", base: true }, ...niceTicks(yMax).filter((v) => v >= 2).map((v) => ({ v, label: v + "×" }))], aria: title, xLabel: (i) => items[i].name }),
     table: { cols: [{ t: "الفترة" }, { t: "الأداء", num: true }, { t: "عدد البوستات", num: true }], rows: items.map((i) => [i.name, x2(i.value), i.n]) },
   });
-  app.append(h("div", { class: "grid g-2" }, mkCard("حسب اليوم", dItems), mkCard("حسب الساعة (بتوقيت " + A.meta.timezone + ")", hItems)));
+  const grid = h("div", { class: "grid g-2" }, mkCard("حسب اليوم", dItems), mkCard("حسب الساعة (بتوقيت " + A.meta.timezone + ")", hItems));
+  if (A.timing.sample_size < 10) {
+    grid.hidden = true;
+    const show = h("button", { class: "btn", type: "button", style: "margin-top:8px" }, "اعرض الرسوم رغم ضعف العينة");
+    show.addEventListener("click", () => { grid.hidden = false; show.remove(); window.dispatchEvent(new Event("resize")); });
+    app.append(h("div", { class: "card" }, h("h3", {}, "العينة صغيرة جدًا لاستنتاج وقت نشر"),
+      h("p", { class: "sub", style: "margin:4px 0 0" }, `اتقيّم ${A.timing.sample_size} بوست بس. أي يوم أو ساعة هتظهر هتكون مبنية على بوست أو بوستين، يعني صدفة مش نمط. ابدأ بالتجربة في خطة الـ30 يوم أو اجمع 25 بوست على الأقل.`), show));
+  }
+  app.append(grid);
   app.append(h("div", { class: "callout" }, "ده استنتاج من أداء بوستات قديمة، مش بيانات نشاط الجمهور الحقيقية. لو الحساب بتاعك اربطه بـSupermetrics عشان تعرف الساعات الفعلية لمتابعينك." + (I.timing_note ? " — " + I.timing_note : "")));
 }
 
@@ -529,7 +539,7 @@ if (PL) {
   if (PL.experiments && PL.experiments.length) cards.push(h("div", { class: "card" }, h("h3", {}, "تجارب الأسابيع"), PL.experiments.map((e) => h("div", { class: "idea" }, h("b", {}, e.week ? "أسبوع " + e.week + ": " : ""), e.test, e.metric ? h("div", { class: "sub", style: "margin:0" }, "المقياس: " + e.metric) : null))));
   app.append(h("div", { class: "grid g-3" }, cards));
   if (PL.ideas && PL.ideas.length) app.append(h("div", { class: "card", style: "margin-top:12px" }, h("h3", {}, "أفكار فيديوهات جاهزة"),
-    PL.ideas.map((x, i) => h("div", { class: "idea" }, h("b", {}, (i + 1) + ". " + x.hook), h("div", { class: "sub", style: "margin:0" }, [x.format, x.based_on ? "مبنية على: " + x.based_on : null, x.why].filter(Boolean).join(" · "))))));
+    PL.ideas.map((x, i) => h("div", { class: "idea" }, h("b", {}, (i + 1) + ". " + x.hook), h("div", { class: "sub", style: "margin:0" }, [x.format, x.why].filter(Boolean).join(" · "), x.based_on ? [" · مبنية على: ", safeUrl(x.based_on) ? link(x.based_on, "ريل مرجعي ↗") : x.based_on] : null)))));
 }
 if (I.extras && I.extras.length) { app.append(...section("extras", "ملاحظات تانية")); app.append(h("div", { class: "card" }, h("ul", {}, I.extras.map((l) => h("li", {}, l))))); }
 
@@ -538,7 +548,7 @@ app.append(...section("all", "كل البوستات", "اضغط على عنوا�
 app.append(h("div", { class: "card" }, table([{ t: "التاريخ" }, { t: "الفورمات" }, { t: "الهوك", cls: "hook" }, { t: "مشاهدات", num: true }, { t: "لايك", num: true }, { t: "كومنت", num: true }, { t: "المؤشر", num: true }, { t: "الحكم" }, { t: "" }],
   P.slice().reverse().map((p) => [day(p.timestamp), FMT[p.format] || p.format, p.hook, { sort: p.views == null ? -1 : p.views, text: full(p.views) }, { sort: p.likes == null ? -1 : p.likes, text: full(p.likes) }, { sort: p.comments == null ? -1 : p.comments, text: full(p.comments) }, { sort: p.index == null ? -1 : p.index, text: p.index == null ? (p.is_pinned ? "مثبت" : "جديد") : x2(p.index) }, p.verdict ? { win: "ناجح", lose: "فاشل", normal: "عادي" }[p.verdict] : "—", { el: link(p.url, "↗") }]), true)));
 
-app.append(h("div", { class: "foot" }, `مصدر البيانات: Apify (بيانات عامة فقط) · تكلفة السحب ≈ $${A.meta.apify_cost_usd} · الوسيط بدل المتوسط عشان بوست فايرال واحد ما يخبيش الباقي. الريتش والسيفز والشيرز مش متاحة علنًا؛ لو الحساب بتاعك اربطه بـSupermetrics. نطاقات التفاعل المرجعية تقريبية مش أرقام رسمية.`));
+app.append(h("div", { class: "foot" }, `مصدر البيانات: Apify (بيانات عامة فقط) · ${I.cost_note || "تكلفة السحب ≈ $" + A.meta.apify_cost_usd} · الوسيط بدل المتوسط عشان بوست فايرال واحد ما يخبيش الباقي. الريتش والسيفز والشيرز مش متاحة علنًا؛ لو الحساب بتاعك اربطه بـSupermetrics. نطاقات التفاعل المرجعية تقريبية مش أرقام رسمية.`));
 })();
 </script>
 </body>

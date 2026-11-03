@@ -300,7 +300,8 @@ def main():
         "losers": [slim(p) for p in reversed(ranked) if p["verdict"] == "lose"][:10],
         "top5": [slim(p) for p in ranked[:5]],
         "bottom5": [slim(p) for p in reversed(ranked[-5:])],
-        "excluded": {"pinned": sum(p["is_pinned"] for p in posts), "immature": sum(p["immature"] for p in posts)},
+        "excluded": {"pinned": sum(p["is_pinned"] for p in posts), "immature": sum(p["immature"] for p in posts),
+                     "no_baseline": sum(1 for p in posts if p["index"] is None and not p["is_pinned"] and not p["immature"])},
         "related_profiles": prof.get("related_profiles", []),
     }
     if a.niche:

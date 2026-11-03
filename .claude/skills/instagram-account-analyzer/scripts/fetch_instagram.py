@@ -73,6 +73,25 @@ def run_actor(actor, run_input, wait_secs=420):
     return items or [], run.get("usageTotalUsd")
 
 
+def spend_since(t0):
+    """Real Apify spend: sum usage of every run on the account started since t0.
+
+    The hashtag actor reports $0 on its own run and bills child runs, so the
+    per-run figure under-reports. Usage is finalised a few seconds after a run
+    ends, hence the short wait. If other jobs run on the same account at the same
+    time they are counted too, so treat the number as an upper bound.
+    """
+    time.sleep(8)
+    runs = _req("GET", _url("/actor-runs", desc="true", limit=50))["data"]["items"]
+    cut = t0 - dt.timedelta(seconds=3)
+    total = 0.0
+    for r in runs:
+        started = dt.datetime.fromisoformat(r["startedAt"].replace("Z", "+00:00"))
+        if started >= cut:
+            total += r.get("usageTotalUsd") or 0
+    return round(total, 4)
+
+
 # --------------------------------------------------------------------------- normalisation
 def _num(v):
     """Instagram uses -1 for hidden likes; treat as missing."""
@@ -202,9 +221,10 @@ def main():
     a.add_argument("--since", help="YYYY-MM-DD or '3 months'")
     a.add_argument("--out", required=True)
     h = sub.add_parser("hashtag"); h.add_argument("tags", nargs="+")
-    h.add_argument("--limit", type=int, default=40); h.add_argument("--out", required=True)
+    h.add_argument("--limit", type=int, default=25); h.add_argument("--out", required=True)
     p = sub.add_parser("profiles"); p.add_argument("usernames", nargs="+"); p.add_argument("--out", required=True)
     args = ap.parse_args()
+    t0 = dt.datetime.now(dt.timezone.utc)
 
     if args.cmd == "account":
         data = cmd_account(args.username, args.limit, args.since)
@@ -218,10 +238,11 @@ def main():
                 "cost_usd": round(usd or 0, 4), "profiles": profs}
         n = len(profs)
 
+    data["cost_usd"] = max(data.get("cost_usd") or 0, spend_since(t0))
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"saved {n} items -> {args.out} | apify cost ~ ${data['cost_usd']}")
+    print(f"saved {n} items -> {args.out} | apify spend (upper bound) ~ ${data['cost_usd']}")
 
 
 if __name__ == "__main__":
