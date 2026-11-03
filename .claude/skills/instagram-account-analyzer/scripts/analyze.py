@@ -295,6 +295,7 @@ def main():
         "trend": trend(posts),
         "timing": timing(posts),
         "patterns": content_patterns(posts),
+        "posts": [slim(p) for p in sorted(posts, key=lambda p: p["timestamp"] or "")],
         "winners": [slim(p) for p in ranked if p["verdict"] == "win"][:10],
         "losers": [slim(p) for p in reversed(ranked) if p["verdict"] == "lose"][:10],
         "top5": [slim(p) for p in ranked[:5]],

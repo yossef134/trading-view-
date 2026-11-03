@@ -21,6 +21,8 @@ Give it an account, get a full diagnosis. All numbers come from scripts, not fro
 
 - `scripts/fetch_instagram.py` — Apify fetcher (`account`, `hashtag`, `profiles`).
 - `scripts/analyze.py` — all metrics → `analysis.json`.
+- `scripts/build_dashboard.py` + `scripts/dashboard_template.html` — single-file offline HTML dashboard (RTL, light/dark, hover tooltips, table view for every chart).
+- `references/insights-schema.md` — the `insights.json` Claude writes so the dashboard carries the Arabic findings.
 - `references/metrics.md` — what every metric means and its limits. Read it before explaining a number you are unsure about.
 
 Work in `outputs/instagram-analyzer/<username>/<YYYY-MM-DD>/` inside the project (create it). Keep `raw.json`, `analysis.json`, `niche_reels.json` and the final report there.
@@ -90,11 +92,20 @@ Use these sections, in order. Be specific: quote actual hooks, name actual posts
 
 Save as `report.md` next to the data and give the user the path.
 
+## Step 6b. Dashboard
+
+Write the findings from the report into `insights.json` (schema in `references/insights-schema.md`; every figure you cite must exist in the data files), then:
+
+```bash
+python3 -I scripts/build_dashboard.py --analysis .../analysis.json --insights .../insights.json --competitors .../competitors.json --out .../dashboard.html
+```
+
+Omit `--insights` or `--competitors` if you do not have them; the page still renders all numbers with an automatic summary. The file is self-contained (no network, no libraries), so it can be opened directly, sent as-is, or published as an Artifact. Open it in a browser (Playwright is available in cloud sessions) and look at it before handing it over: check there is no overlapping text, no horizontal scroll at 390px, and that dark mode reads well.
+
 ## Step 7. Optional extras
 
 - **Own account + Supermetrics:** load the Supermetrics tools (`data_source_discovery`, `field_discovery`, `instagram_insights`) and pull reach, impressions, saves, shares, profile visits and follower online times. Use `field_discovery` for real field ids; never invent them. Then correct the timing and "what worked" sections with real reach and saves.
 - **Scripts for new ideas:** hand the best viral reel URLs to `reels-scripting`; use `hook-generator` for hook variants (adapt to Instagram/Arabic if asked).
-- **Dashboard:** *(next build step — not implemented yet.)* Do not promise an HTML dashboard until `scripts/build_dashboard.py` exists.
 - **Content calendar or repeat audit in 30 days:** save `analysis.json` per date so progress can be diffed.
 
 ## When things go wrong
