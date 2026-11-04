@@ -256,6 +256,31 @@ def niche_summary(niche, account_posts):
     }
 
 
+def detect_stage(prof, posts, now):
+    """Rough client stage from public numbers. Always confirm it with the client."""
+    f = prof.get("followers") or 0
+    total = prof.get("posts_count") or len(posts)
+    recent = sum(1 for p in posts if p["_dt"] and (now - p["_dt"]).days <= 90)
+    reasons = []
+    if f < 1000:
+        reasons.append(f"{f} followers (< 1,000)")
+    if total < 15:
+        reasons.append(f"{total} posts in the account's whole history (< 15)")
+    if recent < 6:
+        reasons.append(f"{recent} posts in the last 90 days (< 6)")
+    if f < 1000 or total < 15:
+        code = "zero"
+    elif f < 10000 or recent < 12:
+        code = "early"
+    else:
+        code = "working"
+    return {"code": code, "followers": f, "posts_total": total, "posts_last_90d": recent, "reasons": reasons,
+            "meaning": {"zero": "no audience/history yet: focus on niche, competitors and formats, not on auditing own posts",
+                        "early": "some traction: audit own content, but weigh competitors heavily",
+                        "working": "established audience and cadence: audit own content in depth"}[code],
+            "note": "heuristic from public numbers - confirm with the client"}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--raw", required=True)
@@ -290,6 +315,7 @@ def main():
                    "below" if acct_er < tier[2] else "above" if acct_er > tier[3] else "within",
                    "followers_to_following": ratio, "format_medians": {k: round(v) for k, v in medians.items()},
                    "benchmark_note": "Rule-of-thumb bands, not official Instagram figures."},
+        "stage": detect_stage(prof, posts, now),
         "bio": bio_signals(prof),
         "cadence": cadence(posts),
         "trend": trend(posts),

@@ -1,116 +1,145 @@
 ---
 name: instagram-account-analyzer
 description: >
-  Full audit of any public Instagram account from just a username. Pulls the profile and recent posts/reels through Apify, then reports which videos worked and which flopped (and why), best posting days and hours, bio quality, hooks, captions, hashtags, CTAs, posting consistency and trend. Detects the account's niche, finds the viral reels in that niche and benchmarks the account against them and against competitors, and ends with a concrete 30-day plan. Use whenever the user says "analyse this Instagram account", "حلل حساب انستجرام", "حلل الاكونت ده", "audit my Instagram", "why are my reels flopping", "best time to post", "is my bio good", or just sends an Instagram @username or profile link and wants to know how it is doing. Reports in the user's language (Egyptian Arabic by default for this user).
+  Full audit and content strategy for an Instagram account from a username. First understands the client's stage (zero audience vs working audience) and pins down the exact niche by asking questions, checks topic coherence and visual identity, proposes 5 sub-niches, finds 5 real competitors in that niche, analyses their last 20 reels (what won, what repeats, with links, formats judged by viewing the video frames), collects real audience questions and objections from competitor comments and web research (Google, Reddit, Quora, forums), and turns them into video ideas. Also audits the account itself (winners, flops, posting times, bio) at a depth that matches its stage. Use whenever the user says "analyse this Instagram account", "حلل حساب انستجرام", "حلل الاكونت ده", "audit my Instagram", "find my competitors", "what content should I make", "ايه الفيديوهات اللي بتكسب في النيش بتاعي", or sends an Instagram @username or profile link. Reports in the user's language (Egyptian Arabic by default for this user).
 ---
 
 # Instagram Account Analyzer
 
-Give it an account, get a full diagnosis. All numbers come from scripts, not from guessing. Your job is to run them, read the results like a strategist, and explain them plainly.
+Numbers come from scripts. Judgement (niche, formats, why something won, ideas) comes from you, always grounded in data you can link to.
 
 ## Ground rules
 
-- **Language:** write the report in Egyptian Arabic (عامية مصرية) unless the user writes in another language. Keep technical terms in English where Egyptians use them (hook, reach, CTA, reel, carousel).
-- **Only public data.** Instagram does not expose reach, saves, shares or follower activity to outsiders. Never present an estimate of those as a fact. "Best time to post" for an account that is not the user's is **inferred from past post performance** and must be labelled that way with its sample size.
-- **Comments:** analyse comment *counts* only. The Apify post actors return comment text anyway; `fetch_instagram.py` drops it in memory before saving. Do not go looking for it, do not run a comments scrape.
-- **Costs:** Apify is pay-per-result. Measured: an account with 60 posts is about $0.03-0.16 (about $0.0026 per post); competitor profile cards about $0.0026 each; **hashtag reels are the expensive part, about $0.2 per hashtag at 30-45 reels (roughly $0.0075 per reel)**, so 3 hashtags can reach $0.6. Before Step 3 tell the user the estimate and keep it small by default (2-3 hashtags, `--limit 25`). `cost_usd` in the saved files is the real spend summed over all runs started during the fetch (an upper bound if other jobs share the Apify account). Report it afterwards.
-- **Never fabricate.** If a step failed or a sample is too small, say so. Under about 25 scored posts, mark timing and pattern findings as "مؤشر مش حقيقة".
-- Never print tokens. `APIFY_API_TOKEN` is read from the environment by the scripts (or injected by the proxy in cloud sessions).
+- **Language:** Egyptian Arabic (عامية مصرية), technical words in English (hook, reach, CTA, reel).
+- **Public data only.** Reach, saves, shares and follower activity are not public; never state estimates of them as facts. "Best time to post" for someone else's account is inferred from past results, with its sample size.
+- **Never fabricate.** Every claim about a competitor, question or objection carries a link. If a source returned nothing, say so. Small samples are "مؤشر مش حقيقة".
+- **Comments (consent given by the user, 2026-11-04):** `comments` collects public comment TEXT from competitors' top reels, anonymised (no names/ids/avatars; mentions, links, emails, numbers masked; the competitor's own replies removed). Own-account files keep counts only. Do not collect comments for any other purpose.
+- **Open format vocabulary.** The ten formats in `references/content-formats-2026.md` are suggested names. Label what you actually see; invent a new name whenever a reel does not fit.
+- **Do not use the IShort connector** (the user said not to rely on it).
+- **Costs are real money; measure, quote, ask, then run.** Measured on 2026-11-04:
+
+| Step | Measured cost | Rule |
+|---|---|---|
+| Own account, 60 posts | about $0.03-0.16 | just run |
+| Profile cards | $0.0026 each | just run |
+| Competitor reels | about $0.003 per reel (5 accounts x 20 = about $0.2-0.3) | quote, then run |
+| Comments on top reels | about $0.02 per reel with 40 comments (24 reels = about $0.5) | quote, then run |
+| **Videos stored by Apify (`videos`)** | **about $0.07 per video** (24 = about $1.6) | **always ask first; keep `--top 2-3`; prefer free `--cdn`** |
+| Hashtag reels | about $0.0075 per reel; noisy and biased low | not used by default |
+
+  `cost_usd` in saved files is the real spend summed over all runs started during the fetch (an upper bound if other jobs share the Apify account, and **double-counted if two fetches run at the same time**: run them one after the other).
+- Never print tokens (`APIFY_API_TOKEN` is read from the environment, or injected by a proxy).
 
 ## Files
 
-- `scripts/fetch_instagram.py` — Apify fetcher (`account`, `hashtag`, `profiles`).
-- `scripts/analyze.py` — all metrics → `analysis.json`.
-- `scripts/build_dashboard.py` + `scripts/dashboard_template.html` — single-file offline HTML dashboard (RTL, light/dark, hover tooltips, table view for every chart).
-- `references/insights-schema.md` — the `insights.json` Claude writes so the dashboard carries the Arabic findings.
-- `references/metrics.md` — what every metric means and its limits. Read it before explaining a number you are unsure about.
+- `scripts/fetch_instagram.py` - Apify: `account`, `profiles`, `reels`, `videos`, `comments` (and optional `hashtag`).
+- `scripts/analyze.py` - own account: metrics, winners/losers, timing, bio checks, **stage** -> `analysis.json`.
+- `scripts/analyze_competitors.py` - competitor reels vs each account's own median, winners, repeated patterns with links -> `competitors_analysis.json`.
+- `scripts/media.py` - `sheets` (contact sheets of frames from reels, needs ffmpeg+Pillow) and `grid` (cover grid of the account's posts).
+- `scripts/prep_comments.py` - sorts comments into questions / objections / requests -> `audience_signals.json`.
+- `scripts/build_dashboard.py` + `scripts/dashboard_template.html` - offline HTML dashboard (own-account sections today; see Step 9).
+- `references/niche-interview.md`, `references/content-formats-2026.md`, `references/research-method.md`, `references/metrics.md`, `references/insights-schema.md`.
 
-Work in `outputs/instagram-analyzer/<username>/<YYYY-MM-DD>/` inside the project (create it). Keep `raw.json`, `analysis.json`, `niche_reels.json` and the final report there.
+Work in `outputs/instagram-analyzer/<username>/<YYYY-MM-DD>/`.
 
-## Step 1. Get the target
+## Step 0. Intake
 
-Accept `@name`, a profile URL, or a bare username. Ask only what is missing:
+Accept `@name`, URL or username. Ask only what is missing: is it the user's own account or a client's; timezone for "best time" (default `Africa/Cairo`).
 
-1. Is this the user's **own** account? (If yes and Supermetrics has an Instagram source connected, Step 7 adds real insights.)
-2. Depth: default 60 posts (about 2 months for an active account). Offer 100 for more reliable timing.
-3. Timezone for "best time": default `Africa/Cairo`; ask if the audience is elsewhere (e.g. Gulf → `Asia/Riyadh`).
-
-## Step 2. Fetch
+## Step 1. Fetch the account
 
 ```bash
-python3 -I scripts/fetch_instagram.py account <username> --limit 60 --out outputs/instagram-analyzer/<username>/<date>/raw.json
+python3 -I scripts/fetch_instagram.py account <username> --limit 60 --out <dir>/raw.json
+python3 -I scripts/analyze.py --raw <dir>/raw.json --out <dir>/analysis.json
 ```
 
-Stops with a clear message for private/missing accounts. A run takes about 40–90 seconds. If Apify returns a validation error, re-check the actor input schema (`GET https://api.apify.com/v2/acts/<actor>/builds/default`) rather than guessing inputs.
+Read `analysis.json -> stage` (`zero` / `early` / `working`, with reasons) and **confirm it with the client** in one line. It decides how deep Step 8 goes: at `zero` do not audit own posts beyond bio and what exists; put the effort into Steps 2-7.
 
-## Step 3. Detect the niche, then fetch the niche's viral reels
+## Step 2. Pin down the niche - ask until exact
 
-Read the bio, `top_hashtags`, hooks and captions in `raw.json`. Decide, and show the user:
+Follow `references/niche-interview.md`. Do not scrape competitors or research until the client confirms one sentence: "I help [exactly who] get [exactly what] through [how]". If the account already shows it clearly, propose a draft and ask only to confirm. Otherwise ask in rounds of 3-4 questions (use AskUserQuestion). Also capture constraints (on camera? time? editor? dialect?) and the 90-day goal.
 
-- **Niche** (specific: "fitness coaching for Arab women", not "fitness") and **sub-niche**.
-- **3–5 niche hashtags** that real creators in this niche use (prefer the account's own tags that are neither huge generic ones like `#love` nor private brand tags).
+## Step 3. Coherence and visual identity
 
-Confirm with the user in one line if the niche is ambiguous; otherwise proceed.
+- **Topic coherence:** read all captions in `raw.json`, label each post on-niche / adjacent / unrelated, report the share and list the unrelated ones with links.
+- **Visual identity:** `python3 -I scripts/media.py grid --raw <dir>/raw.json --out <dir>/grid.jpg`, then look at the image: consistent colours, fonts, framing, face, cover style? Qualitative verdict only. If it fails with a CDN 403, say the network blocks Instagram's image host (`fbcdn.net`, `cdninstagram.com`) and either ask the user to allow it in the environment's network settings or ask for a screenshot of the profile grid. Do not guess a verdict without seeing it.
+
+## Step 4. Five sub-niches
+
+Propose 5 sub-niches (audience slice x problem), each with a one-line reason and the evidence (bio, captions, competitor focus). Let the client pick or edit. Research and ideas are produced per sub-niche.
+
+## Step 5. Competitors: 5, approved before the expensive steps
+
+Find candidates, then verify each with `profiles`. Discovery that works: web search ("best Instagram accounts for <niche>", Arabic and English, `site:instagram.com`), the account's `related_profiles`, accounts the client admires, and owners of top reels in a small hashtag sample if needed. **Apify keyword search does NOT discover accounts (it returned one account), so do not use it.**
+
+Keep a mix: 2 larger accounts to learn from and 3 close to the client's size (0.3x to 5x followers), all public, active in the last 60 days, same language and market. Verify with:
 
 ```bash
-python3 -I scripts/fetch_instagram.py hashtag <tag1> <tag2> <tag3> --limit 40 --out outputs/instagram-analyzer/<username>/<date>/niche_reels.json
+python3 -I scripts/fetch_instagram.py profiles <a> <b> <c> <d> <e> --out <dir>/competitors.json
 ```
 
-## Step 4. Analyse
+Show the list (link, followers, why chosen, bio line) with the cost of Step 6 and **wait for approval**.
+
+## Step 6. Last 20 reels per competitor: what won and what repeats
 
 ```bash
-python3 -I scripts/analyze.py --raw .../raw.json --niche .../niche_reels.json --tz Africa/Cairo --out .../analysis.json
+python3 -I scripts/fetch_instagram.py reels <a> <b> <c> <d> <e> --limit 20 --out <dir>/competitor_reels.json
+python3 -I scripts/analyze_competitors.py --reels <dir>/competitor_reels.json --out <dir>/competitors_analysis.json
 ```
 
-Read `analysis.json` fully. Skip `--niche` only if Step 3 was skipped.
+Each reel is judged against ITS OWN account's median (winner >= 1.5x, loser <= 0.5x). Accounts with fewer than 4 reels with views are not scored. A pattern is "repeated" only with >= 3 winners, >= 2 accounts, no single account supplying > 60% of them, lift >= 1.3. Report counts ("9 of 18 winners") with links, never a bare claim. Watch for accounts with few reels (their medians are noisy).
 
-## Step 5. Competitors (optional but recommended)
-
-`analysis.json → related_profiles` are Instagram's own "similar accounts". Pick 3–4 that truly match the niche (drop celebrities and unrelated brands), then:
+**Formats: look at the video.** Quote the price, get a yes, then:
 
 ```bash
-python3 -I scripts/fetch_instagram.py profiles <a> <b> <c> --out .../competitors.json
+python3 -I scripts/fetch_instagram.py videos --reels <dir>/competitor_reels.json --top 3 --out <dir>/videos.json   # about $0.07 per video; or add --cdn when fbcdn.net is allowed (free)
+python3 -I scripts/media.py sheets --videos <dir>/videos.json --out-dir <dir>/sheets
 ```
 
-Compare followers, bio positioning and link strategy. For a deeper comparison run Step 2 on one or two of them with `--limit 30`.
+Open each sheet (8 frames with time stamps). Write `format_labels.json` as `{"<shortCode>": {"format": "...", "topic": "...", "note": "..."}}`, free-form names. Note what you can see: who is on camera, text-on-screen, when the hook appears, cuts and b-roll, props, production level. Re-run `analyze_competitors.py --labels <dir>/format_labels.json`. Because only top reels are viewed, format results are **counts among winners, not lift**; the script marks them `counts_only`. Say so.
 
-## Step 6. Write the report
+For each competitor give: top 3 winners (link, views, index, format, hook), the pattern that recurs in its own winners, and where it is weak. Then the cross-competitor repeated patterns, each with example links.
 
-Use these sections, in order. Be specific: quote actual hooks, name actual posts with their URLs, give numbers with their sample size. Every "problem" gets a "so do this".
-
-1. **الخلاصة في 5 أسطر** — verdict, biggest strength, biggest leak, the one thing to change first.
-2. **صحة الحساب** — followers, median engagement rate vs the rule-of-thumb band (`health`; say the band is a rough heuristic), followers/following ratio, trend (`trend.direction`, `change_pct`), cadence and consistency.
-3. **الفيديوهات الناجحة** — `winners` (index ≥ 1.5× the median of their own format). For each: what it is, why it likely worked (hook, topic, length, format, audio, CTA), what pattern repeats across winners.
-4. **الفيديوهات الفاشلة** — `losers` (≤ 0.5×). Same treatment: likely cause and whether to retire, rework or retest the idea. Be fair: a low index on a post under 48 h old is excluded for that reason (`excluded.immature`).
-5. **أنماط المحتوى** — from `patterns`: format mix vs results, reel duration sweet spot, caption length, hashtag count, CTA vs none, question hooks, number hooks, original vs trending audio, carousel slide count. Only call something a pattern when each side has n ≥ 3, and say n.
-6. **أحسن أوقات النشر** — `timing`: best weekdays and 3-hour blocks, where the winners were posted, confidence and sample size, and the caveat line. For the user's own account, replace with Supermetrics data if Step 7 ran.
-7. **البايو واللينك** — start from `bio` (mechanical checks), then judge it yourself: does a stranger understand *who it is for, what they get, why trust you, what to do next* in 3 seconds? Give a rewritten bio (max 150 chars) and a name-field tip (keyword in the name field is searchable).
-8. **النيش والترند** — the niche you detected, `niche` summary (median and 90th-percentile views, typical duration, top hashtags), the top viral reels with URLs and *why they hit* (hook structure, payoff speed, format), and how the account's reels compare. Remind that hashtag results favour big accounts.
-9. **المنافسين** — comparison table and what each does better; what gap the account can own.
-10. **خطة 30 يوم** — weekly cadence, 3–4 content pillars with the format and hook style that suits each, 10 concrete video ideas drawn from winners and viral niche reels (with a hook line each), posting slots, one experiment per week with a success metric.
-11. **حاجات تانية لاحظتها** — anything outside the checklist you noticed: pinned posts strategy, repeated topics that die, collaboration/paid-partnership effect, hidden likes, comments disabled, posting gaps, language mix, thumbnail/cover consistency, first-line hook habits.
-
-Save as `report.md` next to the data and give the user the path.
-
-## Step 6b. Dashboard
-
-Write the findings from the report into `insights.json` (schema in `references/insights-schema.md`; every figure you cite must exist in the data files), then:
+**Audience comments (the user agreed):**
 
 ```bash
-python3 -I scripts/build_dashboard.py --analysis .../analysis.json --insights .../insights.json --competitors .../competitors.json --out .../dashboard.html
+python3 -I scripts/fetch_instagram.py comments --reels <dir>/competitor_reels.json --top 3 --limit 40 --out <dir>/comments.json
+python3 -I scripts/prep_comments.py --comments <dir>/comments.json --out <dir>/audience_signals.json
 ```
 
-Omit `--insights` or `--competitors` if you do not have them; the page still renders all numbers with an automatic summary. The file is self-contained (no network, no libraries), so it can be opened directly, sent as-is, or published as an Artifact. Open it in a browser (Playwright is available in cloud sessions) and look at it before handing it over: check there is no overlapping text, no horizontal scroll at 390px, and that dark mode reads well.
+Read `questions`, `objections`, `requests` AND the top of `other`; cluster by theme. Expect few real questions (first run: about 4 questions and 1 objection out of 185 comments, plus 12+ "send the sheet" requests, which show a lead magnet working). Never quote a commenter's identity.
 
-## Step 7. Optional extras
+## Step 7. Real questions and objections -> video ideas
 
-- **Own account + Supermetrics:** load the Supermetrics tools (`data_source_discovery`, `field_discovery`, `instagram_insights`) and pull reach, impressions, saves, shares, profile visits and follower online times. Use `field_discovery` for real field ids; never invent them. Then correct the timing and "what worked" sections with real reach and saves.
-- **Scripts for new ideas:** hand the best viral reel URLs to `reels-scripting`; use `hook-generator` for hook variants (adapt to Instagram/Arabic if asked).
-- **Content calendar or repeat audit in 30 days:** save `analysis.json` per date so progress can be diffed.
+Follow `references/research-method.md`: per approved sub-niche, deep research (Google, Reddit, Quora, forums, YouTube, Arabic and English) plus the comment signals. Every item has a source link and quote. Output the ranked table with hook variants, format, CTA, difficulty and a reference competitor reel. Say which sources returned nothing (Arabic Reddit/Quora are usually thin).
+
+## Step 8. Own-account audit, depth by stage
+
+At `zero`: bio, positioning, coherence, identity, and what little exists. At `early`/`working`: also winners and flops (index >= 1.5x / <= 0.5x of own format median), format mix, caption/hook/CTA/duration patterns (n >= 3 per side), posting times (only with >= 25 scored posts; below 10 the dashboard hides them), trend (>= 10 mature posts). Compare against Step 6 competitors, not against hashtag samples.
+
+**Lesson from the first run:** a hashtag sample gave a niche median of 448 views, while the five competitors' own medians were 329 to 10,015. Hashtag samples under-represent real accounts; benchmark against competitors' own reels.
+
+## Step 9. Report, insights, dashboard
+
+Write `report.md` (Egyptian Arabic) in this order: الخلاصة · مرحلة العميل والنيش (the confirmed sentence, constraints, stage) · التماسك والهوية البصرية · النيش الفرعي الخمسة · المنافسين (table + per-competitor winners with links) · الأنماط المتكررة (counts + links) · الفورمات (what appeared, including ones outside the ten) · أسئلة واعتراضات الجمهور (with sources) · أفكار الفيديوهات (ranked table) · تقييم الحساب نفسه · خطة 30 يوم · ما لا يمكن إثباته.
+
+Then `insights.json` (see `references/insights-schema.md`) and:
+
+```bash
+python3 -I scripts/build_dashboard.py --analysis <dir>/analysis.json --insights <dir>/insights.json --competitors <dir>/competitors.json --out <dir>/dashboard.html
+```
+
+**Not built yet:** dashboard sections for competitor patterns, formats, audience questions and the ideas table. Until they exist, those live in `report.md` and the JSON files; do not promise them in the dashboard. Open the dashboard in a browser before handing it over (no overlapping text, no horizontal scroll at 390px, dark mode readable).
+
+## Optional
+
+- Own account with Supermetrics connected: `data_source_discovery`, `field_discovery`, `instagram_insights` for reach, saves, shares, online followers. Never invent field ids. If it returns `TRIAL_EXPIRED`, report it and continue; do not work around it.
+- Hand the best reel URLs to `reels-scripting`; use `hook-generator` for hook variants.
+- Save `analysis.json` per date to diff progress later.
 
 ## When things go wrong
 
-- Private account: say so and stop. Do not try workarounds.
-- Fewer than 12 posts: give a light audit (bio, health, format mix) and say that winners/losers/timing need more history.
-- Hidden likes (`likes: null`): rely on views for reels and say engagement rate is unavailable for those posts.
-- Apify quota/payment error: report the exact message and the console link; do not retry in a loop.
+- Private account: say so and stop.
+- Fewer than 12 posts: light audit only; say winners/losers/timing need more history.
+- CDN 403 on images or video: the environment blocks Instagram's CDN. Tell the user which hosts to allow, offer the paid Apify route with its price, never route around the block.
+- Apify errors: report the exact message; no retry loops. A 502 on Apify's sync endpoints is a gateway issue; the scripts use async runs.

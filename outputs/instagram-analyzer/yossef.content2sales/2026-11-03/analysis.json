@@ -33,6 +33,19 @@
     },
     "benchmark_note": "Rule-of-thumb bands, not official Instagram figures."
   },
+  "stage": {
+    "code": "zero",
+    "followers": 126,
+    "posts_total": 9,
+    "posts_last_90d": 2,
+    "reasons": [
+      "126 followers (< 1,000)",
+      "9 posts in the account's whole history (< 15)",
+      "2 posts in the last 90 days (< 6)"
+    ],
+    "meaning": "no audience/history yet: focus on niche, competitors and formats, not on auditing own posts",
+    "note": "heuristic from public numbers - confirm with the client"
+  },
   "bio": {
     "length": 112,
     "lines": 3,
