@@ -4,6 +4,10 @@ Run once per approved sub-niche (5). Use the `anthropic-skills:deep-research` sk
 sub-niche when the Agent tool exists; otherwise do it directly with web search and fetch. Always add the
 audience comments from `audience_signals.json`.
 
+## Whose voice
+
+Only the client's audience (for a doctor-marketing client: doctors and clinic owners asking about patients, content, pricing, ads, rules). Patients' complaints about doctors are a different audience and are excluded.
+
 ## The one rule
 
 **Every question, objection or claim in the output carries a source link and a short verbatim or close-paraphrased

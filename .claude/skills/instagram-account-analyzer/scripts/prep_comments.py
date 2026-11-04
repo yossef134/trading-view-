@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sort anonymised audience comments into questions, objections and requests (stdlib only).
+"""Keep ONLY the audience questions and objections from anonymised comments (stdlib only).
 
 usage: prep_comments.py --comments comments.json --out audience_signals.json
 
@@ -10,10 +10,10 @@ some and over-catch others, so read the `other` bucket's top items too.
 
   question    asks something (? / ؟ or a question word)
   objection   pushes back (too expensive, does not work, scam, I disagree, not realistic)
-  request     asks for a resource ("send the sheet", "link please") - a lead-magnet signal
-  praise      thanks / compliments only, dropped from the ranked lists
-  other       everything else
-Identical comments are merged and counted (duplicates are the signal for requests).
+Only these two are written to the output (the user asked for questions and objections only).
+Everything else (praise, "send the sheet" requests, chatter) is counted in meta.by_kind and dropped,
+so nothing but real questions and objections reaches the report.
+Identical comments are merged and counted.
 """
 import argparse
 import json
@@ -73,9 +73,9 @@ def main():
     by_owner = Counter(c["owner"] for c in data["comments"])
     out = {"meta": {"comments": len(data["comments"]), "unique": len(groups), "by_account": dict(by_owner),
                     "by_kind": {k: sum(g["count"] for g in v) for k, v in buckets.items()},
-                    "note": "keyword rules; Claude must read and cluster. praise is excluded from the lists."},
-           "questions": buckets["question"], "objections": buckets["objection"], "requests": buckets["request"],
-           "other": buckets["other"][:60]}
+                    "note": "keyword rules, so some real questions may be missed; only questions and objections are kept. "
+                            "Claude reads them and clusters by theme."},
+           "questions": buckets["question"], "objections": buckets["objection"]}
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     print(f"signals -> {a.out} | {out['meta']['by_kind']}")

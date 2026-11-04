@@ -1,0 +1,2608 @@
+{
+  "meta": {
+    "fetched_at": "2026-11-04T23:42:53+00:00",
+    "accounts": 5,
+    "scored_accounts": 5,
+    "reels_scored": 86,
+    "winners": 24,
+    "base_win_rate": 0.279,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5,
+    "min_reels_per_account": 4,
+    "timezone": "Africa/Cairo",
+    "labels_applied": 10,
+    "note": "index is vs each account's own median; patterns are counts with links, 'repeated' = >=3 winners, >=2 accounts, no single account supplying >60% of them, lift >= 1.3"
+  },
+  "accounts": [
+    {
+      "username": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/abdulrhmanshawki/",
+      "followers": 5662,
+      "bio": "The Non-Clinical Side Of Dentistry 💰\nشيت تسعير خدمات أسنان ابعتلي واتساب وهيتبعتلك فورا👇",
+      "link": "https://wa.me/201211390594",
+      "reels_found": 18,
+      "reels_with_views": 18,
+      "median_views": 7684.5,
+      "median_view_rate": 1.3572,
+      "span": [
+        "2026-08-29",
+        "2026-10-28"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/De1jxQOoKV8/",
+          "views": 67706,
+          "likes": 996,
+          "comments": 11,
+          "duration": 178.583221,
+          "index": 8.81,
+          "view_rate": 11.958,
+          "eng_per_view": 0.0149,
+          "hook": "إزاي افتح عيادة أسنان class c تشتغل وتجيبلي أرباح من أول يوم ؟",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": "whiteboard explainer + face PiP",
+          "topic": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+          "verdict": "win",
+          "timestamp": "2026-10-23T12:54:22.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/DdW6bntInty/",
+          "views": 50338,
+          "likes": 516,
+          "comments": 170,
+          "duration": 128.54422,
+          "index": 6.55,
+          "view_rate": 8.89,
+          "eng_per_view": 0.0136,
+          "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": "screen-share walkthrough + face (Split Screen)",
+          "topic": "تكاليف تشغيل العيادة والتسعير",
+          "verdict": "win",
+          "timestamp": "2026-09-16T19:08:37.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/Demr8BVI5X5/",
+          "views": 44630,
+          "likes": 469,
+          "comments": 12,
+          "duration": 147.375595,
+          "index": 5.81,
+          "view_rate": 7.882,
+          "eng_per_view": 0.0108,
+          "hook": "هو ليه أغلب عيادات الأسنان بتخسر !!",
+          "hook_type": [
+            "loss_or_mistake"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": "whiteboard explainer + face PiP",
+          "topic": "ليه عيادات الأسنان بتخسر (margin vs markup)",
+          "verdict": "win",
+          "timestamp": "2026-10-17T18:00:17.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/DdeiECwxc-L/",
+          "views": 42733,
+          "likes": 410,
+          "comments": 179,
+          "duration": 170.699997,
+          "index": 5.56,
+          "view_rate": 7.547,
+          "eng_per_view": 0.0138,
+          "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟ الجزء الثاني",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-19T17:35:44.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/Dd6yaOHtTEx/",
+          "views": 39016,
+          "likes": 496,
+          "comments": 37,
+          "duration": 124.434288,
+          "index": 5.08,
+          "view_rate": 6.891,
+          "eng_per_view": 0.0137,
+          "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط ؟ الجزء السادس",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-30T16:46:35.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/DePluW3I70F/",
+          "views": 3030,
+          "likes": 85,
+          "comments": 6,
+          "duration": 205.936325,
+          "index": 0.39,
+          "view_rate": 0.535,
+          "eng_per_view": 0.03,
+          "hook": "ايه الفرق بين القيمة الحقيقية والقيمة المدركة لعيادات الأسنان ؟",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-08T18:41:50.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/Dcoinf2OJRy/",
+          "views": 3403,
+          "likes": 139,
+          "comments": 10,
+          "duration": 66.036102,
+          "index": 0.44,
+          "view_rate": 0.601,
+          "eng_per_view": 0.0438,
+          "hook": "اكتر من مليون مريض جاهزين بس عيادتك مش ظاهرة ليهم !!",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-08-29T18:05:07.000Z"
+        },
+        {
+          "owner": "abdulrhmanshawki",
+          "url": "https://www.instagram.com/p/Dcy2Xvwuvm2/",
+          "views": 3590,
+          "likes": 99,
+          "comments": 54,
+          "duration": 75.556282,
+          "index": 0.47,
+          "view_rate": 0.634,
+          "eng_per_view": 0.0426,
+          "hook": "إزاي عيادتك تظهر رقم 1 علي جوجل مابس في منطقتك؟",
+          "hook_type": [
+            "question",
+            "number_or_list",
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-09-02T18:10:09.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "abdulrhmanshawki",
+        "url": "https://www.instagram.com/p/De1jxQOoKV8/",
+        "views": 67706,
+        "likes": 996,
+        "comments": 11,
+        "duration": 178.583221,
+        "index": 8.81,
+        "view_rate": 11.958,
+        "eng_per_view": 0.0149,
+        "hook": "إزاي افتح عيادة أسنان class c تشتغل وتجيبلي أرباح من أول يوم ؟",
+        "hook_type": [
+          "question"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": "whiteboard explainer + face PiP",
+        "topic": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+        "verdict": "win",
+        "timestamp": "2026-10-23T12:54:22.000Z"
+      }
+    },
+    {
+      "username": "kamal.elkhateeb",
+      "url": "https://www.instagram.com/kamal.elkhateeb/",
+      "followers": 7329,
+      "bio": "‏Doctor turned Marketing Strategist 👨‍⚕️\n‏Helping medical practices drive profitability & growth 📈\nLeadership | Business | Medical Marketing | MBA",
+      "link": "https://linktr.ee/Kamal.elkhateeb",
+      "reels_found": 17,
+      "reels_with_views": 17,
+      "median_views": 1125,
+      "median_view_rate": 0.1535,
+      "span": [
+        "2025-07-14",
+        "2026-11-01"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "views": 16415,
+          "likes": 40,
+          "comments": 11,
+          "duration": 46.613335,
+          "index": 14.59,
+          "view_rate": 2.24,
+          "eng_per_view": 0.0031,
+          "hook": "⁨\tدفعت كام إعلانات الشهر ده؟ 💸 5 آلاف؟ 10 آلاف؟ 50 ألف درهم؟",
+          "hook_type": [
+            "question",
+            "number_or_list"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": "talking head + motion-graphic cutaways",
+          "topic": "كام بتدفع على الإعلانات / موظف المبيعات",
+          "verdict": "win",
+          "timestamp": "2026-01-10T17:27:55.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "views": 4128,
+          "likes": 28,
+          "comments": 4,
+          "duration": 73.466667,
+          "index": 3.67,
+          "view_rate": 0.563,
+          "eng_per_view": 0.0078,
+          "hook": "عندك موظف شاطر جداً بس مبيعملش المطلوب منه... وموظف تاني بيحاول بكل طاقته بس نتايجه ضعيفة.",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": "podcast clip + text-card hook",
+          "topic": "أسلوب القيادة (ديكتاتوري ولا ديموقراطي)",
+          "verdict": "win",
+          "timestamp": "2025-08-22T16:47:56.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "views": 3326,
+          "likes": 20,
+          "comments": 5,
+          "duration": 38.566666,
+          "index": 2.96,
+          "view_rate": 0.454,
+          "eng_per_view": 0.0075,
+          "hook": "✋ قبل ما تصرف درهم واحد على إعلان أو بوست… اسمع الكلمتين دول",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": "podcast clip + text-card hook",
+          "topic": "استراتيجية المركز الطبي قبل الافتتاح",
+          "verdict": "win",
+          "timestamp": "2025-10-11T17:08:49.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "views": 3086,
+          "likes": 31,
+          "comments": 15,
+          "duration": 35.178665,
+          "index": 2.74,
+          "view_rate": 0.421,
+          "eng_per_view": 0.0149,
+          "hook": "المريض حجز وما جاش 🚫",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "dm"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-08-30T16:01:13.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/De8zfvzgnKI/",
+          "views": 2068,
+          "likes": 21,
+          "comments": 1,
+          "duration": 32.405334,
+          "index": 1.84,
+          "view_rate": 0.282,
+          "eng_per_view": 0.0106,
+          "hook": "لو دكتورك الأساسي ساب العيادة بكرة ⚠️",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "dm",
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-26T08:01:51.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DNyH4wXQiG3/",
+          "views": 348,
+          "likes": 9,
+          "comments": 1,
+          "duration": 89.76667,
+          "index": 0.31,
+          "view_rate": 0.047,
+          "eng_per_view": 0.0287,
+          "hook": "بتتعامل إزاي مع موظفينك؟ 🤔 سؤال هيكشف نوع القائد اللي جواك",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2025-08-25T15:35:17.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DfM9F25FS7i/",
+          "views": 360,
+          "likes": 17,
+          "comments": 6,
+          "duration": 29.535782,
+          "index": 0.32,
+          "view_rate": 0.049,
+          "eng_per_view": 0.0639,
+          "hook": "A simple marketing lesson:",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-11-01T14:34:14.000Z"
+        },
+        {
+          "owner": "kamal.elkhateeb",
+          "url": "https://www.instagram.com/p/DMLM1A7tco4/",
+          "views": 515,
+          "likes": 9,
+          "comments": 0,
+          "duration": 46.866665,
+          "index": 0.46,
+          "view_rate": 0.07,
+          "eng_per_view": 0.0175,
+          "hook": "فين جمهورك؟ 🎯 ",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2025-07-16T16:24:20.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "kamal.elkhateeb",
+        "url": "https://www.instagram.com/p/DTVqkzaDcrg/",
+        "views": 16415,
+        "likes": 40,
+        "comments": 11,
+        "duration": 46.613335,
+        "index": 14.59,
+        "view_rate": 2.24,
+        "eng_per_view": 0.0031,
+        "hook": "⁨\tدفعت كام إعلانات الشهر ده؟ 💸 5 آلاف؟ 10 آلاف؟ 50 ألف درهم؟",
+        "hook_type": [
+          "question",
+          "number_or_list"
+        ],
+        "cta": [
+          "save_share"
+        ],
+        "format": "talking head + motion-graphic cutaways",
+        "topic": "كام بتدفع على الإعلانات / موظف المبيعات",
+        "verdict": "win",
+        "timestamp": "2026-01-10T17:27:55.000Z"
+      }
+    },
+    {
+      "username": "prime_doc1",
+      "url": "https://www.instagram.com/prime_doc1/",
+      "followers": 81,
+      "bio": "Patient acquisition for Bariatric & Endoscopy clinics\n[1500]+ bookings generated for our clients\n↓ Book a free audit",
+      "link": "https://primedoc1.com/",
+      "reels_found": 11,
+      "reels_with_views": 11,
+      "median_views": 329,
+      "median_view_rate": 4.0617,
+      "span": [
+        "2026-10-22",
+        "2026-11-04"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "prime_doc1",
+          "url": "https://www.instagram.com/p/De9uEFJk_30/",
+          "views": 1736,
+          "likes": 32,
+          "comments": 8,
+          "duration": 81.599998,
+          "index": 5.28,
+          "view_rate": 21.432,
+          "eng_per_view": 0.023,
+          "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": "talking head + word captions + screen insert",
+          "topic": "إعلان ناجح للطبيب (CRM)",
+          "verdict": "win",
+          "timestamp": "2026-10-26T16:33:37.000Z"
+        },
+        {
+          "owner": "prime_doc1",
+          "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+          "views": 1568,
+          "likes": 42,
+          "comments": 7,
+          "duration": 68.565331,
+          "index": 4.77,
+          "view_rate": 19.358,
+          "eng_per_view": 0.0312,
+          "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": "talking head + numbered list cards",
+          "topic": "3 حاجات لنمو العيادة",
+          "verdict": "win",
+          "timestamp": "2026-10-22T16:33:34.000Z"
+        },
+        {
+          "owner": "prime_doc1",
+          "url": "https://www.instagram.com/p/DfSKBxHD9sq/",
+          "views": 1307,
+          "likes": 12,
+          "comments": 0,
+          "duration": 97.599998,
+          "index": 3.97,
+          "view_rate": 16.136,
+          "eng_per_view": 0.0092,
+          "hook": "المريض ما يدور على الأرخص.. المريض يدور على الأمان والثقة، وهذا اللي يملي عيادتك!",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-11-03T15:02:47.000Z"
+        },
+        {
+          "owner": "prime_doc1",
+          "url": "https://www.instagram.com/p/De4lHhbkrfi/",
+          "views": 666,
+          "likes": 21,
+          "comments": 4,
+          "duration": 94.890663,
+          "index": 2.02,
+          "view_rate": 8.222,
+          "eng_per_view": 0.0375,
+          "hook": "كيف تخللي المريض يوثق فيك قبل ما يجيك العيادة",
+          "hook_type": [
+            "question",
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-24T16:40:17.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "prime_doc1",
+          "url": "https://www.instagram.com/p/DfKMaK1osZe/",
+          "views": 62,
+          "likes": null,
+          "comments": 0,
+          "duration": 58.474667,
+          "index": 0.19,
+          "view_rate": 0.765,
+          "eng_per_view": 0.0,
+          "hook": "أكبر غلطة بيقع فيها الأطباء في الإعلانات.. وبتخسرهم فلوسهم!",
+          "hook_type": [
+            "loss_or_mistake"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-31T12:50:39.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "prime_doc1",
+        "url": "https://www.instagram.com/p/De9uEFJk_30/",
+        "views": 1736,
+        "likes": 32,
+        "comments": 8,
+        "duration": 81.599998,
+        "index": 5.28,
+        "view_rate": 21.432,
+        "eng_per_view": 0.023,
+        "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+        "hook_type": [
+          "question"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": "talking head + word captions + screen insert",
+        "topic": "إعلان ناجح للطبيب (CRM)",
+        "verdict": "win",
+        "timestamp": "2026-10-26T16:33:37.000Z"
+      }
+    },
+    {
+      "username": "highkeyagency",
+      "url": "https://www.instagram.com/highkeyagency/",
+      "followers": 739704,
+      "bio": "Marketing for Medical & Aesthetic Clinics 🩺\nSMM | Paid Ads | Press & PR\nMaking doctors the go-to name in their specialty\n👇 Book a free strategy call",
+      "link": "http://highkeyagency.com/contact",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 13197.0,
+      "median_view_rate": 0.0178,
+      "span": [
+        "2026-08-29",
+        "2026-10-21"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "highkeyagency",
+          "url": "https://www.instagram.com/p/DeAEcg-k-3c/",
+          "views": 36681,
+          "likes": 423,
+          "comments": 30,
+          "duration": 37.137138,
+          "index": 2.78,
+          "view_rate": 0.05,
+          "eng_per_view": 0.0123,
+          "hook": "Everything men think they know about this… is probably wrong 😳",
+          "hook_type": [
+            "loss_or_mistake"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-02T18:01:01.000Z"
+        }
+      ],
+      "losers": [],
+      "best_reel": {
+        "owner": "highkeyagency",
+        "url": "https://www.instagram.com/p/DeAEcg-k-3c/",
+        "views": 36681,
+        "likes": 423,
+        "comments": 30,
+        "duration": 37.137138,
+        "index": 2.78,
+        "view_rate": 0.05,
+        "eng_per_view": 0.0123,
+        "hook": "Everything men think they know about this… is probably wrong 😳",
+        "hook_type": [
+          "loss_or_mistake"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-02T18:01:01.000Z"
+      }
+    },
+    {
+      "username": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/thedoctorpreneuracademy/",
+      "followers": 308529,
+      "bio": "🏁 𝐖𝐞 𝐡𝐞𝐥𝐩 𝐝𝐨𝐜𝐭𝐨𝐫𝐬 𝐭𝐨 𝐥𝐚𝐮𝐧𝐜𝐡 𝐭𝐡𝐞𝐢𝐫 𝐜𝐥𝐢𝐧𝐢𝐜𝐬/𝐡𝐨𝐬𝐩𝐢𝐭𝐚𝐥𝐬 OR 𝐞𝐱𝐢𝐬𝐭𝐢𝐧𝐠 𝐨𝐰𝐧𝐞𝐫𝐬 𝐭𝐨 𝐬𝐜𝐚𝐥𝐞 𝐮𝐩 𝐭𝐡𝐞𝐢𝐫 𝐬𝐞𝐭𝐮𝐩𝐬\n📈 Learn AI & Chatgpt for Healthcare\n💰Learn,Earn,Grow!",
+      "link": "https://smartpa.ge/doctorpreneur",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 4489.5,
+      "median_view_rate": 0.0146,
+      "span": [
+        "2026-10-30",
+        "2026-11-04"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "views": 72285,
+          "likes": 418,
+          "comments": 132,
+          "duration": 14.784,
+          "index": 16.1,
+          "view_rate": 0.234,
+          "eng_per_view": 0.0076,
+          "hook": "₹2000 for anyone who can guess what this \"doctor\" is diagnosing! 😂🩺",
+          "hook_type": [
+            "number_or_list"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-11-03T03:30:53.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfHQ_trgdfO/",
+          "views": 17579,
+          "likes": 71,
+          "comments": 0,
+          "duration": 17.237333,
+          "index": 3.92,
+          "view_rate": 0.057,
+          "eng_per_view": 0.004,
+          "hook": "What Happens When Bacteria Enter Your Body? 🦠🛡️",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "link"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-30T09:31:33.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfRrBKJiVmW/",
+          "views": 16617,
+          "likes": 110,
+          "comments": 1,
+          "duration": 12.906667,
+          "index": 3.7,
+          "view_rate": 0.054,
+          "eng_per_view": 0.0067,
+          "hook": "How does a patient wake up after general anesthesia? 🤔😂",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-11-03T10:31:15.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfT7KYmik-A/",
+          "views": 13237,
+          "likes": 79,
+          "comments": 6,
+          "duration": 32.469334,
+          "index": 2.95,
+          "view_rate": 0.043,
+          "eng_per_view": 0.0064,
+          "hook": "Exploring the Future of Healthcare! | Advanced AI Vein Finder Technology 🩺",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-11-04T07:31:01.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfUdh7FlPr0/",
+          "views": 10527,
+          "likes": 41,
+          "comments": 0,
+          "duration": 7.210667,
+          "index": 2.34,
+          "view_rate": 0.034,
+          "eng_per_view": 0.0039,
+          "hook": "When your best friend is a doctor, you’re always in safe hands! 🩺😄✨",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-11-04T12:31:06.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfUI4f0kSzw/",
+          "views": 1001,
+          "likes": 0,
+          "comments": 0,
+          "duration": 44.225292,
+          "index": 0.22,
+          "view_rate": 0.003,
+          "eng_per_view": 0.0,
+          "hook": "Thinking about purchasing medical equipment?",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-11-04T09:30:40.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfUkbg2DZJ3/",
+          "views": 976,
+          "likes": 0,
+          "comments": 0,
+          "duration": 44.694626,
+          "index": 0.22,
+          "view_rate": 0.003,
+          "eng_per_view": 0.0,
+          "hook": "💰 Buying medical equipment but unsure how to fund it?",
+          "hook_type": [
+            "question",
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-11-04T13:31:30.000Z"
+        },
+        {
+          "owner": "thedoctorpreneuracademy",
+          "url": "https://www.instagram.com/p/DfTfunGE1Ix/",
+          "views": 1149,
+          "likes": 2,
+          "comments": 2,
+          "duration": 59.83923,
+          "index": 0.26,
+          "view_rate": 0.004,
+          "eng_per_view": 0.0035,
+          "hook": "Building a ₹4 Cr setup?",
+          "hook_type": [
+            "question",
+            "number_or_list"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-11-04T03:31:03.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "thedoctorpreneuracademy",
+        "url": "https://www.instagram.com/p/DfQ65cNgl0O/",
+        "views": 72285,
+        "likes": 418,
+        "comments": 132,
+        "duration": 14.784,
+        "index": 16.1,
+        "view_rate": 0.234,
+        "eng_per_view": 0.0076,
+        "hook": "₹2000 for anyone who can guess what this \"doctor\" is diagnosing! 😂🩺",
+        "hook_type": [
+          "number_or_list"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-11-03T03:30:53.000Z"
+      }
+    }
+  ],
+  "patterns": {
+    "hook_type": [
+      {
+        "value": "question",
+        "in_winners": 13,
+        "of_winners": 24,
+        "in_all": 37,
+        "win_rate": 0.35,
+        "lift": 1.4,
+        "accounts_with_win": 4,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/DdeiECwxc-L/",
+          "https://www.instagram.com/p/De9uEFJk_30/"
+        ]
+      },
+      {
+        "value": "direct_address",
+        "in_winners": 0,
+        "of_winners": 24,
+        "in_all": 7,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "loss_or_mistake",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 5,
+        "win_rate": 0.4,
+        "lift": 1.72,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DeAEcg-k-3c/"
+        ]
+      },
+      {
+        "value": "tension_or_contrast",
+        "in_winners": 6,
+        "of_winners": 24,
+        "in_all": 20,
+        "win_rate": 0.3,
+        "lift": 1.11,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DfSKBxHD9sq/",
+          "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/"
+        ]
+      },
+      {
+        "value": "number_or_list",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 12,
+        "win_rate": 0.25,
+        "lift": 0.86,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/DfHlhsdEziU/"
+        ]
+      },
+      {
+        "value": "plain_statement",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 21,
+        "win_rate": 0.14,
+        "lift": 0.43,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DfT7KYmik-A/",
+          "https://www.instagram.com/p/De8zfvzgnKI/",
+          "https://www.instagram.com/p/DeoNDV3CCN9/"
+        ]
+      }
+    ],
+    "format": [
+      {
+        "value": "whiteboard explainer + face PiP",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 2,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/Demr8BVI5X5/"
+        ]
+      },
+      {
+        "value": "podcast clip + text-card hook",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 2,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/"
+        ]
+      },
+      {
+        "value": "screen-share walkthrough + face (Split Screen)",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/DdW6bntInty/"
+        ]
+      },
+      {
+        "value": "talking head + motion-graphic cutaways",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/"
+        ]
+      },
+      {
+        "value": "talking head + word captions + screen insert",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/"
+        ]
+      },
+      {
+        "value": "talking head + numbered list cards",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/Deza3UHGMwO/"
+        ]
+      }
+    ],
+    "topic": [
+      {
+        "value": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/De1jxQOoKV8/"
+        ]
+      },
+      {
+        "value": "ليه عيادات الأسنان بتخسر (margin vs markup)",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/Demr8BVI5X5/"
+        ]
+      },
+      {
+        "value": "تكاليف تشغيل العيادة والتسعير",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/DdW6bntInty/"
+        ]
+      },
+      {
+        "value": "كام بتدفع على الإعلانات / موظف المبيعات",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/"
+        ]
+      },
+      {
+        "value": "استراتيجية المركز الطبي قبل الافتتاح",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DPrUC0fAXuk/"
+        ]
+      },
+      {
+        "value": "أسلوب القيادة (ديكتاتوري ولا ديموقراطي)",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DNqhuPjh0E0/"
+        ]
+      },
+      {
+        "value": "إعلان ناجح للطبيب (CRM)",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/"
+        ]
+      },
+      {
+        "value": "3 حاجات لنمو العيادة",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": null,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": true,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/Deza3UHGMwO/"
+        ]
+      }
+    ],
+    "cta": [
+      {
+        "value": "save_share",
+        "in_winners": 5,
+        "of_winners": 24,
+        "in_all": 9,
+        "win_rate": 0.56,
+        "lift": 3.23,
+        "accounts_with_win": 2,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/DfRrBKJiVmW/",
+          "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/"
+        ]
+      },
+      {
+        "value": "comment_keyword",
+        "in_winners": 0,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "dm",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 6,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "https://www.instagram.com/p/De8zfvzgnKI/",
+          "https://www.instagram.com/p/DeoNDV3CCN9/"
+        ]
+      },
+      {
+        "value": "link",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 6,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfHQ_trgdfO/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/",
+          "https://www.instagram.com/p/DfHlhsdEziU/"
+        ]
+      },
+      {
+        "value": "follow",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 3,
+        "win_rate": 0.33,
+        "lift": 1.29,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/De8zfvzgnKI/"
+        ]
+      },
+      {
+        "value": "none",
+        "in_winners": 14,
+        "of_winners": 24,
+        "in_all": 65,
+        "win_rate": 0.22,
+        "lift": 0.71,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/"
+        ]
+      }
+    ],
+    "duration": [
+      {
+        "value": "<15s",
+        "in_winners": 5,
+        "of_winners": 24,
+        "in_all": 8,
+        "win_rate": 0.62,
+        "lift": 4.31,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/DfRrBKJiVmW/",
+          "https://www.instagram.com/p/DfUdh7FlPr0/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/",
+          "https://www.instagram.com/p/DfHlhsdEziU/"
+        ]
+      },
+      {
+        "value": "90s+",
+        "in_winners": 8,
+        "of_winners": 24,
+        "in_all": 16,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/",
+          "https://www.instagram.com/p/Dd6yaOHtTEx/"
+        ]
+      },
+      {
+        "value": "30-45s",
+        "in_winners": 6,
+        "of_winners": 24,
+        "in_all": 19,
+        "win_rate": 0.32,
+        "lift": 1.19,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/DfT7KYmik-A/",
+          "https://www.instagram.com/p/DeAEcg-k-3c/",
+          "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "https://www.instagram.com/p/De8zfvzgnKI/"
+        ]
+      },
+      {
+        "value": "60-90s",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 18,
+        "win_rate": 0.17,
+        "lift": 0.52,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/",
+          "https://www.instagram.com/p/Deza3UHGMwO/",
+          "https://www.instagram.com/p/DNqhuPjh0E0/"
+        ]
+      },
+      {
+        "value": "15-30s",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 12,
+        "win_rate": 0.08,
+        "lift": 0.23,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfHQ_trgdfO/"
+        ]
+      },
+      {
+        "value": "45-60s",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 13,
+        "win_rate": 0.08,
+        "lift": 0.22,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/"
+        ]
+      }
+    ],
+    "caption_length": [
+      {
+        "value": "600+",
+        "in_winners": 10,
+        "of_winners": 24,
+        "in_all": 23,
+        "win_rate": 0.43,
+        "lift": 1.99,
+        "accounts_with_win": 2,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/DfHQ_trgdfO/",
+          "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/DfT7KYmik-A/"
+        ]
+      },
+      {
+        "value": "<100",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 12,
+        "win_rate": 0.33,
+        "lift": 1.29,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/",
+          "https://www.instagram.com/p/Deza3UHGMwO/",
+          "https://www.instagram.com/p/DfSKBxHD9sq/",
+          "https://www.instagram.com/p/De4lHhbkrfi/"
+        ]
+      },
+      {
+        "value": "100-300",
+        "in_winners": 9,
+        "of_winners": 24,
+        "in_all": 30,
+        "win_rate": 0.3,
+        "lift": 1.11,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "abdulrhmanshawki",
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/"
+        ]
+      },
+      {
+        "value": "300-600",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 21,
+        "win_rate": 0.05,
+        "lift": 0.13,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "highkeyagency",
+        "examples": [
+          "https://www.instagram.com/p/DeAEcg-k-3c/"
+        ]
+      }
+    ],
+    "hashtags": [
+      {
+        "value": "1-3",
+        "in_winners": 0,
+        "of_winners": 24,
+        "in_all": 2,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "8+",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 10,
+        "win_rate": 0.4,
+        "lift": 1.72,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "https://www.instagram.com/p/De8zfvzgnKI/",
+          "https://www.instagram.com/p/DeoNDV3CCN9/"
+        ]
+      },
+      {
+        "value": "4-7",
+        "in_winners": 16,
+        "of_winners": 24,
+        "in_all": 59,
+        "win_rate": 0.27,
+        "lift": 0.96,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/"
+        ]
+      },
+      {
+        "value": "none",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 15,
+        "win_rate": 0.27,
+        "lift": 0.94,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/",
+          "https://www.instagram.com/p/Deza3UHGMwO/",
+          "https://www.instagram.com/p/DfSKBxHD9sq/",
+          "https://www.instagram.com/p/De4lHhbkrfi/"
+        ]
+      }
+    ],
+    "audio": [
+      {
+        "value": "trending/other",
+        "in_winners": 0,
+        "of_winners": 24,
+        "in_all": 1,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "original",
+        "in_winners": 24,
+        "of_winners": 24,
+        "in_all": 85,
+        "win_rate": 0.28,
+        "lift": 1.02,
+        "accounts_with_win": 5,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/"
+        ]
+      }
+    ],
+    "weekday": [
+      {
+        "value": "Fri",
+        "in_winners": 5,
+        "of_winners": 24,
+        "in_all": 10,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 4,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DfHQ_trgdfO/",
+          "https://www.instagram.com/p/DNqhuPjh0E0/",
+          "https://www.instagram.com/p/DeAEcg-k-3c/",
+          "https://www.instagram.com/p/DfHlhsdEziU/"
+        ]
+      },
+      {
+        "value": "Sat",
+        "in_winners": 7,
+        "of_winners": 24,
+        "in_all": 19,
+        "win_rate": 0.37,
+        "lift": 1.51,
+        "accounts_with_win": 4,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/"
+        ]
+      },
+      {
+        "value": "Tue",
+        "in_winners": 3,
+        "of_winners": 24,
+        "in_all": 7,
+        "win_rate": 0.43,
+        "lift": 1.94,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/DfSKBxHD9sq/",
+          "https://www.instagram.com/p/DfRrBKJiVmW/"
+        ]
+      },
+      {
+        "value": "Sun",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 8,
+        "win_rate": 0.25,
+        "lift": 0.86,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "kamal.elkhateeb",
+        "examples": [
+          "https://www.instagram.com/p/Dcq5GLWCnzb/",
+          "https://www.instagram.com/p/DeoNDV3CCN9/"
+        ]
+      },
+      {
+        "value": "Wed",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 20,
+        "win_rate": 0.2,
+        "lift": 0.65,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Dd6yaOHtTEx/",
+          "https://www.instagram.com/p/DfT7KYmik-A/",
+          "https://www.instagram.com/p/DfUdh7FlPr0/"
+        ]
+      },
+      {
+        "value": "Thu",
+        "in_winners": 1,
+        "of_winners": 24,
+        "in_all": 6,
+        "win_rate": 0.17,
+        "lift": 0.52,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "prime_doc1",
+        "examples": [
+          "https://www.instagram.com/p/Deza3UHGMwO/"
+        ]
+      },
+      {
+        "value": "Mon",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 16,
+        "win_rate": 0.12,
+        "lift": 0.37,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/De9uEFJk_30/",
+          "https://www.instagram.com/p/De8zfvzgnKI/"
+        ]
+      }
+    ],
+    "hour_block": [
+      {
+        "value": "08-11h",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 8,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 2,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DfHQ_trgdfO/",
+          "https://www.instagram.com/p/DfT7KYmik-A/",
+          "https://www.instagram.com/p/De8zfvzgnKI/",
+          "https://www.instagram.com/p/DeoNDV3CCN9/"
+        ]
+      },
+      {
+        "value": "00-03h",
+        "in_winners": 0,
+        "of_winners": 24,
+        "in_all": 5,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "04-07h",
+        "in_winners": 2,
+        "of_winners": 24,
+        "in_all": 4,
+        "win_rate": 0.5,
+        "lift": 2.58,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/DfQ65cNgl0O/",
+          "https://www.instagram.com/p/DfJaP3SCfuM/"
+        ]
+      },
+      {
+        "value": "12-15h",
+        "in_winners": 4,
+        "of_winners": 24,
+        "in_all": 12,
+        "win_rate": 0.33,
+        "lift": 1.29,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "thedoctorpreneuracademy",
+        "examples": [
+          "https://www.instagram.com/p/De1jxQOoKV8/",
+          "https://www.instagram.com/p/DfRrBKJiVmW/",
+          "https://www.instagram.com/p/DfUdh7FlPr0/",
+          "https://www.instagram.com/p/DfHlhsdEziU/"
+        ]
+      },
+      {
+        "value": "16-19h",
+        "in_winners": 9,
+        "of_winners": 24,
+        "in_all": 30,
+        "win_rate": 0.3,
+        "lift": 1.11,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DTVqkzaDcrg/",
+          "https://www.instagram.com/p/De9uEFJk_30/",
+          "https://www.instagram.com/p/Dd6yaOHtTEx/",
+          "https://www.instagram.com/p/Deza3UHGMwO/",
+          "https://www.instagram.com/p/DfSKBxHD9sq/"
+        ]
+      },
+      {
+        "value": "20-23h",
+        "in_winners": 5,
+        "of_winners": 24,
+        "in_all": 27,
+        "win_rate": 0.19,
+        "lift": 0.59,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdW6bntInty/",
+          "https://www.instagram.com/p/Demr8BVI5X5/",
+          "https://www.instagram.com/p/DdeiECwxc-L/",
+          "https://www.instagram.com/p/DPrUC0fAXuk/",
+          "https://www.instagram.com/p/DeAEcg-k-3c/"
+        ]
+      }
+    ]
+  },
+  "top_by_index": [
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfQ65cNgl0O/",
+      "views": 72285,
+      "likes": 418,
+      "comments": 132,
+      "duration": 14.784,
+      "index": 16.1,
+      "view_rate": 0.234,
+      "eng_per_view": 0.0076,
+      "hook": "₹2000 for anyone who can guess what this \"doctor\" is diagnosing! 😂🩺",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T03:30:53.000Z"
+    },
+    {
+      "owner": "kamal.elkhateeb",
+      "url": "https://www.instagram.com/p/DTVqkzaDcrg/",
+      "views": 16415,
+      "likes": 40,
+      "comments": 11,
+      "duration": 46.613335,
+      "index": 14.59,
+      "view_rate": 2.24,
+      "eng_per_view": 0.0031,
+      "hook": "⁨\tدفعت كام إعلانات الشهر ده؟ 💸 5 آلاف؟ 10 آلاف؟ 50 ألف درهم؟",
+      "hook_type": [
+        "question",
+        "number_or_list"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": "talking head + motion-graphic cutaways",
+      "topic": "كام بتدفع على الإعلانات / موظف المبيعات",
+      "verdict": "win",
+      "timestamp": "2026-01-10T17:27:55.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/De1jxQOoKV8/",
+      "views": 67706,
+      "likes": 996,
+      "comments": 11,
+      "duration": 178.583221,
+      "index": 8.81,
+      "view_rate": 11.958,
+      "eng_per_view": 0.0149,
+      "hook": "إزاي افتح عيادة أسنان class c تشتغل وتجيبلي أرباح من أول يوم ؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+      "verdict": "win",
+      "timestamp": "2026-10-23T12:54:22.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdW6bntInty/",
+      "views": 50338,
+      "likes": 516,
+      "comments": 170,
+      "duration": 128.54422,
+      "index": 6.55,
+      "view_rate": 8.89,
+      "eng_per_view": 0.0136,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "screen-share walkthrough + face (Split Screen)",
+      "topic": "تكاليف تشغيل العيادة والتسعير",
+      "verdict": "win",
+      "timestamp": "2026-09-16T19:08:37.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Demr8BVI5X5/",
+      "views": 44630,
+      "likes": 469,
+      "comments": 12,
+      "duration": 147.375595,
+      "index": 5.81,
+      "view_rate": 7.882,
+      "eng_per_view": 0.0108,
+      "hook": "هو ليه أغلب عيادات الأسنان بتخسر !!",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "ليه عيادات الأسنان بتخسر (margin vs markup)",
+      "verdict": "win",
+      "timestamp": "2026-10-17T18:00:17.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdeiECwxc-L/",
+      "views": 42733,
+      "likes": 410,
+      "comments": 179,
+      "duration": 170.699997,
+      "index": 5.56,
+      "view_rate": 7.547,
+      "eng_per_view": 0.0138,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟ الجزء الثاني",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-19T17:35:44.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/De9uEFJk_30/",
+      "views": 1736,
+      "likes": 32,
+      "comments": 8,
+      "duration": 81.599998,
+      "index": 5.28,
+      "view_rate": 21.432,
+      "eng_per_view": 0.023,
+      "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "talking head + word captions + screen insert",
+      "topic": "إعلان ناجح للطبيب (CRM)",
+      "verdict": "win",
+      "timestamp": "2026-10-26T16:33:37.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Dd6yaOHtTEx/",
+      "views": 39016,
+      "likes": 496,
+      "comments": 37,
+      "duration": 124.434288,
+      "index": 5.08,
+      "view_rate": 6.891,
+      "eng_per_view": 0.0137,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط ؟ الجزء السادس",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-30T16:46:35.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+      "views": 1568,
+      "likes": 42,
+      "comments": 7,
+      "duration": 68.565331,
+      "index": 4.77,
+      "view_rate": 19.358,
+      "eng_per_view": 0.0312,
+      "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "talking head + numbered list cards",
+      "topic": "3 حاجات لنمو العيادة",
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:33:34.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/DfSKBxHD9sq/",
+      "views": 1307,
+      "likes": 12,
+      "comments": 0,
+      "duration": 97.599998,
+      "index": 3.97,
+      "view_rate": 16.136,
+      "eng_per_view": 0.0092,
+      "hook": "المريض ما يدور على الأرخص.. المريض يدور على الأمان والثقة، وهذا اللي يملي عيادتك!",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T15:02:47.000Z"
+    }
+  ],
+  "top_by_view_rate": [
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/De9uEFJk_30/",
+      "views": 1736,
+      "likes": 32,
+      "comments": 8,
+      "duration": 81.599998,
+      "index": 5.28,
+      "view_rate": 21.432,
+      "eng_per_view": 0.023,
+      "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "talking head + word captions + screen insert",
+      "topic": "إعلان ناجح للطبيب (CRM)",
+      "verdict": "win",
+      "timestamp": "2026-10-26T16:33:37.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+      "views": 1568,
+      "likes": 42,
+      "comments": 7,
+      "duration": 68.565331,
+      "index": 4.77,
+      "view_rate": 19.358,
+      "eng_per_view": 0.0312,
+      "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "talking head + numbered list cards",
+      "topic": "3 حاجات لنمو العيادة",
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:33:34.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/DfSKBxHD9sq/",
+      "views": 1307,
+      "likes": 12,
+      "comments": 0,
+      "duration": 97.599998,
+      "index": 3.97,
+      "view_rate": 16.136,
+      "eng_per_view": 0.0092,
+      "hook": "المريض ما يدور على الأرخص.. المريض يدور على الأمان والثقة، وهذا اللي يملي عيادتك!",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T15:02:47.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/De1jxQOoKV8/",
+      "views": 67706,
+      "likes": 996,
+      "comments": 11,
+      "duration": 178.583221,
+      "index": 8.81,
+      "view_rate": 11.958,
+      "eng_per_view": 0.0149,
+      "hook": "إزاي افتح عيادة أسنان class c تشتغل وتجيبلي أرباح من أول يوم ؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+      "verdict": "win",
+      "timestamp": "2026-10-23T12:54:22.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdW6bntInty/",
+      "views": 50338,
+      "likes": 516,
+      "comments": 170,
+      "duration": 128.54422,
+      "index": 6.55,
+      "view_rate": 8.89,
+      "eng_per_view": 0.0136,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "screen-share walkthrough + face (Split Screen)",
+      "topic": "تكاليف تشغيل العيادة والتسعير",
+      "verdict": "win",
+      "timestamp": "2026-09-16T19:08:37.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/De4lHhbkrfi/",
+      "views": 666,
+      "likes": 21,
+      "comments": 4,
+      "duration": 94.890663,
+      "index": 2.02,
+      "view_rate": 8.222,
+      "eng_per_view": 0.0375,
+      "hook": "كيف تخللي المريض يوثق فيك قبل ما يجيك العيادة",
+      "hook_type": [
+        "question",
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-24T16:40:17.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Demr8BVI5X5/",
+      "views": 44630,
+      "likes": 469,
+      "comments": 12,
+      "duration": 147.375595,
+      "index": 5.81,
+      "view_rate": 7.882,
+      "eng_per_view": 0.0108,
+      "hook": "هو ليه أغلب عيادات الأسنان بتخسر !!",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "ليه عيادات الأسنان بتخسر (margin vs markup)",
+      "verdict": "win",
+      "timestamp": "2026-10-17T18:00:17.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdeiECwxc-L/",
+      "views": 42733,
+      "likes": 410,
+      "comments": 179,
+      "duration": 170.699997,
+      "index": 5.56,
+      "view_rate": 7.547,
+      "eng_per_view": 0.0138,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟ الجزء الثاني",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-19T17:35:44.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Dd6yaOHtTEx/",
+      "views": 39016,
+      "likes": 496,
+      "comments": 37,
+      "duration": 124.434288,
+      "index": 5.08,
+      "view_rate": 6.891,
+      "eng_per_view": 0.0137,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط ؟ الجزء السادس",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-30T16:46:35.000Z"
+    },
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/DfC-gD1Fam3/",
+      "views": 468,
+      "likes": 10,
+      "comments": 0,
+      "duration": 111.893333,
+      "index": 1.42,
+      "view_rate": 5.778,
+      "eng_per_view": 0.0214,
+      "hook": "كيف تتجنب المريض اللي بيدور على ارخص سعر",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "normal",
+      "timestamp": "2026-10-28T17:33:45.000Z"
+    }
+  ],
+  "top_by_views": [
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfQ65cNgl0O/",
+      "views": 72285,
+      "likes": 418,
+      "comments": 132,
+      "duration": 14.784,
+      "index": 16.1,
+      "view_rate": 0.234,
+      "eng_per_view": 0.0076,
+      "hook": "₹2000 for anyone who can guess what this \"doctor\" is diagnosing! 😂🩺",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T03:30:53.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/De1jxQOoKV8/",
+      "views": 67706,
+      "likes": 996,
+      "comments": 11,
+      "duration": 178.583221,
+      "index": 8.81,
+      "view_rate": 11.958,
+      "eng_per_view": 0.0149,
+      "hook": "إزاي افتح عيادة أسنان class c تشتغل وتجيبلي أرباح من أول يوم ؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "كيف تفتح عيادة أسنان وتربح من أول يوم",
+      "verdict": "win",
+      "timestamp": "2026-10-23T12:54:22.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdW6bntInty/",
+      "views": 50338,
+      "likes": 516,
+      "comments": 170,
+      "duration": 128.54422,
+      "index": 6.55,
+      "view_rate": 8.89,
+      "eng_per_view": 0.0136,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "screen-share walkthrough + face (Split Screen)",
+      "topic": "تكاليف تشغيل العيادة والتسعير",
+      "verdict": "win",
+      "timestamp": "2026-09-16T19:08:37.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Demr8BVI5X5/",
+      "views": 44630,
+      "likes": 469,
+      "comments": 12,
+      "duration": 147.375595,
+      "index": 5.81,
+      "view_rate": 7.882,
+      "eng_per_view": 0.0108,
+      "hook": "هو ليه أغلب عيادات الأسنان بتخسر !!",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": "whiteboard explainer + face PiP",
+      "topic": "ليه عيادات الأسنان بتخسر (margin vs markup)",
+      "verdict": "win",
+      "timestamp": "2026-10-17T18:00:17.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/DdeiECwxc-L/",
+      "views": 42733,
+      "likes": 410,
+      "comments": 179,
+      "duration": 170.699997,
+      "index": 5.56,
+      "view_rate": 7.547,
+      "eng_per_view": 0.0138,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط؟ الجزء الثاني",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-19T17:35:44.000Z"
+    },
+    {
+      "owner": "abdulrhmanshawki",
+      "url": "https://www.instagram.com/p/Dd6yaOHtTEx/",
+      "views": 39016,
+      "likes": 496,
+      "comments": 37,
+      "duration": 124.434288,
+      "index": 5.08,
+      "view_rate": 6.891,
+      "eng_per_view": 0.0137,
+      "hook": "إزاي تسعر خدمات عيادة الأسنان بشكل مظبوط ؟ الجزء السادس",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-30T16:46:35.000Z"
+    },
+    {
+      "owner": "highkeyagency",
+      "url": "https://www.instagram.com/p/DeAEcg-k-3c/",
+      "views": 36681,
+      "likes": 423,
+      "comments": 30,
+      "duration": 37.137138,
+      "index": 2.78,
+      "view_rate": 0.05,
+      "eng_per_view": 0.0123,
+      "hook": "Everything men think they know about this… is probably wrong 😳",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-02T18:01:01.000Z"
+    },
+    {
+      "owner": "highkeyagency",
+      "url": "https://www.instagram.com/p/DeHlI9xjD2y/",
+      "views": 17712,
+      "likes": 536,
+      "comments": 28,
+      "duration": 63.029697,
+      "index": 1.34,
+      "view_rate": 0.024,
+      "eng_per_view": 0.0318,
+      "hook": "Dr. Kapadia noticed what everyone else scrolled past, and broke it down with the kind of c",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "normal",
+      "timestamp": "2026-10-05T16:00:43.000Z"
+    },
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfHQ_trgdfO/",
+      "views": 17579,
+      "likes": 71,
+      "comments": 0,
+      "duration": 17.237333,
+      "index": 3.92,
+      "view_rate": 0.057,
+      "eng_per_view": 0.004,
+      "hook": "What Happens When Bacteria Enter Your Body? 🦠🛡️",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "link"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-30T09:31:33.000Z"
+    },
+    {
+      "owner": "highkeyagency",
+      "url": "https://www.instagram.com/p/DcoTyXSDw_m/",
+      "views": 17358,
+      "likes": 499,
+      "comments": 29,
+      "duration": 47.514179,
+      "index": 1.32,
+      "view_rate": 0.023,
+      "eng_per_view": 0.0304,
+      "hook": "Not everyone reacts to bread the same way 🍞 Dr. Kellum breaks down how gluten and inflamma",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "normal",
+      "timestamp": "2026-08-29T16:02:23.000Z"
+    }
+  ],
+  "labeling_queue": [
+    {
+      "owner": "prime_doc1",
+      "url": "https://www.instagram.com/p/DfSKBxHD9sq/",
+      "views": 1307,
+      "likes": 12,
+      "comments": 0,
+      "duration": 97.599998,
+      "index": 3.97,
+      "view_rate": 16.136,
+      "eng_per_view": 0.0092,
+      "hook": "المريض ما يدور على الأرخص.. المريض يدور على الأمان والثقة، وهذا اللي يملي عيادتك!",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T15:02:47.000Z"
+    },
+    {
+      "owner": "highkeyagency",
+      "url": "https://www.instagram.com/p/DeAEcg-k-3c/",
+      "views": 36681,
+      "likes": 423,
+      "comments": 30,
+      "duration": 37.137138,
+      "index": 2.78,
+      "view_rate": 0.05,
+      "eng_per_view": 0.0123,
+      "hook": "Everything men think they know about this… is probably wrong 😳",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-02T18:01:01.000Z"
+    },
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfQ65cNgl0O/",
+      "views": 72285,
+      "likes": 418,
+      "comments": 132,
+      "duration": 14.784,
+      "index": 16.1,
+      "view_rate": 0.234,
+      "eng_per_view": 0.0076,
+      "hook": "₹2000 for anyone who can guess what this \"doctor\" is diagnosing! 😂🩺",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T03:30:53.000Z"
+    },
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfHQ_trgdfO/",
+      "views": 17579,
+      "likes": 71,
+      "comments": 0,
+      "duration": 17.237333,
+      "index": 3.92,
+      "view_rate": 0.057,
+      "eng_per_view": 0.004,
+      "hook": "What Happens When Bacteria Enter Your Body? 🦠🛡️",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "link"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-30T09:31:33.000Z"
+    },
+    {
+      "owner": "thedoctorpreneuracademy",
+      "url": "https://www.instagram.com/p/DfRrBKJiVmW/",
+      "views": 16617,
+      "likes": 110,
+      "comments": 1,
+      "duration": 12.906667,
+      "index": 3.7,
+      "view_rate": 0.054,
+      "eng_per_view": 0.0067,
+      "hook": "How does a patient wake up after general anesthesia? 🤔😂",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-11-03T10:31:15.000Z"
+    }
+  ]
+}

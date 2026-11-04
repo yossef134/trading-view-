@@ -1,7 +1,7 @@
 ---
 name: instagram-account-analyzer
 description: >
-  Full audit and content strategy for an Instagram account from a username. First understands the client's stage (zero audience vs working audience) and pins down the exact niche by asking questions, checks topic coherence and visual identity, proposes 5 sub-niches, finds 5 real competitors in that niche, analyses their last 20 reels (what won, what repeats, with links, formats judged by viewing the video frames), collects real audience questions and objections from competitor comments and web research (Google, Reddit, Quora, forums), and turns them into video ideas. Also audits the account itself (winners, flops, posting times, bio) at a depth that matches its stage. Use whenever the user says "analyse this Instagram account", "حلل حساب انستجرام", "حلل الاكونت ده", "audit my Instagram", "find my competitors", "what content should I make", "ايه الفيديوهات اللي بتكسب في النيش بتاعي", or sends an Instagram @username or profile link. Reports in the user's language (Egyptian Arabic by default for this user).
+  Full audit and content strategy for an Instagram account from a username. First understands the client's stage (zero audience vs working audience) and pins down the exact niche by asking questions, checks topic coherence, proposes 5 sub-niches, finds 5 real competitors in that niche, analyses their last 20 reels (what won, what repeats, with links, formats judged by viewing the video frames), collects real audience questions and objections from competitor comments and web research (Google, Reddit, Quora, forums), and turns them into video ideas. Also audits the account itself (winners, flops, bio) at a depth that matches its stage. Use whenever the user says "analyse this Instagram account", "حلل حساب انستجرام", "حلل الاكونت ده", "audit my Instagram", "find my competitors", "what content should I make", "ايه الفيديوهات اللي بتكسب في النيش بتاعي", or sends an Instagram @username or profile link. Reports in the user's language (Egyptian Arabic by default for this user).
 ---
 
 # Instagram Account Analyzer
@@ -11,7 +11,7 @@ Numbers come from scripts. Judgement (niche, formats, why something won, ideas) 
 ## Ground rules
 
 - **Language:** Egyptian Arabic (عامية مصرية), technical words in English (hook, reach, CTA, reel).
-- **Public data only.** Reach, saves, shares and follower activity are not public; never state estimates of them as facts. "Best time to post" for someone else's account is inferred from past results, with its sample size.
+- **Public data only.** Reach, saves, shares and follower activity are not public; never state estimates of them as facts. Posting times and Supermetrics are out of scope (the user said they are not important); mention timing only if asked, and then as an inference with its sample size.
 - **Never fabricate.** Every claim about a competitor, question or objection carries a link. If a source returned nothing, say so. Small samples are "مؤشر مش حقيقة".
 - **Comments (consent given by the user, 2026-11-04):** `comments` collects public comment TEXT from competitors' top reels, anonymised (no names/ids/avatars; mentions, links, emails, numbers masked; the competitor's own replies removed). Own-account files keep counts only. Do not collect comments for any other purpose.
 - **Open format vocabulary.** The ten formats in `references/content-formats-2026.md` are suggested names. Label what you actually see; invent a new name whenever a reel does not fit.
@@ -36,7 +36,7 @@ Numbers come from scripts. Judgement (niche, formats, why something won, ideas) 
 - `scripts/analyze.py` - own account: metrics, winners/losers, timing, bio checks, **stage** -> `analysis.json`.
 - `scripts/analyze_competitors.py` - competitor reels vs each account's own median, winners, repeated patterns with links -> `competitors_analysis.json`.
 - `scripts/media.py` - `sheets` (contact sheets of frames from reels, needs ffmpeg+Pillow) and `grid` (cover grid of the account's posts).
-- `scripts/prep_comments.py` - sorts comments into questions / objections / requests -> `audience_signals.json`.
+- `scripts/prep_comments.py` - keeps ONLY audience questions and objections -> `audience_signals.json`.
 - `scripts/build_dashboard.py` + `scripts/dashboard_template.html` - offline HTML dashboard (own-account sections today; see Step 9).
 - `references/niche-interview.md`, `references/content-formats-2026.md`, `references/research-method.md`, `references/metrics.md`, `references/insights-schema.md`.
 
@@ -59,10 +59,9 @@ Read `analysis.json -> stage` (`zero` / `early` / `working`, with reasons) and *
 
 Follow `references/niche-interview.md`. Do not scrape competitors or research until the client confirms one sentence: "I help [exactly who] get [exactly what] through [how]". If the account already shows it clearly, propose a draft and ask only to confirm. Otherwise ask in rounds of 3-4 questions (use AskUserQuestion). Also capture constraints (on camera? time? editor? dialect?) and the 90-day goal.
 
-## Step 3. Coherence and visual identity
+## Step 3. Topic coherence (free); visual identity is OFF
 
-- **Topic coherence:** read all captions in `raw.json`, label each post on-niche / adjacent / unrelated, report the share and list the unrelated ones with links.
-- **Visual identity:** `python3 -I scripts/media.py grid --raw <dir>/raw.json --out <dir>/grid.jpg`, then look at the image: consistent colours, fonts, framing, face, cover style? Qualitative verdict only. If it fails with a CDN 403, say the network blocks Instagram's image host (`fbcdn.net`, `cdninstagram.com`) and either ask the user to allow it in the environment's network settings or ask for a screenshot of the profile grid. Do not guess a verdict without seeing it.
+The user removed the visual-identity check because it needs many downloads. Do only the free part: read the captions in `raw.json`, label each post on-niche / adjacent / unrelated, report the share and list the unrelated ones with links. Offer `media.py grid` only if the user asks and the CDN is reachable; never guess a visual verdict without seeing the covers.
 
 ## Step 4. Five sub-niches
 
@@ -72,11 +71,13 @@ Propose 5 sub-niches (audience slice x problem), each with a one-line reason and
 
 Find candidates, then verify each with `profiles`. Discovery that works: web search ("best Instagram accounts for <niche>", Arabic and English, `site:instagram.com`), the account's `related_profiles`, accounts the client admires, and owners of top reels in a small hashtag sample if needed. **Apify keyword search does NOT discover accounts (it returned one account), so do not use it.**
 
-Keep a mix: 2 larger accounts to learn from and 3 close to the client's size (0.3x to 5x followers), all public, active in the last 60 days, same language and market. Verify with:
+Keep a mix: 2 larger accounts to learn from and 3 close to the client's size (0.3x to 5x followers), all public and active in the last 60 days. **English-language accounts are fine** (the user said so); prefer Arabic ones only when dialect matters, and say which language each account uses. Verify with:
 
 ```bash
 python3 -I scripts/fetch_instagram.py profiles <a> <b> <c> <d> <e> --out <dir>/competitors.json
 ```
+
+**Audience match is mandatory:** a competitor must speak to the CLIENT'S audience (for a doctor-marketing client: accounts that talk TO doctors/clinic owners, not patient-facing health content). Check bio plus the hooks of the last reels before accepting. Lesson from the first full run: two large English accounts looked right by bio but posted patient entertainment and were removed.
 
 Show the list (link, followers, why chosen, bio line) with the cost of Step 6 and **wait for approval**.
 
@@ -107,21 +108,23 @@ python3 -I scripts/fetch_instagram.py comments --reels <dir>/competitor_reels.js
 python3 -I scripts/prep_comments.py --comments <dir>/comments.json --out <dir>/audience_signals.json
 ```
 
-Read `questions`, `objections`, `requests` AND the top of `other`; cluster by theme. Expect few real questions (first run: about 4 questions and 1 objection out of 185 comments, plus 12+ "send the sheet" requests, which show a lead magnet working). Never quote a commenter's identity.
+`audience_signals.json` holds ONLY questions and objections (praise, "send the sheet" requests and chatter are counted in `meta.by_kind` and dropped). Read them and cluster by theme. Expect few (first run: about 4 questions and 1 objection out of 185 comments). Never quote a commenter's identity.
 
 ## Step 7. Real questions and objections -> video ideas
+
+**Preflight first:** `python3 -I scripts/preflight.py`. If Reddit / Quora / YouTube / Google are BLOCKED, do not launch research agents (they only get search snippets and return thin, unverified results): tell the user which hosts to allow and continue with the rest. **Research only the voice of the client's audience** (for doctor-marketing: doctors and clinic owners), never their customers' voice.
 
 Follow `references/research-method.md`: per approved sub-niche, deep research (Google, Reddit, Quora, forums, YouTube, Arabic and English) plus the comment signals. Every item has a source link and quote. Output the ranked table with hook variants, format, CTA, difficulty and a reference competitor reel. Say which sources returned nothing (Arabic Reddit/Quora are usually thin).
 
 ## Step 8. Own-account audit, depth by stage
 
-At `zero`: bio, positioning, coherence, identity, and what little exists. At `early`/`working`: also winners and flops (index >= 1.5x / <= 0.5x of own format median), format mix, caption/hook/CTA/duration patterns (n >= 3 per side), posting times (only with >= 25 scored posts; below 10 the dashboard hides them), trend (>= 10 mature posts). Compare against Step 6 competitors, not against hashtag samples.
+At `zero`: bio, positioning, coherence, and what little exists. At `early`/`working`: also winners and flops (index >= 1.5x / <= 0.5x of own format median), format mix, caption/hook/CTA/duration patterns (n >= 3 per side), trend (>= 10 mature posts). Compare against Step 6 competitors, not against hashtag samples.
 
 **Lesson from the first run:** a hashtag sample gave a niche median of 448 views, while the five competitors' own medians were 329 to 10,015. Hashtag samples under-represent real accounts; benchmark against competitors' own reels.
 
 ## Step 9. Report, insights, dashboard
 
-Write `report.md` (Egyptian Arabic) in this order: الخلاصة · مرحلة العميل والنيش (the confirmed sentence, constraints, stage) · التماسك والهوية البصرية · النيش الفرعي الخمسة · المنافسين (table + per-competitor winners with links) · الأنماط المتكررة (counts + links) · الفورمات (what appeared, including ones outside the ten) · أسئلة واعتراضات الجمهور (with sources) · أفكار الفيديوهات (ranked table) · تقييم الحساب نفسه · خطة 30 يوم · ما لا يمكن إثباته.
+Write `report.md` (Egyptian Arabic) in this order: الخلاصة · مرحلة العميل والنيش (the confirmed sentence, constraints, stage) · تماسك المواضيع · النيشات الفرعية الخمسة · المنافسين (table + per-competitor winners with links) · الأنماط المتكررة (counts + links) · الفورمات (what appeared, including ones outside the ten) · أسئلة واعتراضات الجمهور (with sources) · أفكار الفيديوهات (ranked table) · تقييم الحساب نفسه · خطة 30 يوم · ما لا يمكن إثباته.
 
 Then `insights.json` (see `references/insights-schema.md`) and:
 
@@ -133,7 +136,6 @@ python3 -I scripts/build_dashboard.py --analysis <dir>/analysis.json --insights 
 
 ## Optional
 
-- Own account with Supermetrics connected: `data_source_discovery`, `field_discovery`, `instagram_insights` for reach, saves, shares, online followers. Never invent field ids. If it returns `TRIAL_EXPIRED`, report it and continue; do not work around it.
 - Hand the best reel URLs to `reels-scripting`; use `hook-generator` for hook variants.
 - Save `analysis.json` per date to diff progress later.
 

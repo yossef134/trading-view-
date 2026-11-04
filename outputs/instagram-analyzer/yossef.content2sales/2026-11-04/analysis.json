@@ -1,0 +1,824 @@
+{
+  "meta": {
+    "username": "yossef.content2sales",
+    "fetched_at": "2026-11-04T23:33:37+00:00",
+    "timezone": "Africa/Cairo",
+    "posts_analysed": 9,
+    "mature_posts_scored": 7,
+    "apify_cost_usd": 0.0269,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5
+  },
+  "profile": {
+    "username": "yossef.content2sales",
+    "full_name": "yossef | personal branding for experts",
+    "followers": 126,
+    "following": 126,
+    "posts_count": 9,
+    "verified": false,
+    "category": "Digital creator",
+    "external_url": "https://wa.me/971566154593?text=Hi+Yossef%2C+I+want+to+book+my+free+audit",
+    "profile_pic": "https://scontent.cdninstagram.com/v/t51.82787-19/746129874_17935306281322691_4794120780847991905_n.jpg?_nc_cat=102&ig_cache_key=GNIJeSzDCNbnELg-AGFMwyhzI4hCbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=fuT6QBQB0TsQ7kNvwGXsa7H&_nc_oc=AdqyrhywGh4SCxqvMFLK4LwR6FpWqx1OAUH-bxUrZNDO6iTtlJbGnBI-HMasFZPAEvA&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=ehyoxy8i5V69hpiP7Em3TA&_nc_ss=70980&oh=00_AQQ7aq4WUusRtk6H0Z6IQ3h9wAf9Pg4CLPqh6d8SbnL88w&oe=6AF185A5"
+  },
+  "health": {
+    "median_er": 0.07937,
+    "tier": "nano (<10k)",
+    "benchmark_low": 0.03,
+    "benchmark_high": 0.08,
+    "er_vs_benchmark": "within",
+    "followers_to_following": 1.0,
+    "format_medians": {
+      "reel": 316,
+      "image": 6
+    },
+    "benchmark_note": "Rule-of-thumb bands, not official Instagram figures."
+  },
+  "stage": {
+    "code": "zero",
+    "followers": 126,
+    "posts_total": 9,
+    "posts_last_90d": 2,
+    "reasons": [
+      "126 followers (< 1,000)",
+      "9 posts in the account's whole history (< 15)",
+      "2 posts in the last 90 days (< 6)"
+    ],
+    "meaning": "no audience/history yet: focus on niche, competitors and formats, not on auditing own posts",
+    "note": "heuristic from public numbers - confirm with the client"
+  },
+  "bio": {
+    "length": 112,
+    "lines": 3,
+    "length_ok": true,
+    "has_link": true,
+    "has_cta": true,
+    "cta_types": [],
+    "emoji_count": 2,
+    "has_number_proof": false,
+    "category_set": true,
+    "business_account": false,
+    "highlights": null,
+    "name_field": "yossef | personal branding for experts",
+    "bio_text": "I help doctors make content that reaches and sells 🎥\nDocumenting my journey, step by step\nBook your free audit 👇",
+    "note": "Mechanical checks only. Judge clarity, who-it's-for and promise by reading bio_text."
+  },
+  "cadence": {
+    "posts": 9,
+    "span_days": 751,
+    "posts_per_week": 0.08,
+    "median_gap_days": 0.44,
+    "longest_gap_days": 737.1,
+    "gap_stdev_days": 243.1,
+    "consistency": "irregular"
+  },
+  "trend": {
+    "note": "need >=10 mature posts"
+  },
+  "timing": {
+    "by_weekday": {
+      "Mon": {
+        "n": 3,
+        "median_index": 0.923
+      },
+      "Wed": {
+        "n": 1,
+        "median_index": 1.0
+      },
+      "Fri": {
+        "n": 1,
+        "median_index": 0.946
+      },
+      "Sun": {
+        "n": 2,
+        "median_index": 4.408
+      }
+    },
+    "by_hour_block": {
+      "03-05h": {
+        "n": 2,
+        "median_index": 1.65
+      },
+      "12-14h": {
+        "n": 1,
+        "median_index": 1.0
+      },
+      "18-20h": {
+        "n": 3,
+        "median_index": 0.923
+      },
+      "21-23h": {
+        "n": 1,
+        "median_index": 6.462
+      }
+    },
+    "best_weekdays": [
+      {
+        "day": "Sun",
+        "n": 2,
+        "median_index": 4.408
+      },
+      {
+        "day": "Mon",
+        "n": 3,
+        "median_index": 0.923
+      }
+    ],
+    "best_hour_blocks": [
+      {
+        "block": "03-05h",
+        "n": 2,
+        "median_index": 1.65
+      },
+      {
+        "block": "18-20h",
+        "n": 3,
+        "median_index": 0.923
+      }
+    ],
+    "winners_posted_in": {
+      "03-05h": 1,
+      "21-23h": 1
+    },
+    "confidence": "low",
+    "sample_size": 7,
+    "caveat": "Inferred from past post performance, NOT audience-activity data. Link Supermetrics for real follower active hours."
+  },
+  "patterns": {
+    "format": {
+      "carousel": {
+        "n": 2,
+        "share_pct": 22.2,
+        "median_likes": 7.5,
+        "median_comments": 0.0,
+        "median_views": null,
+        "median_er": 0.059525
+      },
+      "image": {
+        "n": 4,
+        "share_pct": 44.4,
+        "median_likes": 6.5,
+        "median_comments": 0.0,
+        "median_views": null,
+        "median_er": 0.05159
+      },
+      "reel": {
+        "n": 3,
+        "share_pct": 33.3,
+        "median_likes": 10,
+        "median_comments": 28,
+        "median_views": 316,
+        "median_er": 0.29365
+      }
+    },
+    "caption_length": {
+      "long>300": {
+        "n": 2,
+        "median_index": 0.973
+      },
+      "mid100-300": {
+        "n": 2,
+        "median_index": 4.408
+      },
+      "short<100": {
+        "n": 3,
+        "median_index": 0.923
+      }
+    },
+    "hashtag_count": {
+      "1-5": {
+        "n": 3,
+        "median_index": 1.0
+      },
+      "none": {
+        "n": 3,
+        "median_index": 0.923
+      },
+      "6-15": {
+        "n": 1,
+        "median_index": 6.462
+      }
+    },
+    "has_cta": {
+      "no_cta": {
+        "n": 6,
+        "median_index": 1.0385
+      },
+      "with_cta": {
+        "n": 1,
+        "median_index": 0.946
+      }
+    },
+    "cta_types": {
+      "question": 1
+    },
+    "has_question_in_caption": {
+      "none": {
+        "n": 6,
+        "median_index": 1.0385
+      },
+      "question": {
+        "n": 1,
+        "median_index": 0.946
+      }
+    },
+    "hook_has_number": {
+      "no_number": {
+        "n": 6,
+        "median_index": 0.973
+      },
+      "number": {
+        "n": 1,
+        "median_index": 1.077
+      }
+    },
+    "hook_length": {
+      "mid30-55": {
+        "n": 1,
+        "median_index": 1.0
+      },
+      "long>55": {
+        "n": 2,
+        "median_index": 1.65
+      },
+      "short<30": {
+        "n": 4,
+        "median_index": 1.0
+      }
+    },
+    "emoji_use": {
+      "no_emoji": {
+        "n": 4,
+        "median_index": 1.677
+      },
+      "emoji": {
+        "n": 3,
+        "median_index": 0.923
+      }
+    },
+    "paid_partnership": {
+      "organic": {
+        "n": 7,
+        "median_index": 1.0
+      }
+    },
+    "reel_duration": {
+      "60s+": {
+        "n": 2,
+        "median_index": 1.677
+      },
+      "30-60s": {
+        "n": 1,
+        "median_index": 0.946
+      }
+    },
+    "reel_original_audio": {
+      "original": {
+        "n": 2,
+        "median_index": 1.677
+      }
+    },
+    "carousel_slides": {},
+    "top_hashtags": [
+      {
+        "tag": "تسويق",
+        "n": 3
+      },
+      {
+        "tag": "مبيعات",
+        "n": 2
+      },
+      {
+        "tag": "الإعلان_الممول",
+        "n": 1
+      },
+      {
+        "tag": "المحتوى",
+        "n": 1
+      },
+      {
+        "tag": "تسويق_العيادات",
+        "n": 1
+      },
+      {
+        "tag": "personal",
+        "n": 1
+      },
+      {
+        "tag": "content",
+        "n": 1
+      },
+      {
+        "tag": "بيزنس",
+        "n": 1
+      },
+      {
+        "tag": "ادارة",
+        "n": 1
+      },
+      {
+        "tag": "منافسة",
+        "n": 1
+      },
+      {
+        "tag": "whymarketing",
+        "n": 1
+      },
+      {
+        "tag": "محتوي",
+        "n": 1
+      },
+      {
+        "tag": "تصوير",
+        "n": 1
+      },
+      {
+        "tag": "تعليق_صوتي",
+        "n": 1
+      }
+    ],
+    "language": "arabic"
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DAyuHONOHVK/",
+      "format": "image",
+      "timestamp": "2024-10-06T18:19:40.000Z",
+      "weekday": "Sun",
+      "hour": 21,
+      "hook": "\"أهلاً، أنا يوسف مسعد",
+      "caption_len": 176,
+      "hashtag_n": 6,
+      "likes": 23,
+      "comments": 19,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.33333,
+      "view_rate": null,
+      "index": 6.462,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA08pr7N452/",
+      "format": "carousel",
+      "timestamp": "2024-10-07T15:05:11.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "",
+      "caption_len": 0,
+      "hashtag_n": 0,
+      "likes": 10,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": 2,
+      "er": 0.07937,
+      "view_rate": null,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA09e2Gtla5/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:12:26.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "@medhatyassin50",
+      "caption_len": 40,
+      "hashtag_n": 0,
+      "likes": 7,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.05556,
+      "view_rate": null,
+      "index": 1.077,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA0_CzlNVsx/",
+      "format": "carousel",
+      "timestamp": "2024-10-07T15:26:05.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "",
+      "caption_len": 0,
+      "hashtag_n": 0,
+      "likes": 5,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": 2,
+      "er": 0.03968,
+      "view_rate": null,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA1AJmqNNJa/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:35:45.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "@shariahaudit.be",
+      "caption_len": 46,
+      "hashtag_n": 0,
+      "likes": 5,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.03968,
+      "view_rate": null,
+      "index": 0.769,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA1BLatNG-i/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:44:44.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "العظيم باشمهندس ايمن راشد",
+      "caption_len": 29,
+      "hashtag_n": 0,
+      "likes": 6,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.04762,
+      "view_rate": null,
+      "index": 0.923,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DBPvqwcK1E7/",
+      "format": "reel",
+      "timestamp": "2024-10-18T00:58:53.000Z",
+      "weekday": "Fri",
+      "hour": 3,
+      "hook": "السبب الحقيقي ورا (عدم التميز ف السوق) مش بس المنافسة الشديدة... المشك",
+      "caption_len": 359,
+      "hashtag_n": 5,
+      "likes": 10,
+      "comments": 0,
+      "views": 299,
+      "duration": 56.124573,
+      "slides": null,
+      "er": 0.07937,
+      "view_rate": 2.373,
+      "index": 0.946,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De5oa01KJxI/",
+      "format": "reel",
+      "timestamp": "2026-10-25T02:38:14.000Z",
+      "weekday": "Sun",
+      "hour": 5,
+      "hook": "لو بتاجل تصوير المحتوى بتاعك دايما يبقى لازم تتابع الفيديو ده ..",
+      "caption_len": 101,
+      "hashtag_n": 3,
+      "likes": 31,
+      "comments": 32,
+      "views": 744,
+      "duration": 61.579319,
+      "slides": null,
+      "er": 0.5,
+      "view_rate": 5.9048,
+      "index": 2.354,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfCGJASqqyM/",
+      "format": "reel",
+      "timestamp": "2026-10-28T09:20:57.000Z",
+      "weekday": "Wed",
+      "hour": 12,
+      "hook": "الإعلان لوحده ممكن يضيّع فلوسك.",
+      "caption_len": 304,
+      "hashtag_n": 3,
+      "likes": 9,
+      "comments": 28,
+      "views": 316,
+      "duration": 67.546844,
+      "slides": null,
+      "er": 0.29365,
+      "view_rate": 2.5079,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "winners": [
+    {
+      "url": "https://www.instagram.com/p/DAyuHONOHVK/",
+      "format": "image",
+      "timestamp": "2024-10-06T18:19:40.000Z",
+      "weekday": "Sun",
+      "hour": 21,
+      "hook": "\"أهلاً، أنا يوسف مسعد",
+      "caption_len": 176,
+      "hashtag_n": 6,
+      "likes": 23,
+      "comments": 19,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.33333,
+      "view_rate": null,
+      "index": 6.462,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De5oa01KJxI/",
+      "format": "reel",
+      "timestamp": "2026-10-25T02:38:14.000Z",
+      "weekday": "Sun",
+      "hour": 5,
+      "hook": "لو بتاجل تصوير المحتوى بتاعك دايما يبقى لازم تتابع الفيديو ده ..",
+      "caption_len": 101,
+      "hashtag_n": 3,
+      "likes": 31,
+      "comments": 32,
+      "views": 744,
+      "duration": 61.579319,
+      "slides": null,
+      "er": 0.5,
+      "view_rate": 5.9048,
+      "index": 2.354,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "losers": [],
+  "top5": [
+    {
+      "url": "https://www.instagram.com/p/DAyuHONOHVK/",
+      "format": "image",
+      "timestamp": "2024-10-06T18:19:40.000Z",
+      "weekday": "Sun",
+      "hour": 21,
+      "hook": "\"أهلاً، أنا يوسف مسعد",
+      "caption_len": 176,
+      "hashtag_n": 6,
+      "likes": 23,
+      "comments": 19,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.33333,
+      "view_rate": null,
+      "index": 6.462,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De5oa01KJxI/",
+      "format": "reel",
+      "timestamp": "2026-10-25T02:38:14.000Z",
+      "weekday": "Sun",
+      "hour": 5,
+      "hook": "لو بتاجل تصوير المحتوى بتاعك دايما يبقى لازم تتابع الفيديو ده ..",
+      "caption_len": 101,
+      "hashtag_n": 3,
+      "likes": 31,
+      "comments": 32,
+      "views": 744,
+      "duration": 61.579319,
+      "slides": null,
+      "er": 0.5,
+      "view_rate": 5.9048,
+      "index": 2.354,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA09e2Gtla5/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:12:26.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "@medhatyassin50",
+      "caption_len": 40,
+      "hashtag_n": 0,
+      "likes": 7,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.05556,
+      "view_rate": null,
+      "index": 1.077,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfCGJASqqyM/",
+      "format": "reel",
+      "timestamp": "2026-10-28T09:20:57.000Z",
+      "weekday": "Wed",
+      "hour": 12,
+      "hook": "الإعلان لوحده ممكن يضيّع فلوسك.",
+      "caption_len": 304,
+      "hashtag_n": 3,
+      "likes": 9,
+      "comments": 28,
+      "views": 316,
+      "duration": 67.546844,
+      "slides": null,
+      "er": 0.29365,
+      "view_rate": 2.5079,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DBPvqwcK1E7/",
+      "format": "reel",
+      "timestamp": "2024-10-18T00:58:53.000Z",
+      "weekday": "Fri",
+      "hour": 3,
+      "hook": "السبب الحقيقي ورا (عدم التميز ف السوق) مش بس المنافسة الشديدة... المشك",
+      "caption_len": 359,
+      "hashtag_n": 5,
+      "likes": 10,
+      "comments": 0,
+      "views": 299,
+      "duration": 56.124573,
+      "slides": null,
+      "er": 0.07937,
+      "view_rate": 2.373,
+      "index": 0.946,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ],
+      "audio_original": null,
+      "is_pinned": false
+    }
+  ],
+  "bottom5": [
+    {
+      "url": "https://www.instagram.com/p/DA1AJmqNNJa/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:35:45.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "@shariahaudit.be",
+      "caption_len": 46,
+      "hashtag_n": 0,
+      "likes": 5,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.03968,
+      "view_rate": null,
+      "index": 0.769,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA1BLatNG-i/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:44:44.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "العظيم باشمهندس ايمن راشد",
+      "caption_len": 29,
+      "hashtag_n": 0,
+      "likes": 6,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.04762,
+      "view_rate": null,
+      "index": 0.923,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DBPvqwcK1E7/",
+      "format": "reel",
+      "timestamp": "2024-10-18T00:58:53.000Z",
+      "weekday": "Fri",
+      "hour": 3,
+      "hook": "السبب الحقيقي ورا (عدم التميز ف السوق) مش بس المنافسة الشديدة... المشك",
+      "caption_len": 359,
+      "hashtag_n": 5,
+      "likes": 10,
+      "comments": 0,
+      "views": 299,
+      "duration": 56.124573,
+      "slides": null,
+      "er": 0.07937,
+      "view_rate": 2.373,
+      "index": 0.946,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfCGJASqqyM/",
+      "format": "reel",
+      "timestamp": "2026-10-28T09:20:57.000Z",
+      "weekday": "Wed",
+      "hour": 12,
+      "hook": "الإعلان لوحده ممكن يضيّع فلوسك.",
+      "caption_len": 304,
+      "hashtag_n": 3,
+      "likes": 9,
+      "comments": 28,
+      "views": 316,
+      "duration": 67.546844,
+      "slides": null,
+      "er": 0.29365,
+      "view_rate": 2.5079,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DA09e2Gtla5/",
+      "format": "image",
+      "timestamp": "2024-10-07T15:12:26.000Z",
+      "weekday": "Mon",
+      "hour": 18,
+      "hook": "@medhatyassin50",
+      "caption_len": 40,
+      "hashtag_n": 0,
+      "likes": 7,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": null,
+      "er": 0.05556,
+      "view_rate": null,
+      "index": 1.077,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    }
+  ],
+  "excluded": {
+    "pinned": 0,
+    "immature": 0,
+    "no_baseline": 2
+  },
+  "related_profiles": []
+}
