@@ -23,7 +23,7 @@ description: >
 |---|---|---|
 | 1. Free audit | 1. Pre-call message + 15-min call guide + call notes | **BUILT**: `forms/audit_intake.md` |
 | 1. Free audit | 2. Pull the account + baseline snapshot + look at 2 best / 1 weakest reel | **BUILT** (see below) |
-| 1. Free audit | 3. Quick scan of 3-5 successful doctors in the same specialty | PLANNED |
+| 1. Free audit | 3. Quick scan of 3-5 successful doctors in the same specialty | **BUILT** (see below) |
 | 1. Free audit | 4. Report (client + internal), dashboard | PLANNED |
 | 2. Full strategy | patient avatar (adapted from the user's "أنت زمان" form), niche topics, patient-voice research, competitors with scripts, 60-90 ideas, funnel table, scripts | PLANNED |
 | 3. Own account | Track 2 with doctors as the audience | PLANNED |
@@ -55,6 +55,19 @@ Rules learned in testing:
 - Reels with < 0.5 words/second have no speech; their transcript is noise (`has_speech: false`).
 - Accounts with fewer than 3 scored reels: skip own_reels.py and say why.
 - If the user stops a run, abort the Apify run too (`POST /v2/actor-runs/<id>/abort`), or it keeps charging.
+
+## Track 1, Step 3: quick scan of doctors in the same specialty (BUILT, tested 2026-11-05)
+
+About 0.3 USD. No transcripts or videos in this track (kept cheap).
+
+1. Candidates: the doctor's form answer 7 plus Google through Apify (Instagram is reachable only through Apify here):
+   write 4-5 queries like `site:instagram.com دكتور <التخصص>` / `site:instagram.com استشاري <التخصص>` into `<dir>/scan/queries.txt`, then
+   `python3 -I scripts/research_fetch.py google --queries-file <dir>/scan/queries.txt --country eg --out <dir>/scan/google.json`
+   and pull handles from result URLs and "(@handle)" in titles.
+2. Verify: `python3 -I scripts/fetch_instagram.py profiles <handles...> --out <dir>/scan/candidates.json`. Keep same specialty, patient-facing, public, active. Pick 5 with a size mix (2 large to learn from, 3 nearer the doctor).
+3. `python3 -I scripts/fetch_instagram.py reels <5 handles> --limit 20 --out <dir>/scan/peer_reels.json`
+4. `python3 -I scripts/analyze_competitors.py --reels <dir>/scan/peer_reels.json --out <dir>/scan/peers_analysis.json`
+5. Write `<dir>/scan/summary.md` (internal): peers table, top reels with links, repeated patterns with counts, and the comparison with the doctor's own account. Followers alone are not success (one peer had 64K followers and a 220-view median).
 
 ## Reusable lessons from the previous skill (`instagram-account-analyzer`)
 
