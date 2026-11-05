@@ -26,6 +26,8 @@ def main():
     ap.add_argument("--best", type=int, default=2)
     ap.add_argument("--worst", type=int, default=1)
     ap.add_argument("--no-video", action="store_true")
+    ap.add_argument("--cdn", action="store_true",
+                    help="free video: use Instagram's CDN link instead of the Apify copy (needs *.fbcdn.net / *.cdninstagram.com allowed)")
     a = ap.parse_args()
 
     an = json.load(open(a.analysis, encoding="utf-8"))
@@ -37,7 +39,7 @@ def main():
     picks = [("best", r) for r in reels[: a.best]]
     picks += [("weakest", r) for r in reels[::-1][: a.worst] if r not in [p for _, p in picks]]
     inp = {"username": [r["url"] for _, r in picks], "resultsLimit": 1, "includeTranscript": True}
-    if not a.no_video:
+    if not a.no_video and not a.cdn:
         inp["includeDownloadedVideo"] = True
     t0 = fi.dt.datetime.now(fi.dt.timezone.utc)
     items, _ = fi.run_actor("apify~instagram-reel-scraper", inp, wait_secs=600)
@@ -53,7 +55,8 @@ def main():
         videos.append({"role": role, "owner": owner, "shortCode": code, "url": r["url"], "views": r.get("views"),
                        "has_speech": speech,
                        "index": r.get("index"), "duration": r.get("duration"), "hook_caption": r.get("hook"),
-                       "transcript": tx if speech else None, "raw_transcript": tx, "downloaded_video": it.get("downloadedVideo")})
+                       "transcript": tx if speech else None, "raw_transcript": tx,
+                       "downloaded_video": it.get("videoUrl") if a.cdn else it.get("downloadedVideo")})
     out = {"fetched_at": t0.isoformat(timespec="seconds"), "cost_usd": fi.spend_since(t0), "videos": videos}
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)

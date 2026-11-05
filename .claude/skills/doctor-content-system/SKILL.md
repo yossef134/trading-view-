@@ -19,6 +19,18 @@ description: >
 - **Every change agreed in the conversation is written into this skill immediately** (user rule, 2026-11-05).
 - Video review scores are **out of 10**, each with a note AND a fix; the user's criteria are in `forms/video_review.md` (hook verbal + visual, pauses/pace, body language, mic + denoise, external light, music, caption placement/style, on-screen title, CTA by question or guide file).
 
+## Track 1 flow (agreed 2026-11-05)
+
+1. Tailored pre-call questions sent to the doctor (Step 1) and his account pulled (Step 2).
+2. The user reviews the videos (`video_review.md`), Claude proposes scores /10 from his notes, the user approves.
+3. The audit report is built WITHOUT the call (Step 4); `opening_quote` stays empty.
+4. **The call happens after the audit.** Before it, Claude gives the user the full list of questions to ask in the call (tailored to this doctor and to what the audit found). The answers feed Track 2.
+5. The comprehensive analysis after the call IS Track 2 (the full strategy).
+
+## Free route (tested 2026-11-05)
+
+With `*.fbcdn.net` and `*.cdninstagram.com` allowed, video and covers download for free: `own_reels.py --cdn` (metadata about 0.003 USD per reel instead of 0.07 for an Apify copy) and `media.py grid`. Transcripts still cost about 0.10 USD per reel through Apify; a free local transcriber (faster-whisper) is installed but its model host (huggingface.co) is blocked until allowed. Run `scripts/preflight.py` first and use the free route when Instagram media is OK.
+
 ## Status
 
 | Track | Step | Status |
@@ -45,7 +57,7 @@ Work dir: `outputs/doctors/<username>/<YYYY-MM-DD>/`.
 python3 -I scripts/fetch_instagram.py account <username> --limit 60 --out <dir>/raw.json      # about 0.03-0.16 USD
 python3 -I scripts/analyze.py --raw <dir>/raw.json --out <dir>/analysis.json
 python3 -I scripts/baseline.py snapshot --raw <dir>/raw.json --analysis <dir>/analysis.json --out <dir>/baseline.json
-python3 -I scripts/own_reels.py --analysis <dir>/analysis.json --out <dir>/own_reels.json        # about 0.35-0.5 USD, approved per doctor
+python3 -I scripts/own_reels.py --analysis <dir>/analysis.json --out <dir>/own_reels.json --cdn  # about 0.3 USD (transcripts); drop --cdn if the CDN is blocked (+0.07/video)
 python3 -I scripts/media.py sheets --videos <dir>/own_reels.json --out-dir <dir>/sheets
 ```
 
@@ -79,7 +91,7 @@ About 0.3 USD. No transcripts or videos in this track (kept cheap).
 
 Agreed: client version = PDF infographic + MD, calm medical style, branded @yossef.content2sales, all 3 specialty patterns revealed; last section depends on `mode` (`client`: next step + invitation; `case_study`: what we will do together + re-measure at 30/60 days).
 
-0. **HARD RULE (user, 2026-11-05): do not build or send the report until the user's `video_review.md` AND `call_notes.md` exist in the doctor's folder.** If they are missing, stop and ask for them. Only build without them if the user says so explicitly for that doctor.
+0. **HARD RULE (user, 2026-11-05): do not build or send the report until the user's `video_review.md` exists** (his notes on the videos lead). The call is NOT required before the report: the audit is built without it, and the call happens after (see the flow below).
 1. Write `<dir>/audit_content.json` following `references/audit-content-schema.md`, using analysis.json, baseline.json, own_reels.json + sheets, scan/summary.md, call_notes.md and the user's video_review.md (when present).
 2. `python3 -I scripts/build_audit.py --dir <dir> --content <dir>/audit_content.json`
    -> audit_client.html / audit_client.pdf / audit_client.md / audit_internal.md (Chromium via `scripts/render_pdf.js`).

@@ -113,6 +113,16 @@ th { color:var(--muted); font-weight:600; }
 """
 
 
+def platform_card(c):
+    pc = c.get("platform_compare")
+    if not pc:
+        return ""
+    rows = "".join(f"<tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td><b>{E(r[2])}</b></td></tr>" for r in pc["rows"])
+    return (f'<div class="card" style="margin-top:12px"><h3 style="margin:0 0 6px;color:var(--navy)">{E(pc["title"])}</h3>'
+            f'<table><tr><th></th><th>إنستجرام</th><th>فيسبوك</th></tr>{rows}</table>'
+            f'<div class="fix" style="margin-top:8px">{E(pc["note"])}</div></div>')
+
+
 def page(inner, brand, date, num, total):
     return (f'<section class="page"><div class="top"><span>تحليل حساب إنستجرام</span>'
             f'<span class="brand">{E(brand)}</span></div>{inner}'
@@ -157,7 +167,7 @@ def build(d, c):
     pages.append(f'''<h2>حسابك بالأرقام</h2><p class="lead">{E(c.get("numbers_intro", ""))}</p>
 <div class="grid g4">{tiles}</div>
 <div class="card" style="margin-top:12px"><b style="color:var(--navy)">مشاهدات آخر {len(last10)} ريلز</b>
-<div class="bars" style="margin-top:22px">{bars}</div><div class="cap">من الأقدم للأحدث · الغامق = الأعلى</div></div>{best}''')
+<div class="bars" style="margin-top:22px">{bars}</div><div class="cap">من الأقدم للأحدث · الغامق = الأعلى</div></div>{best}{platform_card(c)}''')
 
     # 3 problems
     probs = ""
@@ -224,6 +234,10 @@ def client_md(d, c):
     if c.get("best_video"):
         b = c["best_video"]
         L += ["", f"**أنجح فيديو:** [{b['title']}]({b['url']}). {b['why']} **الدرس:** {b['lesson']}"]
+    if c.get("platform_compare"):
+        pc = c["platform_compare"]
+        L += ["", f"### {pc['title']}", "| | إنستجرام | فيسبوك |", "|---|---|---|"]
+        L += [f"| {r[0]} | {r[1]} | {r[2]} |" for r in pc["rows"]] + ["", pc["note"]]
     L += ["", "## 3 حاجات لو اتصلحت هتفرق معاك", ""]
     for i, p in enumerate(c["problems"], 1):
         L += [f"### {i}. {p['title']}", p["evidence"], "", f"**الحل:** {p['fix']}"]
