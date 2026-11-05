@@ -24,7 +24,7 @@ description: >
 1. Tailored pre-call questions sent to the doctor (Step 1) and his account pulled (Step 2).
 2. The user reviews the videos (`video_review.md`), Claude proposes scores /10 from his notes, the user approves.
 3. The audit report is built WITHOUT the call (Step 4); `opening_quote` stays empty.
-4. **The call happens after the audit.** Before it, Claude gives the user the full list of questions to ask in the call (tailored to this doctor and to what the audit found). The answers feed Track 2.
+4. **The call happens after the audit.** Before it, Claude writes `<dir>/call_questions.md` for the user (30-40 min, about 27 questions in 7 blocks: reaction to the audit + his first sentence about his problem; specialty and services incl. topics he refuses and employer limits; THE TYPICAL PATIENT (age, life, what she tried, wants, fears, top 5 questions, objections, who decides, how she finds and books him, platforms she uses) adapted from the user's «أنت زمان» form; his personality and script preference; filming logistics, equipment and patient consent; goal and baseline numbers for the case study; done-by-you vs done-for-you). Tailor every block to this doctor and to the audit findings; the generic first version is in the dr. Mostafa example under outputs. The answers feed Track 2.
 5. The comprehensive analysis after the call IS Track 2 (the full strategy).
 
 ## Free route (tested 2026-11-05)
