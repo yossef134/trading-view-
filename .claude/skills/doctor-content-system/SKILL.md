@@ -75,6 +75,7 @@ About 0.3 USD. No transcripts or videos in this track (kept cheap).
 
 Agreed: client version = PDF infographic + MD, calm medical style, branded @yossef.content2sales, all 3 specialty patterns revealed; last section depends on `mode` (`client`: next step + invitation; `case_study`: what we will do together + re-measure at 30/60 days).
 
+0. **HARD RULE (user, 2026-11-05): do not build or send the report until the user's `video_review.md` AND `call_notes.md` exist in the doctor's folder.** If they are missing, stop and ask for them. Only build without them if the user says so explicitly for that doctor.
 1. Write `<dir>/audit_content.json` following `references/audit-content-schema.md`, using analysis.json, baseline.json, own_reels.json + sheets, scan/summary.md, call_notes.md and the user's video_review.md (when present).
 2. `python3 -I scripts/build_audit.py --dir <dir> --content <dir>/audit_content.json`
    -> audit_client.html / audit_client.pdf / audit_client.md / audit_internal.md (Chromium via `scripts/render_pdf.js`).
