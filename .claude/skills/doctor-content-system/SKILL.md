@@ -30,7 +30,7 @@ description: >
 
 ## Track 1, Step 1: intake (BUILT)
 
-1. Send the doctor part (a) of `forms/audit_intake.md` (WhatsApp or Google Forms).
+1. **Tailor the pre-call questions to THIS doctor (user rule, 2026-11-05).** `forms/audit_intake.md` part (a) is only the base. Pull the account first (Step 2 commands 1-2), then: drop questions the account already answers (specialty, link, posting status), and add 3-6 questions about what the data shows (e.g. his best video and whether it brought patients, why posting stops, who makes the designs, where the bio link leads and how patients really book, ads history, speak freely vs read). Group them: about your work / about the content / your goal. Give the user the tailored text to send (WhatsApp or Google Forms).
 2. The user runs the 15-minute call with part (b).
 3. The user fills part (c) and saves it as `call_notes.md` in `outputs/doctors/<instagram-username>/<YYYY-MM-DD>/`, together with the doctor's form answers as `intake_answers.md`.
 4. Do not start Step 2 until both files exist, or the user says to go ahead without them.
