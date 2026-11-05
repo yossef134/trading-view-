@@ -14,6 +14,7 @@ description: >
 - Output: infographic dashboard + MD file, in two versions: a **client version** (simple, persuasive, genuinely useful) and an **internal version** (all numbers, links, assumptions, cost).
 - Track 1 report must give real value (concrete problems with full fixes), and only hint at the deeper patterns, to create curiosity.
 - Every competitor and research finding carries its link.
+- Track 2 patient avatar: `forms/patient_avatar.md` is a general base; for every doctor, tailor its questions to his specialty (examples, drop irrelevant ones, add 2-4 specialty questions, use audit findings) and save as `track2/patient_questions.md` (user rule 2026-11-05).
 - Ask the user's approval before every new step, and before any paid step.
 - Track 1 saves a baseline snapshot so a before/after case study can be made at 30 and 60 days.
 - **Every change agreed in the conversation is written into this skill immediately** (user rule, 2026-11-05). Keep `references/roadmap.md` (the mind map) in sync.
