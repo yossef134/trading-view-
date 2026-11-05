@@ -37,8 +37,10 @@ def n(v):
 
 
 def dots(score):
-    s = max(0, min(5, int(score or 0)))
-    return "".join('<span class="dot on"></span>' if i < s else '<span class="dot"></span>' for i in range(5))
+    """Score out of 10, drawn as 10 small segments plus the number."""
+    s = max(0, min(10, int(score or 0)))
+    segs = "".join('<span class="dot on"></span>' if i < s else '<span class="dot"></span>' for i in range(10))
+    return f'{segs} <b dir="ltr">{s}/10</b>'
 
 
 CSS = """
@@ -91,9 +93,9 @@ h2 .num { display:inline-flex; width:30px; height:30px; border-radius:50%; backg
 .fix b { color:var(--teal); }
 .example { margin-top:6px; background:#fff; border:1px dashed var(--teal2); border-radius:8px; padding:8px 10px;
   white-space:pre-wrap; font-size:13px; }
-.rate { display:grid; grid-template-columns:120px 90px 1fr; gap:8px; align-items:start; padding:6px 0;
+.rate { display:grid; grid-template-columns:110px 130px 1fr; gap:8px; align-items:start; padding:6px 0;
   border-bottom:1px solid var(--line); font-size:12.5px; }
-.dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#d6e2e3; margin-inline-start:3px; }
+.dot { display:inline-block; width:6px; height:9px; border-radius:2px; background:#d6e2e3; margin-inline-start:3px; }
 .dot.on { background:var(--teal); }
 .note { background:#fff8ec; border:1px solid #f1dcb5; border-radius:10px; padding:10px 12px; font-size:12.5px; margin-top:10px; }
 .pat { margin-bottom:10px; }
@@ -167,7 +169,8 @@ def build(d, c):
 
     # 4 videos (only if the user's review or notes exist)
     if c.get("video_ratings") or c.get("video_notes") or c.get("privacy_note"):
-        rows = "".join(f'<div class="rate"><b>{E(r["item"])}</b><span>{dots(r.get("score"))}</span><span>{E(r.get("note", ""))}</span></div>'
+        rows = "".join(f'<div class="rate"><b>{E(r["item"])}</b><span>{dots(r.get("score"))}</span><span>{E(r.get("note", ""))}'
+                       + (f'<br><span style="color:var(--teal)"><b>الحل: </b>{E(r["fix"])}</span>' if r.get("fix") else "") + '</span></div>'
                        for r in c.get("video_ratings", []))
         notes = "".join(f"<li>{E(x)}</li>" for x in c.get("video_notes", []))
         priv = f'<div class="note"><b>تنبيه مهم: </b>{E(c["privacy_note"])}</div>' if c.get("privacy_note") else ""
@@ -229,7 +232,7 @@ def client_md(d, c):
         L += [""]
     if c.get("video_ratings") or c.get("video_notes") or c.get("privacy_note"):
         L += ["## ملاحظات على فيديوهاتك", ""]
-        L += [f"- **{r['item']}** ({r.get('score', '-')}/5): {r.get('note', '')}" for r in c.get("video_ratings", [])]
+        L += [f"- **{r['item']}** ({r.get('score', '-')}/10): {r.get('note', '')}" + (f" **الحل:** {r['fix']}" if r.get('fix') else "") for r in c.get("video_ratings", [])]
         L += [f"- {x}" for x in c.get("video_notes", [])]
         if c.get("privacy_note"):
             L += ["", f"> **تنبيه مهم:** {c['privacy_note']}"]
