@@ -49,6 +49,8 @@ python3 -I scripts/own_reels.py --analysis <dir>/analysis.json --out <dir>/own_r
 python3 -I scripts/media.py sheets --videos <dir>/own_reels.json --out-dir <dir>/sheets
 ```
 
+**Facebook (optional, when the doctor has an active page; approved 2026-11-05):** `python3 -I scripts/fetch_facebook.py --url https://www.facebook.com/<page> --out <dir>/facebook.json --limit 30` (about 0.17 USD; use the normal page URL, not /share/). Compare followers, typical views and engagement with Instagram, and take address / title / hospital affiliation from the page for the bio. Lesson from the first doctor: his real audience was on Facebook (2,437 followers, about 1,400 typical video views) while Instagram had 115, so the advice became "move what works on Facebook to Instagram reels", not "nobody watches".
+
 Then the USER reviews the same reels himself with `forms/video_review.md` (speaking style, presence, lighting, SOUND, script, editing; 1-5 + concrete notes) and saves `video_review.md` in the doctor's folder. Claude cannot hear audio: the user's judgement leads on sound, delivery and presence; on conflicts the internal report shows both and the doctor's version follows the user.
 
 Claude also LOOKS at each sheet and reads each transcript. Note concretely: when the hook appears, who is on screen, what fills the screen (black frames, template glitches, watermarks), captions, length, ending/CTA, and any patient-privacy or consent risk (patient names, faces, scans). Case-study follow-up at day 30/60: re-run the first three commands into a new dated folder, then `baseline.py compare --before ... --after ... --out compare.md`.
