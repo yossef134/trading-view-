@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "username": "dr_mo_sherif",
+    "fetched_at": "2026-11-05T01:51:01+00:00",
+    "timezone": "Africa/Cairo",
+    "posts_analysed": 3,
+    "mature_posts_scored": 0,
+    "apify_cost_usd": 0.0107,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5
+  },
+  "profile": {
+    "username": "dr_mo_sherif",
+    "full_name": "DR Mohamed Sherif | Cosmetic Dentist",
+    "followers": 1211,
+    "following": 107,
+    "posts_count": 3,
+    "verified": false,
+    "category": "Cosmetic Dentist",
+    "external_url": "https://wa.me/2001012403840?countryName=EG&countryCode=20&phoneNumber=01012403840",
+    "profile_pic": "https://scontent-waw2-1.cdninstagram.com/v/t51.82787-19/543921565_18375945511178072_6677575489534669932_n.jpg?_nc_cat=107&ig_cache_key=GJ2VayBYD5s400hBAGy0kUaHg6tcbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=pQ4sxxeOCOYQ7kNvwF2oD1_&_nc_oc=AdpyLW2I5nUXBTNTisVAT2qE9s8Tdn74jDv8LzWpK6Fd5FBD7PQM86SNM5wV6Xgqi9I&_nc_zt=24&_nc_ht=scontent-waw2-1.cdninstagram.com&_nc_gid=1DPwZNMPBSC37h6b257mSw&_nc_ss=70980&oh=00_AQS1ZoUjjNSVewvwbXNFc5Yno-7I2k5yhyb9kc0FjR6Wog&oe=6AF1AA96"
+  },
+  "health": {
+    "median_er": 0.02973,
+    "tier": "nano (<10k)",
+    "benchmark_low": 0.03,
+    "benchmark_high": 0.08,
+    "er_vs_benchmark": "below",
+    "followers_to_following": 11.3,
+    "format_medians": {},
+    "benchmark_note": "Rule-of-thumb bands, not official Instagram figures."
+  },
+  "stage": {
+    "code": "zero",
+    "followers": 1211,
+    "posts_total": 3,
+    "posts_last_90d": 0,
+    "reasons": [
+      "3 posts in the account's whole history (< 15)",
+      "0 posts in the last 90 days (< 6)"
+    ],
+    "meaning": "no audience/history yet: focus on niche, competitors and formats, not on auditing own posts",
+    "note": "heuristic from public numbers - confirm with the client"
+  },
+  "bio": {
+    "length": 91,
+    "lines": 2,
+    "length_ok": true,
+    "has_link": true,
+    "has_cta": false,
+    "cta_types": [],
+    "emoji_count": 0,
+    "has_number_proof": false,
+    "category_set": true,
+    "business_account": true,
+    "highlights": null,
+    "name_field": "DR Mohamed Sherif | Cosmetic Dentist",
+    "bio_text": "• Biomimetic Dentist - Cosmetic Dentist \n• Fellowship Biomimetic Dentistry @allemancenter🇺🇸",
+    "note": "Mechanical checks only. Judge clarity, who-it's-for and promise by reading bio_text."
+  },
+  "cadence": {
+    "posts": 3,
+    "span_days": 258,
+    "posts_per_week": 0.08,
+    "median_gap_days": 129.27,
+    "longest_gap_days": 175.5,
+    "gap_stdev_days": 46.23,
+    "consistency": "rare"
+  },
+  "trend": {
+    "note": "need >=10 mature posts"
+  },
+  "timing": {
+    "by_weekday": {},
+    "by_hour_block": {},
+    "best_weekdays": [],
+    "best_hour_blocks": [],
+    "winners_posted_in": {},
+    "confidence": "low",
+    "sample_size": 0,
+    "caveat": "Inferred from past post performance, NOT audience-activity data. Link Supermetrics for real follower active hours."
+  },
+  "patterns": {
+    "format": {
+      "carousel": {
+        "n": 1,
+        "share_pct": 33.3,
+        "median_likes": null,
+        "median_comments": 0,
+        "median_views": null,
+        "median_er": 0.0
+      },
+      "reel": {
+        "n": 2,
+        "share_pct": 66.7,
+        "median_likes": 35.0,
+        "median_comments": 2.0,
+        "median_views": 995.5,
+        "median_er": 0.030555
+      }
+    },
+    "caption_length": {},
+    "hashtag_count": {},
+    "has_cta": {},
+    "cta_types": {
+      "question": 1
+    },
+    "has_question_in_caption": {},
+    "hook_has_number": {},
+    "hook_length": {},
+    "emoji_use": {},
+    "paid_partnership": {},
+    "reel_duration": {},
+    "reel_original_audio": {},
+    "carousel_slides": {},
+    "top_hashtags": [
+      {
+        "tag": "طب_الأسنان",
+        "n": 1
+      },
+      {
+        "tag": "biomimeticdentistry",
+        "n": 1
+      },
+      {
+        "tag": "حشو_الأسنان",
+        "n": 1
+      }
+    ],
+    "language": "arabic"
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DOSZAbuiL2s/",
+      "format": "carousel",
+      "timestamp": "2025-09-07T04:19:03.000Z",
+      "weekday": "Sun",
+      "hour": 7,
+      "hook": "استبدال حشوات الامالجم ( البلاتينية ) المضرة .. بتركيبات E-Max التجميل",
+      "caption_len": 193,
+      "hashtag_n": 0,
+      "likes": null,
+      "comments": 0,
+      "views": null,
+      "duration": null,
+      "slides": 2,
+      "er": 0.0,
+      "view_rate": null,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": null,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DVWT18EAUrn/",
+      "format": "reel",
+      "timestamp": "2026-03-01T16:31:03.000Z",
+      "weekday": "Sun",
+      "hour": 18,
+      "hook": "ليه حشو سنانك بيقع كل شوية؟",
+      "caption_len": 323,
+      "hashtag_n": 3,
+      "likes": 34,
+      "comments": 2,
+      "views": 602,
+      "duration": 36.43211,
+      "slides": null,
+      "er": 0.02973,
+      "view_rate": 0.4971,
+      "index": null,
+      "verdict": null,
+      "ctas": [
+        "question"
+      ],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DYsIawpgckh/",
+      "format": "reel",
+      "timestamp": "2026-05-23T17:28:46.000Z",
+      "weekday": "Sat",
+      "hour": 20,
+      "hook": "وقوع الطربوش أو كسر السن تحته مش دايمًا معناه إنك عملت حاجة غلط 🦷",
+      "caption_len": 656,
+      "hashtag_n": 0,
+      "likes": 36,
+      "comments": 2,
+      "views": 1389,
+      "duration": 39.936001,
+      "slides": null,
+      "er": 0.03138,
+      "view_rate": 1.147,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "winners": [],
+  "losers": [],
+  "top5": [],
+  "bottom5": [],
+  "excluded": {
+    "pinned": 0,
+    "immature": 0,
+    "no_baseline": 3
+  },
+  "related_profiles": []
+}

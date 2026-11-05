@@ -103,7 +103,7 @@ Agreed: client version = PDF infographic + MD, calm medical style, branded @yoss
 2. `python3 -I scripts/build_audit.py --dir <dir> --content <dir>/audit_content.json`
    -> audit_client.html / audit_client.pdf / audit_client.md / audit_internal.md (Chromium via `scripts/render_pdf.js`).
 3. Check every page before sending: `node scripts/render_pdf.js <dir>/audit_client.html /tmp/x.pdf --png <scratch>/p` and look at each PNG (overflow, reversed numbers, empty sections, consistency of numbers).
-4. Send the PDF and MD to the user; the user sends to the doctor. Doctors' data stays local (outputs/doctors/ is git-ignored).
+4. Send the PDF and MD to the user; the user sends to the doctor. Doctors' data in outputs/doctors/ is committed to git (user decision 2026-11-05); do not commit videos over 20 MB.
 
 ## Reusable lessons from the previous skill (`instagram-account-analyzer`)
 

@@ -1,0 +1,967 @@
+{
+  "meta": {
+    "url": "https://www.facebook.com/dr.mostafa.mobark",
+    "fetched_at": "2026-11-05T03:00:21+00:00",
+    "timezone": "Africa/Cairo",
+    "posts_analysed": 30,
+    "mature_posts_scored": 28,
+    "apify_cost_usd": 0.163,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5
+  },
+  "page": {
+    "followers": 2437,
+    "title": "عيادة د. مصطفي مبارك للنساء و التوليد و الحقن المجهري | Kafr el Sheikh"
+  },
+  "stage": {
+    "code": "early",
+    "followers": 2437,
+    "posts_last_90d": 13,
+    "reasons": []
+  },
+  "page_signals": {
+    "title": "عيادة د. مصطفي مبارك للنساء و التوليد و الحقن المجهري | Kafr el Sheikh",
+    "intro": "د/  مصطفى مبارك \nاستشارى  الحقن المجهرى و المناظير بمستشفى الجلاء التعليمى للولاده",
+    "address": "عمارات المحاربين الجديده -امام مزلقان الانشاء و التعمير -بجوار بنك الCIB -برج الماوى اعلى الصعيدى العالمى للعصير   الدور الثانى, Kafr el Sheikh, Egypt",
+    "phone": "+20 10 23636697",
+    "email": "moustafamubarak1@gmail.com",
+    "rating": "100% recommend (13 reviews)",
+    "rating_count": 13,
+    "followers": 2437,
+    "ad_status": "This Page isn't currently running ads.",
+    "has_phone": true,
+    "has_address": true,
+    "has_intro": true,
+    "note": "Mechanical checks only; judge clarity and booking path by reading intro/address."
+  },
+  "cadence": {
+    "posts": 30,
+    "span_days": 186,
+    "posts_per_week": 1.13,
+    "median_gap_days": 3.85,
+    "longest_gap_days": 25.2,
+    "gap_stdev_days": 6.55,
+    "consistency": "irregular"
+  },
+  "trend": {
+    "older_half_median_er": 0.01826,
+    "newer_half_median_er": 0.0119,
+    "change_pct": -34.8,
+    "direction": "down"
+  },
+  "patterns": {
+    "format": {
+      "photo_or_text": {
+        "n": 14,
+        "share_pct": 46.7,
+        "median_likes": 26.0,
+        "median_comments": 13.5,
+        "median_shares": 1.0,
+        "median_views": null,
+        "median_er": 0.01518
+      },
+      "video": {
+        "n": 16,
+        "share_pct": 53.3,
+        "median_likes": 25.0,
+        "median_comments": 8,
+        "median_shares": 0.0,
+        "median_views": 1405.5,
+        "median_er": 0.01272
+      }
+    },
+    "caption_length": {
+      "long>300": {
+        "n": 16,
+        "median_index": 0.892
+      },
+      "mid100-300": {
+        "n": 7,
+        "median_index": 1.321
+      },
+      "short<100": {
+        "n": 5,
+        "median_index": 1.073
+      }
+    },
+    "has_cta": {
+      "with_cta": {
+        "n": 14,
+        "median_index": 0.8965
+      },
+      "no_cta": {
+        "n": 14,
+        "median_index": 1.173
+      }
+    },
+    "cta_types": {
+      "question": 15,
+      "phone_in_text": 1
+    },
+    "has_question": {
+      "question": {
+        "n": 13,
+        "median_index": 0.878
+      },
+      "none": {
+        "n": 15,
+        "median_index": 1.273
+      }
+    },
+    "hashtag_use": {
+      "none": {
+        "n": 22,
+        "median_index": 0.8965
+      },
+      "with_hashtags": {
+        "n": 6,
+        "median_index": 1.297
+      }
+    },
+    "emoji_use": {
+      "emoji": {
+        "n": 25,
+        "median_index": 0.915
+      },
+      "no_emoji": {
+        "n": 3,
+        "median_index": 1.273
+      }
+    },
+    "top_hashtags": [
+      {
+        "tag": "د",
+        "n": 4
+      },
+      {
+        "tag": "حقن_مجهري",
+        "n": 2
+      },
+      {
+        "tag": "استشارى",
+        "n": 2
+      },
+      {
+        "tag": "ولاده",
+        "n": 2
+      },
+      {
+        "tag": "دكتور_مصطفى_مبارك",
+        "n": 1
+      },
+      {
+        "tag": "نساء_وتوليد",
+        "n": 1
+      },
+      {
+        "tag": "كفر_الشيخ",
+        "n": 1
+      },
+      {
+        "tag": "استئصال",
+        "n": 1
+      },
+      {
+        "tag": "ستئصال",
+        "n": 1
+      },
+      {
+        "tag": "اطفال_الانابيب",
+        "n": 1
+      },
+      {
+        "tag": "تأخر_الحمل",
+        "n": 1
+      },
+      {
+        "tag": "علاج_العقم",
+        "n": 1
+      },
+      {
+        "tag": "اجنة_اليوم_الثالث",
+        "n": 1
+      },
+      {
+        "tag": "اجنة_اليوم_الخامس",
+        "n": 1
+      },
+      {
+        "tag": "بلاستوسيست",
+        "n": 1
+      }
+    ]
+  },
+  "winners": [
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0Td1DYr2e5nqpDYJtWv2T7utDF2sATpqHX5Vzwak5S2iYRFmx4YP7BmhRKUC2ntpml",
+      "format": "photo_or_text",
+      "time": "2026-07-08T15:55:03.000Z",
+      "weekday": "Wed",
+      "hour": 18,
+      "hook": "في مهنة زي الطب، أجمل مكافأة هي اللحظة دي.",
+      "caption_len": 278,
+      "hashtag_n": 0,
+      "likes": 83,
+      "comments": 24,
+      "shares": 1,
+      "views": null,
+      "er": 0.04432,
+      "index": 2.634,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid033VN99mubPyargLA2RnJP1MhrFV8Tmiaf3CnLJCGy2NdJitp5YoJ68G9omimqYpbZl",
+      "format": "photo_or_text",
+      "time": "2026-06-22T17:25:20.000Z",
+      "weekday": "Mon",
+      "hour": 20,
+      "hook": "🌸 من أجمل لحظات شغلنا...",
+      "caption_len": 311,
+      "hashtag_n": 0,
+      "likes": 64,
+      "comments": 29,
+      "shares": 2,
+      "views": null,
+      "er": 0.03898,
+      "index": 2.317,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/26819080137773489/",
+      "format": "video",
+      "time": "2026-05-25T00:21:52.000Z",
+      "weekday": "Mon",
+      "hour": 3,
+      "hook": "الولادة الطبيعية ≠ اتساع دائم في المهبل",
+      "caption_len": 112,
+      "hashtag_n": 3,
+      "likes": 58,
+      "comments": 27,
+      "shares": 1,
+      "views": 2838,
+      "er": 0.03529,
+      "index": 2.019,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02xbRFrqbZdpQyARPtq9zafJSW2GghE4hkutQxg4Pk1AmpsErZFUDqdhtJCbjuJ1Zkl",
+      "format": "photo_or_text",
+      "time": "2026-07-22T15:13:00.000Z",
+      "weekday": "Wed",
+      "hour": 18,
+      "hook": "أهلًا بيكي يا كنوز ❤️",
+      "caption_len": 549,
+      "hashtag_n": 0,
+      "likes": 51,
+      "comments": 24,
+      "shares": 1,
+      "views": null,
+      "er": 0.03119,
+      "index": 1.854,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02AUkhbJPAwEF6EZht6yTUM7HKPxZjTvbLVpRRNmyRcdYbjNy7tgq8cjCtjqryuUikl",
+      "format": "photo_or_text",
+      "time": "2026-07-11T22:28:53.000Z",
+      "weekday": "Sun",
+      "hour": 1,
+      "hook": "الحمد لله.. من أجمل اللحظات اللي بنعيشها في شغلنا إننا نشوف النهاية ال",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 51,
+      "comments": 18,
+      "shares": 1,
+      "views": null,
+      "er": 0.02872,
+      "index": 1.707,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02Uejw3FL6ddsmumNzjCuT6QijJszTqCH62EBXC5J4kkZfx7me2br3o2rtm6w52VqJl",
+      "format": "photo_or_text",
+      "time": "2026-08-27T23:05:53.000Z",
+      "weekday": "Fri",
+      "hour": 2,
+      "hook": "من أجمل حاجات بتخليني مستمر... تقييم زي ده من مريضة تابعت معايا 💗",
+      "caption_len": 262,
+      "hashtag_n": 4,
+      "likes": 45,
+      "comments": 23,
+      "shares": 1,
+      "views": null,
+      "er": 0.02831,
+      "index": 1.683,
+      "verdict": "win",
+      "ctas": [
+        "phone_in_text"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1359589325769443/",
+      "format": "video",
+      "time": "2026-07-29T21:07:00.000Z",
+      "weekday": "Thu",
+      "hour": 0,
+      "hook": "🛏️ هل الراحة بعد ترجيع الأجنة بتزود فرصة الحمل؟",
+      "caption_len": 328,
+      "hashtag_n": 0,
+      "likes": 35,
+      "comments": 8,
+      "shares": 0,
+      "views": 2234,
+      "er": 0.01764,
+      "index": 1.589,
+      "verdict": "win",
+      "ctas": [
+        "question"
+      ]
+    }
+  ],
+  "losers": [
+    {
+      "url": "https://www.facebook.com/reel/1023763130736904/",
+      "format": "video",
+      "time": "2026-11-01T15:31:59.000Z",
+      "weekday": "Sun",
+      "hour": 17,
+      "hook": "هل الأفضل نقل جنين واحد أم جنينين في الحقن المجهري؟ 🤔",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 16,
+      "comments": 8,
+      "shares": 0,
+      "views": 307,
+      "er": 0.00985,
+      "index": 0.218,
+      "verdict": "lose",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1053683610471631/",
+      "format": "video",
+      "time": "2026-08-02T23:47:17.000Z",
+      "weekday": "Mon",
+      "hour": 2,
+      "hook": "🤔 كل التحاليل سليمة... ليه الحمل لسه متأخر؟",
+      "caption_len": 386,
+      "hashtag_n": 0,
+      "likes": 23,
+      "comments": 5,
+      "shares": 5,
+      "views": 400,
+      "er": 0.01354,
+      "index": 0.285,
+      "verdict": "lose",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid06jyQCE8hZ7EKMLVCyamjRKRTN5s8VMFUFdeCMzNmtGZxoJcsSEZ6Ssz9hGE9RRQbl",
+      "format": "photo_or_text",
+      "time": "2026-10-05T19:10:08.000Z",
+      "weekday": "Mon",
+      "hour": 22,
+      "hook": "تنويه هام لأمهاتنا وسيداتنا العزيزات 📢",
+      "caption_len": 227,
+      "hashtag_n": 0,
+      "likes": 14,
+      "comments": 1,
+      "shares": 1,
+      "views": null,
+      "er": 0.00657,
+      "index": 0.39,
+      "verdict": "lose",
+      "ctas": []
+    }
+  ],
+  "format_medians": {
+    "video": 1406,
+    "photo_or_text": 41
+  },
+  "posts": [
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/1273671574422193:1273671574422193",
+      "format": "photo_or_text",
+      "time": "2026-05-01T23:05:39.000Z",
+      "weekday": "Sat",
+      "hour": 2,
+      "hook": "",
+      "caption_len": 0,
+      "hashtag_n": 0,
+      "likes": 31,
+      "comments": 13,
+      "shares": 0,
+      "views": null,
+      "er": 0.01805,
+      "index": 1.073,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/26819080137773489/",
+      "format": "video",
+      "time": "2026-05-25T00:21:52.000Z",
+      "weekday": "Mon",
+      "hour": 3,
+      "hook": "الولادة الطبيعية ≠ اتساع دائم في المهبل",
+      "caption_len": 112,
+      "hashtag_n": 3,
+      "likes": 58,
+      "comments": 27,
+      "shares": 1,
+      "views": 2838,
+      "er": 0.03529,
+      "index": 2.019,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/1211980937610160/",
+      "format": "video",
+      "time": "2026-06-03T22:11:50.000Z",
+      "weekday": "Thu",
+      "hour": 1,
+      "hook": "#خرافات عن اشعه الصبغه",
+      "caption_len": 90,
+      "hashtag_n": 4,
+      "likes": 27,
+      "comments": 18,
+      "shares": 0,
+      "views": 1789,
+      "er": 0.01847,
+      "index": 1.273,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/1998420894379387/",
+      "format": "video",
+      "time": "2026-06-15T17:13:16.000Z",
+      "weekday": "Mon",
+      "hour": 20,
+      "hook": "هل اجنه اليوم الخامس افضل من اليوم التالت ؟؟؟ 🤔🤔🤔 #حقن_مجهري",
+      "caption_len": 170,
+      "hashtag_n": 8,
+      "likes": 20,
+      "comments": 5,
+      "shares": 0,
+      "views": 1525,
+      "er": 0.01026,
+      "index": 1.085,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/2420602011778893/",
+      "format": "video",
+      "time": "2026-06-19T14:53:50.000Z",
+      "weekday": "Fri",
+      "hour": 17,
+      "hook": "❌ متسأليش على وسيلة منع الحمل في التليفون!",
+      "caption_len": 42,
+      "hashtag_n": 0,
+      "likes": 40,
+      "comments": 21,
+      "shares": 44,
+      "views": 1091,
+      "er": 0.04309,
+      "index": 0.776,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid033VN99mubPyargLA2RnJP1MhrFV8Tmiaf3CnLJCGy2NdJitp5YoJ68G9omimqYpbZl",
+      "format": "photo_or_text",
+      "time": "2026-06-22T17:25:20.000Z",
+      "weekday": "Mon",
+      "hour": 20,
+      "hook": "🌸 من أجمل لحظات شغلنا...",
+      "caption_len": 311,
+      "hashtag_n": 0,
+      "likes": 64,
+      "comments": 29,
+      "shares": 2,
+      "views": null,
+      "er": 0.03898,
+      "index": 2.317,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0Td1DYr2e5nqpDYJtWv2T7utDF2sATpqHX5Vzwak5S2iYRFmx4YP7BmhRKUC2ntpml",
+      "format": "photo_or_text",
+      "time": "2026-07-08T15:55:03.000Z",
+      "weekday": "Wed",
+      "hour": 18,
+      "hook": "في مهنة زي الطب، أجمل مكافأة هي اللحظة دي.",
+      "caption_len": 278,
+      "hashtag_n": 0,
+      "likes": 83,
+      "comments": 24,
+      "shares": 1,
+      "views": null,
+      "er": 0.04432,
+      "index": 2.634,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02AUkhbJPAwEF6EZht6yTUM7HKPxZjTvbLVpRRNmyRcdYbjNy7tgq8cjCtjqryuUikl",
+      "format": "photo_or_text",
+      "time": "2026-07-11T22:28:53.000Z",
+      "weekday": "Sun",
+      "hour": 1,
+      "hook": "الحمد لله.. من أجمل اللحظات اللي بنعيشها في شغلنا إننا نشوف النهاية ال",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 51,
+      "comments": 18,
+      "shares": 1,
+      "views": null,
+      "er": 0.02872,
+      "index": 1.707,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02xbRFrqbZdpQyARPtq9zafJSW2GghE4hkutQxg4Pk1AmpsErZFUDqdhtJCbjuJ1Zkl",
+      "format": "photo_or_text",
+      "time": "2026-07-22T15:13:00.000Z",
+      "weekday": "Wed",
+      "hour": 18,
+      "hook": "أهلًا بيكي يا كنوز ❤️",
+      "caption_len": 549,
+      "hashtag_n": 0,
+      "likes": 51,
+      "comments": 24,
+      "shares": 1,
+      "views": null,
+      "er": 0.03119,
+      "index": 1.854,
+      "verdict": "win",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/1061831269767723/",
+      "format": "video",
+      "time": "2026-07-25T18:43:51.000Z",
+      "weekday": "Sat",
+      "hour": 21,
+      "hook": "❓ هل كل تأخر حمل يحتاج حقن مجهري؟",
+      "caption_len": 322,
+      "hashtag_n": 0,
+      "likes": 13,
+      "comments": null,
+      "shares": 0,
+      "views": 961,
+      "er": 0.00533,
+      "index": 0.684,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1051139684537057/",
+      "format": "video",
+      "time": "2026-07-26T20:40:41.000Z",
+      "weekday": "Sun",
+      "hour": 23,
+      "hook": "🧪 ليه بنطلب تحليل السائل المنوي من أول زيارة؟",
+      "caption_len": 419,
+      "hashtag_n": 0,
+      "likes": 9,
+      "comments": null,
+      "shares": 0,
+      "views": 740,
+      "er": 0.00369,
+      "index": 0.527,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/911877114652545/",
+      "format": "video",
+      "time": "2026-07-27T18:04:47.000Z",
+      "weekday": "Mon",
+      "hour": 21,
+      "hook": "⏳ هل السن فعلًا بيأثر على فرص الحمل؟",
+      "caption_len": 364,
+      "hashtag_n": 0,
+      "likes": 29,
+      "comments": null,
+      "shares": 0,
+      "views": 1221,
+      "er": 0.0119,
+      "index": 0.869,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/2132152144376640/",
+      "format": "video",
+      "time": "2026-07-28T22:28:45.000Z",
+      "weekday": "Wed",
+      "hour": 1,
+      "hook": "⏳ إمتى نقول إن فيه تأخر حمل؟",
+      "caption_len": 422,
+      "hashtag_n": 0,
+      "likes": 28,
+      "comments": 10,
+      "shares": 0,
+      "views": 1788,
+      "er": 0.01559,
+      "index": 1.272,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1359589325769443/",
+      "format": "video",
+      "time": "2026-07-29T21:07:00.000Z",
+      "weekday": "Thu",
+      "hour": 0,
+      "hook": "🛏️ هل الراحة بعد ترجيع الأجنة بتزود فرصة الحمل؟",
+      "caption_len": 328,
+      "hashtag_n": 0,
+      "likes": 35,
+      "comments": 8,
+      "shares": 0,
+      "views": 2234,
+      "er": 0.01764,
+      "index": 1.589,
+      "verdict": "win",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/2530872667339910/",
+      "format": "video",
+      "time": "2026-07-30T21:17:20.000Z",
+      "weekday": "Fri",
+      "hour": 0,
+      "hook": "😌 \"بطلي تفكير في الحمل... وهيحصل لوحده!\"",
+      "caption_len": 378,
+      "hashtag_n": 0,
+      "likes": 29,
+      "comments": 13,
+      "shares": 0,
+      "views": 1286,
+      "er": 0.01723,
+      "index": 0.915,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1053683610471631/",
+      "format": "video",
+      "time": "2026-08-02T23:47:17.000Z",
+      "weekday": "Mon",
+      "hour": 2,
+      "hook": "🤔 كل التحاليل سليمة... ليه الحمل لسه متأخر؟",
+      "caption_len": 386,
+      "hashtag_n": 0,
+      "likes": 23,
+      "comments": 5,
+      "shares": 5,
+      "views": 400,
+      "er": 0.01354,
+      "index": 0.285,
+      "verdict": "lose",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/1163084799724541/",
+      "format": "video",
+      "time": "2026-08-03T19:06:04.000Z",
+      "weekday": "Mon",
+      "hour": 22,
+      "hook": "🔍 هل كل مريضة قبل الحقن المجهري محتاجة منظار رحمي أو منظار بطني؟",
+      "caption_len": 396,
+      "hashtag_n": 0,
+      "likes": 18,
+      "comments": 6,
+      "shares": 0,
+      "views": 929,
+      "er": 0.00985,
+      "index": 0.661,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/919877977255401/",
+      "format": "video",
+      "time": "2026-08-12T14:26:16.000Z",
+      "weekday": "Wed",
+      "hour": 17,
+      "hook": "الاورام الليفيه و تاثيرها على الحمل !!!",
+      "caption_len": 472,
+      "hashtag_n": 0,
+      "likes": 18,
+      "comments": 6,
+      "shares": 0,
+      "views": 1995,
+      "er": 0.00985,
+      "index": 1.419,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02fNapAURvc5XKGY8x372dQoSddV1mgjbGxSc5pqHu2ZuoxUQL4GLbvTVBeCEHXJj9l",
+      "format": "photo_or_text",
+      "time": "2026-08-17T22:15:14.000Z",
+      "weekday": "Tue",
+      "hour": 1,
+      "hook": "بعد 3 سنوات من تأخر الحمل، وبعد محاولة سابقة لم يُكتب لها النجاح…",
+      "caption_len": 362,
+      "hashtag_n": 4,
+      "likes": 22,
+      "comments": 1,
+      "shares": 1,
+      "views": null,
+      "er": 0.00985,
+      "index": 0.585,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/1703200047460047/",
+      "format": "video",
+      "time": "2026-08-18T21:52:09.000Z",
+      "weekday": "Wed",
+      "hour": 0,
+      "hook": "نسيتي قرص؟ 💊",
+      "caption_len": 264,
+      "hashtag_n": 4,
+      "likes": 22,
+      "comments": 7,
+      "shares": 0,
+      "views": 1856,
+      "er": 0.0119,
+      "index": 1.321,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02DjoCfMU9nN1b2Hj38Y1ntzBA7YEoFgbHfAQVZkfHQazyrmZgvgVUq5uhUaZysoznl",
+      "format": "photo_or_text",
+      "time": "2026-08-22T18:15:02.000Z",
+      "weekday": "Sat",
+      "hour": 21,
+      "hook": "عياده دكتور مصطفى وصلت قاع الهامور 😎😄😄",
+      "caption_len": 56,
+      "hashtag_n": 0,
+      "likes": 24,
+      "comments": 4,
+      "shares": 1,
+      "views": null,
+      "er": 0.0119,
+      "index": 0.707,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0Rv4RHzbj976p3GWDszsHVSm9VoNQnDdrxUrCYW3ydQUbh9nURWnFTmmGKjwXXAMYl",
+      "format": "photo_or_text",
+      "time": "2026-08-26T22:30:33.000Z",
+      "weekday": "Thu",
+      "hour": 1,
+      "hook": "\"سؤال بيتكرر كتير: هل عدم انتظام الدورة الشهرية لازم يقلقني؟ 🤔",
+      "caption_len": 152,
+      "hashtag_n": 0,
+      "likes": 21,
+      "comments": 14,
+      "shares": 1,
+      "views": null,
+      "er": 0.01477,
+      "index": 0.878,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02Uejw3FL6ddsmumNzjCuT6QijJszTqCH62EBXC5J4kkZfx7me2br3o2rtm6w52VqJl",
+      "format": "photo_or_text",
+      "time": "2026-08-27T23:05:53.000Z",
+      "weekday": "Fri",
+      "hour": 2,
+      "hook": "من أجمل حاجات بتخليني مستمر... تقييم زي ده من مريضة تابعت معايا 💗",
+      "caption_len": 262,
+      "hashtag_n": 4,
+      "likes": 45,
+      "comments": 23,
+      "shares": 1,
+      "views": null,
+      "er": 0.02831,
+      "index": 1.683,
+      "verdict": "win",
+      "ctas": [
+        "phone_in_text"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/reel/4430232427190977/",
+      "format": "video",
+      "time": "2026-09-02T15:16:01.000Z",
+      "weekday": "Wed",
+      "hour": 18,
+      "hook": "اختيار نوع الجنين حرام ولا حلال 🤔🤔🤔🤲",
+      "caption_len": 87,
+      "hashtag_n": 0,
+      "likes": 34,
+      "comments": 11,
+      "shares": 0,
+      "views": 1987,
+      "er": 0.01847,
+      "index": 1.414,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0253TuSCTpjVWptj2RtLqUBisBNrXKtFUw2TdjXVyo1nNewwa8PJME6841uhB2iBMWl",
+      "format": "photo_or_text",
+      "time": "2026-09-10T14:42:47.000Z",
+      "weekday": "Thu",
+      "hour": 17,
+      "hook": "قصة نجاح جديدة.. ونهاية سعيدة بفضل الله🤲🤲",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 28,
+      "comments": 9,
+      "shares": 1,
+      "views": null,
+      "er": 0.01559,
+      "index": 0.927,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid06jyQCE8hZ7EKMLVCyamjRKRTN5s8VMFUFdeCMzNmtGZxoJcsSEZ6Ssz9hGE9RRQbl",
+      "format": "photo_or_text",
+      "time": "2026-10-05T19:10:08.000Z",
+      "weekday": "Mon",
+      "hour": 22,
+      "hook": "تنويه هام لأمهاتنا وسيداتنا العزيزات 📢",
+      "caption_len": 227,
+      "hashtag_n": 0,
+      "likes": 14,
+      "comments": 1,
+      "shares": 1,
+      "views": null,
+      "er": 0.00657,
+      "index": 0.39,
+      "verdict": "lose",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid02sp2RY4a1aV4AoNRdMYKdQpFHmiC5qCHqaiELChLGsw4mF5MXv2RmPQPsNh6VdGfol",
+      "format": "photo_or_text",
+      "time": "2026-10-16T19:55:58.000Z",
+      "weekday": "Fri",
+      "hour": 22,
+      "hook": "فى رسائل بتوصلك، تحس إن كل تعبك كان يستاهل…",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 12,
+      "comments": 10,
+      "shares": 1,
+      "views": null,
+      "er": 0.00944,
+      "index": 0.561,
+      "verdict": "normal",
+      "ctas": []
+    },
+    {
+      "url": "https://www.facebook.com/reel/1023763130736904/",
+      "format": "video",
+      "time": "2026-11-01T15:31:59.000Z",
+      "weekday": "Sun",
+      "hour": 17,
+      "hook": "هل الأفضل نقل جنين واحد أم جنينين في الحقن المجهري؟ 🤔",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 16,
+      "comments": 8,
+      "shares": 0,
+      "views": 307,
+      "er": 0.00985,
+      "index": 0.218,
+      "verdict": "lose",
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0ETQaynvSvgQAxNrLeaG6sWrHvk9JM3VQSzAU5s47jWyF3qChWL9xN33qpd7xQ61Kl",
+      "format": "photo_or_text",
+      "time": "2026-11-03T17:37:49.000Z",
+      "weekday": "Tue",
+      "hour": 19,
+      "hook": "جوزك مسافر؟ وبتتقابلوا شهر أو شهرين بس في السنة؟ ❤️",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 20,
+      "comments": null,
+      "shares": 3,
+      "views": null,
+      "er": 0.00944,
+      "index": null,
+      "verdict": null,
+      "ctas": [
+        "question"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/dr.mostafa.mobark/posts/pfbid0Aearwzr9mCTtg3Xmcjq53UiBCSMYok2DNRaPfBjriGLgwiTwydPYPN8Lhx5EXxjHl",
+      "format": "photo_or_text",
+      "time": "2026-11-04T17:42:21.000Z",
+      "weekday": "Wed",
+      "hour": 19,
+      "hook": "هل كل الحوامل محتاجين نفس جرعة الفوليك أسيد؟ 🤰",
+      "caption_len": 600,
+      "hashtag_n": 0,
+      "likes": 4,
+      "comments": null,
+      "shares": 1,
+      "views": null,
+      "er": 0.00205,
+      "index": null,
+      "verdict": null,
+      "ctas": [
+        "question"
+      ]
+    }
+  ],
+  "health": {
+    "median_er": 0.01518
+  }
+}

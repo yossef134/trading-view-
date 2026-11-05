@@ -1,0 +1,2606 @@
+{
+  "meta": {
+    "fetched_at": "2026-11-05T02:04:22+00:00",
+    "accounts": 5,
+    "scored_accounts": 5,
+    "reels_scored": 92,
+    "winners": 25,
+    "base_win_rate": 0.272,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5,
+    "min_reels_per_account": 4,
+    "timezone": "Africa/Cairo",
+    "labels_applied": 0,
+    "note": "index is vs each account's own median; patterns are counts with links, 'repeated' = >=3 winners, >=2 accounts, no single account supplying >60% of them, lift >= 1.3"
+  },
+  "accounts": [
+    {
+      "username": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/dr.ahmedabdelazeem/",
+      "followers": 7638,
+      "bio": "• استشاري تأخر الإنجاب والحقن المجهري\n• استشاري أمراض النساء والتوليد\n  \n📍المقطم - زهراء المعادي - التجمع الخامس\n📞 01028300707\n📞 01037671256",
+      "link": "https://www.facebook.com/share/1bPXuqTy4Y/",
+      "reels_found": 19,
+      "reels_with_views": 19,
+      "median_views": 1732,
+      "median_view_rate": 0.2268,
+      "span": [
+        "2026-09-09",
+        "2026-11-04"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "dr.ahmedabdelazeem",
+          "url": "https://www.instagram.com/p/DexRDFQo_43/",
+          "views": 4710,
+          "likes": 40,
+          "comments": 0,
+          "duration": 37.638096,
+          "index": 2.72,
+          "view_rate": 0.617,
+          "eng_per_view": 0.0085,
+          "hook": "35 بويضة اتخصب منهم جنينين بس .. والنهاية كانت غير متوقعة ‼️ ",
+          "hook_type": [
+            "number_or_list",
+            "direct_address",
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-21T20:29:04.000Z"
+        },
+        {
+          "owner": "dr.ahmedabdelazeem",
+          "url": "https://www.instagram.com/p/Ddj17ZTIkz7/",
+          "views": 4558,
+          "likes": 59,
+          "comments": 2,
+          "duration": 26.266666,
+          "index": 2.63,
+          "view_rate": 0.597,
+          "eng_per_view": 0.0134,
+          "hook": "خايفة من آلم الطلق فى #الولادة_الطبيعي؟ 😰",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "dm"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-21T18:50:27.000Z"
+        },
+        {
+          "owner": "dr.ahmedabdelazeem",
+          "url": "https://www.instagram.com/p/DeR8GbyIPtv/",
+          "views": 3485,
+          "likes": 36,
+          "comments": 0,
+          "duration": 36.848618,
+          "index": 2.01,
+          "view_rate": 0.456,
+          "eng_per_view": 0.0103,
+          "hook": "بطنك مدورة؟ يبقى حامل في بنت! 💗",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-09T16:31:48.000Z"
+        },
+        {
+          "owner": "dr.ahmedabdelazeem",
+          "url": "https://www.instagram.com/p/DepVCprIzH6/",
+          "views": 3064,
+          "likes": 20,
+          "comments": 1,
+          "duration": 50.64127,
+          "index": 1.77,
+          "view_rate": 0.401,
+          "eng_per_view": 0.0069,
+          "hook": "أهم حاجتين في روشتة علاج تكيس المبايض عند البنات ‼️",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "comment_keyword"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-18T18:30:13.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "dr.ahmedabdelazeem",
+          "url": "https://www.instagram.com/p/DfE6jI0IJsk/",
+          "views": 631,
+          "likes": 20,
+          "comments": 5,
+          "duration": 87.866669,
+          "index": 0.36,
+          "view_rate": 0.083,
+          "eng_per_view": 0.0396,
+          "hook": "هل الذكاء الاصطناعي ممكن يغير مسار الحقن المجهري؟ .. وايه أفضل ما توصل إليه العلم فى علاج ",
+          "hook_type": [
+            "question",
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-29T11:38:39.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "dr.ahmedabdelazeem",
+        "url": "https://www.instagram.com/p/DexRDFQo_43/",
+        "views": 4710,
+        "likes": 40,
+        "comments": 0,
+        "duration": 37.638096,
+        "index": 2.72,
+        "view_rate": 0.617,
+        "eng_per_view": 0.0085,
+        "hook": "35 بويضة اتخصب منهم جنينين بس .. والنهاية كانت غير متوقعة ‼️ ",
+        "hook_type": [
+          "number_or_list",
+          "direct_address",
+          "tension_or_contrast"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-21T20:29:04.000Z"
+      }
+    },
+    {
+      "username": "amr_abbassy",
+      "url": "https://www.instagram.com/amr_abbassy/",
+      "followers": 75686,
+      "bio": "Obstetrics & Gynaecology IVF, Cosmetic Gynaecology \nWomen Health Promoter\nMedia Trainer 'Presenting Medicine on TV'\n+201000655414",
+      "link": "https://amrabbassy.com/",
+      "reels_found": 13,
+      "reels_with_views": 13,
+      "median_views": 4319,
+      "median_view_rate": 0.0571,
+      "span": [
+        "2026-10-07",
+        "2026-11-01"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "amr_abbassy",
+          "url": "https://www.instagram.com/p/De96MtZTEPS/",
+          "views": 55009,
+          "likes": 189,
+          "comments": 2,
+          "duration": 69.400002,
+          "index": 12.74,
+          "view_rate": 0.727,
+          "eng_per_view": 0.0035,
+          "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-26T18:19:52.000Z"
+        },
+        {
+          "owner": "amr_abbassy",
+          "url": "https://www.instagram.com/p/DeiAmS5Afis/",
+          "views": 19482,
+          "likes": 396,
+          "comments": 18,
+          "duration": 82.802361,
+          "index": 4.51,
+          "view_rate": 0.257,
+          "eng_per_view": 0.0213,
+          "hook": "جيل واعد صنع في  مصر 🇪🇬",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-15T22:17:50.000Z"
+        },
+        {
+          "owner": "amr_abbassy",
+          "url": "https://www.instagram.com/p/DepcFk4g3gD/",
+          "views": 8441,
+          "likes": 130,
+          "comments": 30,
+          "duration": 81.599998,
+          "index": 1.95,
+          "view_rate": 0.112,
+          "eng_per_view": 0.019,
+          "hook": "مش لازم تعاني في صمت",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-18T21:06:03.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "amr_abbassy",
+          "url": "https://www.instagram.com/p/DeeO-wQgyGl/",
+          "views": 1727,
+          "likes": 15,
+          "comments": 0,
+          "duration": 66.816002,
+          "index": 0.4,
+          "view_rate": 0.023,
+          "eng_per_view": 0.0087,
+          "hook": "بعد الولادة، بيكون الجسم أكثر عرضة لتكون الجلطات الوريدية.",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-14T11:06:01.000Z"
+        },
+        {
+          "owner": "amr_abbassy",
+          "url": "https://www.instagram.com/p/DfA8A4zTT5h/",
+          "views": 1892,
+          "likes": 34,
+          "comments": 0,
+          "duration": 56.633335,
+          "index": 0.44,
+          "view_rate": 0.025,
+          "eng_per_view": 0.018,
+          "hook": "🇺🇸📍 من بالتيمور – الولايات المتحدة الأمريكية، ومن قلب مؤتمر ASRM 2026 🌎",
+          "hook_type": [
+            "number_or_list"
+          ],
+          "cta": [
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-27T22:33:45.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "amr_abbassy",
+        "url": "https://www.instagram.com/p/De96MtZTEPS/",
+        "views": 55009,
+        "likes": 189,
+        "comments": 2,
+        "duration": 69.400002,
+        "index": 12.74,
+        "view_rate": 0.727,
+        "eng_per_view": 0.0035,
+        "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+        "hook_type": [
+          "question"
+        ],
+        "cta": [
+          "follow"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-26T18:19:52.000Z"
+      }
+    },
+    {
+      "username": "drahmed.ivf",
+      "url": "https://www.instagram.com/drahmed.ivf/",
+      "followers": 17932,
+      "bio": "استشاري النساء و التوليد و الحقن المجهري\nعضو الجمعية الاوروبيه للخصوبة\n📞 01030003866 |📲 01146004638\nالعيادات: الدقي- حدائق الأهرام- مدينة نصر- الغردقة",
+      "link": "http://www.drahmed.co/",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 2538.5,
+      "median_view_rate": 0.1416,
+      "span": [
+        "2026-08-11",
+        "2026-11-03"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+          "views": 130958,
+          "likes": 621,
+          "comments": 6,
+          "duration": 90.67247,
+          "index": 51.59,
+          "view_rate": 7.303,
+          "eng_per_view": 0.0048,
+          "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-18T18:43:20.000Z"
+        },
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "views": 68833,
+          "likes": 3066,
+          "comments": 770,
+          "duration": 139.109299,
+          "index": 27.12,
+          "view_rate": 3.839,
+          "eng_per_view": 0.0557,
+          "hook": "طلب صادم من اختين #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-03T08:58:00.000Z"
+        },
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/DezYcydNpJy/",
+          "views": 34961,
+          "likes": 113,
+          "comments": 14,
+          "duration": 73.433334,
+          "index": 13.77,
+          "view_rate": 1.95,
+          "eng_per_view": 0.0036,
+          "hook": "مع خامس قيصرية الدكتور رفض يولدها فجاتلي أنا بقى 😂♥️#حمل  #الحمل #نساءوتوليد #ولادة #الولا",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-22T16:22:26.000Z"
+        },
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "views": 18895,
+          "likes": 129,
+          "comments": 8,
+          "duration": 57.366665,
+          "index": 7.44,
+          "view_rate": 1.054,
+          "eng_per_view": 0.0073,
+          "hook": "هي مش خايفة بس أنا خايف 😂",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-08T12:23:49.000Z"
+        },
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/DetSamzNrQD/",
+          "views": 8303,
+          "likes": 56,
+          "comments": 2,
+          "duration": 97.76667,
+          "index": 3.27,
+          "view_rate": 0.463,
+          "eng_per_view": 0.007,
+          "hook": "البويضات اختفت ..!! #حقن_مجهري #الحقن_المجهري #أطفال_أنابيب #تاخر_حمل #نساءوتوليد",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-20T07:27:37.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "drahmed.ivf",
+          "url": "https://www.instagram.com/p/De_Y4QXNAF-/",
+          "views": 688,
+          "likes": 13,
+          "comments": 4,
+          "duration": 95.466667,
+          "index": 0.27,
+          "view_rate": 0.038,
+          "eng_per_view": 0.0247,
+          "hook": "خلي نفسك طويل معايا #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين #تاخر_حمل #نساءوتوليد",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-27T08:07:13.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "drahmed.ivf",
+        "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+        "views": 130958,
+        "likes": 621,
+        "comments": 6,
+        "duration": 90.67247,
+        "index": 51.59,
+        "view_rate": 7.303,
+        "eng_per_view": 0.0048,
+        "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+        "hook_type": [
+          "plain_statement"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-18T18:43:20.000Z"
+      }
+    },
+    {
+      "username": "dryehiaidris",
+      "url": "https://www.instagram.com/dryehiaidris/",
+      "followers": 63926,
+      "bio": "الأستاذ الدكتور يحيي سمير ادريس\nأستاذ واستشاري علاج تأخر الحمل والحقن المجهري كلية الطب جامعة بنها",
+      "link": "https://www.facebook.com/dryehiaidris",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 219.5,
+      "median_view_rate": 0.0034,
+      "span": [
+        "2026-08-19",
+        "2026-10-22"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "views": 1840,
+          "likes": 8,
+          "comments": 0,
+          "duration": 45.16396,
+          "index": 8.38,
+          "view_rate": 0.029,
+          "eng_per_view": 0.0043,
+          "hook": "إمتى نحتاج الحقن المجهري؟ البداية دايمًا بفهم سبب تأخر الحمل.",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-22T08:22:42.000Z"
+        },
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/Ddcc6VxIlUt/",
+          "views": 388,
+          "likes": 3,
+          "comments": 0,
+          "duration": 136.556549,
+          "index": 1.77,
+          "view_rate": 0.006,
+          "eng_per_view": 0.0077,
+          "hook": "",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-18T22:14:22.000Z"
+        },
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/DdmBynlAQWt/",
+          "views": 331,
+          "likes": 9,
+          "comments": 2,
+          "duration": 87.957191,
+          "index": 1.51,
+          "view_rate": 0.005,
+          "eng_per_view": 0.0332,
+          "hook": "أكبر غلطة قبل الحقن المجهري إننا نبدأ نشتري مكملات كتير على أمل إنها تحسن جودة البويضات… م",
+          "hook_type": [
+            "loss_or_mistake"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-22T15:12:26.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/DeMUteaicF8/",
+          "views": 55,
+          "likes": 1,
+          "comments": 0,
+          "duration": 72.840996,
+          "index": 0.25,
+          "view_rate": 0.001,
+          "eng_per_view": 0.0182,
+          "hook": "في الحقن المجهري، الالتزام بمواعيد الأدوية والحقن مش تفصيلة بسيطة.",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-07T12:08:57.000Z"
+        },
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/DemVvpSCvjb/",
+          "views": 56,
+          "likes": 0,
+          "comments": 0,
+          "duration": 82.059319,
+          "index": 0.26,
+          "view_rate": 0.001,
+          "eng_per_view": 0.0,
+          "hook": "الهدف من تنشيط المبيض مش مجرد بويضات كتير… الهدف إن كل خطوة تكون ضمن خطة مناسبة لحالتك.",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-17T14:38:21.000Z"
+        },
+        {
+          "owner": "dryehiaidris",
+          "url": "https://www.instagram.com/p/DdtqJyZDNBa/",
+          "views": 76,
+          "likes": 4,
+          "comments": 0,
+          "duration": 62.0205,
+          "index": 0.35,
+          "view_rate": 0.001,
+          "eng_per_view": 0.0526,
+          "hook": "تحسين فرص النجاح في الحقن المجهري مش بيبدأ من المكملات بس.",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-09-25T14:19:41.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "dryehiaidris",
+        "url": "https://www.instagram.com/p/DeyiwUyCmjl/",
+        "views": 1840,
+        "likes": 8,
+        "comments": 0,
+        "duration": 45.16396,
+        "index": 8.38,
+        "view_rate": 0.029,
+        "eng_per_view": 0.0043,
+        "hook": "إمتى نحتاج الحقن المجهري؟ البداية دايمًا بفهم سبب تأخر الحمل.",
+        "hook_type": [
+          "question"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-22T08:22:42.000Z"
+      }
+    },
+    {
+      "username": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/dr.mohamedhamza_obgyn/",
+      "followers": 3369,
+      "bio": "👨‍⚕️ د. محمد حمزة\nاستشاري أمراض النساء والتوليد – كلية طب قصر العيني\nاستشاري تأخر الإنجاب والحقن المجهري\nاستشاري المناظير الجراحية",
+      "link": "https://www.facebook.com/DrMohamedHamza.eg",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 582.5,
+      "median_view_rate": 0.1729,
+      "span": [
+        "2026-04-21",
+        "2026-10-31"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "views": 18041,
+          "likes": 36,
+          "comments": 3,
+          "duration": 37.127254,
+          "index": 30.97,
+          "view_rate": 5.355,
+          "eng_per_view": 0.0022,
+          "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "comment_keyword"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-01T13:00:05.000Z"
+        },
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/De7MfLfhTPt/",
+          "views": 2115,
+          "likes": 22,
+          "comments": 1,
+          "duration": 88.559998,
+          "index": 3.63,
+          "view_rate": 0.628,
+          "eng_per_view": 0.0109,
+          "hook": "فيه فرق بين التلقيح الصناعي والحقن المجهري⁉️",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-25T17:00:05.000Z"
+        },
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DcLg_adqqyJ/",
+          "views": 1872,
+          "likes": 9,
+          "comments": 0,
+          "duration": 28.419773,
+          "index": 3.21,
+          "view_rate": 0.556,
+          "eng_per_view": 0.0048,
+          "hook": "⁨\tهل بطانة الرحم المهاجرة ممكن تتأثر بعوامل السن؟ ",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-08-18T11:35:19.000Z"
+        },
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DeUWz2Wh07X/",
+          "views": 1852,
+          "likes": 11,
+          "comments": 2,
+          "duration": 58.094875,
+          "index": 3.18,
+          "view_rate": 0.55,
+          "eng_per_view": 0.007,
+          "hook": "⁨\tامتي نقول ناخد منشطات حتى لو البيريود منتظمة؟ 🤔",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-10T15:00:20.000Z"
+        },
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DYFZTRHohPB/",
+          "views": 1576,
+          "likes": 12,
+          "comments": 0,
+          "duration": 52.245335,
+          "index": 2.71,
+          "view_rate": 0.468,
+          "eng_per_view": 0.0076,
+          "hook": "بعد منظار الرحم أيه أفضل فترة زمنية للحمل ؟",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-05-08T16:27:03.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DfKNzXxhJNi/",
+          "views": 202,
+          "likes": 8,
+          "comments": 1,
+          "duration": 80.360001,
+          "index": 0.35,
+          "view_rate": 0.06,
+          "eng_per_view": 0.0446,
+          "hook": "ليه المنظار ممكن يكون حل ممتاز لغيرك ",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-31T13:00:05.000Z"
+        },
+        {
+          "owner": "dr.mohamedhamza_obgyn",
+          "url": "https://www.instagram.com/p/DdRexeuKLJL/",
+          "views": 246,
+          "likes": 10,
+          "comments": 2,
+          "duration": 58.489616,
+          "index": 0.42,
+          "view_rate": 0.073,
+          "eng_per_view": 0.0488,
+          "hook": "إزاي الحمل بيبقي علاج لبطانة الرحم المهاجرة ",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-09-14T15:43:22.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "dr.mohamedhamza_obgyn",
+        "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+        "views": 18041,
+        "likes": 36,
+        "comments": 3,
+        "duration": 37.127254,
+        "index": 30.97,
+        "view_rate": 5.355,
+        "eng_per_view": 0.0022,
+        "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+        "hook_type": [
+          "question"
+        ],
+        "cta": [
+          "comment_keyword"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-09-01T13:00:05.000Z"
+      }
+    }
+  ],
+  "patterns": {
+    "hook_type": [
+      {
+        "value": "plain_statement",
+        "in_winners": 10,
+        "of_winners": 25,
+        "in_all": 23,
+        "win_rate": 0.43,
+        "lift": 2.06,
+        "accounts_with_win": 5,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/De7MfLfhTPt/"
+        ]
+      },
+      {
+        "value": "story_or_first_person",
+        "in_winners": 0,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "authority_claim",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.5,
+        "lift": 2.68,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/DeaBQcsNmaF/"
+        ]
+      },
+      {
+        "value": "loss_or_mistake",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.5,
+        "lift": 2.68,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dryehiaidris",
+        "examples": [
+          "https://www.instagram.com/p/DdmBynlAQWt/"
+        ]
+      },
+      {
+        "value": "direct_address",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 3,
+        "win_rate": 0.33,
+        "lift": 1.34,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dr.ahmedabdelazeem",
+        "examples": [
+          "https://www.instagram.com/p/DexRDFQo_43/"
+        ]
+      },
+      {
+        "value": "question",
+        "in_winners": 10,
+        "of_winners": 25,
+        "in_all": 42,
+        "win_rate": 0.24,
+        "lift": 0.84,
+        "accounts_with_win": 5,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/De96MtZTEPS/",
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DcLg_adqqyJ/",
+          "https://www.instagram.com/p/DeUWz2Wh07X/"
+        ]
+      },
+      {
+        "value": "number_or_list",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 5,
+        "win_rate": 0.2,
+        "lift": 0.67,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dr.ahmedabdelazeem",
+        "examples": [
+          "https://www.instagram.com/p/DexRDFQo_43/"
+        ]
+      },
+      {
+        "value": "tension_or_contrast",
+        "in_winners": 4,
+        "of_winners": 25,
+        "in_all": 23,
+        "win_rate": 0.17,
+        "lift": 0.56,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "https://www.instagram.com/p/DexRDFQo_43/",
+          "https://www.instagram.com/p/DepcFk4g3gD/",
+          "https://www.instagram.com/p/DeeLMuPta2d/"
+        ]
+      }
+    ],
+    "format": [],
+    "topic": [],
+    "cta": [
+      {
+        "value": "none",
+        "in_winners": 21,
+        "of_winners": 25,
+        "in_all": 61,
+        "win_rate": 0.34,
+        "lift": 1.41,
+        "accounts_with_win": 5,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DeO7KIuN6eH/"
+        ]
+      },
+      {
+        "value": "save_share",
+        "in_winners": 0,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "dm",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 4,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dr.ahmedabdelazeem",
+        "examples": [
+          "https://www.instagram.com/p/Ddj17ZTIkz7/"
+        ]
+      },
+      {
+        "value": "comment_keyword",
+        "in_winners": 2,
+        "of_winners": 25,
+        "in_all": 10,
+        "win_rate": 0.2,
+        "lift": 0.67,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/DepVCprIzH6/"
+        ]
+      },
+      {
+        "value": "follow",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 17,
+        "win_rate": 0.06,
+        "lift": 0.17,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "amr_abbassy",
+        "examples": [
+          "https://www.instagram.com/p/De96MtZTEPS/"
+        ]
+      }
+    ],
+    "duration": [
+      {
+        "value": "15-30s",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 8,
+        "win_rate": 0.38,
+        "lift": 1.61,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DcLg_adqqyJ/",
+          "https://www.instagram.com/p/Ddj17ZTIkz7/",
+          "https://www.instagram.com/p/DeeLMuPta2d/"
+        ]
+      },
+      {
+        "value": "45-60s",
+        "in_winners": 6,
+        "of_winners": 25,
+        "in_all": 17,
+        "win_rate": 0.35,
+        "lift": 1.46,
+        "accounts_with_win": 4,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "https://www.instagram.com/p/DeUWz2Wh07X/",
+          "https://www.instagram.com/p/DYFZTRHohPB/",
+          "https://www.instagram.com/p/DepVCprIzH6/"
+        ]
+      },
+      {
+        "value": "<15s",
+        "in_winners": 0,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "60-90s",
+        "in_winners": 9,
+        "of_winners": 25,
+        "in_all": 35,
+        "win_rate": 0.26,
+        "lift": 0.93,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/De96MtZTEPS/",
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/De7MfLfhTPt/",
+          "https://www.instagram.com/p/Dca7nD4NTDm/"
+        ]
+      },
+      {
+        "value": "30-45s",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 12,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dr.ahmedabdelazeem",
+        "examples": [
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/DexRDFQo_43/",
+          "https://www.instagram.com/p/DeR8GbyIPtv/"
+        ]
+      },
+      {
+        "value": "90s+",
+        "in_winners": 4,
+        "of_winners": 25,
+        "in_all": 18,
+        "win_rate": 0.22,
+        "lift": 0.77,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DetSamzNrQD/",
+          "https://www.instagram.com/p/Ddcc6VxIlUt/"
+        ]
+      }
+    ],
+    "caption_length": [
+      {
+        "value": "<100",
+        "in_winners": 11,
+        "of_winners": 25,
+        "in_all": 23,
+        "win_rate": 0.48,
+        "lift": 2.46,
+        "accounts_with_win": 4,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/DetSamzNrQD/",
+          "https://www.instagram.com/p/DcLg_adqqyJ/"
+        ]
+      },
+      {
+        "value": "100-300",
+        "in_winners": 10,
+        "of_winners": 25,
+        "in_all": 38,
+        "win_rate": 0.26,
+        "lift": 0.96,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "https://www.instagram.com/p/De7MfLfhTPt/",
+          "https://www.instagram.com/p/DeUWz2Wh07X/"
+        ]
+      },
+      {
+        "value": "300-600",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 18,
+        "win_rate": 0.17,
+        "lift": 0.54,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "dryehiaidris",
+        "examples": [
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DexRDFQo_43/",
+          "https://www.instagram.com/p/DdmBynlAQWt/"
+        ]
+      },
+      {
+        "value": "600+",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 13,
+        "win_rate": 0.08,
+        "lift": 0.22,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "amr_abbassy",
+        "examples": [
+          "https://www.instagram.com/p/De96MtZTEPS/"
+        ]
+      }
+    ],
+    "hashtags": [
+      {
+        "value": "4-7",
+        "in_winners": 14,
+        "of_winners": 25,
+        "in_all": 45,
+        "win_rate": 0.31,
+        "lift": 1.21,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/De96MtZTEPS/",
+          "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "https://www.instagram.com/p/De7MfLfhTPt/",
+          "https://www.instagram.com/p/DetSamzNrQD/"
+        ]
+      },
+      {
+        "value": "1-3",
+        "in_winners": 7,
+        "of_winners": 25,
+        "in_all": 26,
+        "win_rate": 0.27,
+        "lift": 0.99,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DcLg_adqqyJ/"
+        ]
+      },
+      {
+        "value": "none",
+        "in_winners": 4,
+        "of_winners": 25,
+        "in_all": 21,
+        "win_rate": 0.19,
+        "lift": 0.63,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/DepcFk4g3gD/",
+          "https://www.instagram.com/p/Ddcc6VxIlUt/",
+          "https://www.instagram.com/p/DdmBynlAQWt/"
+        ]
+      }
+    ],
+    "audio": [
+      {
+        "value": "unknown",
+        "in_winners": 1,
+        "of_winners": 25,
+        "in_all": 2,
+        "win_rate": 0.5,
+        "lift": 2.68,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/DeO7KIuN6eH/"
+        ]
+      },
+      {
+        "value": "trending/other",
+        "in_winners": 2,
+        "of_winners": 25,
+        "in_all": 5,
+        "win_rate": 0.4,
+        "lift": 1.79,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/DeaBQcsNmaF/",
+          "https://www.instagram.com/p/DeeLMuPta2d/"
+        ]
+      },
+      {
+        "value": "original",
+        "in_winners": 22,
+        "of_winners": 25,
+        "in_all": 85,
+        "win_rate": 0.26,
+        "lift": 0.94,
+        "accounts_with_win": 5,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/De96MtZTEPS/"
+        ]
+      }
+    ],
+    "weekday": [
+      {
+        "value": "Mon",
+        "in_winners": 5,
+        "of_winners": 25,
+        "in_all": 13,
+        "win_rate": 0.38,
+        "lift": 1.68,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/De96MtZTEPS/",
+          "https://www.instagram.com/p/Dca7nD4NTDm/",
+          "https://www.instagram.com/p/Ddj17ZTIkz7/",
+          "https://www.instagram.com/p/DeaBQcsNmaF/",
+          "https://www.instagram.com/p/DepcFk4g3gD/"
+        ]
+      },
+      {
+        "value": "Fri",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 9,
+        "win_rate": 0.33,
+        "lift": 1.34,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/DYFZTRHohPB/",
+          "https://www.instagram.com/p/DeR8GbyIPtv/"
+        ]
+      },
+      {
+        "value": "Sun",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 10,
+        "win_rate": 0.3,
+        "lift": 1.15,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/De7MfLfhTPt/",
+          "https://www.instagram.com/p/DepVCprIzH6/"
+        ]
+      },
+      {
+        "value": "Tue",
+        "in_winners": 5,
+        "of_winners": 25,
+        "in_all": 17,
+        "win_rate": 0.29,
+        "lift": 1.12,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/DetSamzNrQD/",
+          "https://www.instagram.com/p/DcLg_adqqyJ/",
+          "https://www.instagram.com/p/DYQFk7Aobhj/",
+          "https://www.instagram.com/p/DdmBynlAQWt/"
+        ]
+      },
+      {
+        "value": "Thu",
+        "in_winners": 4,
+        "of_winners": 25,
+        "in_all": 16,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DeO7KIuN6eH/"
+        ]
+      },
+      {
+        "value": "Sat",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 12,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeUWz2Wh07X/",
+          "https://www.instagram.com/p/Ddcc6VxIlUt/",
+          "https://www.instagram.com/p/DcVs-wWtftq/"
+        ]
+      },
+      {
+        "value": "Wed",
+        "in_winners": 2,
+        "of_winners": 25,
+        "in_all": 15,
+        "win_rate": 0.13,
+        "lift": 0.41,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DexRDFQo_43/",
+          "https://www.instagram.com/p/DeeLMuPta2d/"
+        ]
+      }
+    ],
+    "hour_block": [
+      {
+        "value": "04-07h",
+        "in_winners": 0,
+        "of_winners": 25,
+        "in_all": 1,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "00-03h",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 5,
+        "win_rate": 0.6,
+        "lift": 4.02,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "amr_abbassy",
+        "examples": [
+          "https://www.instagram.com/p/DeiAmS5Afis/",
+          "https://www.instagram.com/p/DepcFk4g3gD/",
+          "https://www.instagram.com/p/Ddcc6VxIlUt/"
+        ]
+      },
+      {
+        "value": "20-23h",
+        "in_winners": 8,
+        "of_winners": 25,
+        "in_all": 25,
+        "win_rate": 0.32,
+        "lift": 1.26,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DepV1EwNZMW/",
+          "https://www.instagram.com/p/De96MtZTEPS/",
+          "https://www.instagram.com/p/De7MfLfhTPt/",
+          "https://www.instagram.com/p/DexRDFQo_43/",
+          "https://www.instagram.com/p/Ddj17ZTIkz7/"
+        ]
+      },
+      {
+        "value": "12-15h",
+        "in_winners": 5,
+        "of_winners": 25,
+        "in_all": 19,
+        "win_rate": 0.26,
+        "lift": 0.96,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/DeO7KIuN6eH/",
+          "https://www.instagram.com/p/DcLg_adqqyJ/",
+          "https://www.instagram.com/p/Dca7nD4NTDm/",
+          "https://www.instagram.com/p/DeeLMuPta2d/",
+          "https://www.instagram.com/p/DcVs-wWtftq/"
+        ]
+      },
+      {
+        "value": "08-11h",
+        "in_winners": 3,
+        "of_winners": 25,
+        "in_all": 13,
+        "win_rate": 0.23,
+        "lift": 0.8,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drahmed.ivf",
+        "examples": [
+          "https://www.instagram.com/p/Dc0bJkFNWxA/",
+          "https://www.instagram.com/p/DeyiwUyCmjl/",
+          "https://www.instagram.com/p/DetSamzNrQD/"
+        ]
+      },
+      {
+        "value": "16-19h",
+        "in_winners": 6,
+        "of_winners": 25,
+        "in_all": 29,
+        "win_rate": 0.21,
+        "lift": 0.7,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DcvuHJdMaNd/",
+          "https://www.instagram.com/p/DezYcydNpJy/",
+          "https://www.instagram.com/p/DeUWz2Wh07X/",
+          "https://www.instagram.com/p/DYFZTRHohPB/",
+          "https://www.instagram.com/p/DeR8GbyIPtv/"
+        ]
+      }
+    ]
+  },
+  "top_by_index": [
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+      "views": 130958,
+      "likes": 621,
+      "comments": 6,
+      "duration": 90.67247,
+      "index": 51.59,
+      "view_rate": 7.303,
+      "eng_per_view": 0.0048,
+      "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T18:43:20.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+      "views": 18041,
+      "likes": 36,
+      "comments": 3,
+      "duration": 37.127254,
+      "index": 30.97,
+      "view_rate": 5.355,
+      "eng_per_view": 0.0022,
+      "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "comment_keyword"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-01T13:00:05.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+      "views": 68833,
+      "likes": 3066,
+      "comments": 770,
+      "duration": 139.109299,
+      "index": 27.12,
+      "view_rate": 3.839,
+      "eng_per_view": 0.0557,
+      "hook": "طلب صادم من اختين #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-03T08:58:00.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DezYcydNpJy/",
+      "views": 34961,
+      "likes": 113,
+      "comments": 14,
+      "duration": 73.433334,
+      "index": 13.77,
+      "view_rate": 1.95,
+      "eng_per_view": 0.0036,
+      "hook": "مع خامس قيصرية الدكتور رفض يولدها فجاتلي أنا بقى 😂♥️#حمل  #الحمل #نساءوتوليد #ولادة #الولا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:22:26.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/De96MtZTEPS/",
+      "views": 55009,
+      "likes": 189,
+      "comments": 2,
+      "duration": 69.400002,
+      "index": 12.74,
+      "view_rate": 0.727,
+      "eng_per_view": 0.0035,
+      "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "follow"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-26T18:19:52.000Z"
+    },
+    {
+      "owner": "dryehiaidris",
+      "url": "https://www.instagram.com/p/DeyiwUyCmjl/",
+      "views": 1840,
+      "likes": 8,
+      "comments": 0,
+      "duration": 45.16396,
+      "index": 8.38,
+      "view_rate": 0.029,
+      "eng_per_view": 0.0043,
+      "hook": "إمتى نحتاج الحقن المجهري؟ البداية دايمًا بفهم سبب تأخر الحمل.",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T08:22:42.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DeO7KIuN6eH/",
+      "views": 18895,
+      "likes": 129,
+      "comments": 8,
+      "duration": 57.366665,
+      "index": 7.44,
+      "view_rate": 1.054,
+      "eng_per_view": 0.0073,
+      "hook": "هي مش خايفة بس أنا خايف 😂",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-08T12:23:49.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/DeiAmS5Afis/",
+      "views": 19482,
+      "likes": 396,
+      "comments": 18,
+      "duration": 82.802361,
+      "index": 4.51,
+      "view_rate": 0.257,
+      "eng_per_view": 0.0213,
+      "hook": "جيل واعد صنع في  مصر 🇪🇬",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-15T22:17:50.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/De7MfLfhTPt/",
+      "views": 2115,
+      "likes": 22,
+      "comments": 1,
+      "duration": 88.559998,
+      "index": 3.63,
+      "view_rate": 0.628,
+      "eng_per_view": 0.0109,
+      "hook": "فيه فرق بين التلقيح الصناعي والحقن المجهري⁉️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-25T17:00:05.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DetSamzNrQD/",
+      "views": 8303,
+      "likes": 56,
+      "comments": 2,
+      "duration": 97.76667,
+      "index": 3.27,
+      "view_rate": 0.463,
+      "eng_per_view": 0.007,
+      "hook": "البويضات اختفت ..!! #حقن_مجهري #الحقن_المجهري #أطفال_أنابيب #تاخر_حمل #نساءوتوليد",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-20T07:27:37.000Z"
+    }
+  ],
+  "top_by_view_rate": [
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+      "views": 130958,
+      "likes": 621,
+      "comments": 6,
+      "duration": 90.67247,
+      "index": 51.59,
+      "view_rate": 7.303,
+      "eng_per_view": 0.0048,
+      "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T18:43:20.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+      "views": 18041,
+      "likes": 36,
+      "comments": 3,
+      "duration": 37.127254,
+      "index": 30.97,
+      "view_rate": 5.355,
+      "eng_per_view": 0.0022,
+      "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "comment_keyword"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-01T13:00:05.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+      "views": 68833,
+      "likes": 3066,
+      "comments": 770,
+      "duration": 139.109299,
+      "index": 27.12,
+      "view_rate": 3.839,
+      "eng_per_view": 0.0557,
+      "hook": "طلب صادم من اختين #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-03T08:58:00.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DezYcydNpJy/",
+      "views": 34961,
+      "likes": 113,
+      "comments": 14,
+      "duration": 73.433334,
+      "index": 13.77,
+      "view_rate": 1.95,
+      "eng_per_view": 0.0036,
+      "hook": "مع خامس قيصرية الدكتور رفض يولدها فجاتلي أنا بقى 😂♥️#حمل  #الحمل #نساءوتوليد #ولادة #الولا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:22:26.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DeO7KIuN6eH/",
+      "views": 18895,
+      "likes": 129,
+      "comments": 8,
+      "duration": 57.366665,
+      "index": 7.44,
+      "view_rate": 1.054,
+      "eng_per_view": 0.0073,
+      "hook": "هي مش خايفة بس أنا خايف 😂",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-08T12:23:49.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/De96MtZTEPS/",
+      "views": 55009,
+      "likes": 189,
+      "comments": 2,
+      "duration": 69.400002,
+      "index": 12.74,
+      "view_rate": 0.727,
+      "eng_per_view": 0.0035,
+      "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "follow"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-26T18:19:52.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/De7MfLfhTPt/",
+      "views": 2115,
+      "likes": 22,
+      "comments": 1,
+      "duration": 88.559998,
+      "index": 3.63,
+      "view_rate": 0.628,
+      "eng_per_view": 0.0109,
+      "hook": "فيه فرق بين التلقيح الصناعي والحقن المجهري⁉️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-25T17:00:05.000Z"
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/p/DexRDFQo_43/",
+      "views": 4710,
+      "likes": 40,
+      "comments": 0,
+      "duration": 37.638096,
+      "index": 2.72,
+      "view_rate": 0.617,
+      "eng_per_view": 0.0085,
+      "hook": "35 بويضة اتخصب منهم جنينين بس .. والنهاية كانت غير متوقعة ‼️ ",
+      "hook_type": [
+        "number_or_list",
+        "direct_address",
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-21T20:29:04.000Z"
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/p/Ddj17ZTIkz7/",
+      "views": 4558,
+      "likes": 59,
+      "comments": 2,
+      "duration": 26.266666,
+      "index": 2.63,
+      "view_rate": 0.597,
+      "eng_per_view": 0.0134,
+      "hook": "خايفة من آلم الطلق فى #الولادة_الطبيعي؟ 😰",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "dm"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-21T18:50:27.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcLg_adqqyJ/",
+      "views": 1872,
+      "likes": 9,
+      "comments": 0,
+      "duration": 28.419773,
+      "index": 3.21,
+      "view_rate": 0.556,
+      "eng_per_view": 0.0048,
+      "hook": "⁨\tهل بطانة الرحم المهاجرة ممكن تتأثر بعوامل السن؟ ",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-18T11:35:19.000Z"
+    }
+  ],
+  "top_by_views": [
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+      "views": 130958,
+      "likes": 621,
+      "comments": 6,
+      "duration": 90.67247,
+      "index": 51.59,
+      "view_rate": 7.303,
+      "eng_per_view": 0.0048,
+      "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T18:43:20.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+      "views": 68833,
+      "likes": 3066,
+      "comments": 770,
+      "duration": 139.109299,
+      "index": 27.12,
+      "view_rate": 3.839,
+      "eng_per_view": 0.0557,
+      "hook": "طلب صادم من اختين #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-03T08:58:00.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/De96MtZTEPS/",
+      "views": 55009,
+      "likes": 189,
+      "comments": 2,
+      "duration": 69.400002,
+      "index": 12.74,
+      "view_rate": 0.727,
+      "eng_per_view": 0.0035,
+      "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "follow"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-26T18:19:52.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DezYcydNpJy/",
+      "views": 34961,
+      "likes": 113,
+      "comments": 14,
+      "duration": 73.433334,
+      "index": 13.77,
+      "view_rate": 1.95,
+      "eng_per_view": 0.0036,
+      "hook": "مع خامس قيصرية الدكتور رفض يولدها فجاتلي أنا بقى 😂♥️#حمل  #الحمل #نساءوتوليد #ولادة #الولا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:22:26.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/DeiAmS5Afis/",
+      "views": 19482,
+      "likes": 396,
+      "comments": 18,
+      "duration": 82.802361,
+      "index": 4.51,
+      "view_rate": 0.257,
+      "eng_per_view": 0.0213,
+      "hook": "جيل واعد صنع في  مصر 🇪🇬",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-15T22:17:50.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DeO7KIuN6eH/",
+      "views": 18895,
+      "likes": 129,
+      "comments": 8,
+      "duration": 57.366665,
+      "index": 7.44,
+      "view_rate": 1.054,
+      "eng_per_view": 0.0073,
+      "hook": "هي مش خايفة بس أنا خايف 😂",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-08T12:23:49.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+      "views": 18041,
+      "likes": 36,
+      "comments": 3,
+      "duration": 37.127254,
+      "index": 30.97,
+      "view_rate": 5.355,
+      "eng_per_view": 0.0022,
+      "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "comment_keyword"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-01T13:00:05.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/DepcFk4g3gD/",
+      "views": 8441,
+      "likes": 130,
+      "comments": 30,
+      "duration": 81.599998,
+      "index": 1.95,
+      "view_rate": 0.112,
+      "eng_per_view": 0.019,
+      "hook": "مش لازم تعاني في صمت",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T21:06:03.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DetSamzNrQD/",
+      "views": 8303,
+      "likes": 56,
+      "comments": 2,
+      "duration": 97.76667,
+      "index": 3.27,
+      "view_rate": 0.463,
+      "eng_per_view": 0.007,
+      "hook": "البويضات اختفت ..!! #حقن_مجهري #الحقن_المجهري #أطفال_أنابيب #تاخر_حمل #نساءوتوليد",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-20T07:27:37.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/Dca7nD4NTDm/",
+      "views": 6989,
+      "likes": 52,
+      "comments": 6,
+      "duration": 87.099998,
+      "index": 2.75,
+      "view_rate": 0.39,
+      "eng_per_view": 0.0083,
+      "hook": "شفط جنين من داخل الرحم بعد الحقن المجهري #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين #تاخر",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-24T11:23:11.000Z"
+    }
+  ],
+  "labeling_queue": [
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/p/DexRDFQo_43/",
+      "views": 4710,
+      "likes": 40,
+      "comments": 0,
+      "duration": 37.638096,
+      "index": 2.72,
+      "view_rate": 0.617,
+      "eng_per_view": 0.0085,
+      "hook": "35 بويضة اتخصب منهم جنينين بس .. والنهاية كانت غير متوقعة ‼️ ",
+      "hook_type": [
+        "number_or_list",
+        "direct_address",
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-21T20:29:04.000Z"
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/p/Ddj17ZTIkz7/",
+      "views": 4558,
+      "likes": 59,
+      "comments": 2,
+      "duration": 26.266666,
+      "index": 2.63,
+      "view_rate": 0.597,
+      "eng_per_view": 0.0134,
+      "hook": "خايفة من آلم الطلق فى #الولادة_الطبيعي؟ 😰",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "dm"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-21T18:50:27.000Z"
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "url": "https://www.instagram.com/p/DeR8GbyIPtv/",
+      "views": 3485,
+      "likes": 36,
+      "comments": 0,
+      "duration": 36.848618,
+      "index": 2.01,
+      "view_rate": 0.456,
+      "eng_per_view": 0.0103,
+      "hook": "بطنك مدورة؟ يبقى حامل في بنت! 💗",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-09T16:31:48.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/De96MtZTEPS/",
+      "views": 55009,
+      "likes": 189,
+      "comments": 2,
+      "duration": 69.400002,
+      "index": 12.74,
+      "view_rate": 0.727,
+      "eng_per_view": 0.0035,
+      "hook": "من قلب مؤتمر ASRM في الولايات المتحدة 🇺🇸",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "follow"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-26T18:19:52.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/DeiAmS5Afis/",
+      "views": 19482,
+      "likes": 396,
+      "comments": 18,
+      "duration": 82.802361,
+      "index": 4.51,
+      "view_rate": 0.257,
+      "eng_per_view": 0.0213,
+      "hook": "جيل واعد صنع في  مصر 🇪🇬",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-15T22:17:50.000Z"
+    },
+    {
+      "owner": "amr_abbassy",
+      "url": "https://www.instagram.com/p/DepcFk4g3gD/",
+      "views": 8441,
+      "likes": 130,
+      "comments": 30,
+      "duration": 81.599998,
+      "index": 1.95,
+      "view_rate": 0.112,
+      "eng_per_view": 0.019,
+      "hook": "مش لازم تعاني في صمت",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T21:06:03.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+      "views": 130958,
+      "likes": 621,
+      "comments": 6,
+      "duration": 90.67247,
+      "index": 51.59,
+      "view_rate": 7.303,
+      "eng_per_view": 0.0048,
+      "hook": "مكسوفة تبعتلي إنها تعبانة 😭",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-18T18:43:20.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+      "views": 68833,
+      "likes": 3066,
+      "comments": 770,
+      "duration": 139.109299,
+      "index": 27.12,
+      "view_rate": 3.839,
+      "eng_per_view": 0.0557,
+      "hook": "طلب صادم من اختين #الحقن_المجهري #حقن_مجهري #تحديد_نوع_الجنين",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-03T08:58:00.000Z"
+    },
+    {
+      "owner": "drahmed.ivf",
+      "url": "https://www.instagram.com/p/DezYcydNpJy/",
+      "views": 34961,
+      "likes": 113,
+      "comments": 14,
+      "duration": 73.433334,
+      "index": 13.77,
+      "view_rate": 1.95,
+      "eng_per_view": 0.0036,
+      "hook": "مع خامس قيصرية الدكتور رفض يولدها فجاتلي أنا بقى 😂♥️#حمل  #الحمل #نساءوتوليد #ولادة #الولا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T16:22:26.000Z"
+    },
+    {
+      "owner": "dryehiaidris",
+      "url": "https://www.instagram.com/p/DeyiwUyCmjl/",
+      "views": 1840,
+      "likes": 8,
+      "comments": 0,
+      "duration": 45.16396,
+      "index": 8.38,
+      "view_rate": 0.029,
+      "eng_per_view": 0.0043,
+      "hook": "إمتى نحتاج الحقن المجهري؟ البداية دايمًا بفهم سبب تأخر الحمل.",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-22T08:22:42.000Z"
+    },
+    {
+      "owner": "dryehiaidris",
+      "url": "https://www.instagram.com/p/Ddcc6VxIlUt/",
+      "views": 388,
+      "likes": 3,
+      "comments": 0,
+      "duration": 136.556549,
+      "index": 1.77,
+      "view_rate": 0.006,
+      "eng_per_view": 0.0077,
+      "hook": "",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-18T22:14:22.000Z"
+    },
+    {
+      "owner": "dryehiaidris",
+      "url": "https://www.instagram.com/p/DdmBynlAQWt/",
+      "views": 331,
+      "likes": 9,
+      "comments": 2,
+      "duration": 87.957191,
+      "index": 1.51,
+      "view_rate": 0.005,
+      "eng_per_view": 0.0332,
+      "hook": "أكبر غلطة قبل الحقن المجهري إننا نبدأ نشتري مكملات كتير على أمل إنها تحسن جودة البويضات… م",
+      "hook_type": [
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-22T15:12:26.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+      "views": 18041,
+      "likes": 36,
+      "comments": 3,
+      "duration": 37.127254,
+      "index": 30.97,
+      "view_rate": 5.355,
+      "eng_per_view": 0.0022,
+      "hook": "امتى وليه بنعمل ربط لعنق الرحم؟ 🤔",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "comment_keyword"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-01T13:00:05.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/De7MfLfhTPt/",
+      "views": 2115,
+      "likes": 22,
+      "comments": 1,
+      "duration": 88.559998,
+      "index": 3.63,
+      "view_rate": 0.628,
+      "eng_per_view": 0.0109,
+      "hook": "فيه فرق بين التلقيح الصناعي والحقن المجهري⁉️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-25T17:00:05.000Z"
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "url": "https://www.instagram.com/p/DcLg_adqqyJ/",
+      "views": 1872,
+      "likes": 9,
+      "comments": 0,
+      "duration": 28.419773,
+      "index": 3.21,
+      "view_rate": 0.556,
+      "eng_per_view": 0.0048,
+      "hook": "⁨\tهل بطانة الرحم المهاجرة ممكن تتأثر بعوامل السن؟ ",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-18T11:35:19.000Z"
+    }
+  ]
+}

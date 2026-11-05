@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "username": "prime_doc1",
+    "fetched_at": "2026-11-05T01:51:57+00:00",
+    "timezone": "Africa/Cairo",
+    "posts_analysed": 12,
+    "mature_posts_scored": 9,
+    "apify_cost_usd": 0.035,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5
+  },
+  "profile": {
+    "username": "prime_doc1",
+    "full_name": "Prime Doc | Marketing for Bariatric clinics",
+    "followers": 81,
+    "following": 0,
+    "posts_count": 12,
+    "verified": false,
+    "category": "None",
+    "external_url": "https://primedoc1.com/",
+    "profile_pic": "https://scontent-ham3-1.cdninstagram.com/v/t51.82787-19/745541815_17887427292665692_679892749722177020_n.jpg?_nc_cat=111&ig_cache_key=GLcQcCxcl7k1hYw-APzNjYjadm8JbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDI0LkMzIn0%3D&_nc_ohc=NdxUguGceVwQ7kNvwHeKMgQ&_nc_oc=Ado7P9NXFh191KXZFPsnzO0m3UFID2rPcM6F7tGocQ4Aq5iXQx3cmWODFuGW7CLXzlQ&_nc_zt=24&_nc_ht=scontent-ham3-1.cdninstagram.com&_nc_gid=JqhCyPr4A4DiB9uQX4f8sQ&_nc_ss=73580&oh=00_AQROsl0uL_uf8oC8gSS96HYsngfskg2Q_9whr96Nljla8g&oe=6AF1BA38"
+  },
+  "health": {
+    "median_er": 0.21605,
+    "tier": "nano (<10k)",
+    "benchmark_low": 0.03,
+    "benchmark_high": 0.08,
+    "er_vs_benchmark": "above",
+    "followers_to_following": null,
+    "format_medians": {
+      "reel": 330
+    },
+    "benchmark_note": "Rule-of-thumb bands, not official Instagram figures."
+  },
+  "stage": {
+    "code": "zero",
+    "followers": 81,
+    "posts_total": 12,
+    "posts_last_90d": 12,
+    "reasons": [
+      "81 followers (< 1,000)",
+      "12 posts in the account's whole history (< 15)"
+    ],
+    "meaning": "no audience/history yet: focus on niche, competitors and formats, not on auditing own posts",
+    "note": "heuristic from public numbers - confirm with the client"
+  },
+  "bio": {
+    "length": 116,
+    "lines": 3,
+    "length_ok": true,
+    "has_link": true,
+    "has_cta": false,
+    "cta_types": [],
+    "emoji_count": 0,
+    "has_number_proof": true,
+    "category_set": true,
+    "business_account": false,
+    "highlights": null,
+    "name_field": "Prime Doc | Marketing for Bariatric clinics",
+    "bio_text": "Patient acquisition for Bariatric & Endoscopy clinics\n[1500]+ bookings generated for our clients\n↓ Book a free audit",
+    "note": "Mechanical checks only. Judge clarity, who-it's-for and promise by reading bio_text."
+  },
+  "cadence": {
+    "posts": 12,
+    "span_days": 14,
+    "posts_per_week": 6.0,
+    "median_gap_days": 1.13,
+    "longest_gap_days": 2.0,
+    "gap_stdev_days": 0.65,
+    "consistency": "regular"
+  },
+  "trend": {
+    "note": "need >=10 mature posts"
+  },
+  "timing": {
+    "by_weekday": {
+      "Mon": {
+        "n": 1,
+        "median_index": 5.264
+      },
+      "Wed": {
+        "n": 1,
+        "median_index": 1.421
+      },
+      "Thu": {
+        "n": 2,
+        "median_index": 2.67
+      },
+      "Fri": {
+        "n": 1,
+        "median_index": 0.976
+      },
+      "Sat": {
+        "n": 3,
+        "median_index": 0.658
+      },
+      "Sun": {
+        "n": 1,
+        "median_index": 1.0
+      }
+    },
+    "by_hour_block": {
+      "12-14h": {
+        "n": 1,
+        "median_index": 0.191
+      },
+      "15-17h": {
+        "n": 1,
+        "median_index": 0.658
+      },
+      "18-20h": {
+        "n": 7,
+        "median_index": 1.421
+      }
+    },
+    "best_weekdays": [
+      {
+        "day": "Thu",
+        "n": 2,
+        "median_index": 2.67
+      },
+      {
+        "day": "Sat",
+        "n": 3,
+        "median_index": 0.658
+      }
+    ],
+    "best_hour_blocks": [
+      {
+        "block": "18-20h",
+        "n": 7,
+        "median_index": 1.421
+      }
+    ],
+    "winners_posted_in": {
+      "18-20h": 3
+    },
+    "confidence": "low",
+    "sample_size": 9,
+    "caveat": "Inferred from past post performance, NOT audience-activity data. Link Supermetrics for real follower active hours."
+  },
+  "patterns": {
+    "format": {
+      "reel": {
+        "n": 12,
+        "share_pct": 100.0,
+        "median_likes": 14,
+        "median_comments": 1.0,
+        "median_views": 399.5,
+        "median_er": 0.179015
+      }
+    },
+    "caption_length": {
+      "short<100": {
+        "n": 8,
+        "median_index": 1.2105
+      },
+      "mid100-300": {
+        "n": 1,
+        "median_index": 0.582
+      }
+    },
+    "hashtag_count": {
+      "none": {
+        "n": 9,
+        "median_index": 1.0
+      }
+    },
+    "has_cta": {
+      "no_cta": {
+        "n": 8,
+        "median_index": 1.2105
+      },
+      "with_cta": {
+        "n": 1,
+        "median_index": 0.658
+      }
+    },
+    "cta_types": {
+      "question": 2,
+      "dm": 1
+    },
+    "has_question_in_caption": {
+      "none": {
+        "n": 8,
+        "median_index": 1.2105
+      },
+      "question": {
+        "n": 1,
+        "median_index": 0.658
+      }
+    },
+    "hook_has_number": {
+      "number": {
+        "n": 2,
+        "median_index": 0.829
+      },
+      "no_number": {
+        "n": 7,
+        "median_index": 1.421
+      }
+    },
+    "hook_length": {
+      "mid30-55": {
+        "n": 6,
+        "median_index": 1.721
+      },
+      "long>55": {
+        "n": 3,
+        "median_index": 0.582
+      }
+    },
+    "emoji_use": {
+      "no_emoji": {
+        "n": 8,
+        "median_index": 1.2105
+      },
+      "emoji": {
+        "n": 1,
+        "median_index": 0.582
+      }
+    },
+    "paid_partnership": {
+      "organic": {
+        "n": 9,
+        "median_index": 1.0
+      }
+    },
+    "reel_duration": {
+      "30-60s": {
+        "n": 2,
+        "median_index": 0.5955
+      },
+      "60s+": {
+        "n": 7,
+        "median_index": 1.421
+      }
+    },
+    "reel_original_audio": {
+      "original": {
+        "n": 9,
+        "median_index": 1.0
+      }
+    },
+    "carousel_slides": {},
+    "top_hashtags": [
+      {
+        "tag": "primedoc",
+        "n": 1
+      },
+      {
+        "tag": "تسويق_طبي",
+        "n": 1
+      },
+      {
+        "tag": "تسويق_العيادات",
+        "n": 1
+      },
+      {
+        "tag": "جراحات_السمنة",
+        "n": 1
+      },
+      {
+        "tag": "التسويق_الرقمي",
+        "n": 1
+      }
+    ],
+    "language": "arabic"
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DeuROMxjjYB/",
+      "format": "reel",
+      "timestamp": "2026-10-20T16:33:42.000Z",
+      "weekday": "Tue",
+      "hour": 19,
+      "hook": "يا دكتور، كام مريض دخل عيادتك بسبب الإعلانات اللي بتدفع عليها؟ 👨⚕️",
+      "caption_len": 598,
+      "hashtag_n": 5,
+      "likes": 126,
+      "comments": 51,
+      "views": 2474,
+      "duration": 198.570663,
+      "slides": null,
+      "er": 2.18519,
+      "view_rate": 30.5432,
+      "index": null,
+      "verdict": null,
+      "ctas": [
+        "dm",
+        "question"
+      ],
+      "audio_original": true,
+      "is_pinned": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+      "format": "reel",
+      "timestamp": "2026-10-22T16:33:34.000Z",
+      "weekday": "Thu",
+      "hour": 19,
+      "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+      "caption_len": 39,
+      "hashtag_n": 0,
+      "likes": 42,
+      "comments": 7,
+      "views": 1570,
+      "duration": 68.565331,
+      "slides": null,
+      "er": 0.60494,
+      "view_rate": 19.3827,
+      "index": 4.758,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De4lHhbkrfi/",
+      "format": "reel",
+      "timestamp": "2026-10-24T16:40:17.000Z",
+      "weekday": "Sat",
+      "hour": 19,
+      "hook": "كيف تخللي المريض يوثق فيك قبل ما يجيك العيادة",
+      "caption_len": 45,
+      "hashtag_n": 0,
+      "likes": 21,
+      "comments": 4,
+      "views": 667,
+      "duration": 94.890663,
+      "slides": null,
+      "er": 0.30864,
+      "view_rate": 8.2346,
+      "index": 2.021,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De9uEFJk_30/",
+      "format": "reel",
+      "timestamp": "2026-10-26T16:33:37.000Z",
+      "weekday": "Mon",
+      "hour": 19,
+      "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+      "caption_len": 30,
+      "hashtag_n": 0,
+      "likes": 32,
+      "comments": 8,
+      "views": 1737,
+      "duration": 81.599998,
+      "slides": null,
+      "er": 0.49383,
+      "view_rate": 21.4444,
+      "index": 5.264,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfC-gD1Fam3/",
+      "format": "reel",
+      "timestamp": "2026-10-28T17:33:45.000Z",
+      "weekday": "Wed",
+      "hour": 20,
+      "hook": "كيف تتجنب المريض اللي بيدور على ارخص سعر",
+      "caption_len": 40,
+      "hashtag_n": 0,
+      "likes": 10,
+      "comments": 0,
+      "views": 469,
+      "duration": 111.893333,
+      "slides": null,
+      "er": 0.12346,
+      "view_rate": 5.7901,
+      "index": 1.421,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfFSjSZlUk_/",
+      "format": "reel",
+      "timestamp": "2026-10-29T15:08:07.000Z",
+      "weekday": "Thu",
+      "hour": 18,
+      "hook": "مو بس صور \"قبل وبعد\" اللي مليانة بكل مكان وما عاد تفرق مع أحد.. السر ا",
+      "caption_len": 167,
+      "hashtag_n": 0,
+      "likes": 7,
+      "comments": 0,
+      "views": 192,
+      "duration": 86.037331,
+      "slides": null,
+      "er": 0.08642,
+      "view_rate": 2.3704,
+      "index": 0.582,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfIILX5FPCJ/",
+      "format": "reel",
+      "timestamp": "2026-10-30T17:34:14.000Z",
+      "weekday": "Fri",
+      "hour": 19,
+      "hook": "الدكتور المشهور بيبيع اكتر من الشاطر",
+      "caption_len": 36,
+      "hashtag_n": 0,
+      "likes": 16,
+      "comments": 2,
+      "views": 322,
+      "duration": 64.896004,
+      "slides": null,
+      "er": 0.22222,
+      "view_rate": 3.9753,
+      "index": 0.976,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfKMaK1osZe/",
+      "format": "reel",
+      "timestamp": "2026-10-31T12:50:39.000Z",
+      "weekday": "Sat",
+      "hour": 14,
+      "hook": "أكبر غلطة بيقع فيها الأطباء في الإعلانات.. وبتخسرهم فلوسهم!",
+      "caption_len": 59,
+      "hashtag_n": 0,
+      "likes": null,
+      "comments": 0,
+      "views": 63,
+      "duration": 58.474667,
+      "slides": null,
+      "er": 0.0,
+      "view_rate": 0.7778,
+      "index": 0.191,
+      "verdict": "lose",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfKVoIkAvRP/",
+      "format": "reel",
+      "timestamp": "2026-10-31T14:10:17.000Z",
+      "weekday": "Sat",
+      "hour": 16,
+      "hook": "تبي ليدز وحجوزات حقيقية في عيادتك؟ اطبق هالـ 3 أشياء اليوم!",
+      "caption_len": 59,
+      "hashtag_n": 0,
+      "likes": 8,
+      "comments": 0,
+      "views": 217,
+      "duration": 81.664001,
+      "slides": null,
+      "er": 0.09877,
+      "view_rate": 2.679,
+      "index": 0.658,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfNPzV9jcPS/",
+      "format": "reel",
+      "timestamp": "2026-11-01T17:17:09.000Z",
+      "weekday": "Sun",
+      "hour": 19,
+      "hook": "3 انواع محتوى هيجيبولك ملايين المشاهدات لو انت طلبل",
+      "caption_len": 51,
+      "hashtag_n": 0,
+      "likes": 14,
+      "comments": 3,
+      "views": 330,
+      "duration": 57.493332,
+      "slides": null,
+      "er": 0.20988,
+      "view_rate": 4.0741,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfSKBxHD9sq/",
+      "format": "reel",
+      "timestamp": "2026-11-03T15:02:47.000Z",
+      "weekday": "Tue",
+      "hour": 17,
+      "hook": "المريض ما يدور على الأرخص.. المريض يدور على الأمان والثقة، وهذا اللي ي",
+      "caption_len": 81,
+      "hashtag_n": 0,
+      "likes": 12,
+      "comments": 0,
+      "views": 1308,
+      "duration": 97.599998,
+      "slides": null,
+      "er": 0.14815,
+      "view_rate": 16.1481,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfUS9Q7DG15/",
+      "format": "reel",
+      "timestamp": "2026-11-04T10:59:23.000Z",
+      "weekday": "Wed",
+      "hour": 12,
+      "hook": "لو انت دكتور و جبت مليوم مشاهدة هل ده معناه ان هتبقى عيادتك ممتلئة",
+      "caption_len": 66,
+      "hashtag_n": 0,
+      "likes": 4,
+      "comments": 0,
+      "views": 265,
+      "duration": 70.528,
+      "slides": null,
+      "er": 0.04938,
+      "view_rate": 3.2716,
+      "index": null,
+      "verdict": null,
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "winners": [
+    {
+      "url": "https://www.instagram.com/p/De9uEFJk_30/",
+      "format": "reel",
+      "timestamp": "2026-10-26T16:33:37.000Z",
+      "weekday": "Mon",
+      "hour": 19,
+      "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+      "caption_len": 30,
+      "hashtag_n": 0,
+      "likes": 32,
+      "comments": 8,
+      "views": 1737,
+      "duration": 81.599998,
+      "slides": null,
+      "er": 0.49383,
+      "view_rate": 21.4444,
+      "index": 5.264,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+      "format": "reel",
+      "timestamp": "2026-10-22T16:33:34.000Z",
+      "weekday": "Thu",
+      "hour": 19,
+      "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+      "caption_len": 39,
+      "hashtag_n": 0,
+      "likes": 42,
+      "comments": 7,
+      "views": 1570,
+      "duration": 68.565331,
+      "slides": null,
+      "er": 0.60494,
+      "view_rate": 19.3827,
+      "index": 4.758,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De4lHhbkrfi/",
+      "format": "reel",
+      "timestamp": "2026-10-24T16:40:17.000Z",
+      "weekday": "Sat",
+      "hour": 19,
+      "hook": "كيف تخللي المريض يوثق فيك قبل ما يجيك العيادة",
+      "caption_len": 45,
+      "hashtag_n": 0,
+      "likes": 21,
+      "comments": 4,
+      "views": 667,
+      "duration": 94.890663,
+      "slides": null,
+      "er": 0.30864,
+      "view_rate": 8.2346,
+      "index": 2.021,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "losers": [
+    {
+      "url": "https://www.instagram.com/p/DfKMaK1osZe/",
+      "format": "reel",
+      "timestamp": "2026-10-31T12:50:39.000Z",
+      "weekday": "Sat",
+      "hour": 14,
+      "hook": "أكبر غلطة بيقع فيها الأطباء في الإعلانات.. وبتخسرهم فلوسهم!",
+      "caption_len": 59,
+      "hashtag_n": 0,
+      "likes": null,
+      "comments": 0,
+      "views": 63,
+      "duration": 58.474667,
+      "slides": null,
+      "er": 0.0,
+      "view_rate": 0.7778,
+      "index": 0.191,
+      "verdict": "lose",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "top5": [
+    {
+      "url": "https://www.instagram.com/p/De9uEFJk_30/",
+      "format": "reel",
+      "timestamp": "2026-10-26T16:33:37.000Z",
+      "weekday": "Mon",
+      "hour": 19,
+      "hook": "كيف تعمل اعلان ناجح ليك ك طبيب",
+      "caption_len": 30,
+      "hashtag_n": 0,
+      "likes": 32,
+      "comments": 8,
+      "views": 1737,
+      "duration": 81.599998,
+      "slides": null,
+      "er": 0.49383,
+      "view_rate": 21.4444,
+      "index": 5.264,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/Deza3UHGMwO/",
+      "format": "reel",
+      "timestamp": "2026-10-22T16:33:34.000Z",
+      "weekday": "Thu",
+      "hour": 19,
+      "hook": "ازاي تخللي عيادتك تكبر كل يوم عن التاني",
+      "caption_len": 39,
+      "hashtag_n": 0,
+      "likes": 42,
+      "comments": 7,
+      "views": 1570,
+      "duration": 68.565331,
+      "slides": null,
+      "er": 0.60494,
+      "view_rate": 19.3827,
+      "index": 4.758,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/De4lHhbkrfi/",
+      "format": "reel",
+      "timestamp": "2026-10-24T16:40:17.000Z",
+      "weekday": "Sat",
+      "hour": 19,
+      "hook": "كيف تخللي المريض يوثق فيك قبل ما يجيك العيادة",
+      "caption_len": 45,
+      "hashtag_n": 0,
+      "likes": 21,
+      "comments": 4,
+      "views": 667,
+      "duration": 94.890663,
+      "slides": null,
+      "er": 0.30864,
+      "view_rate": 8.2346,
+      "index": 2.021,
+      "verdict": "win",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfC-gD1Fam3/",
+      "format": "reel",
+      "timestamp": "2026-10-28T17:33:45.000Z",
+      "weekday": "Wed",
+      "hour": 20,
+      "hook": "كيف تتجنب المريض اللي بيدور على ارخص سعر",
+      "caption_len": 40,
+      "hashtag_n": 0,
+      "likes": 10,
+      "comments": 0,
+      "views": 469,
+      "duration": 111.893333,
+      "slides": null,
+      "er": 0.12346,
+      "view_rate": 5.7901,
+      "index": 1.421,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfNPzV9jcPS/",
+      "format": "reel",
+      "timestamp": "2026-11-01T17:17:09.000Z",
+      "weekday": "Sun",
+      "hour": 19,
+      "hook": "3 انواع محتوى هيجيبولك ملايين المشاهدات لو انت طلبل",
+      "caption_len": 51,
+      "hashtag_n": 0,
+      "likes": 14,
+      "comments": 3,
+      "views": 330,
+      "duration": 57.493332,
+      "slides": null,
+      "er": 0.20988,
+      "view_rate": 4.0741,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "bottom5": [
+    {
+      "url": "https://www.instagram.com/p/DfKMaK1osZe/",
+      "format": "reel",
+      "timestamp": "2026-10-31T12:50:39.000Z",
+      "weekday": "Sat",
+      "hour": 14,
+      "hook": "أكبر غلطة بيقع فيها الأطباء في الإعلانات.. وبتخسرهم فلوسهم!",
+      "caption_len": 59,
+      "hashtag_n": 0,
+      "likes": null,
+      "comments": 0,
+      "views": 63,
+      "duration": 58.474667,
+      "slides": null,
+      "er": 0.0,
+      "view_rate": 0.7778,
+      "index": 0.191,
+      "verdict": "lose",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfFSjSZlUk_/",
+      "format": "reel",
+      "timestamp": "2026-10-29T15:08:07.000Z",
+      "weekday": "Thu",
+      "hour": 18,
+      "hook": "مو بس صور \"قبل وبعد\" اللي مليانة بكل مكان وما عاد تفرق مع أحد.. السر ا",
+      "caption_len": 167,
+      "hashtag_n": 0,
+      "likes": 7,
+      "comments": 0,
+      "views": 192,
+      "duration": 86.037331,
+      "slides": null,
+      "er": 0.08642,
+      "view_rate": 2.3704,
+      "index": 0.582,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfKVoIkAvRP/",
+      "format": "reel",
+      "timestamp": "2026-10-31T14:10:17.000Z",
+      "weekday": "Sat",
+      "hour": 16,
+      "hook": "تبي ليدز وحجوزات حقيقية في عيادتك؟ اطبق هالـ 3 أشياء اليوم!",
+      "caption_len": 59,
+      "hashtag_n": 0,
+      "likes": 8,
+      "comments": 0,
+      "views": 217,
+      "duration": 81.664001,
+      "slides": null,
+      "er": 0.09877,
+      "view_rate": 2.679,
+      "index": 0.658,
+      "verdict": "normal",
+      "ctas": [
+        "question"
+      ],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfIILX5FPCJ/",
+      "format": "reel",
+      "timestamp": "2026-10-30T17:34:14.000Z",
+      "weekday": "Fri",
+      "hour": 19,
+      "hook": "الدكتور المشهور بيبيع اكتر من الشاطر",
+      "caption_len": 36,
+      "hashtag_n": 0,
+      "likes": 16,
+      "comments": 2,
+      "views": 322,
+      "duration": 64.896004,
+      "slides": null,
+      "er": 0.22222,
+      "view_rate": 3.9753,
+      "index": 0.976,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    },
+    {
+      "url": "https://www.instagram.com/p/DfNPzV9jcPS/",
+      "format": "reel",
+      "timestamp": "2026-11-01T17:17:09.000Z",
+      "weekday": "Sun",
+      "hour": 19,
+      "hook": "3 انواع محتوى هيجيبولك ملايين المشاهدات لو انت طلبل",
+      "caption_len": 51,
+      "hashtag_n": 0,
+      "likes": 14,
+      "comments": 3,
+      "views": 330,
+      "duration": 57.493332,
+      "slides": null,
+      "er": 0.20988,
+      "view_rate": 4.0741,
+      "index": 1.0,
+      "verdict": "normal",
+      "ctas": [],
+      "audio_original": true,
+      "is_pinned": false
+    }
+  ],
+  "excluded": {
+    "pinned": 1,
+    "immature": 2,
+    "no_baseline": 0
+  },
+  "related_profiles": []
+}
