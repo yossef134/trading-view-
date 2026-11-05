@@ -24,7 +24,7 @@ description: >
 | 1. Free audit | 1. Pre-call message + 15-min call guide + call notes | **BUILT**: `forms/audit_intake.md` |
 | 1. Free audit | 2. Pull the account + baseline snapshot + look at 2 best / 1 weakest reel | **BUILT** (see below) |
 | 1. Free audit | 3. Quick scan of 3-5 successful doctors in the same specialty | **BUILT** (see below) |
-| 1. Free audit | 4. Report (client + internal), dashboard | PLANNED |
+| 1. Free audit | 4. Report: client PDF infographic + client MD + internal MD | **BUILT** (see below) |
 | 2. Full strategy | patient avatar (adapted from the user's "أنت زمان" form), niche topics, patient-voice research, competitors with scripts, 60-90 ideas, funnel table, scripts | PLANNED |
 | 3. Own account | Track 2 with doctors as the audience | PLANNED |
 
@@ -70,6 +70,16 @@ About 0.3 USD. No transcripts or videos in this track (kept cheap).
 3. `python3 -I scripts/fetch_instagram.py reels <5 handles> --limit 20 --out <dir>/scan/peer_reels.json`
 4. `python3 -I scripts/analyze_competitors.py --reels <dir>/scan/peer_reels.json --out <dir>/scan/peers_analysis.json`
 5. Write `<dir>/scan/summary.md` (internal): peers table, top reels with links, repeated patterns with counts, and the comparison with the doctor's own account. Followers alone are not success (one peer had 64K followers and a 220-view median).
+
+## Track 1, Step 4: the report (BUILT, tested 2026-11-05)
+
+Agreed: client version = PDF infographic + MD, calm medical style, branded @yossef.content2sales, all 3 specialty patterns revealed; last section depends on `mode` (`client`: next step + invitation; `case_study`: what we will do together + re-measure at 30/60 days).
+
+1. Write `<dir>/audit_content.json` following `references/audit-content-schema.md`, using analysis.json, baseline.json, own_reels.json + sheets, scan/summary.md, call_notes.md and the user's video_review.md (when present).
+2. `python3 -I scripts/build_audit.py --dir <dir> --content <dir>/audit_content.json`
+   -> audit_client.html / audit_client.pdf / audit_client.md / audit_internal.md (Chromium via `scripts/render_pdf.js`).
+3. Check every page before sending: `node scripts/render_pdf.js <dir>/audit_client.html /tmp/x.pdf --png <scratch>/p` and look at each PNG (overflow, reversed numbers, empty sections, consistency of numbers).
+4. Send the PDF and MD to the user; the user sends to the doctor. Doctors' data stays local (outputs/doctors/ is git-ignored).
 
 ## Reusable lessons from the previous skill (`instagram-account-analyzer`)
 
