@@ -49,6 +49,102 @@
     "change_pct": -34.8,
     "direction": "down"
   },
+  "timing": {
+    "by_weekday": {
+      "Mon": {
+        "n": 7,
+        "median_index": 0.869
+      },
+      "Tue": {
+        "n": 1,
+        "median_index": 0.585
+      },
+      "Wed": {
+        "n": 6,
+        "median_index": 1.4165
+      },
+      "Thu": {
+        "n": 4,
+        "median_index": 1.1
+      },
+      "Fri": {
+        "n": 4,
+        "median_index": 0.8455
+      },
+      "Sat": {
+        "n": 3,
+        "median_index": 0.707
+      },
+      "Sun": {
+        "n": 3,
+        "median_index": 0.527
+      }
+    },
+    "by_hour_block": {
+      "00-02h": {
+        "n": 11,
+        "median_index": 1.272
+      },
+      "03-05h": {
+        "n": 1,
+        "median_index": 2.019
+      },
+      "15-17h": {
+        "n": 4,
+        "median_index": 0.8515
+      },
+      "18-20h": {
+        "n": 5,
+        "median_index": 1.854
+      },
+      "21-23h": {
+        "n": 7,
+        "median_index": 0.661
+      }
+    },
+    "best_weekdays": [
+      {
+        "day": "Wed",
+        "n": 6,
+        "median_index": 1.4165
+      },
+      {
+        "day": "Thu",
+        "n": 4,
+        "median_index": 1.1
+      },
+      {
+        "day": "Mon",
+        "n": 7,
+        "median_index": 0.869
+      }
+    ],
+    "best_hour_blocks": [
+      {
+        "block": "18-20h",
+        "n": 5,
+        "median_index": 1.854
+      },
+      {
+        "block": "00-02h",
+        "n": 11,
+        "median_index": 1.272
+      },
+      {
+        "block": "15-17h",
+        "n": 4,
+        "median_index": 0.8515
+      }
+    ],
+    "winners_posted_in": {
+      "00-02h": 3,
+      "18-20h": 3,
+      "03-05h": 1
+    },
+    "confidence": "medium",
+    "sample_size": 28,
+    "caveat": "Inferred from past post performance, NOT audience-activity data. The doctor's Insights screenshot (active times) overrides this when available."
+  },
   "patterns": {
     "format": {
       "photo_or_text": {

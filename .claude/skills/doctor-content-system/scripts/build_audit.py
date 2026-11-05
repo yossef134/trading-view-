@@ -235,6 +235,14 @@ def build(d, c):
         pages.append(f'<h2>ملاحظات على فيديوهاتك</h2><p class="lead">{E(c.get("video_intro", ""))}</p>'
                      f'<div class="card">{rows}{"<ul>" + notes + "</ul>" if notes else ""}</div>{priv}')
 
+    # 4b posting time (always framed as an experiment, never as a fact)
+    pt = c.get("posting_time")
+    if pt:
+        src = "من إحصائيات حسابك (أوقات تواجد متابعينك)" if pt.get("source") == "insights" else "من أداء بوستاتك اللي فاتت"
+        pages.append(f'<h2>أحسن وقت للنشر: تجربة نقترحها</h2><p class="lead">{E(pt.get("basis", ""))}</p>'
+                     f'<div class="card"><div class="fix"><b>جرّب: </b>{E(pt["experiment"])}</div>'
+                     f'<p style="margin:8px 0 0;font-size:12px;color:#667">{src}. هنقارن بعد شهر ونثبّت اللي ينجح.</p></div>')
+
     # 5 specialty patterns
     pats = ""
     for i, p in enumerate(c.get("patterns", []), 1):
@@ -300,6 +308,11 @@ def client_md(d, c):
         if c.get("privacy_note"):
             L += ["", f"> **تنبيه مهم:** {c['privacy_note']}"]
         L += [""]
+    if c.get("posting_time"):
+        pt = c["posting_time"]
+        src = "من إحصائيات حسابك (أوقات تواجد متابعينك)" if pt.get("source") == "insights" else "من أداء بوستاتك اللي فاتت"
+        L += ["## أحسن وقت للنشر: تجربة نقترحها", "", pt.get("basis", ""), "",
+              f"**جرّب:** {pt['experiment']}", "", f"_{src}. هنقارن بعد شهر ونثبّت اللي ينجح._", ""]
     L += ["## إيه اللي شغال في تخصصك", "", c.get("patterns_intro", ""), ""]
     for i, p in enumerate(c.get("patterns", []), 1):
         L += [f"### {i}. {p['title']}", p["evidence"]]

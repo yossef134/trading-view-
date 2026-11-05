@@ -21,6 +21,11 @@ no statistics jargon (index, median), no tool names, no costs. Every claim must 
  "video_ratings": [{"item": "الإضاءة", "score": 0-10, "note": "", "fix": ""}],  // from the user's video_review.md; scores proposed by Claude from the user's words need the user's OK
  "video_notes": [""],                        // Claude's observations from sheets/transcripts
  "privacy_note": "",                         // patient names/faces/scans without visible consent
+ "posting_time": {                          // ALWAYS present (agreed 2026-11-05); client report only, NOT in the internal report
+  "source": "insights" | "past_posts",      // insights = the doctor's screenshot of follower active times (preferred)
+  "basis": "",                              // one simple line on why, no jargon
+  "experiment": ""                          // e.g. «انشر بين 12 و2 بالليل لمدة شهر، الحد والخميس»; Instagram + Facebook if both
+ },
  "patterns_intro": "",
  "patterns": [                               // the 3 patterns from scan/summary.md, ALL revealed
   {"title": "", "evidence": "counts", "examples": [{"url": "", "label": "", "views": 0}], "you": ""}

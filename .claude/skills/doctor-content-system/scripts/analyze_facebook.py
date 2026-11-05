@@ -112,6 +112,28 @@ def slim(p):
     return {k: p.get(k) for k in keep}
 
 
+def timing(posts):
+    """Best posting day/time from past post performance (same method as analyze.py)."""
+    ok = [p for p in posts if p["index"] is not None and p["hour"] is not None]
+    by_day = group_perf(ok, lambda p: p["weekday"])
+    block = lambda p: f"{(p['hour']//3)*3:02d}-{(p['hour']//3)*3+2:02d}h"
+    by_block = group_perf(ok, block)
+    best = lambda d, k=2: sorted(((a, b) for a, b in d.items() if b["n"] >= k),
+                                 key=lambda x: -x[1]["median_index"])
+    win_hours = Counter(block(p) for p in ok if p["verdict"] == "win")
+    return {
+        "by_weekday": {d: by_day[d] for d in WEEKDAYS if d in by_day},
+        "by_hour_block": dict(sorted(by_block.items())),
+        "best_weekdays": [{"day": a, **b} for a, b in best(by_day)[:3]],
+        "best_hour_blocks": [{"block": a, **b} for a, b in best(by_block)[:3]],
+        "winners_posted_in": dict(win_hours.most_common()),
+        "confidence": "low" if len(ok) < 25 else "medium" if len(ok) < 60 else "decent",
+        "sample_size": len(ok),
+        "caveat": "Inferred from past post performance, NOT audience-activity data. "
+                  "The doctor's Insights screenshot (active times) overrides this when available.",
+    }
+
+
 def cadence(posts):
     ts = sorted(p["_dt"] for p in posts if p["_dt"])
     if len(ts) < 3:
@@ -205,6 +227,7 @@ def main():
         "page_signals": page_signals(page),
         "cadence": cadence(posts),
         "trend": trend(posts),
+        "timing": timing(posts),
         "patterns": content_patterns(posts),
         "winners": [slim(p) for p in ranked if p["verdict"] == "win"][:10],
         "losers": [slim(p) for p in reversed(ranked) if p["verdict"] == "lose"][:10],
