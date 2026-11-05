@@ -16,7 +16,8 @@ description: >
 - Every competitor and research finding carries its link.
 - Ask the user's approval before every new step, and before any paid step.
 - Track 1 saves a baseline snapshot so a before/after case study can be made at 30 and 60 days.
-- **Every change agreed in the conversation is written into this skill immediately** (user rule, 2026-11-05).
+- **Every change agreed in the conversation is written into this skill immediately** (user rule, 2026-11-05). Keep `references/roadmap.md` (the mind map) in sync.
+- The audit covers **Instagram + Facebook** when the doctor has an active Facebook page (decided 2026-11-05; the full Facebook section design awaits the user's OK).
 - Video review scores are **out of 10**, each with a note AND a fix; the user's criteria are in `forms/video_review.md` (hook verbal + visual, pauses/pace, body language, mic + denoise, external light, music, caption placement/style, on-screen title, CTA by question or guide file).
 
 ## Track 1 flow (agreed 2026-11-05)
