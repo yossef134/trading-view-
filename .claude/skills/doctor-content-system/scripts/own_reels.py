@@ -26,6 +26,8 @@ def main():
     ap.add_argument("--best", type=int, default=2)
     ap.add_argument("--worst", type=int, default=1)
     ap.add_argument("--no-video", action="store_true")
+    ap.add_argument("--no-transcript", action="store_true",
+                    help="skip the paid Apify transcript (use scripts/transcribe.py locally instead)")
     ap.add_argument("--cdn", action="store_true",
                     help="free video: use Instagram's CDN link instead of the Apify copy (needs *.fbcdn.net / *.cdninstagram.com allowed)")
     a = ap.parse_args()
@@ -38,7 +40,7 @@ def main():
         raise SystemExit("No scored reels (needs at least 3 mature reels). Nothing to fetch.")
     picks = [("best", r) for r in reels[: a.best]]
     picks += [("weakest", r) for r in reels[::-1][: a.worst] if r not in [p for _, p in picks]]
-    inp = {"username": [r["url"] for _, r in picks], "resultsLimit": 1, "includeTranscript": True}
+    inp = {"username": [r["url"] for _, r in picks], "resultsLimit": 1, "includeTranscript": not a.no_transcript}
     if not a.no_video and not a.cdn:
         inp["includeDownloadedVideo"] = True
     t0 = fi.dt.datetime.now(fi.dt.timezone.utc)

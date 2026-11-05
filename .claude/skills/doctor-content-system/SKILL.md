@@ -29,7 +29,7 @@ description: >
 
 ## Free route (tested 2026-11-05)
 
-With `*.fbcdn.net` and `*.cdninstagram.com` allowed, video and covers download for free: `own_reels.py --cdn` (metadata about 0.003 USD per reel instead of 0.07 for an Apify copy) and `media.py grid`. Transcripts still cost about 0.10 USD per reel through Apify; a free local transcriber (faster-whisper) is installed but its model host (huggingface.co) is blocked until allowed. Run `scripts/preflight.py` first and use the free route when Instagram media is OK.
+With `*.fbcdn.net` and `*.cdninstagram.com` allowed, video and covers download for free: `own_reels.py --cdn` (metadata about 0.003 USD per reel instead of 0.07 for an Apify copy) and `media.py grid`. Transcripts are free too since huggingface.co was allowed: `scripts/transcribe.py` (faster-whisper large-v3-turbo on CPU, about 25 s per reel, quality close to Apify's; pass `--vocab` with the specialty's terms and correct obvious term errors from context). Default per doctor: `own_reels.py --cdn --no-transcript` (about 0.01 USD) then `transcribe.py --videos <dir>/own_reels.json --vocab "..."`. Fall back to the Apify transcript (0.10 USD/reel) only if the local run fails. Run `scripts/preflight.py` first.
 
 ## Status
 
