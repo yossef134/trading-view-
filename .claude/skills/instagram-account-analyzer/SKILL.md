@@ -112,7 +112,14 @@ python3 -I scripts/prep_comments.py --comments <dir>/comments.json --out <dir>/a
 
 ## Step 7. Real questions and objections -> video ideas
 
-**Preflight first:** `python3 -I scripts/preflight.py`. If Reddit / Quora / YouTube / Google are BLOCKED, do not launch research agents (they only get search snippets and return thin, unverified results): tell the user which hosts to allow and continue with the rest. **Research only the voice of the client's audience** (for doctor-marketing: doctors and clinic owners), never their customers' voice.
+**Preflight first:** `python3 -I scripts/preflight.py`. If Reddit / Quora / YouTube / Google are BLOCKED, do not launch research agents (they only get search snippets and return thin, unverified results). Use the Apify route instead (quote about 0.3-0.6 USD first):
+
+```bash
+python3 -I scripts/research_fetch.py google --queries-file <dir>/research/queries.txt --out <dir>/research/google.json   # doctor-voice queries, Arabic + English, incl. site:reddit.com
+python3 -I scripts/research_fetch.py reddit --url <thread1> --url <thread2> ... --max-comments 15 --out <dir>/research/reddit_threads.json
+```
+
+Find threads with Google `site:reddit.com` first, then pull THEIR comments (that is where the objections are). Reddit keyword search (`--search`) was measured as mostly noise (3-4 relevant of 77 posts, 0.35 USD), so avoid it. Read the results yourself and write `deep_research.md`. Also tell the user which hosts to allow if they want direct access. **Research only the voice of the client's audience** (for doctor-marketing: doctors and clinic owners), never their customers' voice.
 
 Follow `references/research-method.md`: per approved sub-niche, deep research (Google, Reddit, Quora, forums, YouTube, Arabic and English) plus the comment signals. Every item has a source link and quote. Output the ranked table with hook variants, format, CTA, difficulty and a reference competitor reel. Say which sources returned nothing (Arabic Reddit/Quora are usually thin).
 
