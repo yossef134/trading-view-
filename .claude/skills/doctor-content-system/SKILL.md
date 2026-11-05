@@ -22,7 +22,7 @@ description: >
 | Track | Step | Status |
 |---|---|---|
 | 1. Free audit | 1. Pre-call message + 15-min call guide + call notes | **BUILT**: `forms/audit_intake.md` |
-| 1. Free audit | 2. Pull the account + baseline snapshot | PLANNED |
+| 1. Free audit | 2. Pull the account + baseline snapshot + look at 2 best / 1 weakest reel | **BUILT** (see below) |
 | 1. Free audit | 3. Quick scan of 3-5 successful doctors in the same specialty | PLANNED |
 | 1. Free audit | 4. Report (client + internal), dashboard | PLANNED |
 | 2. Full strategy | patient avatar (adapted from the user's "أنت زمان" form), niche topics, patient-voice research, competitors with scripts, 60-90 ideas, funnel table, scripts | PLANNED |
@@ -34,6 +34,27 @@ description: >
 2. The user runs the 15-minute call with part (b).
 3. The user fills part (c) and saves it as `call_notes.md` in `outputs/doctors/<instagram-username>/<YYYY-MM-DD>/`, together with the doctor's form answers as `intake_answers.md`.
 4. Do not start Step 2 until both files exist, or the user says to go ahead without them.
+
+## Track 1, Step 2: account, baseline, own reels (BUILT, tested 2026-11-05 on a real OB/GYN account)
+
+Work dir: `outputs/doctors/<username>/<YYYY-MM-DD>/`.
+
+```bash
+python3 -I scripts/fetch_instagram.py account <username> --limit 60 --out <dir>/raw.json      # about 0.03-0.16 USD
+python3 -I scripts/analyze.py --raw <dir>/raw.json --out <dir>/analysis.json
+python3 -I scripts/baseline.py snapshot --raw <dir>/raw.json --analysis <dir>/analysis.json --out <dir>/baseline.json
+python3 -I scripts/own_reels.py --analysis <dir>/analysis.json --out <dir>/own_reels.json        # about 0.35-0.5 USD, approved per doctor
+python3 -I scripts/media.py sheets --videos <dir>/own_reels.json --out-dir <dir>/sheets
+```
+
+Then LOOK at each sheet and read each transcript. Note concretely: when the hook appears, who is on screen, what fills the screen (black frames, template glitches, watermarks), captions, length, ending/CTA, and any patient-privacy or consent risk (patient names, faces, scans). Case-study follow-up at day 30/60: re-run the first three commands into a new dated folder, then `baseline.py compare --before ... --after ... --out compare.md`.
+
+Rules learned in testing:
+- A format is only scored when it has >= 3 mature posts AND a median of at least 10; otherwise "11x the usual" can mean 9 likes vs 1.
+- Posting under 0.5 posts/week is "rare", whatever the gap spacing.
+- Reels with < 0.5 words/second have no speech; their transcript is noise (`has_speech: false`).
+- Accounts with fewer than 3 scored reels: skip own_reels.py and say why.
+- If the user stops a run, abort the Apify run too (`POST /v2/actor-runs/<id>/abort`), or it keeps charging.
 
 ## Reusable lessons from the previous skill (`instagram-account-analyzer`)
 
