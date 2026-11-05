@@ -110,6 +110,11 @@ th { color:var(--muted); font-weight:600; }
 .next li { margin:4px 0; }
 .cta { margin-top:14px; background:var(--teal); color:#fff; border-radius:12px; padding:14px 16px; font-size:15px; font-weight:600; }
 .measure { margin-top:10px; font-size:12.5px; color:var(--muted); }
+.wl { border-radius:10px; padding:9px 11px; margin-bottom:7px; font-size:12px; }
+.wl.win { background:#eaf7f1; border-inline-start:4px solid var(--good); }
+.wl.lose { background:#fdf0ea; border-inline-start:4px solid var(--warn); }
+.wl .idx { font-weight:700; } .wl .hk { color:var(--navy); margin:2px 0; } .wl .mt { color:var(--muted); font-size:11px; }
+
 """
 
 
@@ -123,15 +128,54 @@ def platform_card(c):
             f'<div class="fix" style="margin-top:8px">{E(pc["note"])}</div></div>')
 
 
-def page(inner, brand, date, num, total):
-    return (f'<section class="page"><div class="top"><span>تحليل حساب إنستجرام</span>'
+def win_lose_card(items, cls, platform_label):
+    if not items:
+        return f'<div class="card"><div class="why">لسه مفيش {E(cls)} كفاية على {E(platform_label)} نحكم عليهم.</div></div>'
+    out = ""
+    for it in items[:5]:
+        val = n(it.get("views")) + " مشاهدة" if it.get("views") else n((it.get("likes") or 0) + (it.get("comments") or 0) + (it.get("shares") or 0)) + " تفاعل"
+        out += (f'<div class="wl {cls}"><div class="idx" dir="ltr">{it["index"]}×</div>'
+                f'<div class="hk"><a href="{E(it.get("url",""))}">{E((it.get("hook") or "")[:70] or "بدون نص")}</a></div>'
+                f'<div class="mt">{val}</div></div>')
+    return f'<div class="card">{out}</div>'
+
+
+CONSISTENCY_AR = {"regular": "منتظم", "irregular": "غير منتظم", "rare": "نادر"}
+LRI, PDI = "\u2066", "\u2069"  # isolate LTR text (phone numbers, English ratings) inside RTL flow
+
+
+def facebook_section(fb):
+    """Full Facebook page, mirroring the Instagram winners/losers page (parity, agreed 2026-11-05)."""
+    if not fb:
+        return None
+    ps = fb["page_signals"]
+    kpis = [("متابعين فيسبوك", n(fb["page"]["followers"]), ""),
+            ("بوستات/أسبوع", str(fb["cadence"].get("posts_per_week", "—")),
+             CONSISTENCY_AR.get(fb["cadence"].get("consistency"), "")),
+            ("مشاهدات الفيديو المعتادة", n(fb["format_medians"].get("video")), ""),
+            ("معدل التفاعل", (f'{fb["health"]["median_er"]*100:.1f}%' if fb["health"].get("median_er") else "—"), "")]
+    tiles = "".join(f'<div class="card kpi"><div class="l">{E(l)}</div><div class="v">{v}</div><div class="s">{E(s)}</div></div>' for l, v, s in kpis)
+    info_rows = "".join(f'<div class="rate" style="grid-template-columns:90px 1fr"><b>{E(l)}</b><span>{LRI if ltr else ""}{E(str(v) or "—")}{PDI if ltr else ""}</span></div>'
+                        for l, v, ltr in (('التليفون', ps.get("phone"), True), ('العنوان', ps.get("address"), False),
+                                         ('التقييم', ps.get("rating"), True)) if v)
+    cols = (f'<div class="grid g2" style="margin-top:12px">'
+            f'<div><h3 style="color:var(--navy);font-size:14px;margin:0 0 6px">أقوى بوستات فيسبوك</h3>{win_lose_card(fb["winners"], "win", "فيسبوك")}</div>'
+            f'<div><h3 style="color:var(--navy);font-size:14px;margin:0 0 6px">أضعف بوستات فيسبوك</h3>{win_lose_card(fb["losers"], "lose", "فيسبوك")}</div></div>')
+    return (f'<h2>حسابك على فيسبوك: الناجح والفاشل</h2>'
+            f'<p class="lead">نفس طريقة التحليل بالظبط: كل بوست بيتقارن بمعتاد نوعه هو (فيديو مع فيديو، بوست مع بوست).</p>'
+            f'<div class="grid g4">{tiles}</div>{cols}'
+            + (f'<div class="card" style="margin-top:12px"><b style="color:var(--navy)">بيانات الصفحة</b>{info_rows}</div>' if info_rows else ""))
+
+
+def page(inner, brand, date, num, total, header):
+    return (f'<section class="page"><div class="top"><span>{E(header)}</span>'
             f'<span class="brand">{E(brand)}</span></div>{inner}'
             f'<div class="foot"><span>{E(date)}</span><span dir="ltr">{num} / {total}</span></div></section>')
 
 
 def build(d, c):
     an, base = d["analysis"], d["baseline"]
-    peers, own = d.get("peers"), d.get("own")
+    peers, own, fb = d.get("peers"), d.get("own"), d.get("facebook")
     brand, date = c.get("brand", ""), c.get("date", base["taken_at"][:10])
     doc = c["doctor"]
     pages = []
@@ -141,7 +185,7 @@ def build(d, c):
     if c.get("opening_quote"):
         q = f'<div class="quote">«{E(c["opening_quote"])}»<small>{E(doc["name"])}</small></div>'
     pages.append(f'''<div class="cover"><div><span class="pill">تحليل مبدئي</span></div>
-<h1>تحليل حسابك على إنستجرام</h1>
+<h1>تحليل حسابك على {"إنستجرام وفيسبوك" if fb else "إنستجرام"}</h1>
 <div class="who">{E(doc["name"])} · {E(doc["specialty"])} · <span dir="ltr">@{E(doc["handle"])}</span></div>
 <div class="diag">{E(c["diagnosis"])}</div>{q}</div>''')
 
@@ -176,6 +220,10 @@ def build(d, c):
         probs += (f'<div class="card prob"><div class="ic">{i}</div><div><h3>{E(p["title"])}</h3>'
                   f'<div class="why">{E(p["evidence"])}</div><div class="fix"><b>الحل: </b>{E(p["fix"])}</div>{ex}</div></div>')
     pages.append(f'<h2>3 حاجات لو اتصلحت هتفرق معاك</h2><p class="lead">كل نقطة معاها حلها كامل، تقدر تبدأ فيه النهارده.</p>{probs}')
+
+    fb_page = facebook_section(fb)
+    if fb_page:
+        pages.append(fb_page)
 
     # 4 videos (only if the user's review or notes exist)
     if c.get("video_ratings") or c.get("video_notes") or c.get("privacy_note"):
@@ -214,9 +262,10 @@ def build(d, c):
                  f'<div class="card next"><ul>{lis}</ul></div>{cta}{meas}')
 
     total = len(pages)
-    body = "".join(page(x, brand, date, i + 1, total) for i, x in enumerate(pages))
+    header = "تحليل حساب إنستجرام وفيسبوك" if fb else "تحليل حساب إنستجرام"
+    body = "".join(page(x, brand, date, i + 1, total, header) for i, x in enumerate(pages))
     return ('<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">'
-            f'<title>تحليل حساب {E(doc["name"])}</title>'
+            f'<title>{E(header)}: {E(doc["name"])}</title>'
             '<link rel="preconnect" href="https://fonts.googleapis.com">'
             '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">'
             f'<style>{CSS}</style></head><body>{body}</body></html>')
@@ -298,6 +347,7 @@ def main():
     ap.add_argument("--no-pdf", action="store_true")
     a = ap.parse_args()
     d = {"analysis": load(os.path.join(a.dir, "analysis.json")), "baseline": load(os.path.join(a.dir, "baseline.json")),
+             "facebook": load(os.path.join(a.dir, "analysis_facebook.json")),
          "own": load(os.path.join(a.dir, "own_reels.json")), "peers": load(os.path.join(a.dir, "scan", "peers_analysis.json"))}
     if not d["analysis"] or not d["baseline"]:
         raise SystemExit("analysis.json and baseline.json are required (run Step 2 first)")
