@@ -1,0 +1,2223 @@
+{
+  "meta": {
+    "fetched_at": "2026-11-05T16:24:48+00:00",
+    "accounts": 5,
+    "scored_accounts": 4,
+    "reels_scored": 77,
+    "winners": 21,
+    "base_win_rate": 0.273,
+    "win_threshold": 1.5,
+    "lose_threshold": 0.5,
+    "min_reels_per_account": 4,
+    "timezone": "Africa/Cairo",
+    "labels_applied": 0,
+    "note": "index is vs each account's own median; patterns are counts with links, 'repeated' = >=3 winners, >=2 accounts, no single account supplying >60% of them, lift >= 1.3"
+  },
+  "accounts": [
+    {
+      "username": "dr_mariam_alawadhi",
+      "url": "https://www.instagram.com/dr_mariam_alawadhi/",
+      "followers": 42404,
+      "bio": "استشاري الطب النفسي Psychiatrist /\nمستوصف د.مريم العوضي \nرقم الترخيص: 382  كلوڤر تاور -الجابرية - الطابق ١١ \nللمواعيد\n+965 2226 9308/7",
+      "link": "http://www.mariamalawadhi.com/",
+      "reels_found": 0,
+      "reels_with_views": 0,
+      "median_views": null,
+      "median_view_rate": null,
+      "span": null,
+      "scored": false
+    },
+    {
+      "username": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/drmohamed_abdelsalam/",
+      "followers": 11983,
+      "bio": "Developmental Neuropsychiatrist | Child Development Consultant | ADHD • Autism • Speech Delay • Learning Disorders | Alex. Uni. Faculty of Medicine",
+      "link": "https://healthydevelop.bio.link/",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 2377.5,
+      "median_view_rate": 0.1984,
+      "span": [
+        "2026-06-11",
+        "2026-10-28"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "drmohamed_abdelsalam",
+          "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+          "views": 36020,
+          "likes": 202,
+          "comments": 4,
+          "duration": 47.807999,
+          "index": 15.15,
+          "view_rate": 3.006,
+          "eng_per_view": 0.0057,
+          "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-07-08T18:03:40.000Z"
+        },
+        {
+          "owner": "drmohamed_abdelsalam",
+          "url": "https://www.instagram.com/p/Db0uWIREWiY/",
+          "views": 22271,
+          "likes": 314,
+          "comments": 18,
+          "duration": 123.839996,
+          "index": 9.37,
+          "view_rate": 1.859,
+          "eng_per_view": 0.0149,
+          "hook": "أم الـADHD مش بتواجه تحدي واحد بس💭",
+          "hook_type": [
+            "tension_or_contrast"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-08-09T15:08:43.000Z"
+        },
+        {
+          "owner": "drmohamed_abdelsalam",
+          "url": "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "views": 10388,
+          "likes": 142,
+          "comments": 4,
+          "duration": 63.667664,
+          "index": 4.37,
+          "view_rate": 0.867,
+          "eng_per_view": 0.0141,
+          "hook": "كل صباح مع طفل ADHD بيبدأ بخناقة 🌤️",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-06-28T14:45:28.000Z"
+        },
+        {
+          "owner": "drmohamed_abdelsalam",
+          "url": "https://www.instagram.com/p/DaK_z89lE7G/",
+          "views": 9605,
+          "likes": 143,
+          "comments": 0,
+          "duration": 42.769707,
+          "index": 4.04,
+          "view_rate": 0.802,
+          "eng_per_view": 0.0149,
+          "hook": "كل ليلة النوم مع طفل ADHD بتبقى معركة؟ 🌙",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-06-29T13:41:26.000Z"
+        },
+        {
+          "owner": "drmohamed_abdelsalam",
+          "url": "https://www.instagram.com/p/DeuRJIrkzUn/",
+          "views": 8924,
+          "likes": 143,
+          "comments": 5,
+          "duration": 104.745216,
+          "index": 3.75,
+          "view_rate": 0.745,
+          "eng_per_view": 0.0166,
+          "hook": "طفلك بيتشتت حتى لو مفيش أي حاجة حواليه تلفت انتباهه؟ 🤔",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "save_share"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-20T16:32:27.000Z"
+        }
+      ],
+      "losers": [],
+      "best_reel": {
+        "owner": "drmohamed_abdelsalam",
+        "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+        "views": 36020,
+        "likes": 202,
+        "comments": 4,
+        "duration": 47.807999,
+        "index": 15.15,
+        "view_rate": 3.006,
+        "eng_per_view": 0.0057,
+        "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+        "hook_type": [
+          "tension_or_contrast"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-07-08T18:03:40.000Z"
+      }
+    },
+    {
+      "username": "psychscience1",
+      "url": "https://www.instagram.com/psychscience1/",
+      "followers": 4326,
+      "bio": "أول توكيل علمي بالعالم العربي لصيانة النفوس 👌\nأسسه #دكتور_أحمد_هارون @drahmedharoun\nرئيس مجلس إدارة #توكيل_النفوس 🧠⚙️🫀",
+      "link": "https://www.facebook.com/PsychologyOrganizationAOPS",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 106.0,
+      "median_view_rate": 0.0245,
+      "span": [
+        "2026-10-28",
+        "2026-11-05"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "psychscience1",
+          "url": "https://www.instagram.com/p/DfE9H0nNRzb/",
+          "views": 196,
+          "likes": 1,
+          "comments": 2,
+          "duration": 48.099998,
+          "index": 1.85,
+          "view_rate": 0.045,
+          "eng_per_view": 0.0153,
+          "hook": "لما تعرف إيه اللي بيحصل جواك وقت المواقف الصعبة",
+          "hook_type": [
+            "tension_or_contrast",
+            "story_or_first_person"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-29T12:00:33.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "psychscience1",
+          "url": "https://www.instagram.com/p/DfXVZOvDVP3/",
+          "views": 6,
+          "likes": 1,
+          "comments": 0,
+          "duration": 2402.08203125,
+          "index": 0.06,
+          "view_rate": 0.001,
+          "eng_per_view": 0.1667,
+          "hook": "من قلب الحدث💚",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-11-05T15:17:43.000Z"
+        },
+        {
+          "owner": "psychscience1",
+          "url": "https://www.instagram.com/p/DfHoampDZ_v/",
+          "views": 32,
+          "likes": 1,
+          "comments": 2,
+          "duration": 309.8699951171875,
+          "index": 0.3,
+          "view_rate": 0.007,
+          "eng_per_view": 0.0938,
+          "hook": "من قلب الحدث 💚 فعاليات اليوم الأول ✌️",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-30T12:56:00.000Z"
+        },
+        {
+          "owner": "psychscience1",
+          "url": "https://www.instagram.com/p/DfIMEFsEUB9/",
+          "views": 39,
+          "likes": 1,
+          "comments": 0,
+          "duration": 1347.9320068359375,
+          "index": 0.37,
+          "view_rate": 0.009,
+          "eng_per_view": 0.0256,
+          "hook": "من قلب الحدث 💚 فاعليات اليوم الأول ✌️",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-30T18:07:35.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "psychscience1",
+        "url": "https://www.instagram.com/p/DfE9H0nNRzb/",
+        "views": 196,
+        "likes": 1,
+        "comments": 2,
+        "duration": 48.099998,
+        "index": 1.85,
+        "view_rate": 0.045,
+        "eng_per_view": 0.0153,
+        "hook": "لما تعرف إيه اللي بيحصل جواك وقت المواقف الصعبة",
+        "hook_type": [
+          "tension_or_contrast",
+          "story_or_first_person"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-10-29T12:00:33.000Z"
+      }
+    },
+    {
+      "username": "ehtwaaclinic",
+      "url": "https://www.instagram.com/ehtwaaclinic/",
+      "followers": 21988,
+      "bio": "عيادة للصحة النفسية:\nالطب النفسي والعلاج الاسري\nرقم الترخيص:4690\n📞هاتف:94440989-72201479\n(موقع العيادة: بوشر)\nالاشراف القانوني:@sm.lawfirm",
+      "link": "https://maps.app.goo.gl/DAzpWVV5DuJuK4zM8?g_st=ic",
+      "reels_found": 17,
+      "reels_with_views": 17,
+      "median_views": 3435,
+      "median_view_rate": 0.1562,
+      "span": [
+        "2023-09-07",
+        "2026-03-18"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "ehtwaaclinic",
+          "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+          "views": 56875,
+          "likes": 455,
+          "comments": 49,
+          "duration": 136.800003,
+          "index": 16.56,
+          "view_rate": 2.587,
+          "eng_per_view": 0.0089,
+          "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+          "hook_type": [
+            "number_or_list"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2025-02-04T19:15:27.000Z"
+        },
+        {
+          "owner": "ehtwaaclinic",
+          "url": "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "views": 14529,
+          "likes": 119,
+          "comments": 3,
+          "duration": 111.709747,
+          "index": 4.23,
+          "view_rate": 0.661,
+          "eng_per_view": 0.0084,
+          "hook": "سمعتوا من قبل عن مصطلح أدمغة التيك توك ؟!",
+          "hook_type": [
+            "question"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2025-03-09T12:40:52.000Z"
+        },
+        {
+          "owner": "ehtwaaclinic",
+          "url": "https://www.instagram.com/p/C96mrIDKfFn/",
+          "views": 10350,
+          "likes": 45,
+          "comments": 4,
+          "duration": 51.066666,
+          "index": 3.01,
+          "view_rate": 0.471,
+          "eng_per_view": 0.0047,
+          "hook": "مسؤولياتنا",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2024-07-27T06:17:30.000Z"
+        },
+        {
+          "owner": "ehtwaaclinic",
+          "url": "https://www.instagram.com/p/DQeAqOzCNRG/",
+          "views": 8516,
+          "likes": 44,
+          "comments": 2,
+          "duration": 33.639999,
+          "index": 2.48,
+          "view_rate": 0.387,
+          "eng_per_view": 0.0054,
+          "hook": "وأخيييراً… المفاجأة اللي وعدناكم فيها! 😎",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2025-10-31T09:40:33.000Z"
+        },
+        {
+          "owner": "ehtwaaclinic",
+          "url": "https://www.instagram.com/p/CzWKc3yqGIG/",
+          "views": 7634,
+          "likes": 103,
+          "comments": 3,
+          "duration": 81.28119659423828,
+          "index": 2.22,
+          "view_rate": 0.347,
+          "eng_per_view": 0.0139,
+          "hook": "نتابع قضيتنا بوعي",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "follow"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2023-11-07T13:22:38.000Z"
+        }
+      ],
+      "losers": [],
+      "best_reel": {
+        "owner": "ehtwaaclinic",
+        "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+        "views": 56875,
+        "likes": 455,
+        "comments": 49,
+        "duration": 136.800003,
+        "index": 16.56,
+        "view_rate": 2.587,
+        "eng_per_view": 0.0089,
+        "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+        "hook_type": [
+          "number_or_list"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2025-02-04T19:15:27.000Z"
+      }
+    },
+    {
+      "username": "ms.rmo",
+      "url": "https://www.instagram.com/ms.rmo/",
+      "followers": 240931,
+      "bio": "💡 أخصائية تعديل سلوك الأطفال والمراهقين\n🏛️ مؤسسة وصاحبة برنامج ركيزة®\n👨‍👩‍👧‍👦 أكثر من 500 أسرة وثقت بنا\n🎯 احجزي استشارتك وابدئي التغيير",
+      "link": "https://snapchat.com/t/Zf9E0Qbq",
+      "reels_found": 20,
+      "reels_with_views": 20,
+      "median_views": 5540.0,
+      "median_view_rate": 0.023,
+      "span": [
+        "2026-09-14",
+        "2026-11-05"
+      ],
+      "scored": true,
+      "winners": [
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "views": 475673,
+          "likes": 3744,
+          "comments": 257,
+          "duration": 166.166672,
+          "index": 85.86,
+          "view_rate": 1.974,
+          "eng_per_view": 0.0084,
+          "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+          "hook_type": [
+            "tension_or_contrast",
+            "loss_or_mistake"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-27T03:01:26.000Z"
+        },
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "views": 41195,
+          "likes": 56,
+          "comments": 27,
+          "duration": 31.368708,
+          "index": 7.44,
+          "view_rate": 0.171,
+          "eng_per_view": 0.002,
+          "hook": "رجاء محمد | أخصائية تعديل سلوك ",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-12T05:48:11.000Z"
+        },
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "views": 39783,
+          "likes": 280,
+          "comments": 32,
+          "duration": 83.266754,
+          "index": 7.18,
+          "view_rate": 0.165,
+          "eng_per_view": 0.0078,
+          "hook": "نصائح لتسهيل وقت المذاكرة:",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-04T05:34:48.000Z"
+        },
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/DduiBulsFfZ/",
+          "views": 21559,
+          "likes": 115,
+          "comments": 9,
+          "duration": 28.133333,
+          "index": 3.89,
+          "view_rate": 0.089,
+          "eng_per_view": 0.0058,
+          "hook": "المغامرة جزء من طفولة صحية، ودورنا مو إننا نمنع كل مخاطرة، بل نعلّم أطفالنا كيف يستكشفون و",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-09-25T22:28:47.000Z"
+        },
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/DelJhpNIbpk/",
+          "views": 15755,
+          "likes": 56,
+          "comments": 6,
+          "duration": 89.699997,
+          "index": 2.84,
+          "view_rate": 0.065,
+          "eng_per_view": 0.0039,
+          "hook": "التقنية أداة مساعدة وليست مُربياً بديلًا.. لا تترك حوارك مع طفلك للشاشات",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "none"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "win",
+          "timestamp": "2026-10-17T03:32:25.000Z"
+        }
+      ],
+      "losers": [
+        {
+          "owner": "ms.rmo",
+          "url": "https://www.instagram.com/p/De-9q1sMyRc/",
+          "views": 2357,
+          "likes": 14,
+          "comments": 0,
+          "duration": 37.614876,
+          "index": 0.43,
+          "view_rate": 0.01,
+          "eng_per_view": 0.0059,
+          "hook": "📌 رسالة لكل أب:",
+          "hook_type": [
+            "plain_statement"
+          ],
+          "cta": [
+            "dm"
+          ],
+          "format": null,
+          "topic": null,
+          "verdict": "lose",
+          "timestamp": "2026-10-27T04:09:35.000Z"
+        }
+      ],
+      "best_reel": {
+        "owner": "ms.rmo",
+        "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+        "views": 475673,
+        "likes": 3744,
+        "comments": 257,
+        "duration": 166.166672,
+        "index": 85.86,
+        "view_rate": 1.974,
+        "eng_per_view": 0.0084,
+        "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+        "hook_type": [
+          "tension_or_contrast",
+          "loss_or_mistake"
+        ],
+        "cta": [
+          "none"
+        ],
+        "format": null,
+        "topic": null,
+        "verdict": "win",
+        "timestamp": "2026-09-27T03:01:26.000Z"
+      }
+    }
+  ],
+  "patterns": {
+    "hook_type": [
+      {
+        "value": "number_or_list",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 1,
+        "win_rate": 1.0,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/DFqXscCIp-I/"
+        ]
+      },
+      {
+        "value": "loss_or_mistake",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 1,
+        "win_rate": 1.0,
+        "lift": null,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/"
+        ]
+      },
+      {
+        "value": "tension_or_contrast",
+        "in_winners": 6,
+        "of_winners": 21,
+        "in_all": 18,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DeKA4SRjar8/",
+          "https://www.instagram.com/p/DfE9H0nNRzb/"
+        ]
+      },
+      {
+        "value": "plain_statement",
+        "in_winners": 11,
+        "of_winners": 21,
+        "in_all": 39,
+        "win_rate": 0.28,
+        "lift": 1.05,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DduiBulsFfZ/",
+          "https://www.instagram.com/p/C96mrIDKfFn/"
+        ]
+      },
+      {
+        "value": "story_or_first_person",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 4,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "psychscience1",
+        "examples": [
+          "https://www.instagram.com/p/DfE9H0nNRzb/"
+        ]
+      },
+      {
+        "value": "question",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 19,
+        "win_rate": 0.16,
+        "lift": 0.5,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "https://www.instagram.com/p/DaK_z89lE7G/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/"
+        ]
+      }
+    ],
+    "format": [],
+    "topic": [],
+    "cta": [
+      {
+        "value": "save_share",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 8,
+        "win_rate": 0.38,
+        "lift": 1.6,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DaK_z89lE7G/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/"
+        ]
+      },
+      {
+        "value": "dm",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 3,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DdRxjjWs5Zm/"
+        ]
+      },
+      {
+        "value": "follow",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 4,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/CzWKc3yqGIG/"
+        ]
+      },
+      {
+        "value": "none",
+        "in_winners": 16,
+        "of_winners": 21,
+        "in_all": 65,
+        "win_rate": 0.25,
+        "lift": 0.87,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DeYhG1ssjBy/"
+        ]
+      }
+    ],
+    "duration": [
+      {
+        "value": "30-45s",
+        "in_winners": 4,
+        "of_winners": 21,
+        "in_all": 10,
+        "win_rate": 0.4,
+        "lift": 1.78,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DaK_z89lE7G/",
+          "https://www.instagram.com/p/DQeAqOzCNRG/",
+          "https://www.instagram.com/p/DQcJZWtCEqp/"
+        ]
+      },
+      {
+        "value": "60-90s",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 14,
+        "win_rate": 0.36,
+        "lift": 1.48,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DelJhpNIbpk/",
+          "https://www.instagram.com/p/CzWKc3yqGIG/",
+          "https://www.instagram.com/p/DeZr5-fFH6-/"
+        ]
+      },
+      {
+        "value": "<15s",
+        "in_winners": 0,
+        "of_winners": 21,
+        "in_all": 1,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "45-60s",
+        "in_winners": 4,
+        "of_winners": 21,
+        "in_all": 16,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/C96mrIDKfFn/",
+          "https://www.instagram.com/p/DdRxjjWs5Zm/",
+          "https://www.instagram.com/p/DfE9H0nNRzb/"
+        ]
+      },
+      {
+        "value": "90s+",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 21,
+        "win_rate": 0.24,
+        "lift": 0.83,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/"
+        ]
+      },
+      {
+        "value": "15-30s",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 15,
+        "win_rate": 0.2,
+        "lift": 0.67,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DduiBulsFfZ/",
+          "https://www.instagram.com/p/DeKA4SRjar8/",
+          "https://www.instagram.com/p/DfWHR4ks7aJ/"
+        ]
+      }
+    ],
+    "caption_length": [
+      {
+        "value": "<100",
+        "in_winners": 2,
+        "of_winners": 21,
+        "in_all": 2,
+        "win_rate": 1.0,
+        "lift": null,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/DdRxjjWs5Zm/"
+        ]
+      },
+      {
+        "value": "300-600",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 15,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/DduiBulsFfZ/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/",
+          "https://www.instagram.com/p/DfWHR4ks7aJ/"
+        ]
+      },
+      {
+        "value": "600+",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 15,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "https://www.instagram.com/p/C96mrIDKfFn/",
+          "https://www.instagram.com/p/DQeAqOzCNRG/",
+          "https://www.instagram.com/p/CzWKc3yqGIG/",
+          "https://www.instagram.com/p/DQcJZWtCEqp/"
+        ]
+      },
+      {
+        "value": "100-300",
+        "in_winners": 9,
+        "of_winners": 21,
+        "in_all": 45,
+        "win_rate": 0.2,
+        "lift": 0.67,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DaK_z89lE7G/"
+        ]
+      }
+    ],
+    "hashtags": [
+      {
+        "value": "1-3",
+        "in_winners": 0,
+        "of_winners": 21,
+        "in_all": 1,
+        "win_rate": 0.0,
+        "lift": 0.0,
+        "accounts_with_win": 0,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": []
+      },
+      {
+        "value": "none",
+        "in_winners": 8,
+        "of_winners": 21,
+        "in_all": 21,
+        "win_rate": 0.38,
+        "lift": 1.64,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DaK_z89lE7G/"
+        ]
+      },
+      {
+        "value": "8+",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 15,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "https://www.instagram.com/p/C96mrIDKfFn/",
+          "https://www.instagram.com/p/DQeAqOzCNRG/",
+          "https://www.instagram.com/p/CzWKc3yqGIG/",
+          "https://www.instagram.com/p/DQcJZWtCEqp/"
+        ]
+      },
+      {
+        "value": "4-7",
+        "in_winners": 8,
+        "of_winners": 21,
+        "in_all": 40,
+        "win_rate": 0.2,
+        "lift": 0.67,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/DduiBulsFfZ/",
+          "https://www.instagram.com/p/DelJhpNIbpk/"
+        ]
+      }
+    ],
+    "audio": [
+      {
+        "value": "original",
+        "in_winners": 20,
+        "of_winners": 21,
+        "in_all": 64,
+        "win_rate": 0.31,
+        "lift": 1.21,
+        "accounts_with_win": 4,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DeYhG1ssjBy/"
+        ]
+      },
+      {
+        "value": "trending/other",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 13,
+        "win_rate": 0.08,
+        "lift": 0.22,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DfWHR4ks7aJ/"
+        ]
+      }
+    ],
+    "weekday": [
+      {
+        "value": "Tue",
+        "in_winners": 4,
+        "of_winners": 21,
+        "in_all": 7,
+        "win_rate": 0.57,
+        "lift": 3.56,
+        "accounts_with_win": 2,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/",
+          "https://www.instagram.com/p/DeKA4SRjar8/",
+          "https://www.instagram.com/p/CzWKc3yqGIG/"
+        ]
+      },
+      {
+        "value": "Sun",
+        "in_winners": 5,
+        "of_winners": 21,
+        "in_all": 9,
+        "win_rate": 0.56,
+        "lift": 3.33,
+        "accounts_with_win": 3,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DG-pbPuIi9b/"
+        ]
+      },
+      {
+        "value": "Mon",
+        "in_winners": 4,
+        "of_winners": 21,
+        "in_all": 8,
+        "win_rate": 0.5,
+        "lift": 2.67,
+        "accounts_with_win": 2,
+        "repeated": true,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DaK_z89lE7G/",
+          "https://www.instagram.com/p/DdRxjjWs5Zm/",
+          "https://www.instagram.com/p/DeZr5-fFH6-/"
+        ]
+      },
+      {
+        "value": "Sat",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 12,
+        "win_rate": 0.25,
+        "lift": 0.89,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DduiBulsFfZ/",
+          "https://www.instagram.com/p/C96mrIDKfFn/",
+          "https://www.instagram.com/p/DelJhpNIbpk/"
+        ]
+      },
+      {
+        "value": "Thu",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 17,
+        "win_rate": 0.18,
+        "lift": 0.57,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DQcJZWtCEqp/",
+          "https://www.instagram.com/p/DfE9H0nNRzb/",
+          "https://www.instagram.com/p/DfWHR4ks7aJ/"
+        ]
+      },
+      {
+        "value": "Wed",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 10,
+        "win_rate": 0.1,
+        "lift": 0.3,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/Daio-YoDBPI/"
+        ]
+      },
+      {
+        "value": "Fri",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 14,
+        "win_rate": 0.07,
+        "lift": 0.21,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/DQeAqOzCNRG/"
+        ]
+      }
+    ],
+    "hour_block": [
+      {
+        "value": "12-15h",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 9,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ehtwaaclinic",
+        "examples": [
+          "https://www.instagram.com/p/DG-pbPuIi9b/",
+          "https://www.instagram.com/p/CzWKc3yqGIG/",
+          "https://www.instagram.com/p/DfE9H0nNRzb/"
+        ]
+      },
+      {
+        "value": "00-03h",
+        "in_winners": 1,
+        "of_winners": 21,
+        "in_all": 3,
+        "win_rate": 0.33,
+        "lift": 1.33,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DduiBulsFfZ/"
+        ]
+      },
+      {
+        "value": "04-07h",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 10,
+        "win_rate": 0.3,
+        "lift": 1.14,
+        "accounts_with_win": 1,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "ms.rmo",
+        "examples": [
+          "https://www.instagram.com/p/DdxmFz0o6Wi/",
+          "https://www.instagram.com/p/DelJhpNIbpk/",
+          "https://www.instagram.com/p/DfWHR4ks7aJ/"
+        ]
+      },
+      {
+        "value": "08-11h",
+        "in_winners": 4,
+        "of_winners": 21,
+        "in_all": 14,
+        "win_rate": 0.29,
+        "lift": 1.07,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DeYhG1ssjBy/",
+          "https://www.instagram.com/p/DeD5BnzsaFi/",
+          "https://www.instagram.com/p/C96mrIDKfFn/",
+          "https://www.instagram.com/p/DQeAqOzCNRG/"
+        ]
+      },
+      {
+        "value": "16-19h",
+        "in_winners": 7,
+        "of_winners": 21,
+        "in_all": 25,
+        "win_rate": 0.28,
+        "lift": 1.04,
+        "accounts_with_win": 2,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": "drmohamed_abdelsalam",
+        "examples": [
+          "https://www.instagram.com/p/Db0uWIREWiY/",
+          "https://www.instagram.com/p/DaIiVKfl6hj/",
+          "https://www.instagram.com/p/DaK_z89lE7G/",
+          "https://www.instagram.com/p/DeuRJIrkzUn/",
+          "https://www.instagram.com/p/DeKA4SRjar8/"
+        ]
+      },
+      {
+        "value": "20-23h",
+        "in_winners": 3,
+        "of_winners": 21,
+        "in_all": 16,
+        "win_rate": 0.19,
+        "lift": 0.62,
+        "accounts_with_win": 3,
+        "repeated": false,
+        "counts_only": false,
+        "dominated_by": null,
+        "examples": [
+          "https://www.instagram.com/p/DFqXscCIp-I/",
+          "https://www.instagram.com/p/Daio-YoDBPI/",
+          "https://www.instagram.com/p/DdRxjjWs5Zm/"
+        ]
+      }
+    ]
+  },
+  "top_by_index": [
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+      "views": 475673,
+      "likes": 3744,
+      "comments": 257,
+      "duration": 166.166672,
+      "index": 85.86,
+      "view_rate": 1.974,
+      "eng_per_view": 0.0084,
+      "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+      "hook_type": [
+        "tension_or_contrast",
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-27T03:01:26.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+      "views": 56875,
+      "likes": 455,
+      "comments": 49,
+      "duration": 136.800003,
+      "index": 16.56,
+      "view_rate": 2.587,
+      "eng_per_view": 0.0089,
+      "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-02-04T19:15:27.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+      "views": 36020,
+      "likes": 202,
+      "comments": 4,
+      "duration": 47.807999,
+      "index": 15.15,
+      "view_rate": 3.006,
+      "eng_per_view": 0.0057,
+      "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-07-08T18:03:40.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Db0uWIREWiY/",
+      "views": 22271,
+      "likes": 314,
+      "comments": 18,
+      "duration": 123.839996,
+      "index": 9.37,
+      "view_rate": 1.859,
+      "eng_per_view": 0.0149,
+      "hook": "أم الـADHD مش بتواجه تحدي واحد بس💭",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-09T15:08:43.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeYhG1ssjBy/",
+      "views": 41195,
+      "likes": 56,
+      "comments": 27,
+      "duration": 31.368708,
+      "index": 7.44,
+      "view_rate": 0.171,
+      "eng_per_view": 0.002,
+      "hook": "رجاء محمد | أخصائية تعديل سلوك ",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-12T05:48:11.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeD5BnzsaFi/",
+      "views": 39783,
+      "likes": 280,
+      "comments": 32,
+      "duration": 83.266754,
+      "index": 7.18,
+      "view_rate": 0.165,
+      "eng_per_view": 0.0078,
+      "hook": "نصائح لتسهيل وقت المذاكرة:",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-04T05:34:48.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DaIiVKfl6hj/",
+      "views": 10388,
+      "likes": 142,
+      "comments": 4,
+      "duration": 63.667664,
+      "index": 4.37,
+      "view_rate": 0.867,
+      "eng_per_view": 0.0141,
+      "hook": "كل صباح مع طفل ADHD بيبدأ بخناقة 🌤️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-06-28T14:45:28.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DG-pbPuIi9b/",
+      "views": 14529,
+      "likes": 119,
+      "comments": 3,
+      "duration": 111.709747,
+      "index": 4.23,
+      "view_rate": 0.661,
+      "eng_per_view": 0.0084,
+      "hook": "سمعتوا من قبل عن مصطلح أدمغة التيك توك ؟!",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-03-09T12:40:52.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DaK_z89lE7G/",
+      "views": 9605,
+      "likes": 143,
+      "comments": 0,
+      "duration": 42.769707,
+      "index": 4.04,
+      "view_rate": 0.802,
+      "eng_per_view": 0.0149,
+      "hook": "كل ليلة النوم مع طفل ADHD بتبقى معركة؟ 🌙",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-06-29T13:41:26.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DduiBulsFfZ/",
+      "views": 21559,
+      "likes": 115,
+      "comments": 9,
+      "duration": 28.133333,
+      "index": 3.89,
+      "view_rate": 0.089,
+      "eng_per_view": 0.0058,
+      "hook": "المغامرة جزء من طفولة صحية، ودورنا مو إننا نمنع كل مخاطرة، بل نعلّم أطفالنا كيف يستكشفون و",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-25T22:28:47.000Z"
+    }
+  ],
+  "top_by_view_rate": [
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+      "views": 36020,
+      "likes": 202,
+      "comments": 4,
+      "duration": 47.807999,
+      "index": 15.15,
+      "view_rate": 3.006,
+      "eng_per_view": 0.0057,
+      "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-07-08T18:03:40.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+      "views": 56875,
+      "likes": 455,
+      "comments": 49,
+      "duration": 136.800003,
+      "index": 16.56,
+      "view_rate": 2.587,
+      "eng_per_view": 0.0089,
+      "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-02-04T19:15:27.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+      "views": 475673,
+      "likes": 3744,
+      "comments": 257,
+      "duration": 166.166672,
+      "index": 85.86,
+      "view_rate": 1.974,
+      "eng_per_view": 0.0084,
+      "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+      "hook_type": [
+        "tension_or_contrast",
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-27T03:01:26.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Db0uWIREWiY/",
+      "views": 22271,
+      "likes": 314,
+      "comments": 18,
+      "duration": 123.839996,
+      "index": 9.37,
+      "view_rate": 1.859,
+      "eng_per_view": 0.0149,
+      "hook": "أم الـADHD مش بتواجه تحدي واحد بس💭",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-09T15:08:43.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DaIiVKfl6hj/",
+      "views": 10388,
+      "likes": 142,
+      "comments": 4,
+      "duration": 63.667664,
+      "index": 4.37,
+      "view_rate": 0.867,
+      "eng_per_view": 0.0141,
+      "hook": "كل صباح مع طفل ADHD بيبدأ بخناقة 🌤️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-06-28T14:45:28.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DaK_z89lE7G/",
+      "views": 9605,
+      "likes": 143,
+      "comments": 0,
+      "duration": 42.769707,
+      "index": 4.04,
+      "view_rate": 0.802,
+      "eng_per_view": 0.0149,
+      "hook": "كل ليلة النوم مع طفل ADHD بتبقى معركة؟ 🌙",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-06-29T13:41:26.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DeuRJIrkzUn/",
+      "views": 8924,
+      "likes": 143,
+      "comments": 5,
+      "duration": 104.745216,
+      "index": 3.75,
+      "view_rate": 0.745,
+      "eng_per_view": 0.0166,
+      "hook": "طفلك بيتشتت حتى لو مفيش أي حاجة حواليه تلفت انتباهه؟ 🤔",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-20T16:32:27.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DG-pbPuIi9b/",
+      "views": 14529,
+      "likes": 119,
+      "comments": 3,
+      "duration": 111.709747,
+      "index": 4.23,
+      "view_rate": 0.661,
+      "eng_per_view": 0.0084,
+      "hook": "سمعتوا من قبل عن مصطلح أدمغة التيك توك ؟!",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-03-09T12:40:52.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/C96mrIDKfFn/",
+      "views": 10350,
+      "likes": 45,
+      "comments": 4,
+      "duration": 51.066666,
+      "index": 3.01,
+      "view_rate": 0.471,
+      "eng_per_view": 0.0047,
+      "hook": "مسؤولياتنا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2024-07-27T06:17:30.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DeKA4SRjar8/",
+      "views": 5301,
+      "likes": 60,
+      "comments": 4,
+      "duration": 24.241632,
+      "index": 2.23,
+      "view_rate": 0.442,
+      "eng_per_view": 0.0121,
+      "hook": "مش كل تصرف من طفلك معناه إنه عناد أو عدم اهتمام أحيانًا محتاجين نفهم اللي وراه. 👀",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-06T14:37:02.000Z"
+    }
+  ],
+  "top_by_views": [
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+      "views": 475673,
+      "likes": 3744,
+      "comments": 257,
+      "duration": 166.166672,
+      "index": 85.86,
+      "view_rate": 1.974,
+      "eng_per_view": 0.0084,
+      "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+      "hook_type": [
+        "tension_or_contrast",
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-27T03:01:26.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+      "views": 56875,
+      "likes": 455,
+      "comments": 49,
+      "duration": 136.800003,
+      "index": 16.56,
+      "view_rate": 2.587,
+      "eng_per_view": 0.0089,
+      "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-02-04T19:15:27.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeYhG1ssjBy/",
+      "views": 41195,
+      "likes": 56,
+      "comments": 27,
+      "duration": 31.368708,
+      "index": 7.44,
+      "view_rate": 0.171,
+      "eng_per_view": 0.002,
+      "hook": "رجاء محمد | أخصائية تعديل سلوك ",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-12T05:48:11.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeD5BnzsaFi/",
+      "views": 39783,
+      "likes": 280,
+      "comments": 32,
+      "duration": 83.266754,
+      "index": 7.18,
+      "view_rate": 0.165,
+      "eng_per_view": 0.0078,
+      "hook": "نصائح لتسهيل وقت المذاكرة:",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-04T05:34:48.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+      "views": 36020,
+      "likes": 202,
+      "comments": 4,
+      "duration": 47.807999,
+      "index": 15.15,
+      "view_rate": 3.006,
+      "eng_per_view": 0.0057,
+      "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-07-08T18:03:40.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Db0uWIREWiY/",
+      "views": 22271,
+      "likes": 314,
+      "comments": 18,
+      "duration": 123.839996,
+      "index": 9.37,
+      "view_rate": 1.859,
+      "eng_per_view": 0.0149,
+      "hook": "أم الـADHD مش بتواجه تحدي واحد بس💭",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-09T15:08:43.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DduiBulsFfZ/",
+      "views": 21559,
+      "likes": 115,
+      "comments": 9,
+      "duration": 28.133333,
+      "index": 3.89,
+      "view_rate": 0.089,
+      "eng_per_view": 0.0058,
+      "hook": "المغامرة جزء من طفولة صحية، ودورنا مو إننا نمنع كل مخاطرة، بل نعلّم أطفالنا كيف يستكشفون و",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-25T22:28:47.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DelJhpNIbpk/",
+      "views": 15755,
+      "likes": 56,
+      "comments": 6,
+      "duration": 89.699997,
+      "index": 2.84,
+      "view_rate": 0.065,
+      "eng_per_view": 0.0039,
+      "hook": "التقنية أداة مساعدة وليست مُربياً بديلًا.. لا تترك حوارك مع طفلك للشاشات",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-17T03:32:25.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DG-pbPuIi9b/",
+      "views": 14529,
+      "likes": 119,
+      "comments": 3,
+      "duration": 111.709747,
+      "index": 4.23,
+      "view_rate": 0.661,
+      "eng_per_view": 0.0084,
+      "hook": "سمعتوا من قبل عن مصطلح أدمغة التيك توك ؟!",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-03-09T12:40:52.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DdRxjjWs5Zm/",
+      "views": 13028,
+      "likes": 133,
+      "comments": 6,
+      "duration": 57.533333,
+      "index": 2.35,
+      "view_rate": 0.054,
+      "eng_per_view": 0.0107,
+      "hook": "رجاء محمد | اخصائية تعديل سلوك ",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "dm"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-14T18:28:38.000Z"
+    }
+  ],
+  "labeling_queue": [
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Daio-YoDBPI/",
+      "views": 36020,
+      "likes": 202,
+      "comments": 4,
+      "duration": 47.807999,
+      "index": 15.15,
+      "view_rate": 3.006,
+      "eng_per_view": 0.0057,
+      "hook": "لو حاسة إنك تايهة في التعامل مع طفلك الـ ADHD فأنتي مش لوحدك.🫶",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-07-08T18:03:40.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/Db0uWIREWiY/",
+      "views": 22271,
+      "likes": 314,
+      "comments": 18,
+      "duration": 123.839996,
+      "index": 9.37,
+      "view_rate": 1.859,
+      "eng_per_view": 0.0149,
+      "hook": "أم الـADHD مش بتواجه تحدي واحد بس💭",
+      "hook_type": [
+        "tension_or_contrast"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-08-09T15:08:43.000Z"
+    },
+    {
+      "owner": "drmohamed_abdelsalam",
+      "url": "https://www.instagram.com/p/DaIiVKfl6hj/",
+      "views": 10388,
+      "likes": 142,
+      "comments": 4,
+      "duration": 63.667664,
+      "index": 4.37,
+      "view_rate": 0.867,
+      "eng_per_view": 0.0141,
+      "hook": "كل صباح مع طفل ADHD بيبدأ بخناقة 🌤️",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "save_share"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-06-28T14:45:28.000Z"
+    },
+    {
+      "owner": "psychscience1",
+      "url": "https://www.instagram.com/p/DfE9H0nNRzb/",
+      "views": 196,
+      "likes": 1,
+      "comments": 2,
+      "duration": 48.099998,
+      "index": 1.85,
+      "view_rate": 0.045,
+      "eng_per_view": 0.0153,
+      "hook": "لما تعرف إيه اللي بيحصل جواك وقت المواقف الصعبة",
+      "hook_type": [
+        "tension_or_contrast",
+        "story_or_first_person"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-29T12:00:33.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DFqXscCIp-I/",
+      "views": 56875,
+      "likes": 455,
+      "comments": 49,
+      "duration": 136.800003,
+      "index": 16.56,
+      "view_rate": 2.587,
+      "eng_per_view": 0.0089,
+      "hook": "399 جريمة تحرش وهتك عرض طفل في عام 2024!",
+      "hook_type": [
+        "number_or_list"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-02-04T19:15:27.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/DG-pbPuIi9b/",
+      "views": 14529,
+      "likes": 119,
+      "comments": 3,
+      "duration": 111.709747,
+      "index": 4.23,
+      "view_rate": 0.661,
+      "eng_per_view": 0.0084,
+      "hook": "سمعتوا من قبل عن مصطلح أدمغة التيك توك ؟!",
+      "hook_type": [
+        "question"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2025-03-09T12:40:52.000Z"
+    },
+    {
+      "owner": "ehtwaaclinic",
+      "url": "https://www.instagram.com/p/C96mrIDKfFn/",
+      "views": 10350,
+      "likes": 45,
+      "comments": 4,
+      "duration": 51.066666,
+      "index": 3.01,
+      "view_rate": 0.471,
+      "eng_per_view": 0.0047,
+      "hook": "مسؤولياتنا",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2024-07-27T06:17:30.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DdxmFz0o6Wi/",
+      "views": 475673,
+      "likes": 3744,
+      "comments": 257,
+      "duration": 166.166672,
+      "index": 85.86,
+      "view_rate": 1.974,
+      "eng_per_view": 0.0084,
+      "hook": "الخوف قد يوقف السلوك للحظة… لكن الأمان والحوار هما ما يساعدان الطفل على فهم الخطأ وتعلّم ا",
+      "hook_type": [
+        "tension_or_contrast",
+        "loss_or_mistake"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-09-27T03:01:26.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeYhG1ssjBy/",
+      "views": 41195,
+      "likes": 56,
+      "comments": 27,
+      "duration": 31.368708,
+      "index": 7.44,
+      "view_rate": 0.171,
+      "eng_per_view": 0.002,
+      "hook": "رجاء محمد | أخصائية تعديل سلوك ",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-12T05:48:11.000Z"
+    },
+    {
+      "owner": "ms.rmo",
+      "url": "https://www.instagram.com/p/DeD5BnzsaFi/",
+      "views": 39783,
+      "likes": 280,
+      "comments": 32,
+      "duration": 83.266754,
+      "index": 7.18,
+      "view_rate": 0.165,
+      "eng_per_view": 0.0078,
+      "hook": "نصائح لتسهيل وقت المذاكرة:",
+      "hook_type": [
+        "plain_statement"
+      ],
+      "cta": [
+        "none"
+      ],
+      "format": null,
+      "topic": null,
+      "verdict": "win",
+      "timestamp": "2026-10-04T05:34:48.000Z"
+    }
+  ]
+}
