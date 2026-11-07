@@ -6,7 +6,7 @@ description: >
 
 # Doctor Content System
 
-**This skill is being rebuilt step by step with the user. Only the steps marked BUILT exist. Do not improvise the steps marked PLANNED: tell the user they are not built yet.**
+**This skill is being rebuilt step by step with the user. Only the steps marked BUILT exist. Do not improvise the steps marked PLANNED: tell the user they are not built yet. Work style (user rule): Claude proposes each change, the user approves or edits, and every approved change and every lesson is saved in this file the same turn (not only in roadmap.md).**
 
 ## Agreed decisions (2026-11-05)
 
@@ -18,7 +18,7 @@ description: >
 - Ask the user's approval before every new step, and before any paid step.
 - Track 1 saves a baseline snapshot so a before/after case study can be made at 30 and 60 days.
 - **Every change agreed in the conversation is written into this skill immediately** (user rule, 2026-11-05). Keep `references/roadmap.md` (the mind map) in sync.
-- The audit covers **Instagram + Facebook** when the doctor has an active Facebook page (decided 2026-11-05; the full Facebook section design awaits the user's OK).
+- The audit covers **Instagram + Facebook** when the doctor has an active Facebook page (decided and approved 2026-11-05).
 - **Best posting time is a fixed part of every audit (2026-11-05), Instagram + Facebook.** Primary source: the doctor's Insights screenshot of follower active times (ask for it in the pre-audit questions, save it in the doctor's folder as `insights_*.png`). Fallback: `timing` in analysis.json / analysis_facebook.json (past post performance, often a small sample). In the client report it is ALWAYS framed as an experiment to test for a month (`posting_time` in audit_content.json), never as a fact. It is NOT added to the internal report (user decision).
 - **Hidden client study of doctors (user rule 2026-11-05).** Every doctor is also research for the user's own account (Track 3). After EVERY input from a doctor (form answers, voice notes, call notes, screenshots, his account state), update `references/doctors_voice.md`: pains, failed attempts, beliefs, desires, objections, each with his own words, the doctor and the source, and bump the count when a point repeats; then add or refine reel ideas for the user's account in section 6. When the user asks in any session about doctors' problems or content ideas for his own account, start from this file. Never put a doctor's name or numbers in the user's public content without consent.
 - Video review scores are **out of 10**, each with a note AND a fix; the user's criteria are in `forms/video_review.md` (hook verbal + visual, pauses/pace, body language, mic + denoise, external light, music, caption placement/style, on-screen title, CTA by question or guide file).
@@ -28,7 +28,7 @@ description: >
 1. Tailored pre-call questions sent to the doctor (Step 1) and his account pulled (Step 2).
 2. The user reviews the videos (`video_review.md`), Claude proposes scores /10 from his notes, the user approves.
 3. The audit report is built WITHOUT the call (Step 4); `opening_quote` stays empty.
-4. **The call happens after the audit.** Before it, Claude writes `<dir>/call_questions.md` for the user (40-45 min, about 33 questions in 7 blocks; block 3 follows the 5 sections of `forms/patient_avatar.md` and block 4 asks the doctor to rate 8-10 candidate topics 1-5 for `forms/niche_topics.md`: reaction to the audit + his first sentence about his problem; specialty and services incl. topics he refuses and employer limits; THE TYPICAL PATIENT (age, life, what she tried, wants, fears, top 5 questions, objections, who decides, how she finds and books him, platforms she uses) adapted from the user's «أنت زمان» form; his personality and script preference; filming logistics, equipment and patient consent; goal and baseline numbers for the case study; done-by-you vs done-for-you). Tailor every block to this doctor and to the audit findings; the generic first version is in the dr. Mostafa example under outputs. The answers feed Track 2.
+4. **The call happens after the audit, PODCAST-STYLE (user rule 2026-11-07).** Use `forms/call_questions.md`: 33 questions, each one a self-contained topic that can be cut into a reel (both sides filmed, the doctor restates the question in his answer, one topic per answer). Each question also carries 2-3 talking points for the USER, so his own explanations come out as separate clip-able topics too. Before the call, Claude writes `<dir>/call_questions.md` for the user (40-45 min, about 33 questions in 7 blocks; block 3 follows the 5 sections of `forms/patient_avatar.md` and block 4 asks the doctor to rate 8-10 candidate topics 1-5 for `forms/niche_topics.md`: reaction to the audit + his first sentence about his problem; specialty and services incl. topics he refuses and employer limits; THE TYPICAL PATIENT (age, life, what she tried, wants, fears, top 5 questions, objections, who decides, how she finds and books him, platforms she uses) adapted from the user's «أنت زمان» form; his personality and script preference; filming logistics, equipment and patient consent; goal and baseline numbers for the case study; done-by-you vs done-for-you). Tailor every block to this doctor and to the audit findings; the generic first version is in the dr. Mostafa example under outputs. The answers feed Track 2.
 5. The comprehensive analysis after the call IS Track 2 (the full strategy).
 
 ## Free route (tested 2026-11-05)
@@ -49,7 +49,15 @@ With `*.fbcdn.net` and `*.cdninstagram.com` allowed, video and covers download f
 | 1. Free audit | 2. Pull the account + baseline snapshot + look at 2 best / 1 weakest reel | **BUILT** (see below) |
 | 1. Free audit | 3. Quick scan of 3-5 successful doctors in the same specialty | **BUILT** (see below) |
 | 1. Free audit | 4. Report: client PDF infographic + client MD + internal MD | **BUILT** (see below) |
-| 2. Full strategy | patient avatar (adapted from the user's "أنت زمان" form), niche topics, patient-voice research, competitors with scripts, 60-90 ideas, funnel table, scripts | PLANNED |
+| 1. Free audit | 5. After the call: transcript, clip table, reels | **BUILT** (see below) |
+| 2. Full strategy | 1. Patient avatar | **BUILT**: `forms/patient_avatar.md` |
+| 2. Full strategy | 2. Niche topics | **BUILT**: `forms/niche_topics.md` |
+| 2. Full strategy | 3. Patient voice (Google + competitor videos the user sends + call) | **BUILT** (see below) |
+| 2. Full strategy | 4. Competitors: last 30 reels, patterns (NO transcripts here) | **BUILT** (see below) |
+| 2. Full strategy | 5. Ideas bank 60-90 + filters, merged with the user's own research | **BUILT** (see below) |
+| 2. Full strategy | 6. Funnel table | method BUILT: `forms/funnel_table.md`; waits for the user's research |
+| 2. Full strategy | 7. Scripts (transcribe competitors' best 4 reels HERE, after ideas are agreed) + 20 hooks + structures + CTA | PLANNED |
+| 2. Full strategy | 8. Delivery: done-by-you / done-for-you | PLANNED |
 | 3. Own account | Track 2 with doctors as the audience | PLANNED |
 
 ## Track 1, Step 1: intake (BUILT)
@@ -92,6 +100,7 @@ About 0.3 USD. No transcripts or videos in this track (kept cheap).
    write 4-5 queries like `site:instagram.com دكتور <التخصص>` / `site:instagram.com استشاري <التخصص>` into `<dir>/scan/queries.txt`, then
    `python3 -I scripts/research_fetch.py google --queries-file <dir>/scan/queries.txt --country eg --out <dir>/scan/google.json`
    and pull handles from result URLs and "(@handle)" in titles.
+   **Plus the user's own quick search (user rule 2026-11-07):** ask him for any doctors he found and add them to the candidates before verifying.
 2. Verify: `python3 -I scripts/fetch_instagram.py profiles <handles...> --out <dir>/scan/candidates.json`. Keep same specialty, patient-facing, public, active. Pick 5 with a size mix (2 large to learn from, 3 nearer the doctor).
 3. `python3 -I scripts/fetch_instagram.py reels <5 handles> --limit 20 --out <dir>/scan/peer_reels.json`
 4. `python3 -I scripts/analyze_competitors.py --reels <dir>/scan/peer_reels.json --out <dir>/scan/peers_analysis.json`
@@ -107,6 +116,34 @@ Agreed: client version = PDF infographic + MD, calm medical style, branded @yoss
    -> audit_client.html / audit_client.pdf / audit_client.md / audit_internal.md (Chromium via `scripts/render_pdf.js`).
 3. Check every page before sending: `node scripts/render_pdf.js <dir>/audit_client.html /tmp/x.pdf --png <scratch>/p` and look at each PNG (overflow, reversed numbers, empty sections, consistency of numbers).
 4. Send the PDF and MD to the user; the user sends to the doctor. Doctors' data in outputs/doctors/ is committed to git (user decision 2026-11-05); do not commit videos over 20 MB.
+
+## Track 1, Step 5: after the call (BUILT, done with dr. Mostafa 2026-11-06)
+
+1. Ask WHICH file covers which part of the call before transcribing (audio and videos overlapped last time, about 3 h of CPU).
+2. Large files: the user uploads to Google Drive and shares the folder as **"Anyone with the link: Viewer"** (private files return a login page). Download: `curl -L "https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t"`. Videos stay out of git.
+3. Transcribe with timestamps (faster-whisper on raw 16 kHz PCM; `av.open(..., metadata_errors=...)` fails on this box, so convert with ffmpeg first) into `<dir>/call/transcript_*.txt`.
+4. Write `<dir>/call/clips_for_yossef.md`: (a) clips for the USER's account (audience doctors), (b) audio-only ideas he can re-record, (c) clips for the DOCTOR's account (audience patients). File, from, to, hook, why it works; mark the strongest ⭐. The user cuts by hand or with **OpenClip** (plugin `openclip`, skill `clip-video`; needs its connector authorised in claude.ai). Do NOT use Reel Studio (user decision 2026-11-07).
+5. Record consent in `<dir>/consent.md` before any clip with the doctor is published.
+6. Optional sample render: `scripts/make_reel.py SRC START END WORDS.json "TITLE" OUT.mp4 [FIXES.json] [CROP]` (upscale to 1080x1920, Cairo captions, title for 4 s; for screen recordings pass a crop like `920:1000:140:900` so captions sit in dark bands and never cover a face).
+7. Fill Track 2 steps 1-2 from the transcript, citing timestamps, and update `references/doctors_voice.md`.
+
+## Track 2, Steps 3-5 (BUILT, done with dr. Mostafa 2026-11-07)
+
+- **Step 3, patient voice** (about 0.1-0.3 USD): 12-15 Google queries in the patients' words (`research_fetch.py google --country eg`, keep People-also-ask) + **the competitor videos the user sends** (transcribe free) + the call. Instagram comments only from reels that are a QUESTION or MYTH on the topic, never "top views" (top-view reels gave congratulations and "Salt"). Output `track2/voice/patient_voice.md`: objections / problems / wants / dreams / fears, each with source + link, and the 5 questions that repeat across sources.
+- **Step 4, competitors** (about 0.4 USD for 5): `fetch_instagram.py reels <handles> --limit 30`, `analyze_competitors.py`; table of accounts, winning reels with links, hooks, structure, length, repeated patterns with counts, and what it means for this doctor. **No transcripts in this step** (user rule 2026-11-07): transcribing the best 4 per competitor moves to Step 7, after the ideas are agreed. Give academic or conference-heavy accounts less weight.
+- **Step 5, ideas bank**: 60-90 ideas on the niche pillars, each with its source and a draft funnel stage; filters: his filming situation, tone, preferred format, medical compliance (no promises or success rates, no price offers, no patient name/face without consent, sensitive topics as information not ads). **Merge the user's own research and competitor ideas, tagged `[يوسف]`, before Step 6.** List what was dropped and why, and propose the first 12.
+
+## Lessons learned (saved 2026-11-07)
+
+1. Save anything the user sends (forms, templates, files) into the skill the same turn: the «أنت زمان» form was lost once.
+2. Record procedures in SKILL.md, not only in roadmap.md: Track 2 stayed "PLANNED" here while it was already running.
+3. Competitor comments: pick question/myth reels on the topic, not the top-viewed ones.
+4. Ask for the exact screen: Instagram > Insights > Total followers > Most active times (the first screenshots were per-reel insights).
+5. Search the plugin catalogue before saying a tool is not available (OpenClip was a plugin).
+6. Ask which recording covers which part of a long call before transcribing.
+7. Never put captions over a face; zoom on the call window instead.
+8. Ask for Drive "Anyone with the link" sharing up front.
+9. `render_pdf.js` resolves relative paths now (it used to fail with ERR_INVALID_URL).
 
 ## Reusable lessons from the previous skill (`instagram-account-analyzer`)
 

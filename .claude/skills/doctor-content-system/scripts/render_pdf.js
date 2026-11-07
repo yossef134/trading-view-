@@ -10,7 +10,7 @@ catch (e) { ({ chromium } = require(require('child_process').execSync('npm root 
   const pngIdx = process.argv.indexOf('--png');
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 794, height: 1123 } });
-  await page.goto('file://' + inp, { waitUntil: 'networkidle' });
+  await page.goto('file://' + require('path').resolve(inp), { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.pdf({ path: out, format: 'A4', printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
   if (pngIdx > -1) {
