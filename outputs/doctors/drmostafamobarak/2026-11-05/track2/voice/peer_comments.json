@@ -1,0 +1,654 @@
+{
+  "fetched_at": "2026-11-07T00:47:41+00:00",
+  "cost_usd": 0.2711,
+  "anonymised": "author names/ids/avatars dropped; mentions, links, e-mails, numbers masked",
+  "dropped_owner_replies": 2,
+  "posts": [
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "shortCode": "DexRDFQo_43",
+      "url": "https://www.instagram.com/p/DexRDFQo_43/",
+      "views": 4710,
+      "index": 2.72
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "shortCode": "Ddj17ZTIkz7",
+      "url": "https://www.instagram.com/p/Ddj17ZTIkz7/",
+      "views": 4558,
+      "index": 2.63
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "shortCode": "DeR8GbyIPtv",
+      "url": "https://www.instagram.com/p/DeR8GbyIPtv/",
+      "views": 3485,
+      "index": 2.01
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "shortCode": "DepVCprIzH6",
+      "url": "https://www.instagram.com/p/DepVCprIzH6/",
+      "views": 3064,
+      "index": 1.77
+    },
+    {
+      "owner": "dr.ahmedabdelazeem",
+      "shortCode": "DdbrIGHoRpw",
+      "url": "https://www.instagram.com/p/DdbrIGHoRpw/",
+      "views": 2537,
+      "index": 1.46
+    },
+    {
+      "owner": "amr_abbassy",
+      "shortCode": "De96MtZTEPS",
+      "url": "https://www.instagram.com/p/De96MtZTEPS/",
+      "views": 55009,
+      "index": 12.74
+    },
+    {
+      "owner": "amr_abbassy",
+      "shortCode": "DeiAmS5Afis",
+      "url": "https://www.instagram.com/p/DeiAmS5Afis/",
+      "views": 19482,
+      "index": 4.51
+    },
+    {
+      "owner": "amr_abbassy",
+      "shortCode": "DepcFk4g3gD",
+      "url": "https://www.instagram.com/p/DepcFk4g3gD/",
+      "views": 8441,
+      "index": 1.95
+    },
+    {
+      "owner": "amr_abbassy",
+      "shortCode": "DeWAL6PABc9",
+      "url": "https://www.instagram.com/p/DeWAL6PABc9/",
+      "views": 6154,
+      "index": 1.42
+    },
+    {
+      "owner": "amr_abbassy",
+      "shortCode": "DfE5bO1TGm5",
+      "url": "https://www.instagram.com/p/DfE5bO1TGm5/",
+      "views": 4997,
+      "index": 1.16
+    },
+    {
+      "owner": "drahmed.ivf",
+      "shortCode": "DepV1EwNZMW",
+      "url": "https://www.instagram.com/p/DepV1EwNZMW/",
+      "views": 130958,
+      "index": 51.59
+    },
+    {
+      "owner": "drahmed.ivf",
+      "shortCode": "Dc0bJkFNWxA",
+      "url": "https://www.instagram.com/p/Dc0bJkFNWxA/",
+      "views": 68833,
+      "index": 27.12
+    },
+    {
+      "owner": "drahmed.ivf",
+      "shortCode": "DezYcydNpJy",
+      "url": "https://www.instagram.com/p/DezYcydNpJy/",
+      "views": 34961,
+      "index": 13.77
+    },
+    {
+      "owner": "drahmed.ivf",
+      "shortCode": "DeO7KIuN6eH",
+      "url": "https://www.instagram.com/p/DeO7KIuN6eH/",
+      "views": 18895,
+      "index": 7.44
+    },
+    {
+      "owner": "drahmed.ivf",
+      "shortCode": "DetSamzNrQD",
+      "url": "https://www.instagram.com/p/DetSamzNrQD/",
+      "views": 8303,
+      "index": 3.27
+    },
+    {
+      "owner": "dryehiaidris",
+      "shortCode": "DeyiwUyCmjl",
+      "url": "https://www.instagram.com/p/DeyiwUyCmjl/",
+      "views": 1840,
+      "index": 8.38
+    },
+    {
+      "owner": "dryehiaidris",
+      "shortCode": "Ddcc6VxIlUt",
+      "url": "https://www.instagram.com/p/Ddcc6VxIlUt/",
+      "views": 388,
+      "index": 1.77
+    },
+    {
+      "owner": "dryehiaidris",
+      "shortCode": "DdmBynlAQWt",
+      "url": "https://www.instagram.com/p/DdmBynlAQWt/",
+      "views": 331,
+      "index": 1.51
+    },
+    {
+      "owner": "dryehiaidris",
+      "shortCode": "DcoHvTWjVFk",
+      "url": "https://www.instagram.com/p/DcoHvTWjVFk/",
+      "views": 305,
+      "index": 1.39
+    },
+    {
+      "owner": "dryehiaidris",
+      "shortCode": "DdDyFVcCqT4",
+      "url": "https://www.instagram.com/p/DdDyFVcCqT4/",
+      "views": 282,
+      "index": 1.28
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "shortCode": "DcvuHJdMaNd",
+      "url": "https://www.instagram.com/p/DcvuHJdMaNd/",
+      "views": 18041,
+      "index": 30.97
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "shortCode": "De7MfLfhTPt",
+      "url": "https://www.instagram.com/p/De7MfLfhTPt/",
+      "views": 2115,
+      "index": 3.63
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "shortCode": "DcLg_adqqyJ",
+      "url": "https://www.instagram.com/p/DcLg_adqqyJ/",
+      "views": 1872,
+      "index": 3.21
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "shortCode": "DeUWz2Wh07X",
+      "url": "https://www.instagram.com/p/DeUWz2Wh07X/",
+      "views": 1852,
+      "index": 3.18
+    },
+    {
+      "owner": "dr.mohamedhamza_obgyn",
+      "shortCode": "DYFZTRHohPB",
+      "url": "https://www.instagram.com/p/DYFZTRHohPB/",
+      "views": 1576,
+      "index": 2.71
+    }
+  ],
+  "comments": [
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ماشاء الله ❤️❤️",
+      "likes": 0,
+      "timestamp": "2026-10-25T00:49:25.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ممكن نعرف ازاي التقديم",
+      "likes": 1,
+      "timestamp": "2026-10-16T17:59:25.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ماشاء الله عقبال أولادنا جميعا ❤️❤️❤️",
+      "likes": 1,
+      "timestamp": "2026-10-16T13:32:39.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "It will always be an honor to be with you dr. @user, your success story and your precious pieces of advice will always be a source of inspiration to me ♥️",
+      "likes": 1,
+      "timestamp": "2026-10-16T13:23:58.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ممكن نعرف التقديم ازاي لدكاتره الامتياز",
+      "likes": 2,
+      "timestamp": "2026-10-16T10:56:35.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "وحشني يا دكتور",
+      "likes": 1,
+      "timestamp": "2026-10-16T07:47:01.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ماشاء الله ربنا يبارك فيهم وفي علمهم وفي حياتهم كلها❤️❤️",
+      "likes": 3,
+      "timestamp": "2026-10-16T07:10:14.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "اشطر ناس ❤️❤️❤️",
+      "likes": 2,
+      "timestamp": "2026-10-16T00:25:36.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "ماشاء الله ربنا يبارك 👏❤️❤️",
+      "likes": 5,
+      "timestamp": "2026-10-15T22:54:13.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "😂😂😂😂حرام يعني ايه حرام",
+      "likes": 1,
+      "timestamp": "2026-11-04T23:33:34.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "ههههههههههههههههههههههههههه يضحكون الله يسعدهم ويرزقهم يارب مايتمنون",
+      "likes": 0,
+      "timestamp": "2026-11-03T11:50:02.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "دكتور محترم لو راحوا لدكتور  مايخاف الله حيعمل لهم",
+      "likes": 1,
+      "timestamp": "2026-10-26T07:25:45.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "فاهمين الخالة والدة بشكل غلط",
+      "likes": 0,
+      "timestamp": "2026-10-25T19:29:30.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "شنو هالجهل؟ و الأنساب شلون بيها. استغفر الله العظيم و اتوب اليه. 😮",
+      "likes": 0,
+      "timestamp": "2026-10-25T13:19:44.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "زواجهم وين؟؟؟ كيف يراجعو طبيب اجنه بدون ازواجهم؟",
+      "likes": 0,
+      "timestamp": "2026-10-24T07:06:56.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "😂😂😂😂😂",
+      "likes": 0,
+      "timestamp": "2026-10-24T04:13:33.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "فعلن غير فاهمين شرعاً ليه مايعرفون انه الاولد والبنات لرجالهم مالهم حق يتبادلون",
+      "likes": 0,
+      "timestamp": "2026-10-23T09:17:11.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "طيب اش دخل البيوت اللي جنب بيوتهم😆😆😩",
+      "likes": 0,
+      "timestamp": "2026-10-22T17:52:17.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 1,
+      "timestamp": "2026-10-24T02:36:21.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt😍",
+      "likes": 1,
+      "timestamp": "2026-10-22T20:49:01.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-20T20:08:30.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-20T16:07:37.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T20:01:40.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T14:00:59.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 1,
+      "timestamp": "2026-10-19T11:52:59.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 1,
+      "timestamp": "2026-10-19T11:28:28.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T07:36:53.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T07:30:52.000Z"
+    },
+    {
+      "post": "De96MtZTEPS",
+      "owner": "amr_abbassy",
+      "text": "بالتوفيق يارب",
+      "likes": 0,
+      "timestamp": "2026-11-02T12:25:46.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T06:13:54.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T05:17:42.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 1,
+      "timestamp": "2026-10-19T04:09:49.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "Salt",
+      "likes": 0,
+      "timestamp": "2026-10-19T03:15:05.000Z"
+    },
+    {
+      "post": "DepcFk4g3gD",
+      "owner": "amr_abbassy",
+      "text": "💪💪💪",
+      "likes": 0,
+      "timestamp": "2026-10-18T21:35:11.000Z"
+    },
+    {
+      "post": "DdbrIGHoRpw",
+      "owner": "dr.ahmedabdelazeem",
+      "text": "سؤالي ف حمل 😂😂😂😂😂😂",
+      "likes": 0,
+      "timestamp": "2026-09-18T15:45:53.000Z"
+    },
+    {
+      "post": "DepV1EwNZMW",
+      "owner": "drahmed.ivf",
+      "text": "الله يرزقنا و كل من بغى",
+      "likes": 0,
+      "timestamp": "2026-10-25T15:35:23.000Z"
+    },
+    {
+      "post": "DepV1EwNZMW",
+      "owner": "drahmed.ivf",
+      "text": "شكد حلو لو كل الاطباء مثلك",
+      "likes": 1,
+      "timestamp": "2026-10-20T15:30:14.000Z"
+    },
+    {
+      "post": "DepV1EwNZMW",
+      "owner": "drahmed.ivf",
+      "text": "دكتور شاطر وعنده ضمير",
+      "likes": 1,
+      "timestamp": "2026-10-19T20:18:57.000Z"
+    },
+    {
+      "post": "Ddj17ZTIkz7",
+      "owner": "dr.ahmedabdelazeem",
+      "text": "حضرتك والله كنت مطمني للولادة الطبيعية❤️❤️❤️❤️❤️❤️❤️❤️",
+      "likes": 1,
+      "timestamp": "2026-09-21T21:13:11.000Z"
+    },
+    {
+      "post": "Ddj17ZTIkz7",
+      "owner": "dr.ahmedabdelazeem",
+      "text": "انا نفسي أولد طبيعي بس للاسف المشيمه متقدمه😢انا بكريه",
+      "likes": 0,
+      "timestamp": "2026-09-21T21:09:45.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "مافهمت هو يعمل ايه",
+      "likes": 1,
+      "timestamp": "2026-10-23T00:45:28.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "الله يجزاك كل خير مثل ما طمنت السيدة.. والله يرزقنا ويرزقها وجميع المسلمين والمسلمات الصحة والعافية",
+      "likes": 0,
+      "timestamp": "2026-10-22T23:36:13.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "ناويه وقت الولاده الخامسه اعمل شد ينفع",
+      "likes": 0,
+      "timestamp": "2026-10-22T20:15:06.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "حرام تخلفي بحياة بنتك الحلفان ب أشي غير الله شرك انتبهي حبيبتي",
+      "likes": 0,
+      "timestamp": "2026-10-22T19:21:24.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "😍😍😍",
+      "likes": 1,
+      "timestamp": "2026-10-22T18:07:54.000Z"
+    },
+    {
+      "post": "DezYcydNpJy",
+      "owner": "drahmed.ivf",
+      "text": "❤️❤️❤️",
+      "likes": 1,
+      "timestamp": "2026-10-22T16:56:14.000Z"
+    },
+    {
+      "post": "DepVCprIzH6",
+      "owner": "dr.ahmedabdelazeem",
+      "text": "❤️❤️❤️",
+      "likes": 0,
+      "timestamp": "2026-10-18T21:33:21.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "بارك الله فيك",
+      "likes": 0,
+      "timestamp": "2026-10-22T04:57:21.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "👏👏👏👏👏 أحييك يادكتور",
+      "likes": 0,
+      "timestamp": "2026-10-21T23:48:08.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "استعباط طبعا",
+      "likes": 0,
+      "timestamp": "2026-10-21T22:31:23.000Z"
+    },
+    {
+      "post": "Dc0bJkFNWxA",
+      "owner": "drahmed.ivf",
+      "text": "سيجارة لف تقريبا",
+      "likes": 0,
+      "timestamp": "2026-10-21T12:31:38.000Z"
+    },
+    {
+      "post": "DeWAL6PABc9",
+      "owner": "amr_abbassy",
+      "text": "❤️❤️❤️❤️🔥🔥🔥",
+      "likes": 0,
+      "timestamp": "2026-10-11T10:14:31.000Z"
+    },
+    {
+      "post": "DeWAL6PABc9",
+      "owner": "amr_abbassy",
+      "text": "احلى مؤتمر و اتشرفنا بيك و انت انسان راقي استقبلتنا و كان الي الشرف اوكف ع منصة الكونكرس مالتك 💐",
+      "likes": 0,
+      "timestamp": "2026-10-11T08:51:48.000Z"
+    },
+    {
+      "post": "De7MfLfhTPt",
+      "owner": "dr.mohamedhamza_obgyn",
+      "text": "👏👏👏👏",
+      "likes": 0,
+      "timestamp": "2026-10-25T18:21:46.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "عقبال ابنى ان شاءالله ما شاء الله عليهم👏👏",
+      "likes": 2,
+      "timestamp": "2026-10-15T22:50:58.000Z"
+    },
+    {
+      "post": "DeiAmS5Afis",
+      "owner": "amr_abbassy",
+      "text": "Really, it was an honour to meet you, Prof.  You're a great doctor with a great personality. Thank you for always being an inspiration. ❤️🔥",
+      "likes": 1,
+      "timestamp": "2026-10-15T22:22:37.000Z"
+    },
+    {
+      "post": "DeUWz2Wh07X",
+      "owner": "dr.mohamedhamza_obgyn",
+      "text": "❤️❤️👏👏👏👏",
+      "likes": 0,
+      "timestamp": "2026-10-10T15:43:52.000Z"
+    },
+    {
+      "post": "DeUWz2Wh07X",
+      "owner": "dr.mohamedhamza_obgyn",
+      "text": "👏👏👏👏🙌",
+      "likes": 0,
+      "timestamp": "2026-10-10T15:08:26.000Z"
+    },
+    {
+      "post": "DdmBynlAQWt",
+      "owner": "dryehiaidris",
+      "text": "تحياتي لك من فيينا من المتحف الوطني النمساوي وقاعات الثقافة و الفنون شيف/طارق",
+      "likes": 0,
+      "timestamp": "2026-09-23T09:00:17.000Z"
+    },
+    {
+      "post": "DcvuHJdMaNd",
+      "owner": "dr.mohamedhamza_obgyn",
+      "text": "بجد من اشطر الدكاتره الي اتعاملت معاهم وأمانه واحترام وخلوق الله يبارك ف حضرتك ❤️❤️",
+      "likes": 0,
+      "timestamp": "2026-09-29T16:01:44.000Z"
+    },
+    {
+      "post": "DcvuHJdMaNd",
+      "owner": "dr.mohamedhamza_obgyn",
+      "text": "اشطر دكتور كده كده ♥️♥️",
+      "likes": 0,
+      "timestamp": "2026-09-28T14:42:57.000Z"
+    },
+    {
+      "post": "DdDyFVcCqT4",
+      "owner": "dryehiaidris",
+      "text": "دكتورنا 🤍🙏",
+      "likes": 1,
+      "timestamp": "2026-09-09T17:43:32.000Z"
+    },
+    {
+      "post": "DetSamzNrQD",
+      "owner": "drahmed.ivf",
+      "text": "❤️❤️",
+      "likes": 0,
+      "timestamp": "2026-10-20T17:36:40.000Z"
+    },
+    {
+      "post": "DeO7KIuN6eH",
+      "owner": "drahmed.ivf",
+      "text": "ربنا يكرمني ويكرم كل مشتاق يارب العالمين 🤲🤲",
+      "likes": 1,
+      "timestamp": "2026-10-22T18:17:46.000Z"
+    },
+    {
+      "post": "DeO7KIuN6eH",
+      "owner": "drahmed.ivf",
+      "text": "اكرمنا الله 😍",
+      "likes": 1,
+      "timestamp": "2026-10-18T22:01:18.000Z"
+    },
+    {
+      "post": "DeO7KIuN6eH",
+      "owner": "drahmed.ivf",
+      "text": "الدكتور🔥",
+      "likes": 2,
+      "timestamp": "2026-10-08T17:26:24.000Z"
+    },
+    {
+      "post": "DeO7KIuN6eH",
+      "owner": "drahmed.ivf",
+      "text": "😂❤️",
+      "likes": 1,
+      "timestamp": "2026-10-08T14:53:45.000Z"
+    }
+  ]
+}
